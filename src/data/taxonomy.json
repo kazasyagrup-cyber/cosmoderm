@@ -1,0 +1,29 @@
+{
+  "categories": [
+    { "id": "cleansing", "label": "Очищение" },
+    { "id": "moisturizing", "label": "Увлажнение" },
+    { "id": "sun-protection", "label": "Защита от солнца" },
+    { "id": "body-care", "label": "Уход за телом" },
+    { "id": "repair", "label": "Восстановление" },
+    { "id": "pigmentation", "label": "Коррекция пигментации" },
+    { "id": "hair-care", "label": "Уход за волосами и кожей головы" },
+    { "id": "lip-care", "label": "Уход за губами" }
+  ],
+  "skinTypes": [
+    { "id": "oily-problem", "label": "Жирная/Проблемная" },
+    { "id": "sensitive", "label": "Чувствительная" },
+    { "id": "dry-atopic", "label": "Сухая/Атопичная" },
+    { "id": "dehydrated", "label": "Обезвоженная" },
+    { "id": "pigmented", "label": "Пигментированная" }
+  ],
+  "lines": [
+    { "id": "sebium", "label": "Sébium" },
+    { "id": "sensibio", "label": "Sensibio" },
+    { "id": "hydrabio", "label": "Hydrabio" },
+    { "id": "atoderm", "label": "Atoderm" },
+    { "id": "photoderm", "label": "Photoderm" },
+    { "id": "cicabio", "label": "Cicabio" },
+    { "id": "pigmentbio", "label": "Pigmentbio" },
+    { "id": "node", "label": "Nodé" }
+  ]
+}

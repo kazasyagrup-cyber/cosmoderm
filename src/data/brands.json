@@ -1,0 +1,32 @@
+[
+  {
+    "id": "bioderma",
+    "name": "Bioderma",
+    "status": "active",
+    "tagline": "Дермокосметика, вдохновлённая биологией"
+  },
+  {
+    "id": "avene",
+    "name": "Avène",
+    "status": "coming-soon",
+    "tagline": "Уход за чувствительной кожей на основе термальной воды"
+  },
+  {
+    "id": "la-roche-posay",
+    "name": "La Roche-Posay",
+    "status": "coming-soon",
+    "tagline": "Уход, рекомендованный дерматологами"
+  },
+  {
+    "id": "uriage",
+    "name": "Uriage",
+    "status": "coming-soon",
+    "tagline": "Уход за кожным барьером с термальной водой"
+  },
+  {
+    "id": "vichy",
+    "name": "Vichy",
+    "status": "coming-soon",
+    "tagline": "Уход на основе вулканической термальной воды"
+  }
+]

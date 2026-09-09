@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CosmoDerm | Каталог дермокосметики</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="bg-white text-slate-700 font-sans antialiased">
+    <header class="sticky top-0 z-20 bg-white/90 backdrop-blur border-b border-slate-100">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full bg-gradient-to-br from-sky-500 to-emerald-400 shrink-0"></div>
+        <div>
+          <p class="font-semibold text-slate-800 leading-none">CosmoDerm</p>
+          <p class="text-xs text-slate-400">Каталог дермокосметики</p>
+        </div>
+      </div>
+      <div class="max-w-6xl mx-auto px-4 pb-4 flex gap-2 overflow-x-auto" id="brand-tabs"></div>
+      <nav class="max-w-6xl mx-auto px-4 pb-3 flex gap-4 text-sm text-slate-500 overflow-x-auto">
+        <a href="#catalog" class="whitespace-nowrap hover:text-sky-600">Продукты</a>
+        <a href="#line-filter-section" class="whitespace-nowrap hover:text-sky-600">Линии средств</a>
+        <a href="#skintype-filter-section" class="whitespace-nowrap hover:text-sky-600">Типы кожи</a>
+        <a href="#innovations" class="whitespace-nowrap hover:text-sky-600">Дерматологические инновации</a>
+      </nav>
+    </header>
+
+    <main id="catalog" class="max-w-6xl mx-auto px-4 py-8 scroll-mt-24">
+      <div id="coming-soon" class="hidden"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <aside id="filters-panel" class="md:col-span-1 space-y-6">
+          <div>
+            <label for="search-input" class="block text-sm font-medium text-slate-600 mb-1.5">Поиск средств</label>
+            <input
+              id="search-input"
+              type="text"
+              placeholder="Например, Sensibio"
+              class="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-300"
+            />
+          </div>
+          <div>
+            <p class="text-sm font-medium text-slate-600 mb-1.5">Категории</p>
+            <div id="category-filter" class="flex flex-wrap gap-2"></div>
+          </div>
+          <div id="line-filter-section" class="scroll-mt-24">
+            <p class="text-sm font-medium text-slate-600 mb-1.5">Линии средств</p>
+            <div id="line-filter" class="flex flex-wrap gap-2"></div>
+          </div>
+          <div id="skintype-filter-section" class="scroll-mt-24">
+            <p class="text-sm font-medium text-slate-600 mb-1.5">Типы кожи</p>
+            <div id="skintype-filter" class="flex flex-wrap gap-2"></div>
+          </div>
+        </aside>
+
+        <section id="product-grid" class="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-6"></section>
+      </div>
+
+      <section id="innovations" class="mt-16 scroll-mt-24">
+        <h2 class="text-lg font-semibold text-slate-800 mb-1">Дерматологические инновации</h2>
+        <p class="text-sm text-slate-500 mb-4">Патентованные технологии и активные комплексы, лежащие в основе средств Bioderma.</p>
+        <div id="innovations-list" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-100 mt-12 py-8 text-center text-xs text-slate-400">
+      © 2026 CosmoDerm. Данный сайт носит информационный/каталожный характер, не является медицинской рекомендацией и не предназначен для продажи товаров онлайн.
+    </footer>
+
+    <div
+      id="product-modal"
+      class="hidden fixed inset-0 bg-slate-900/40 backdrop-blur-sm flex items-center justify-center p-4 z-30"
+    >
+      <div class="bg-white rounded-2xl max-w-md w-full p-6 relative max-h-[90vh] overflow-y-auto">
+        <button
+          id="modal-close"
+          type="button"
+          class="absolute top-4 right-4 text-slate-400 hover:text-slate-600"
+        >
+          ✕
+        </button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
