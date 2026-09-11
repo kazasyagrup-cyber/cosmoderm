@@ -401,12 +401,14 @@
           <span class="promo-brand-name">${brandName(product.brand)}</span>
           <span class="promo-line" style="color:${accent.fg}">${lineLabel(product.line)}</span>
         </span>
-        <h2 class="promo-name">${product.name}</h2>
-        ${priceMarkup(product)}
+        <h2 class="promo-name">${product.name} ${product.volume ? `<span class="promo-name-volume">${product.volume}</span>` : ""}</h2>
         <p class="promo-desc">${tr(product.description)}</p>
         ${product.efficacy ? `<p class="promo-efficacy" style="color:${accent.fg}">${tr(product.efficacy)}</p>` : ""}
         <div class="tag-row">${renderTags(product.skinTypes)}</div>
-        <button type="button" class="btn btn-primary promo-cta">${t("product.detailsBtn")}</button>
+        <div class="promo-actions">
+          ${product.price ? `<div class="promo-price-box">${formatPrice(product.price)}</div>` : ""}
+          <button type="button" class="btn btn-primary promo-cta">${t("product.detailsBtn")}</button>
+        </div>
       </div>
       <div class="promo-photo">
         <img src="${product.image}" alt="${product.name}" />
