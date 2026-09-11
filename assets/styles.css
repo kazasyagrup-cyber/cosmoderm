@@ -480,6 +480,9 @@ a {
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
+  mix-blend-mode: multiply;
+  -webkit-mask-image: radial-gradient(ellipse 68% 68% at center, #000 55%, transparent 100%);
+  mask-image: radial-gradient(ellipse 68% 68% at center, #000 55%, transparent 100%);
 }
 
 .promo-arrow {
