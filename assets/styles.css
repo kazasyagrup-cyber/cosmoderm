@@ -125,7 +125,6 @@ a {
   font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--sky-dark);
 }
 
 .search-result-item .result-name {

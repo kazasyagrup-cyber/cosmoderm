@@ -3,8 +3,8 @@
   const I18N = window.UI_I18N;
 
   const lineAccents = {
-    sebium: { bg: "#fef3e2", fg: "#b45309" }, sensibio: { bg: "#ffe4e9", fg: "#be123c" },
-    hydrabio: { bg: "#e0f7fa", fg: "#0e7490" }, atoderm: { bg: "#e3f8f2", fg: "#0f766e" },
+    sebium: { bg: "#dcfce7", fg: "#16a34a" }, sensibio: { bg: "#ffe4e9", fg: "#be123c" },
+    hydrabio: { bg: "#e0f7fa", fg: "#0e7490" }, atoderm: { bg: "#dbeafe", fg: "#1d4ed8" },
     photoderm: { bg: "#fef9e2", fg: "#a16207" }, cicabio: { bg: "#f1e9ff", fg: "#6d28d9" },
     pigmentbio: { bg: "#fce7fa", fg: "#a21caf" }, node: { bg: "#e6e8ff", fg: "#4338ca" },
     abcderm: { bg: "#fff1e6", fg: "#c2410c" }, matricium: { bg: "#eafbe7", fg: "#166534" },
@@ -45,6 +45,10 @@
 
   function lineAccent(lineId) {
     return lineAccents[lineId] || { bg: "#f7f2ea", fg: "#9c6b30" };
+  }
+
+  function normalizeText(s) {
+    return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
   }
 
   const MISSING_PHOTOS = new Set([
@@ -151,25 +155,25 @@
   }
 
   function filterProducts() {
-    const query = state.query.trim().toLowerCase();
+    const query = normalizeText(state.query.trim());
     return products.filter((p) => {
       if (state.brand !== "all" && p.brand !== state.brand) return false;
       if (state.category !== "all" && p.category !== state.category) return false;
-      if (query && !`${p.name} ${tr(p.description)}`.toLowerCase().includes(query)) return false;
+      if (query && !normalizeText(`${p.name} ${lineLabel(p.line)} ${brandName(p.brand)} ${tr(p.description)}`).includes(query)) return false;
       return true;
     });
   }
 
   function renderSearchResults(rawQuery) {
     if (!el.searchResults) return;
-    const query = rawQuery.trim().toLowerCase();
+    const query = normalizeText(rawQuery.trim());
     if (!query) {
       el.searchResults.hidden = true;
       el.searchResults.innerHTML = "";
       return;
     }
     const matches = products
-      .filter((p) => `${p.name} ${brandName(p.brand)}`.toLowerCase().includes(query))
+      .filter((p) => normalizeText(`${p.name} ${lineLabel(p.line)} ${brandName(p.brand)}`).includes(query))
       .slice(0, 8);
 
     if (matches.length === 0) {
@@ -179,14 +183,15 @@
     }
 
     el.searchResults.innerHTML = matches
-      .map(
-        (p, i) => `
+      .map((p, i) => {
+        const accent = lineAccent(p.line);
+        return `
       <button type="button" class="search-result-item" data-index="${i}">
-        <span class="result-brand">${brandName(p.brand)}</span>
+        <span class="result-brand" style="color:${accent.fg}">${brandName(p.brand)} · ${lineLabel(p.line)}</span>
         <span class="result-name">${p.name}</span>
       </button>
-    `
-      )
+    `;
+      })
       .join("");
     el.searchResults.querySelectorAll(".search-result-item").forEach((btn, i) => {
       btn.addEventListener("click", () => {
