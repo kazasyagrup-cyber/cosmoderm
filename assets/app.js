@@ -316,22 +316,27 @@
     });
 
     let previousBrand = null;
-    groups.forEach((group) => {
+    groups.forEach((group, groupIndex) => {
+      const isFirstGroup = groupIndex === 0;
       if (group.brand !== previousBrand) {
-        const brandHeading = document.createElement("div");
-        brandHeading.className = "brand-group-heading";
-        brandHeading.textContent = brandName(group.brand);
-        el.productGrid.appendChild(brandHeading);
+        if (!isFirstGroup) {
+          const brandHeading = document.createElement("div");
+          brandHeading.className = "brand-group-heading";
+          brandHeading.textContent = brandName(group.brand);
+          el.productGrid.appendChild(brandHeading);
+        }
         previousBrand = group.brand;
       }
 
       const section = document.createElement("div");
       section.className = "line-group";
 
-      const heading = document.createElement("div");
-      heading.className = "line-group-heading";
-      heading.innerHTML = `<h3>${lineLabel(group.line)}</h3><span class="line-count">${group.items.length}</span>`;
-      section.appendChild(heading);
+      if (!isFirstGroup) {
+        const heading = document.createElement("div");
+        heading.className = "line-group-heading";
+        heading.innerHTML = `<h3>${lineLabel(group.line)}</h3><span class="line-count">${group.items.length}</span>`;
+        section.appendChild(heading);
+      }
 
       const grid = document.createElement("div");
       grid.className = "line-group-grid";
