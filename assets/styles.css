@@ -603,7 +603,8 @@ a {
 /* ---------- Layout ---------- */
 
 .catalog-section {
-  padding-block: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
   scroll-margin-top: 6rem;
 }
 
