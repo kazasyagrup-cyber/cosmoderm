@@ -24,7 +24,9 @@
     "premium-lierac": { bg: "#fce7fa", fg: "#a21caf" }, diopti: { bg: "#e0f7fa", fg: "#0e7490" },
     "lait-creme-concentre": { bg: "#fef3e2", fg: "#b45309" },
     "cerave-moisturizers": { bg: "#e3f8f2", fg: "#0f766e" }, "cerave-cleansers": { bg: "#e6f4ea", fg: "#15803d" }, "cerave-sa": { bg: "#e3f8f2", fg: "#0f766e" },
-    "sc-antioxidants": { bg: "#fef9e2", fg: "#a16207" }, "sc-hydrating": { bg: "#e0f7fa", fg: "#0e7490" }
+    "sc-antioxidants": { bg: "#fef9e2", fg: "#a16207" }, "sc-hydrating": { bg: "#e0f7fa", fg: "#0e7490" },
+    "mustela-bebe": { bg: "#e0e7ff", fg: "#1e3a8a" }, "mustela-stelatopia": { bg: "#cffafe", fg: "#0891b2" },
+    "mustela-maternite": { bg: "#fce7f3", fg: "#db2777" }, "mustela-soleil": { bg: "#fef9c3", fg: "#ca8a04" }
   };
 
   const NAV_CATEGORIES = ["cleansing", "moisturizing", "sun-protection", "body-care", "hair-care"];
@@ -40,7 +42,8 @@
     svr: "svr.png",
     lierac: "lierac.svg",
     embryolisse: "embryolisse.png",
-    cerave: "cerave.png"
+    cerave: "cerave.png",
+    mustela: "mustela.png"
   };
 
   function lineAccent(lineId) {
