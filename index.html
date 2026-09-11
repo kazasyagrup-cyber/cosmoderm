@@ -48,6 +48,15 @@
             <button type="button" class="lang-btn" data-lang-btn="ru">RU</button>
             <button type="button" class="lang-btn" data-lang-btn="kz">ҚАЗ</button>
           </div>
+          <button type="button" id="cart-toggle" class="cart-toggle" aria-haspopup="dialog" aria-expanded="false" data-i18n-aria="cart.title" aria-label="Корзина">
+            <svg class="cart-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.8h7.6a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="10" cy="21" r="1.4" fill="currentColor" />
+              <circle cx="18" cy="21" r="1.4" fill="currentColor" />
+            </svg>
+            <span class="cart-count" id="cart-count" hidden>0</span>
+            <span class="cart-header-total" id="cart-header-total" hidden></span>
+          </button>
         </div>
       </div>
     </header>
@@ -135,6 +144,27 @@
         медицинской рекомендацией и не предназначен для продажи товаров онлайн.
       </p>
     </footer>
+
+    <div id="cart-drawer" class="cart-drawer" hidden>
+      <div class="cart-drawer-backdrop" id="cart-drawer-backdrop"></div>
+      <div class="cart-drawer-panel" role="dialog" aria-modal="true" aria-label="Корзина">
+        <div class="cart-drawer-header">
+          <h3 data-i18n="cart.title">Корзина</h3>
+          <button id="cart-drawer-close" type="button" class="modal-close" data-i18n-aria="modal.close" aria-label="Закрыть">✕</button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-drawer-footer">
+          <div class="cart-total-row">
+            <span data-i18n="cart.total">Итого</span>
+            <span id="cart-total-value">0 ₸</span>
+          </div>
+          <button type="button" id="cart-whatsapp-btn" class="btn btn-primary cart-whatsapp-btn">
+            <span data-i18n="cart.orderWhatsApp">Заказать в WhatsApp</span>
+          </button>
+          <button type="button" id="cart-clear-btn" class="cart-clear-btn" data-i18n="cart.clear">Очистить корзину</button>
+        </div>
+      </div>
+    </div>
 
     <div id="product-modal" class="modal-overlay" hidden>
       <div class="modal-card">
