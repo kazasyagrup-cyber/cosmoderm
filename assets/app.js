@@ -34,7 +34,7 @@
   const brandLogos = {
     bioderma: "bioderma.png",
     avene: "avene.png",
-    "la-roche-posay": "la-roche-posay.png",
+    "la-roche-posay": "la-roche-posay.svg",
     uriage: "uriage.svg",
     vichy: "vichy.jpg",
     ducray: "ducray.png",
@@ -44,6 +44,22 @@
     embryolisse: "embryolisse.png",
     cerave: "cerave.png",
     mustela: "mustela.png"
+  };
+
+  const brandRingColors = {
+    bioderma: "#dc2626",
+    avene: "#db2777",
+    "la-roche-posay": "#2563eb",
+    uriage: "#0d9488",
+    vichy: "#7c3aed",
+    ducray: "#ea580c",
+    nuxe: "#16a34a",
+    svr: "#0891b2",
+    lierac: "#9333ea",
+    embryolisse: "#ca8a04",
+    cerave: "#4f46e5",
+    skinceuticals: "#57534e",
+    mustela: "#0284c7"
   };
 
   function lineAccent(lineId) {
@@ -351,11 +367,13 @@
   function renderBrandStrip() {
     if (!el.brandStripList) return;
     el.brandStripList.innerHTML = "";
-    brands.forEach((brand) => {
+    const makeCircle = (brand) => {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "brand-circle" + (state.brand === brand.id ? " is-active" : "");
       const logo = brandLogos[brand.id];
+      const ring = brandRingColors[brand.id] || "#9ca3af";
+      btn.style.setProperty("--ring-color", ring);
       btn.innerHTML = `
         <span class="circle-frame">
           ${logo ? `<img src="/assets/brands/${logo}" alt="${brand.name}" loading="lazy" />` : `<span>${brand.name.slice(0, 2).toUpperCase()}</span>`}
@@ -368,8 +386,11 @@
         render();
         document.getElementById("catalog").scrollIntoView({ behavior: "smooth", block: "start" });
       });
-      el.brandStripList.appendChild(btn);
-    });
+      return btn;
+    };
+    // render the brand list twice back-to-back so the CSS marquee can loop seamlessly at -50%
+    brands.forEach((brand) => el.brandStripList.appendChild(makeCircle(brand)));
+    brands.forEach((brand) => el.brandStripList.appendChild(makeCircle(brand)));
   }
 
   function renderPromoSlide() {

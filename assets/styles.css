@@ -514,24 +514,42 @@ a {
 .brand-strip {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
-  padding: 1.1rem 0;
+  padding: 1.25rem 0;
+}
+
+.brand-strip-viewport {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent);
 }
 
 .brand-strip-list {
   display: flex;
-  gap: 1.1rem;
-  overflow-x: auto;
-  scrollbar-width: thin;
-  padding-bottom: 0.15rem;
+  width: max-content;
+  gap: 1.5rem;
+  animation: brand-strip-scroll 45s linear infinite;
+}
+
+.brand-strip-viewport:hover .brand-strip-list {
+  animation-play-state: paused;
+}
+
+@keyframes brand-strip-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .brand-circle {
   flex: 0 0 auto;
-  width: 5.4rem;
+  width: 6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
   background: none;
   border: none;
   cursor: pointer;
@@ -539,39 +557,37 @@ a {
 }
 
 .brand-circle .circle-frame {
-  width: 5rem;
-  height: 5rem;
+  width: 5.6rem;
+  height: 5.6rem;
   border-radius: 999px;
-  border: 2px solid var(--border);
+  border: 4px solid var(--ring-color, var(--border));
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .brand-circle:hover .circle-frame {
-  border-color: var(--sky);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
 .brand-circle.is-active .circle-frame {
-  border-color: var(--sky);
-  box-shadow: 0 0 0 2px var(--sky-100);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
 }
 
 .brand-circle img {
-  width: 76%;
-  height: 76%;
+  width: 84%;
+  height: 84%;
   object-fit: contain;
 }
 
 .brand-circle span {
-  font-size: 0.68rem;
-  font-weight: 600;
-  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--text-strong);
   text-align: center;
   line-height: 1.15;
 }
