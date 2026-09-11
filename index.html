@@ -30,11 +30,13 @@
             <input
               id="search-input"
               type="text"
+              autocomplete="off"
               data-i18n-placeholder="filters.searchPlaceholder"
               data-i18n-aria="filters.searchLabel"
               placeholder="Например, Sensibio"
               class="search-input"
             />
+            <div id="search-results" class="search-results" hidden></div>
           </div>
           <div class="lang-switch" role="group" aria-label="Language">
             <button type="button" class="lang-btn" data-lang-btn="ru">RU</button>

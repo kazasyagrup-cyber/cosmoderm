@@ -72,6 +72,7 @@
     langButtons: document.querySelectorAll("[data-lang-btn]"),
     navQuick: document.getElementById("nav-quick"),
     searchInput: document.getElementById("search-input"),
+    searchResults: document.getElementById("search-results"),
     productGrid: document.getElementById("product-grid"),
     modal: document.getElementById("product-modal"),
     modalClose: document.getElementById("modal-close"),
@@ -159,6 +160,47 @@
     });
   }
 
+  function renderSearchResults(rawQuery) {
+    if (!el.searchResults) return;
+    const query = rawQuery.trim().toLowerCase();
+    if (!query) {
+      el.searchResults.hidden = true;
+      el.searchResults.innerHTML = "";
+      return;
+    }
+    const matches = products
+      .filter((p) => `${p.name} ${brandName(p.brand)}`.toLowerCase().includes(query))
+      .slice(0, 8);
+
+    if (matches.length === 0) {
+      el.searchResults.innerHTML = `<p class="search-result-empty">${t("catalog.empty")}</p>`;
+      el.searchResults.hidden = false;
+      return;
+    }
+
+    el.searchResults.innerHTML = matches
+      .map(
+        (p, i) => `
+      <button type="button" class="search-result-item" data-index="${i}">
+        <span class="result-brand">${brandName(p.brand)}</span>
+        <span class="result-name">${p.name}</span>
+      </button>
+    `
+      )
+      .join("");
+    el.searchResults.querySelectorAll(".search-result-item").forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        openModal(matches[i]);
+        el.searchResults.hidden = true;
+        el.searchResults.innerHTML = "";
+        el.searchInput.value = "";
+        state.query = "";
+        render();
+      });
+    });
+    el.searchResults.hidden = false;
+  }
+
   function renderNavQuick() {
     el.navQuick.innerHTML = "";
     const allLink = document.createElement("a");
@@ -239,12 +281,21 @@
     list.forEach((product) => {
       if (!groupIndexByLine.has(product.line)) {
         groupIndexByLine.set(product.line, groups.length);
-        groups.push({ line: product.line, items: [] });
+        groups.push({ line: product.line, brand: product.brand, items: [] });
       }
       groups[groupIndexByLine.get(product.line)].items.push(product);
     });
 
+    let previousBrand = null;
     groups.forEach((group) => {
+      if (group.brand !== previousBrand) {
+        const brandHeading = document.createElement("div");
+        brandHeading.className = "brand-group-heading";
+        brandHeading.textContent = brandName(group.brand);
+        el.productGrid.appendChild(brandHeading);
+        previousBrand = group.brand;
+      }
+
       const section = document.createElement("div");
       section.className = "line-group";
 
@@ -423,6 +474,15 @@
   el.searchInput.addEventListener("input", (e) => {
     state.query = e.target.value;
     render();
+    renderSearchResults(e.target.value);
+  });
+  el.searchInput.addEventListener("focus", (e) => {
+    if (e.target.value.trim()) renderSearchResults(e.target.value);
+  });
+  document.addEventListener("click", (e) => {
+    if (el.searchResults && !el.searchResults.hidden && !e.target.closest(".header-search")) {
+      el.searchResults.hidden = true;
+    }
   });
   el.modalClose.addEventListener("click", closeModal);
   el.modal.addEventListener("click", (e) => {
@@ -430,6 +490,9 @@
   });
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !el.modal.hidden) closeModal();
+    if (e.key === "Escape" && el.searchResults && !el.searchResults.hidden) {
+      el.searchResults.hidden = true;
+    }
   });
   el.langButtons.forEach((btn) => {
     btn.addEventListener("click", () => setLang(btn.getAttribute("data-lang-btn")));
