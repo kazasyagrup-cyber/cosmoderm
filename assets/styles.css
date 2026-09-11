@@ -764,6 +764,12 @@ a {
   text-decoration: underline;
 }
 
+.product-price {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--sky-dark);
+}
+
 .tag-row {
   display: flex;
   flex-wrap: wrap;

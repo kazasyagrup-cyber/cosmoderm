@@ -247,6 +247,14 @@
     return typeIds.map((id) => `<span class="tag">${skinLabel(id)}</span>`).join("");
   }
 
+  function formatPrice(value) {
+    return value.toLocaleString("ru-RU") + " ₸";
+  }
+
+  function priceMarkup(product) {
+    return product.price ? `<div class="product-price">${formatPrice(product.price)}</div>` : "";
+  }
+
   function photoMarkup(product) {
     const accent = lineAccent(product.line);
     return `
@@ -324,6 +332,7 @@
               <span class="line">· ${lineLabel(product.line)}</span>
             </div>
             <button type="button" class="product-name">${product.name}</button>
+            ${priceMarkup(product)}
             <div class="tag-row">${renderTags(product.skinTypes)}</div>
           </div>
         `;
@@ -410,6 +419,7 @@
         <span class="line">· ${lineLabel(product.line)}</span>
       </div>
       <h2>${product.name}</h2>
+      ${priceMarkup(product)}
       ${photoMarkupModal(product)}
       <div class="info-block">
         <h4>${t("modal.description")}</h4>
