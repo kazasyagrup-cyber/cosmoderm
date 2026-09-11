@@ -426,7 +426,10 @@
           </div>
         `;
         wirePhoto(card);
-        card.querySelector(".product-name").addEventListener("click", () => openModal(product));
+        card.addEventListener("click", (e) => {
+          if (e.target.closest(".cart-stepper")) return;
+          openModal(product);
+        });
         grid.appendChild(card);
       });
       section.appendChild(grid);
