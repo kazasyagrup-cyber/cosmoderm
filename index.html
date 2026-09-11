@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CosmoDerm | Каталог дермокосметики</title>
+    <meta
+      name="description"
+      content="CosmoDerm — информационный каталог дермокосметики ведущих мировых брендов: составы, активные компоненты, показания и клинически подтверждённая эффективность."
+    />
+    <meta name="theme-color" content="#e01457" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <div class="header-top">
+          <img class="logo-mark" src="/assets/logo-icon.png" alt="CosmoDerm" />
+          <div class="logo-text">
+            <p>CosmoDerm</p>
+          </div>
+          <div class="header-search">
+            <input
+              id="search-input"
+              type="text"
+              data-i18n-placeholder="filters.searchPlaceholder"
+              data-i18n-aria="filters.searchLabel"
+              placeholder="Например, Sensibio"
+              class="search-input"
+            />
+          </div>
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" class="lang-btn" data-lang-btn="ru">RU</button>
+            <button type="button" class="lang-btn" data-lang-btn="kz">ҚАЗ</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="announce-bar">
+      <div class="wrap">
+        <span class="announce-item" data-i18n="trust.badge1">Оригинальная продукция</span>
+        <span class="announce-item" data-i18n="trust.badge2">Только проверенные бренды</span>
+        <span class="announce-item" data-i18n="trust.badge3">Информационный каталог — не для онлайн-продаж</span>
+      </div>
+    </div>
+
+    <section class="brand-strip">
+      <div class="wrap">
+        <div id="brand-strip-list" class="brand-strip-list"></div>
+      </div>
+    </section>
+
+    <section class="quick-nav">
+      <div class="wrap">
+        <nav class="main-nav" id="nav-quick"></nav>
+      </div>
+    </section>
+
+    <section class="hero">
+      <div class="wrap">
+        <div class="promo-viewport" id="promo-viewport">
+          <div id="promo-slide" class="promo-slide"></div>
+          <button type="button" class="promo-arrow promo-arrow-prev" data-i18n-aria="promo.prev">‹</button>
+          <button type="button" class="promo-arrow promo-arrow-next" data-i18n-aria="promo.next">›</button>
+        </div>
+      </div>
+    </section>
+
+    <main class="wrap">
+      <section id="catalog" class="catalog-section">
+        <div class="catalog-layout">
+          <aside class="filters-panel" id="filters-panel">
+            <div class="filter-block" id="brand-filter-section" data-scroll>
+              <p data-i18n="filters.brands">Бренды</p>
+              <div id="brand-filter" class="chip-group"></div>
+            </div>
+            <div class="filter-block">
+              <p data-i18n="filters.categories">Категории</p>
+              <div id="category-filter" class="chip-group"></div>
+            </div>
+            <div class="filter-block" id="line-filter-section" data-scroll>
+              <p data-i18n="filters.lines">Линии средств</p>
+              <div id="line-filter" class="chip-group"></div>
+            </div>
+          </aside>
+
+          <div>
+            <section id="product-grid" class="product-grid"></section>
+          </div>
+        </div>
+      </section>
+
+      <section id="innovations" class="innovations-section">
+        <div class="section-heading">
+          <h2 data-i18n="innovations.title">Дерматологические инновации</h2>
+          <p data-i18n="innovations.desc">Патентованные технологии и активные комплексы, лежащие в основе средств ведущих брендов.</p>
+        </div>
+        <div id="innovations-list" class="innovations-grid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text">
+            <p style="font-weight:600;color:var(--text-strong)">CosmoDerm</p>
+          </div>
+          <p data-i18n="footer.about">
+            Информационный каталог дермокосметики: составы, активные компоненты и клинически
+            подтверждённая эффективность средств ведущих аптечных брендов.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.catalogHeading">Каталог</h4>
+          <ul>
+            <li><a href="#catalog" data-i18n="footer.linkProducts">Все продукты</a></li>
+            <li><a href="#line-filter-section" data-i18n="footer.linkLines">Линии средств</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.brandsHeading">Бренды</h4>
+          <ul>
+            <li>Bioderma</li>
+            <li>Avène</li>
+            <li>La Roche-Posay</li>
+            <li>Uriage</li>
+            <li>Vichy</li>
+            <li>Ducray · Nuxe · SVR · Lierac</li>
+            <li>Embryolisse · CeraVe · SkinCeuticals</li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-note" data-i18n="footer.note">
+        © 2026 CosmoDerm. Данный сайт носит информационный/каталожный характер, не является
+        медицинской рекомендацией и не предназначен для продажи товаров онлайн.
+      </p>
+    </footer>
+
+    <div id="product-modal" class="modal-overlay" hidden>
+      <div class="modal-card">
+        <button id="modal-close" type="button" class="modal-close" data-i18n-aria="modal.close" aria-label="Закрыть">✕</button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <script src="/assets/i18n.js"></script>
+    <script src="/assets/data.js"></script>
+    <script src="/assets/app.js"></script>
+  </body>
+</html>

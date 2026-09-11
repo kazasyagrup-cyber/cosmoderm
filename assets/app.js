@@ -1,0 +1,486 @@
+(function () {
+  const { brands, categories, skinTypes, lines, products, innovations } = window.CATALOG_DATA;
+  const I18N = window.UI_I18N;
+
+  const lineAccents = {
+    sebium: { bg: "#fef3e2", fg: "#b45309" }, sensibio: { bg: "#ffe4e9", fg: "#be123c" },
+    hydrabio: { bg: "#e0f7fa", fg: "#0e7490" }, atoderm: { bg: "#e3f8f2", fg: "#0f766e" },
+    photoderm: { bg: "#fef9e2", fg: "#a16207" }, cicabio: { bg: "#f1e9ff", fg: "#6d28d9" },
+    pigmentbio: { bg: "#fce7fa", fg: "#a21caf" }, node: { bg: "#e6e8ff", fg: "#4338ca" },
+    abcderm: { bg: "#fff1e6", fg: "#c2410c" }, matricium: { bg: "#eafbe7", fg: "#166534" },
+    cleanance: { bg: "#e6f4ea", fg: "#15803d" }, "tolerance-extreme": { bg: "#fef2f2", fg: "#b91c1c" },
+    hydrance: { bg: "#e0f7fa", fg: "#0e7490" }, "cicalfate-plus": { bg: "#f1e9ff", fg: "#6d28d9" },
+    antirougeurs: { bg: "#ffe4e9", fg: "#be123c" }, effaclar: { bg: "#fef3e2", fg: "#b45309" },
+    cicaplast: { bg: "#f1e9ff", fg: "#6d28d9" }, anthelios: { bg: "#fef9e2", fg: "#a16207" },
+    toleriane: { bg: "#fef2f2", fg: "#b91c1c" }, lipikar: { bg: "#e3f8f2", fg: "#0f766e" },
+    bariederm: { bg: "#f1e9ff", fg: "#6d28d9" }, xemose: { bg: "#e3f8f2", fg: "#0f766e" },
+    "ds-laboratoire": { bg: "#fce7fa", fg: "#a21caf" }, "eau-thermale-uriage": { bg: "#e0f7fa", fg: "#0e7490" },
+    hyseac: { bg: "#fef3e2", fg: "#b45309" }, "mineral-89": { bg: "#e0f7fa", fg: "#0e7490" },
+    liftactiv: { bg: "#fce7fa", fg: "#a21caf" }, normaderm: { bg: "#fef3e2", fg: "#b45309" },
+    "aqualia-thermal": { bg: "#e0f7fa", fg: "#0e7490" }, "capital-soleil": { bg: "#fef9e2", fg: "#a16207" },
+    anaphase: { bg: "#e6e8ff", fg: "#4338ca" }, kelual: { bg: "#e6e8ff", fg: "#4338ca" }, squanorm: { bg: "#e6e8ff", fg: "#4338ca" },
+    "huile-prodigieuse": { bg: "#fef9e2", fg: "#a16207" }, "reve-de-miel": { bg: "#fef3e2", fg: "#b45309" },
+    sebiaclear: { bg: "#e6f4ea", fg: "#15803d" }, topialyse: { bg: "#e3f8f2", fg: "#0f766e" },
+    "premium-lierac": { bg: "#fce7fa", fg: "#a21caf" }, diopti: { bg: "#e0f7fa", fg: "#0e7490" },
+    "lait-creme-concentre": { bg: "#fef3e2", fg: "#b45309" },
+    "cerave-moisturizers": { bg: "#e3f8f2", fg: "#0f766e" }, "cerave-cleansers": { bg: "#e6f4ea", fg: "#15803d" }, "cerave-sa": { bg: "#e3f8f2", fg: "#0f766e" },
+    "sc-antioxidants": { bg: "#fef9e2", fg: "#a16207" }, "sc-hydrating": { bg: "#e0f7fa", fg: "#0e7490" }
+  };
+
+  const NAV_CATEGORIES = ["cleansing", "moisturizing", "sun-protection", "body-care", "hair-care"];
+
+  const brandLogos = {
+    bioderma: "bioderma.png",
+    avene: "avene.png",
+    "la-roche-posay": "la-roche-posay.png",
+    uriage: "uriage.svg",
+    vichy: "vichy.jpg",
+    ducray: "ducray.png",
+    nuxe: "nuxe.svg",
+    svr: "svr.png",
+    lierac: "lierac.svg",
+    embryolisse: "embryolisse.png",
+    cerave: "cerave.png"
+  };
+
+  function lineAccent(lineId) {
+    return lineAccents[lineId] || { bg: "#f7f2ea", fg: "#9c6b30" };
+  }
+
+  const MISSING_PHOTOS = new Set([
+    "tolerance-extreme-creme-riche.jpg",
+    "anthelios-dermo-kids.jpg",
+    "eau-thermale-lingettes.jpg",
+    "liftactiv-peptide-c.jpg",
+    "aqualia-thermal-riche.jpg",
+    "topialyse-cica-plus.jpg",
+    "diopti-ice-effect.jpg",
+    "lait-creme-mist.jpg"
+  ]);
+  const promoProducts = products.filter((p) => !MISSING_PHOTOS.has(p.image.split("/").pop()));
+  let promoIndex = 0;
+  let promoTimer = null;
+
+  const state = {
+    lang: localStorage.getItem("cosmoderm-lang") || "ru",
+    brand: "all",
+    category: "all",
+    line: "all",
+    query: ""
+  };
+
+  const el = {
+    langButtons: document.querySelectorAll("[data-lang-btn]"),
+    navQuick: document.getElementById("nav-quick"),
+    brandFilter: document.getElementById("brand-filter"),
+    categoryFilter: document.getElementById("category-filter"),
+    lineFilter: document.getElementById("line-filter"),
+    searchInput: document.getElementById("search-input"),
+    filtersPanel: document.getElementById("filters-panel"),
+    productGrid: document.getElementById("product-grid"),
+    modal: document.getElementById("product-modal"),
+    modalClose: document.getElementById("modal-close"),
+    innovationsList: document.getElementById("innovations-list"),
+    brandStripList: document.getElementById("brand-strip-list"),
+    promoViewport: document.getElementById("promo-viewport"),
+    promoSlide: document.getElementById("promo-slide"),
+    promoPrev: document.querySelector(".promo-arrow-prev"),
+    promoNext: document.querySelector(".promo-arrow-next")
+  };
+
+  function t(key) {
+    return (I18N[state.lang] && I18N[state.lang][key]) || I18N.ru[key] || key;
+  }
+
+  function tr(v) {
+    if (v == null) return "";
+    if (typeof v === "string") return v;
+    return v[state.lang] || v.ru || Object.values(v)[0] || "";
+  }
+
+  function trList(v) {
+    if (v == null) return [];
+    if (Array.isArray(v)) return v;
+    return v[state.lang] || v.ru || [];
+  }
+
+  function categoryLabel(id) {
+    const c = categories.find((c) => c.id === id);
+    return c ? tr(c.label) : id;
+  }
+  function skinLabel(id) {
+    const s = skinTypes.find((s) => s.id === id);
+    return s ? tr(s.label) : id;
+  }
+  function lineLabel(id) {
+    const l = lines.find((l) => l.id === id);
+    return l ? l.label : id;
+  }
+  function brandName(id) {
+    const b = brands.find((b) => b.id === id);
+    return b ? b.name : id;
+  }
+
+  function monogram(lineId) {
+    return lineLabel(lineId).slice(0, 2).toUpperCase();
+  }
+
+  function applyI18n() {
+    document.documentElement.lang = state.lang === "kz" ? "kk" : "ru";
+    document.querySelectorAll("[data-i18n]").forEach((node) => {
+      node.textContent = t(node.getAttribute("data-i18n"));
+    });
+    document.querySelectorAll("[data-i18n-placeholder]").forEach((node) => {
+      node.setAttribute("placeholder", t(node.getAttribute("data-i18n-placeholder")));
+    });
+    document.querySelectorAll("[data-i18n-aria]").forEach((node) => {
+      node.setAttribute("aria-label", t(node.getAttribute("data-i18n-aria")));
+    });
+    const titleEl = document.querySelector("title");
+    if (titleEl) titleEl.textContent = t("meta.title");
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute("content", t("meta.description"));
+    el.langButtons.forEach((btn) => {
+      btn.classList.toggle("is-active", btn.getAttribute("data-lang-btn") === state.lang);
+    });
+  }
+
+  function setLang(lang) {
+    if (lang === state.lang) return;
+    state.lang = lang;
+    localStorage.setItem("cosmoderm-lang", lang);
+    applyI18n();
+    renderPromoSlide();
+    render();
+  }
+
+  function filterProducts() {
+    const query = state.query.trim().toLowerCase();
+    return products.filter((p) => {
+      if (state.brand !== "all" && p.brand !== state.brand) return false;
+      if (state.category !== "all" && p.category !== state.category) return false;
+      if (state.line !== "all" && p.line !== state.line) return false;
+      if (query && !`${p.name} ${tr(p.description)}`.toLowerCase().includes(query)) return false;
+      return true;
+    });
+  }
+
+  function renderNavQuick() {
+    el.navQuick.innerHTML = "";
+    const allLink = document.createElement("a");
+    allLink.href = "#catalog";
+    allLink.textContent = t("nav.all");
+    allLink.className = state.category === "all" ? "is-active" : "";
+    allLink.addEventListener("click", () => {
+      state.category = "all";
+      state.brand = "all";
+      render();
+    });
+    el.navQuick.appendChild(allLink);
+
+    NAV_CATEGORIES.forEach((catId) => {
+      const a = document.createElement("a");
+      a.href = "#catalog";
+      a.textContent = categoryLabel(catId);
+      a.className = state.category === catId ? "is-active" : "";
+      a.addEventListener("click", () => {
+        state.category = catId;
+        state.brand = "all";
+        render();
+      });
+      el.navQuick.appendChild(a);
+    });
+
+    const brandsLink = document.createElement("a");
+    brandsLink.href = "#brand-filter-section";
+    brandsLink.textContent = t("nav.brands");
+    el.navQuick.appendChild(brandsLink);
+
+    const innovLink = document.createElement("a");
+    innovLink.href = "#innovations";
+    innovLink.textContent = t("nav.innovations");
+    el.navQuick.appendChild(innovLink);
+  }
+
+  function renderChipGroup(container, options, stateKey, labelFn, resetKeys = []) {
+    container.innerHTML = "";
+    const items = [{ id: "all", label: t("filters.all") }, ...options.map((o) => ({ id: o.id, label: labelFn(o) }))];
+    items.forEach((item) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "chip" + (state[stateKey] === item.id ? " is-active" : "");
+      btn.textContent = item.label;
+      btn.addEventListener("click", () => {
+        state[stateKey] = item.id;
+        resetKeys.forEach((key) => { state[key] = "all"; });
+        render();
+      });
+      container.appendChild(btn);
+    });
+  }
+
+  function renderTags(typeIds) {
+    return typeIds.map((id) => `<span class="tag">${skinLabel(id)}</span>`).join("");
+  }
+
+  function photoMarkup(product) {
+    const accent = lineAccent(product.line);
+    return `
+      <div class="product-photo">
+        <img src="${product.image}" alt="${product.name}" hidden />
+        <div class="photo-fallback" style="background:${accent.bg};color:${accent.fg}">
+          <span class="monogram" style="color:${accent.fg}">${monogram(product.line)}</span>
+          <span class="soon-badge" style="color:${accent.fg}">${t("photo.soon")}</span>
+        </div>
+      </div>
+    `;
+  }
+
+  function wirePhoto(container) {
+    const img = container.querySelector("img");
+    img.addEventListener("load", () => {
+      img.hidden = false;
+      const fallback = container.querySelector(".photo-fallback");
+      if (fallback) fallback.style.display = "none";
+    });
+    img.addEventListener("error", () => {
+      img.hidden = true;
+    });
+  }
+
+  function renderProductGrid(list) {
+    el.productGrid.innerHTML = "";
+    if (list.length === 0) {
+      const empty = document.createElement("p");
+      empty.className = "empty-state";
+      empty.textContent = t("catalog.empty");
+      el.productGrid.appendChild(empty);
+      return;
+    }
+    const groups = [];
+    const groupIndexByLine = new Map();
+    list.forEach((product) => {
+      if (!groupIndexByLine.has(product.line)) {
+        groupIndexByLine.set(product.line, groups.length);
+        groups.push({ line: product.line, items: [] });
+      }
+      groups[groupIndexByLine.get(product.line)].items.push(product);
+    });
+
+    groups.forEach((group) => {
+      const section = document.createElement("div");
+      section.className = "line-group";
+
+      const heading = document.createElement("div");
+      heading.className = "line-group-heading";
+      heading.innerHTML = `<h3>${lineLabel(group.line)}</h3><span class="line-count">${group.items.length}</span>`;
+      section.appendChild(heading);
+
+      const grid = document.createElement("div");
+      grid.className = "line-group-grid";
+      group.items.forEach((product) => {
+        const accent = lineAccent(product.line);
+        const card = document.createElement("article");
+        card.className = "product-card";
+        card.style.setProperty("--card-accent", accent.fg);
+        card.innerHTML = `
+          ${photoMarkup(product)}
+          <div class="product-body">
+            <div class="eyebrow-row">
+              <span class="brand-eyebrow">${brandName(product.brand)}</span>
+              <span class="line">· ${lineLabel(product.line)}</span>
+            </div>
+            <button type="button" class="product-name">${product.name}</button>
+            <div class="tag-row">${renderTags(product.skinTypes)}</div>
+          </div>
+        `;
+        wirePhoto(card);
+        card.querySelector(".product-name").addEventListener("click", () => openModal(product));
+        grid.appendChild(card);
+      });
+      section.appendChild(grid);
+      el.productGrid.appendChild(section);
+    });
+  }
+
+  function renderBrandStrip() {
+    if (!el.brandStripList) return;
+    el.brandStripList.innerHTML = "";
+    brands.forEach((brand) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "brand-circle" + (state.brand === brand.id ? " is-active" : "");
+      const logo = brandLogos[brand.id];
+      btn.innerHTML = `
+        <span class="circle-frame">
+          ${logo ? `<img src="/assets/brands/${logo}" alt="${brand.name}" loading="lazy" />` : `<span>${brand.name.slice(0, 2).toUpperCase()}</span>`}
+        </span>
+        <span>${brand.name}</span>
+      `;
+      btn.addEventListener("click", () => {
+        state.brand = brand.id;
+        state.category = "all";
+        render();
+        document.getElementById("catalog").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+      el.brandStripList.appendChild(btn);
+    });
+  }
+
+  function renderPromoSlide() {
+    if (!el.promoSlide || promoProducts.length === 0) return;
+    const product = promoProducts[promoIndex];
+    const accent = lineAccent(product.line);
+    el.promoSlide.style.background = `linear-gradient(120deg, ${accent.bg}, #ffffff 70%)`;
+    el.promoSlide.innerHTML = `
+      <div class="promo-info">
+        <span class="promo-brand" style="color:${accent.fg}">${brandName(product.brand)} · ${lineLabel(product.line)}</span>
+        <h2 class="promo-name">${product.name}</h2>
+        <p class="promo-desc">${tr(product.description)}</p>
+        ${product.efficacy ? `<p class="promo-efficacy">${tr(product.efficacy)}</p>` : ""}
+        <div class="tag-row">${renderTags(product.skinTypes)}</div>
+        <button type="button" class="btn btn-primary promo-cta">${t("product.detailsBtn")}</button>
+      </div>
+      <div class="promo-photo">
+        <img src="${product.image}" alt="${product.name}" />
+      </div>
+    `;
+    el.promoSlide.classList.remove("is-visible");
+    void el.promoSlide.offsetWidth;
+    el.promoSlide.classList.add("is-visible");
+    el.promoSlide.querySelector(".promo-cta").addEventListener("click", () => openModal(product));
+  }
+
+  function goToPromoSlide(index) {
+    if (promoProducts.length === 0) return;
+    promoIndex = (index + promoProducts.length) % promoProducts.length;
+    renderPromoSlide();
+  }
+
+  function startPromoAutoplay() {
+    stopPromoAutoplay();
+    promoTimer = setInterval(() => goToPromoSlide(promoIndex + 1), 4500);
+  }
+
+  function stopPromoAutoplay() {
+    if (promoTimer) {
+      clearInterval(promoTimer);
+      promoTimer = null;
+    }
+  }
+
+  function openModal(product) {
+    const steps = trList(product.usageSteps).map((step) => `<li>${step}</li>`).join("");
+    document.getElementById("modal-content").innerHTML = `
+      <div class="eyebrow-row">
+        <span class="brand-eyebrow">${brandName(product.brand)}</span>
+        <span class="line">· ${lineLabel(product.line)}</span>
+      </div>
+      <h2>${product.name}</h2>
+      ${photoMarkupModal(product)}
+      <div class="info-block">
+        <h4>${t("modal.description")}</h4>
+        <p>${tr(product.description)}</p>
+      </div>
+      ${
+        product.skinTypeNote
+          ? `<div class="note-block"><h4>${t("modal.suitableFor")}</h4><p>${tr(product.skinTypeNote)}</p></div>`
+          : ""
+      }
+      <div class="info-block">
+        <h4>${t("modal.activeIngredients")}</h4>
+        <p>${tr(product.activeIngredients)}</p>
+      </div>
+      <div class="info-block">
+        <h4>${t("modal.usage")}</h4>
+        <ol>${steps}</ol>
+      </div>
+      <div class="info-block">
+        <h4>${t("modal.efficacy")}</h4>
+        <p>${tr(product.efficacy)}</p>
+      </div>
+      <div class="tag-row">${renderTags(product.skinTypes)}</div>
+    `;
+    const photoContainer = document.querySelector("#modal-content .modal-photo-wrap");
+    if (photoContainer) wirePhoto(photoContainer);
+    el.modal.hidden = false;
+  }
+
+  function photoMarkupModal(product) {
+    const accent = lineAccents[product.line] || { bg: "#f7f2ea", fg: "#9c6b30" };
+    return `
+      <div class="modal-photo modal-photo-wrap">
+        <img src="${product.image}" alt="${product.name}" hidden />
+        <div class="photo-fallback" style="background:${accent.bg};color:${accent.fg}">
+          <span class="monogram" style="color:${accent.fg}">${monogram(product.line)}</span>
+          <span class="soon-badge" style="color:${accent.fg}">${t("photo.soon")}</span>
+        </div>
+      </div>
+    `;
+  }
+
+  function closeModal() {
+    el.modal.hidden = true;
+  }
+
+  function renderInnovations() {
+    el.innovationsList.innerHTML = innovations
+      .map(
+        (item) => `
+      <div class="innovation-card">
+        <h3>${tr(item.name)}</h3>
+        ${item.fullName ? `<p class="fullname">${item.fullName}</p>` : ""}
+        <p class="desc">${tr(item.description)}</p>
+      </div>
+    `
+      )
+      .join("");
+  }
+
+  function render() {
+    renderNavQuick();
+    renderBrandStrip();
+    renderChipGroup(el.brandFilter, brands, "brand", (b) => b.name);
+    renderChipGroup(el.categoryFilter, categories, "category", (c) => tr(c.label), ["brand"]);
+    renderChipGroup(el.lineFilter, lines, "line", (l) => l.label);
+    renderProductGrid(filterProducts());
+  }
+
+  el.searchInput.addEventListener("input", (e) => {
+    state.query = e.target.value;
+    render();
+  });
+  el.modalClose.addEventListener("click", closeModal);
+  el.modal.addEventListener("click", (e) => {
+    if (e.target === el.modal) closeModal();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !el.modal.hidden) closeModal();
+  });
+  el.langButtons.forEach((btn) => {
+    btn.addEventListener("click", () => setLang(btn.getAttribute("data-lang-btn")));
+  });
+
+  if (el.promoPrev) {
+    el.promoPrev.addEventListener("click", () => {
+      goToPromoSlide(promoIndex - 1);
+      startPromoAutoplay();
+    });
+  }
+  if (el.promoNext) {
+    el.promoNext.addEventListener("click", () => {
+      goToPromoSlide(promoIndex + 1);
+      startPromoAutoplay();
+    });
+  }
+  if (el.promoViewport) {
+    el.promoViewport.addEventListener("mouseenter", stopPromoAutoplay);
+    el.promoViewport.addEventListener("mouseleave", startPromoAutoplay);
+  }
+
+  applyI18n();
+  renderInnovations();
+  renderPromoSlide();
+  startPromoAutoplay();
+  render();
+})();
