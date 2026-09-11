@@ -287,33 +287,37 @@ a {
 
 .main-nav {
   display: flex;
-  gap: 0.4rem;
+  gap: 0.5rem;
   overflow-x: auto;
   scrollbar-width: thin;
-  padding-block: 0.6rem;
+  padding-block: 0.7rem;
   font-size: 0.875rem;
-  color: var(--text-muted);
+  color: var(--text-strong);
 }
 
 .main-nav a {
   text-decoration: none;
   white-space: nowrap;
   flex-shrink: 0;
-  padding: 0.45rem 0.95rem;
+  padding: 0.5rem 1rem;
   border-radius: 999px;
-  font-weight: 500;
-  transition: color 0.15s ease, background 0.15s ease;
+  border: 1.5px solid var(--border);
+  font-weight: 700;
+  color: var(--text-strong);
+  transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
 }
 
 .main-nav a:hover {
   color: var(--sky-dark);
   background: var(--sky-50);
+  border-color: var(--sky-100);
 }
 
 .main-nav a.is-active {
   background: var(--sky);
+  border-color: var(--sky);
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* ---------- Hero banner ---------- */
