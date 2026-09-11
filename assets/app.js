@@ -271,7 +271,9 @@
   }
 
   function priceMarkup(product) {
-    return product.price ? `<div class="product-price">${formatPrice(product.price)}</div>` : "";
+    if (!product.price) return "";
+    const vol = product.volume ? `<span class="product-volume">${product.volume}</span>` : "";
+    return `<div class="product-price">${formatPrice(product.price)}${vol}</div>`;
   }
 
   function photoMarkup(product) {
@@ -348,7 +350,7 @@
           <div class="product-body">
             <div class="eyebrow-row">
               <span class="brand-eyebrow">${brandName(product.brand)}</span>
-              <span class="line">· ${lineLabel(product.line)}</span>
+              <span class="line" style="color:${accent.fg}">· ${lineLabel(product.line)}</span>
             </div>
             <button type="button" class="product-name">${product.name}</button>
             ${priceMarkup(product)}
@@ -402,6 +404,7 @@
       <div class="promo-info">
         <span class="promo-brand" style="color:${accent.fg}">${brandName(product.brand)} · ${lineLabel(product.line)}</span>
         <h2 class="promo-name">${product.name}</h2>
+        ${priceMarkup(product)}
         <p class="promo-desc">${tr(product.description)}</p>
         ${product.efficacy ? `<p class="promo-efficacy">${tr(product.efficacy)}</p>` : ""}
         <div class="tag-row">${renderTags(product.skinTypes)}</div>
@@ -437,10 +440,11 @@
 
   function openModal(product) {
     const steps = trList(product.usageSteps).map((step) => `<li>${step}</li>`).join("");
+    const modalAccent = lineAccent(product.line);
     document.getElementById("modal-content").innerHTML = `
       <div class="eyebrow-row">
         <span class="brand-eyebrow">${brandName(product.brand)}</span>
-        <span class="line">· ${lineLabel(product.line)}</span>
+        <span class="line" style="color:${modalAccent.fg}">· ${lineLabel(product.line)}</span>
       </div>
       <h2>${product.name}</h2>
       ${priceMarkup(product)}

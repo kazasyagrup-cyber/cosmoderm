@@ -149,11 +149,52 @@ a {
 
 .logo-text p {
   margin: 0;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-strong);
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--sky);
   line-height: 1.1;
   letter-spacing: -0.01em;
+}
+
+.logo-text p sup {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-left: 0.05em;
+}
+
+.header-marketplaces {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.marketplace-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+}
+
+.marketplace-badge:hover {
+  opacity: 0.85;
+}
+
+.marketplace-kaspi {
+  background: #ed1c24;
+}
+
+.marketplace-wb {
+  background: #cb11ab;
+}
+
+.marketplace-ozon {
+  background: #005bff;
 }
 
 .lang-switch {
@@ -601,13 +642,14 @@ a {
 }
 
 .brand-group-heading {
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  font-weight: 800;
-  letter-spacing: -0.01em;
+  font-size: clamp(1.25rem, 2.6vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+  text-align: center;
   color: var(--text-strong);
-  margin: 2.5rem 0 1.25rem;
-  padding-top: 1.5rem;
+  margin: 2rem 0 0.5rem;
+  padding-top: 1.25rem;
   border-top: 3px solid var(--sky);
 }
 
@@ -781,9 +823,18 @@ a {
 }
 
 .product-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--sky-dark);
+}
+
+.product-volume {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
 }
 
 .tag-row {
