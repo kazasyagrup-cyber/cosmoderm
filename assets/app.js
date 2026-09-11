@@ -65,18 +65,13 @@
     lang: localStorage.getItem("cosmoderm-lang") || "ru",
     brand: "all",
     category: "all",
-    line: "all",
     query: ""
   };
 
   const el = {
     langButtons: document.querySelectorAll("[data-lang-btn]"),
     navQuick: document.getElementById("nav-quick"),
-    brandFilter: document.getElementById("brand-filter"),
-    categoryFilter: document.getElementById("category-filter"),
-    lineFilter: document.getElementById("line-filter"),
     searchInput: document.getElementById("search-input"),
-    filtersPanel: document.getElementById("filters-panel"),
     productGrid: document.getElementById("product-grid"),
     modal: document.getElementById("product-modal"),
     modalClose: document.getElementById("modal-close"),
@@ -159,7 +154,6 @@
     return products.filter((p) => {
       if (state.brand !== "all" && p.brand !== state.brand) return false;
       if (state.category !== "all" && p.category !== state.category) return false;
-      if (state.line !== "all" && p.line !== state.line) return false;
       if (query && !`${p.name} ${tr(p.description)}`.toLowerCase().includes(query)) return false;
       return true;
     });
@@ -192,7 +186,7 @@
     });
 
     const brandsLink = document.createElement("a");
-    brandsLink.href = "#brand-filter-section";
+    brandsLink.href = "#brand-strip";
     brandsLink.textContent = t("nav.brands");
     el.navQuick.appendChild(brandsLink);
 
@@ -200,23 +194,6 @@
     innovLink.href = "#innovations";
     innovLink.textContent = t("nav.innovations");
     el.navQuick.appendChild(innovLink);
-  }
-
-  function renderChipGroup(container, options, stateKey, labelFn, resetKeys = []) {
-    container.innerHTML = "";
-    const items = [{ id: "all", label: t("filters.all") }, ...options.map((o) => ({ id: o.id, label: labelFn(o) }))];
-    items.forEach((item) => {
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "chip" + (state[stateKey] === item.id ? " is-active" : "");
-      btn.textContent = item.label;
-      btn.addEventListener("click", () => {
-        state[stateKey] = item.id;
-        resetKeys.forEach((key) => { state[key] = "all"; });
-        render();
-      });
-      container.appendChild(btn);
-    });
   }
 
   function renderTags(typeIds) {
@@ -440,9 +417,6 @@
   function render() {
     renderNavQuick();
     renderBrandStrip();
-    renderChipGroup(el.brandFilter, brands, "brand", (b) => b.name);
-    renderChipGroup(el.categoryFilter, categories, "category", (c) => tr(c.label), ["brand"]);
-    renderChipGroup(el.lineFilter, lines, "line", (l) => l.label);
     renderProductGrid(filterProducts());
   }
 

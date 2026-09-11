@@ -52,7 +52,7 @@
       </div>
     </div>
 
-    <section class="brand-strip">
+    <section class="brand-strip" id="brand-strip">
       <div class="wrap">
         <div id="brand-strip-list" class="brand-strip-list"></div>
       </div>
@@ -76,26 +76,7 @@
 
     <main class="wrap">
       <section id="catalog" class="catalog-section">
-        <div class="catalog-layout">
-          <aside class="filters-panel" id="filters-panel">
-            <div class="filter-block" id="brand-filter-section" data-scroll>
-              <p data-i18n="filters.brands">Бренды</p>
-              <div id="brand-filter" class="chip-group"></div>
-            </div>
-            <div class="filter-block">
-              <p data-i18n="filters.categories">Категории</p>
-              <div id="category-filter" class="chip-group"></div>
-            </div>
-            <div class="filter-block" id="line-filter-section" data-scroll>
-              <p data-i18n="filters.lines">Линии средств</p>
-              <div id="line-filter" class="chip-group"></div>
-            </div>
-          </aside>
-
-          <div>
-            <section id="product-grid" class="product-grid"></section>
-          </div>
-        </div>
+        <section id="product-grid" class="product-grid"></section>
       </section>
 
       <section id="innovations" class="innovations-section">
@@ -122,7 +103,7 @@
           <h4 data-i18n="footer.catalogHeading">Каталог</h4>
           <ul>
             <li><a href="#catalog" data-i18n="footer.linkProducts">Все продукты</a></li>
-            <li><a href="#line-filter-section" data-i18n="footer.linkLines">Линии средств</a></li>
+            <li><a href="#brand-strip" data-i18n="footer.brandsHeading">Бренды</a></li>
           </ul>
         </div>
         <div class="footer-col">
