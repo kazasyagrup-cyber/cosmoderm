@@ -355,7 +355,6 @@ a {
   position: relative;
   overflow: hidden;
   background: var(--surface);
-  border-bottom: 3px solid var(--sky);
 }
 
 .announce-bar {
