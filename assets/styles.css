@@ -287,12 +287,17 @@ a {
 
 .main-nav {
   display: flex;
+  flex-wrap: nowrap;
   gap: 0.5rem;
   overflow-x: auto;
   scrollbar-width: thin;
   padding-block: 0.7rem;
   font-size: 0.875rem;
   color: var(--text-strong);
+}
+
+.main-nav a {
+  flex-shrink: 0;
 }
 
 .main-nav a {
@@ -386,10 +391,21 @@ a {
 }
 
 .promo-brand {
-  font-size: 0.78rem;
-  font-weight: 700;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.95rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
+}
+
+.promo-brand-name {
+  font-weight: 900;
+  color: var(--emerald-dark);
+}
+
+.promo-line {
+  font-weight: 800;
 }
 
 .promo-name {
@@ -412,9 +428,11 @@ a {
 
 .promo-efficacy {
   margin: 0;
-  font-size: 0.82rem;
-  line-height: 1.4;
-  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.35;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;

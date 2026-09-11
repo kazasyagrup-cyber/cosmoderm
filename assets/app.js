@@ -255,11 +255,6 @@
     brandsLink.href = "#brand-strip";
     brandsLink.textContent = t("nav.brands");
     el.navQuick.appendChild(brandsLink);
-
-    const innovLink = document.createElement("a");
-    innovLink.href = "#innovations";
-    innovLink.textContent = t("nav.innovations");
-    el.navQuick.appendChild(innovLink);
   }
 
   function renderTags(typeIds) {
@@ -402,11 +397,14 @@
     el.promoSlide.style.background = `linear-gradient(120deg, ${accent.bg}, #ffffff 70%)`;
     el.promoSlide.innerHTML = `
       <div class="promo-info">
-        <span class="promo-brand" style="color:${accent.fg}">${brandName(product.brand)} · ${lineLabel(product.line)}</span>
+        <span class="promo-brand">
+          <span class="promo-brand-name">${brandName(product.brand)}</span>
+          <span class="promo-line" style="color:${accent.fg}">${lineLabel(product.line)}</span>
+        </span>
         <h2 class="promo-name">${product.name}</h2>
         ${priceMarkup(product)}
         <p class="promo-desc">${tr(product.description)}</p>
-        ${product.efficacy ? `<p class="promo-efficacy">${tr(product.efficacy)}</p>` : ""}
+        ${product.efficacy ? `<p class="promo-efficacy" style="color:${accent.fg}">${tr(product.efficacy)}</p>` : ""}
         <div class="tag-row">${renderTags(product.skinTypes)}</div>
         <button type="button" class="btn btn-primary promo-cta">${t("product.detailsBtn")}</button>
       </div>
