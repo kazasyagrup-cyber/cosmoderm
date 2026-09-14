@@ -127,7 +127,11 @@
 
   function applyPromoCode(rawValue) {
     const normalized = normalizePromoCode(rawValue);
-    if (!normalized) return "empty";
+    if (!normalized) {
+      // Kutu bosaltilip "Uygula"ya basilmasi = aktif indirimi bilerek kaldirma.
+      appliedPromoCode = "";
+      return "empty";
+    }
     if (normalized !== normalizePromoCode(ACTIVE_PROMO.code)) return "invalid";
     appliedPromoCode = normalized;
     return "applied";
@@ -846,7 +850,7 @@
     el.promoApplyBtn.addEventListener("click", () => {
       const result = applyPromoCode(el.promoInput ? el.promoInput.value : "");
       updatePromoMessage(result === "applied" ? "applied" : result === "invalid" ? "invalid" : null);
-      if (result === "applied") {
+      if (result === "applied" || result === "empty") {
         renderCartDrawer();
         updateCartBadge();
       }
