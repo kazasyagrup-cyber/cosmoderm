@@ -24,6 +24,19 @@ function loadCatalog() {
   return sandbox.window.CATALOG_DATA;
 }
 
+// app.js'teki "const ACTIVE_PROMO = {...};" blogunu (tek dogru kaynak - kullanici
+// bunu orada guncelliyor) guvenli sekilde disari cikarir, feed'i onunla ayni tutar.
+// app.js'in geri kalani document/window kullandigi icin tumunu eval etmiyoruz.
+function loadActivePromo() {
+  const appJs = fs.readFileSync(path.join(ROOT, "assets/app.js"), "utf8");
+  const m = appJs.match(/const ACTIVE_PROMO = (\{[\s\S]*?\});/);
+  if (!m) {
+    console.error("UYARI: app.js'te ACTIVE_PROMO bulunamadi, promosyonsuz devam ediliyor.");
+    return null;
+  }
+  return new Function(`return ${m[1]};`)();
+}
+
 function truncate(str, max) {
   if (!str) return "";
   const clean = str.replace(/\s+/g, " ").trim();
@@ -32,13 +45,18 @@ function truncate(str, max) {
 
 function main() {
   const data = loadCatalog();
+  const promo = loadActivePromo();
   const brandById = Object.fromEntries(data.brands.map((b) => [b.id, b]));
   const catById = Object.fromEntries(data.categories.map((c) => [c.id, c]));
+  const promoBrandName = promo && brandById[promo.brand] ? brandById[promo.brand].name : promo && promo.brand;
 
   const products = data.products.map((p) => {
     const brand = brandById[p.brand];
     const imagePath = path.join(ROOT, p.image || "");
     const hasImage = !!p.image && fs.existsSync(imagePath);
+    const basePrice = typeof p.price === "number" ? p.price : null;
+    const promoApplies = !!(promo && basePrice != null && p.brand === promo.brand);
+    const promoPrice = promoApplies ? Math.round((basePrice * (100 - promo.discountPercent)) / 100) : null;
     return {
       id: p.id,
       url: `${SITE_URL}/#${p.id}`,
@@ -46,7 +64,14 @@ function main() {
       line: p.line,
       category: catById[p.category] ? catById[p.category].label : { ru: p.category, kz: p.category },
       volume: p.volume || null,
-      price_kzt: typeof p.price === "number" ? p.price : null,
+      price_kzt: basePrice,
+      // Promosyon kodu girilmeden goze carpmayan, ama HERKESE ACIK ve sitede
+      // reklami yapilan bir indirim oldugu icin "en dusuk gercek fiyat" olarak
+      // ayri alanlarda aciqca isaretleniyor - AI ajanlari fiyat kiyaslarken
+      // bunu gormeli, gizli/yanilti degil.
+      promo_code: promoApplies ? promo.code : null,
+      promo_discount_percent: promoApplies ? promo.discountPercent : null,
+      price_with_promo_kzt: promoPrice,
       skin_types: p.skinTypes || [],
       name: p.name,
       description: p.description || null,
@@ -70,6 +95,18 @@ function main() {
       how_to_order: "WhatsApp: https://wa.me/77087685329 (добавить товары в корзину на сайте и оформить заказ)",
       brands: data.brands.filter((b) => b.status === "active").map((b) => b.name),
     },
+    // Su an aktif olan, herkese acik (giris/uyelik gerektirmeyen) promosyon
+    // kodu/kodlari - zaman zaman degisir (bkz. assets/app.js -> ACTIVE_PROMO).
+    active_promotions: promo
+      ? [
+          {
+            code: promo.code,
+            discount_percent: promo.discountPercent,
+            applies_to_brand: promoBrandName,
+            how_to_use: `Введите промокод "${promo.code}" в корзине на сайте, скидка ${promo.discountPercent}% на товары бренда ${promoBrandName} применится автоматически. Код общедоступен, без регистрации/условий.`,
+          },
+        ]
+      : [],
     products,
   };
 
@@ -98,6 +135,13 @@ function main() {
   };
 
   const itemListElements = products.map((p, idx) => {
+    const hasPromo = !!p.price_with_promo_kzt;
+    let description = truncate(p.description && p.description.ru, 300);
+    if (hasPromo) {
+      // Baz fiyat + kod acikca metinde de geciyor ki JS calistirmayan/sadece
+      // metni okuyan bir ajan da indirimi ve kosulunu anlayabilsin.
+      description += ` Цена по промокоду ${p.promo_code}: ${p.price_with_promo_kzt} ₸ (базовая цена ${p.price_kzt} ₸, скидка ${p.promo_discount_percent}%, код общедоступен).`;
+    }
     const node = {
       "@type": "Product",
       "@id": `${SITE_URL}/#${p.id}`,
@@ -106,15 +150,18 @@ function main() {
       brand: { "@type": "Brand", name: p.brand },
       category: p.category && p.category.ru,
       url: p.url,
-      description: truncate(p.description && p.description.ru, 300),
+      description,
     };
     if (p.image) node.image = p.image;
     if (p.price_kzt) {
+      // Aktif, herkese acik promosyon varsa gercek/en dusuk elde edilebilir
+      // fiyat (Offer.price) budur - kiyaslama yapan ajanlar bunu gormeli.
+      // Taban fiyat + kod, yukaridaki description'da ayrica aciklaniyor.
       node.offers = {
         "@type": "Offer",
         url: p.url,
         priceCurrency: "KZT",
-        price: p.price_kzt,
+        price: hasPromo ? p.price_with_promo_kzt : p.price_kzt,
         availability: "https://schema.org/InStock",
         itemCondition: "https://schema.org/NewCondition",
         seller: { "@id": `${SITE_URL}/#organization` },

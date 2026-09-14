@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T07:32:26.372Z",
+  "generated_at": "2026-09-14T08:11:23.033Z",
   "store": {
     "name": "CosmoDerm",
     "url": "https://www.cosmoderm.kz",
@@ -26,6 +26,14 @@
       "Mustela"
     ]
   },
+  "active_promotions": [
+    {
+      "code": "NAOS",
+      "discount_percent": 20,
+      "applies_to_brand": "Bioderma",
+      "how_to_use": "Введите промокод \"NAOS\" в корзине на сайте, скидка 20% на товары бренда Bioderma применится автоматически. Код общедоступен, без регистрации/условий."
+    }
+  ],
   "products": [
     {
       "id": "bioderma-sebium-gel-moussant",
@@ -38,6 +46,9 @@
       },
       "volume": "200 мл",
       "price_kzt": 9900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 7920,
       "skin_types": [
         "oily-problem"
       ],
@@ -85,6 +96,9 @@
       },
       "volume": "100 мл",
       "price_kzt": 4500,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 3600,
       "skin_types": [
         "oily-problem"
       ],
@@ -130,6 +144,9 @@
       },
       "volume": "200 мл",
       "price_kzt": 11900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 9520,
       "skin_types": [
         "oily-problem"
       ],
@@ -177,6 +194,9 @@
       },
       "volume": "30 мл",
       "price_kzt": 13900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 11120,
       "skin_types": [
         "oily-problem"
       ],
@@ -222,6 +242,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 10400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 8320,
       "skin_types": [
         "oily-problem",
         "dehydrated"
@@ -268,6 +291,9 @@
       },
       "volume": "30 мл",
       "price_kzt": 10900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 8720,
       "skin_types": [
         "oily-problem"
       ],
@@ -313,6 +339,9 @@
       },
       "volume": "30 мл",
       "price_kzt": 10900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 8720,
       "skin_types": [
         "oily-problem"
       ],
@@ -358,6 +387,9 @@
       },
       "volume": "850 мл",
       "price_kzt": 15000,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 12000,
       "skin_types": [
         "sensitive",
         "dehydrated",
@@ -406,6 +438,9 @@
       },
       "volume": "200 мл",
       "price_kzt": 11900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 9520,
       "skin_types": [
         "sensitive"
       ],
@@ -453,6 +488,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 9400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 7520,
       "skin_types": [
         "sensitive"
       ],
@@ -498,6 +536,9 @@
       },
       "volume": "30 мл",
       "price_kzt": 17900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 14320,
       "skin_types": [
         "sensitive"
       ],
@@ -543,6 +584,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 11400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 9120,
       "skin_types": [
         "sensitive"
       ],
@@ -588,6 +632,9 @@
       },
       "volume": "15 мл",
       "price_kzt": 8400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 6720,
       "skin_types": [
         "sensitive"
       ],
@@ -633,6 +680,9 @@
       },
       "volume": "100 мл",
       "price_kzt": 4500,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 3600,
       "skin_types": [
         "dehydrated",
         "sensitive"
@@ -679,6 +729,9 @@
       },
       "volume": "30 мл",
       "price_kzt": 17900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 14320,
       "skin_types": [
         "dehydrated",
         "sensitive",
@@ -726,6 +779,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 15400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 12320,
       "skin_types": [
         "dehydrated"
       ],
@@ -771,6 +827,9 @@
       },
       "volume": "30 мл",
       "price_kzt": 17900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 14320,
       "skin_types": [
         "dehydrated"
       ],
@@ -816,6 +875,9 @@
       },
       "volume": "100 мл",
       "price_kzt": 5900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 4720,
       "skin_types": [
         "dry-atopic",
         "sensitive"
@@ -862,6 +924,9 @@
       },
       "volume": "500 мл",
       "price_kzt": 21900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 17520,
       "skin_types": [
         "dry-atopic"
       ],
@@ -907,6 +972,9 @@
       },
       "volume": "500 мл",
       "price_kzt": 12900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 10320,
       "skin_types": [
         "dry-atopic"
       ],
@@ -952,6 +1020,9 @@
       },
       "volume": "500 мл",
       "price_kzt": 11400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 9120,
       "skin_types": [
         "dry-atopic",
         "sensitive"
@@ -1000,6 +1071,9 @@
       },
       "volume": "4 г",
       "price_kzt": 5400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 4320,
       "skin_types": [
         "dry-atopic",
         "sensitive"
@@ -1046,6 +1120,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 12900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 10320,
       "skin_types": [
         "oily-problem",
         "sensitive"
@@ -1092,6 +1169,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 11900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 9520,
       "skin_types": [
         "oily-problem",
         "pigmented"
@@ -1138,6 +1218,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 13900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 11120,
       "skin_types": [
         "sensitive"
       ],
@@ -1183,6 +1266,9 @@
       },
       "volume": "100 мл",
       "price_kzt": 14900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 11920,
       "skin_types": [
         "sensitive"
       ],
@@ -1228,6 +1314,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 8900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 7120,
       "skin_types": [
         "dry-atopic",
         "sensitive"
@@ -1274,6 +1363,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 8900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 7120,
       "skin_types": [
         "sensitive"
       ],
@@ -1319,6 +1411,9 @@
       },
       "volume": "15 мл",
       "price_kzt": 16000,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 12800,
       "skin_types": [
         "pigmented"
       ],
@@ -1364,6 +1459,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 18000,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 14400,
       "skin_types": [
         "pigmented",
         "sensitive"
@@ -1410,6 +1508,9 @@
       },
       "volume": "200 мл",
       "price_kzt": 11900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 9520,
       "skin_types": [
         "pigmented"
       ],
@@ -1457,6 +1558,9 @@
       },
       "volume": "125 мл",
       "price_kzt": 8900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 7120,
       "skin_types": [],
       "name": "Nodé DS+",
       "description": {
@@ -1502,6 +1606,9 @@
       },
       "volume": "400 мл",
       "price_kzt": 11900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 9520,
       "skin_types": [],
       "name": "Nodé Fluid",
       "description": {
@@ -1545,6 +1652,9 @@
       },
       "volume": "400 мл",
       "price_kzt": 11900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 9520,
       "skin_types": [],
       "name": "Nodé Non-Poo",
       "description": {
@@ -1588,6 +1698,9 @@
       },
       "volume": "150 мл",
       "price_kzt": 18600,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 14880,
       "skin_types": [
         "oily-problem"
       ],
@@ -1633,6 +1746,9 @@
       },
       "volume": "30 мл",
       "price_kzt": 13900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 11120,
       "skin_types": [
         "oily-problem"
       ],
@@ -1678,6 +1794,9 @@
       },
       "volume": "30 мл",
       "price_kzt": 13900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 11120,
       "skin_types": [
         "oily-problem"
       ],
@@ -1723,6 +1842,9 @@
       },
       "volume": "30 мл",
       "price_kzt": 10900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 8720,
       "skin_types": [
         "oily-problem",
         "sensitive"
@@ -1769,6 +1891,9 @@
       },
       "volume": "30 мл",
       "price_kzt": 17900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 14320,
       "skin_types": [
         "oily-problem"
       ],
@@ -1814,6 +1939,9 @@
       },
       "volume": "100 мл",
       "price_kzt": 8400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 6720,
       "skin_types": [
         "oily-problem"
       ],
@@ -1859,6 +1987,9 @@
       },
       "volume": "200 мл",
       "price_kzt": 11900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 9520,
       "skin_types": [
         "oily-problem",
         "sensitive"
@@ -1907,6 +2038,9 @@
       },
       "volume": "200 мл",
       "price_kzt": 16900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 13520,
       "skin_types": [
         "oily-problem"
       ],
@@ -1952,6 +2086,9 @@
       },
       "volume": "200 мл",
       "price_kzt": 16900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 13520,
       "skin_types": [
         "oily-problem"
       ],
@@ -1997,6 +2134,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 14700,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 11760,
       "skin_types": [
         "sensitive"
       ],
@@ -2042,6 +2182,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 14700,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 11760,
       "skin_types": [
         "sensitive"
       ],
@@ -2087,6 +2230,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 11400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 9120,
       "skin_types": [
         "sensitive"
       ],
@@ -2132,6 +2278,9 @@
       },
       "volume": "250 мл",
       "price_kzt": 10400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 8320,
       "skin_types": [
         "sensitive"
       ],
@@ -2179,6 +2328,9 @@
       },
       "volume": "70 мл",
       "price_kzt": 10900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 8720,
       "skin_types": [
         "sensitive"
       ],
@@ -2224,6 +2376,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 9400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 7520,
       "skin_types": [
         "sensitive"
       ],
@@ -2269,6 +2424,9 @@
       },
       "volume": "150 мл",
       "price_kzt": 11500,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 9200,
       "skin_types": [
         "sensitive"
       ],
@@ -2314,6 +2472,9 @@
       },
       "volume": "30 мл",
       "price_kzt": 17900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 14320,
       "skin_types": [
         "sensitive"
       ],
@@ -2359,6 +2520,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 8900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 7120,
       "skin_types": [
         "sensitive",
         "oily-problem"
@@ -2405,6 +2569,9 @@
       },
       "volume": "200 мл",
       "price_kzt": 11900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 9520,
       "skin_types": [
         "sensitive",
         "oily-problem"
@@ -2453,6 +2620,9 @@
       },
       "volume": "15 мл",
       "price_kzt": 8400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 6720,
       "skin_types": [
         "sensitive"
       ],
@@ -2498,6 +2668,9 @@
       },
       "volume": "125 мл",
       "price_kzt": 8700,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 6960,
       "skin_types": [
         "sensitive"
       ],
@@ -2543,6 +2716,9 @@
       },
       "volume": "400 мл",
       "price_kzt": 14400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 11520,
       "skin_types": [
         "dehydrated"
       ],
@@ -2590,6 +2766,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 15400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 12320,
       "skin_types": [
         "dehydrated"
       ],
@@ -2635,6 +2814,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 15400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 12320,
       "skin_types": [
         "dehydrated",
         "dry-atopic"
@@ -2681,6 +2863,9 @@
       },
       "volume": "1 л",
       "price_kzt": 18400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 14720,
       "skin_types": [
         "dry-atopic",
         "sensitive"
@@ -2729,6 +2914,9 @@
       },
       "volume": "500 мл",
       "price_kzt": 16400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 13120,
       "skin_types": [
         "dry-atopic"
       ],
@@ -2774,6 +2962,9 @@
       },
       "volume": "100 мл",
       "price_kzt": 12400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 9920,
       "skin_types": [
         "dry-atopic"
       ],
@@ -2819,6 +3010,9 @@
       },
       "volume": "200 мл",
       "price_kzt": 15400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 12320,
       "skin_types": [
         "dry-atopic"
       ],
@@ -2864,6 +3058,9 @@
       },
       "volume": "15 мл",
       "price_kzt": 6400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 5120,
       "skin_types": [
         "dry-atopic"
       ],
@@ -2909,6 +3106,9 @@
       },
       "volume": "50 мл",
       "price_kzt": 4400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 3520,
       "skin_types": [
         "dry-atopic"
       ],
@@ -2954,6 +3154,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 6400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 5120,
       "skin_types": [
         "dry-atopic"
       ],
@@ -2999,6 +3202,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 10200,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 8160,
       "skin_types": [
         "oily-problem"
       ],
@@ -3044,6 +3250,9 @@
       },
       "volume": "200 мл",
       "price_kzt": 12900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 10320,
       "skin_types": [
         "dry-atopic"
       ],
@@ -3089,6 +3298,9 @@
       },
       "volume": "100 мл",
       "price_kzt": 15900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 12720,
       "skin_types": [
         "sensitive"
       ],
@@ -3134,6 +3346,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 13400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 10720,
       "skin_types": [
         "sensitive",
         "dry-atopic"
@@ -3180,6 +3395,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 13900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 11120,
       "skin_types": [
         "sensitive"
       ],
@@ -3225,6 +3443,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 13900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 11120,
       "skin_types": [
         "pigmented"
       ],
@@ -3270,6 +3491,9 @@
       },
       "volume": "150 мл",
       "price_kzt": 17400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 13920,
       "skin_types": [
         "pigmented"
       ],
@@ -3315,6 +3539,9 @@
       },
       "volume": "100 мл",
       "price_kzt": 14900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 11920,
       "skin_types": [
         "sensitive"
       ],
@@ -3360,6 +3587,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 13900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 11120,
       "skin_types": [
         "sensitive"
       ],
@@ -3405,6 +3635,9 @@
       },
       "volume": "200 мл",
       "price_kzt": 8400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 6720,
       "skin_types": [
         "sensitive"
       ],
@@ -3450,6 +3683,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 13900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 11120,
       "skin_types": [
         "sensitive"
       ],
@@ -3495,6 +3731,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 10900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 8720,
       "skin_types": [
         "pigmented"
       ],
@@ -3540,6 +3779,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 13400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 10720,
       "skin_types": [
         "oily-problem"
       ],
@@ -3585,6 +3827,9 @@
       },
       "volume": "100 мл",
       "price_kzt": 14900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 11920,
       "skin_types": [
         "sensitive"
       ],
@@ -3630,6 +3875,9 @@
       },
       "volume": "100 мл",
       "price_kzt": 14900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 11920,
       "skin_types": [
         "sensitive",
         "dry-atopic"
@@ -3676,6 +3924,9 @@
       },
       "volume": "8 г",
       "price_kzt": 10200,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 8160,
       "skin_types": [
         "sensitive"
       ],
@@ -3721,6 +3972,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 12900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 10320,
       "skin_types": [
         "sensitive"
       ],
@@ -3766,6 +4020,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 12900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 10320,
       "skin_types": [
         "sensitive"
       ],
@@ -3811,6 +4068,9 @@
       },
       "volume": "100 мл",
       "price_kzt": 15900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 12720,
       "skin_types": [
         "sensitive"
       ],
@@ -3856,6 +4116,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 12900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 10320,
       "skin_types": [
         "sensitive"
       ],
@@ -3901,6 +4164,9 @@
       },
       "volume": "50 мл",
       "price_kzt": 8200,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 6560,
       "skin_types": [
         "dry-atopic"
       ],
@@ -3946,6 +4212,9 @@
       },
       "volume": "200 мл",
       "price_kzt": 10900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 8720,
       "skin_types": [
         "dry-atopic",
         "sensitive"
@@ -3994,6 +4263,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 10900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 8720,
       "skin_types": [
         "dry-atopic",
         "sensitive",
@@ -4041,6 +4313,9 @@
       },
       "volume": "10 мл",
       "price_kzt": 6000,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 4800,
       "skin_types": [
         "dry-atopic"
       ],
@@ -4086,6 +4361,9 @@
       },
       "volume": "100 мл",
       "price_kzt": 8900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 7120,
       "skin_types": [
         "dry-atopic",
         "sensitive"
@@ -4132,6 +4410,9 @@
       },
       "volume": "250 мл",
       "price_kzt": 8400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 6720,
       "skin_types": [
         "pigmented"
       ],
@@ -4177,6 +4458,9 @@
       },
       "volume": "50 мл",
       "price_kzt": 22500,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 18000,
       "skin_types": [
         "pigmented"
       ],
@@ -4222,6 +4506,9 @@
       },
       "volume": "75 мл",
       "price_kzt": 11800,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 9440,
       "skin_types": [
         "pigmented",
         "sensitive"
@@ -4268,6 +4555,9 @@
       },
       "volume": "1 л",
       "price_kzt": 15900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 12720,
       "skin_types": [
         "sensitive"
       ],
@@ -4315,6 +4605,9 @@
       },
       "volume": "200 мл",
       "price_kzt": 9400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 7520,
       "skin_types": [
         "sensitive"
       ],
@@ -4360,6 +4653,9 @@
       },
       "volume": "40 мл",
       "price_kzt": 9400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 7520,
       "skin_types": [
         "sensitive",
         "dry-atopic"
@@ -4406,6 +4702,9 @@
       },
       "volume": "75 г",
       "price_kzt": 9400,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 7520,
       "skin_types": [
         "sensitive"
       ],
@@ -4451,6 +4750,9 @@
       },
       "volume": "100 мл",
       "price_kzt": 4500,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 3600,
       "skin_types": [
         "sensitive"
       ],
@@ -4496,6 +4798,9 @@
       },
       "volume": "100 мл",
       "price_kzt": 5900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 4720,
       "skin_types": [
         "sensitive"
       ],
@@ -4541,6 +4846,9 @@
       },
       "volume": "7 x 0.6 мл",
       "price_kzt": 17900,
+      "promo_code": "NAOS",
+      "promo_discount_percent": 20,
+      "price_with_promo_kzt": 14320,
       "skin_types": [
         "sensitive"
       ],
@@ -4586,6 +4894,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "oily-problem"
       ],
@@ -4633,6 +4944,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "oily-problem"
       ],
@@ -4678,6 +4992,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -4723,6 +5040,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive",
         "dry-atopic"
@@ -4769,6 +5089,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dehydrated",
         "dry-atopic"
@@ -4815,6 +5138,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -4860,6 +5186,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive",
         "dry-atopic"
@@ -4906,6 +5235,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -4951,6 +5283,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -4996,6 +5331,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -5041,6 +5379,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "oily-problem"
       ],
@@ -5088,6 +5429,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "oily-problem",
         "pigmented"
@@ -5134,6 +5478,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive",
         "dry-atopic"
@@ -5180,6 +5527,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -5225,6 +5575,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -5270,6 +5623,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -5315,6 +5671,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -5360,6 +5719,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -5407,6 +5769,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -5452,6 +5817,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -5499,6 +5867,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive",
         "dry-atopic"
@@ -5545,6 +5916,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -5590,6 +5964,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -5635,6 +6012,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -5680,6 +6060,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -5725,6 +6108,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "oily-problem",
         "sensitive"
@@ -5773,6 +6159,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -5818,6 +6207,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -5863,6 +6255,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "oily-problem"
       ],
@@ -5910,6 +6305,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "oily-problem",
         "pigmented"
@@ -5956,6 +6354,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -6001,6 +6402,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -6046,6 +6450,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -6091,6 +6498,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "pigmented"
       ],
@@ -6136,6 +6546,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "oily-problem"
       ],
@@ -6183,6 +6596,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "oily-problem"
       ],
@@ -6228,6 +6644,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dry-atopic",
         "dehydrated"
@@ -6274,6 +6693,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -6319,6 +6741,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "pigmented"
       ],
@@ -6364,6 +6789,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -6409,6 +6837,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [],
       "name": "Anaphase Anti-Hair Loss Shampoo",
       "description": {
@@ -6452,6 +6883,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [],
       "name": "Anaphase Serum",
       "description": {
@@ -6495,6 +6929,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -6540,6 +6977,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [],
       "name": "Squanorm Anti-Dandruff Shampoo — Dry Dandruff",
       "description": {
@@ -6583,6 +7023,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "oily-problem"
       ],
@@ -6628,6 +7071,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [],
       "name": "Huile Prodigieuse Multi-Purpose Dry Oil",
       "description": {
@@ -6671,6 +7117,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [],
       "name": "Huile Prodigieuse Florale",
       "description": {
@@ -6714,6 +7163,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dry-atopic",
         "sensitive"
@@ -6760,6 +7212,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -6805,6 +7260,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "oily-problem"
       ],
@@ -6852,6 +7310,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "oily-problem"
       ],
@@ -6897,6 +7358,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -6942,6 +7406,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive",
         "dry-atopic"
@@ -6988,6 +7455,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -7033,6 +7503,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -7078,6 +7551,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [],
       "name": "Diopti Anti-Fatigue Eye Contour Gel",
       "description": {
@@ -7121,6 +7597,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [],
       "name": "Diopti Ice-Effect Eye Contour Roll-On",
       "description": {
@@ -7164,6 +7643,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dry-atopic",
         "sensitive",
@@ -7211,6 +7693,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -7256,6 +7741,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -7301,6 +7789,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -7346,6 +7837,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "oily-problem"
       ],
@@ -7393,6 +7887,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dry-atopic",
         "sensitive"
@@ -7441,6 +7938,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -7486,6 +7986,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "pigmented"
       ],
@@ -7531,6 +8034,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "pigmented",
         "oily-problem"
@@ -7577,6 +8083,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -7622,6 +8131,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -7667,6 +8179,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -7712,6 +8227,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -7757,6 +8275,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -7802,6 +8323,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -7849,6 +8373,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -7894,6 +8421,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -7939,6 +8469,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -7986,6 +8519,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -8031,6 +8567,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -8076,6 +8615,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -8121,6 +8663,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -8168,6 +8713,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
@@ -8213,6 +8761,9 @@
       },
       "volume": null,
       "price_kzt": null,
+      "promo_code": null,
+      "promo_discount_percent": null,
+      "price_with_promo_kzt": null,
       "skin_types": [
         "sensitive"
       ],
