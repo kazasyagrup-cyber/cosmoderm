@@ -1,3 +1,4 @@
+// cache-bust: 2026-09-14-2
 (function () {
   const { brands, categories, skinTypes, lines, products, innovations } = window.CATALOG_DATA;
   const I18N = window.UI_I18N;

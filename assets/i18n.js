@@ -1,3 +1,4 @@
+// cache-bust: 2026-09-14-2
 window.UI_I18N = {
   ru: {
     "header.subtitle": "Каталог дермокосметики",

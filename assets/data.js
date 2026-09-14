@@ -3,6 +3,7 @@
  * NOTE: Kazakh ("kz") copy is a first-pass translation produced for launch speed.
  * It should get a professional native-speaker review pass before final publish,
  * especially for usage-instruction and active-ingredient text.
+ * cache-bust: 2026-09-14-2
  */
 (function () {
   var S = {
