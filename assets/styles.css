@@ -699,6 +699,16 @@ a {
   white-space: nowrap;
 }
 
+.announce-item-soon {
+  opacity: 0.85;
+  font-style: italic;
+}
+
+.announce-item-soon::before {
+  content: "✨ ";
+  font-style: normal;
+}
+
 .promo-viewport {
   position: relative;
   height: 22rem;
