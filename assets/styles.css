@@ -425,6 +425,25 @@ a {
   color: var(--text-muted);
 }
 
+.cart-line-price-discounted {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.cart-line-price-old {
+  font-size: 0.75rem;
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.cart-line-price-new {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #d97706;
+}
+
 .cart-line-remove {
   flex-shrink: 0;
   border: none;
@@ -467,6 +486,56 @@ a {
 
 .cart-whatsapp-btn:hover {
   background: #1eb857;
+}
+
+.promo-code-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.promo-code-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.55rem 0.75rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.promo-code-input:focus {
+  outline: none;
+  border-color: var(--sky);
+}
+
+.promo-code-apply-btn {
+  flex-shrink: 0;
+  padding: 0.55rem 1rem;
+  border-radius: 0.6rem;
+  border: none;
+  background: var(--text-strong);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.promo-code-apply-btn:hover {
+  opacity: 0.88;
+}
+
+.promo-code-message {
+  margin: -0.25rem 0 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.promo-code-message-ok {
+  color: #b45309;
+}
+
+.promo-code-message-error {
+  color: var(--sky-dark);
 }
 
 .cart-whatsapp-btn:disabled {
@@ -792,6 +861,44 @@ a {
   font-size: 1.05rem;
   font-weight: 800;
   white-space: nowrap;
+}
+
+.promo-price-box-discounted {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  border-color: #f59e0b;
+}
+
+.promo-price-old {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.promo-price-new {
+  color: #b45309;
+}
+
+.promo-discount-ribbon {
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 0.6rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: linear-gradient(100deg, #f59e0b, var(--sky));
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  box-shadow: 0 4px 14px rgba(224, 20, 87, 0.35);
+  animation: promo-ribbon-pulse 2.2s ease-in-out infinite;
+}
+
+@keyframes promo-ribbon-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.035); }
 }
 
 .promo-desc {
@@ -1241,6 +1348,33 @@ a {
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--text-muted);
+}
+
+.product-price-discounted {
+  flex-wrap: wrap;
+}
+
+.product-price-old {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.product-price-new {
+  color: #d97706;
+}
+
+.product-price-promo-tag,
+.cart-line-promo-tag {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: linear-gradient(100deg, #f59e0b, var(--sky));
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
 }
 
 .tag-row {

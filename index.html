@@ -171,6 +171,18 @@
         </div>
         <div id="cart-items" class="cart-items"></div>
         <div class="cart-drawer-footer">
+          <div class="promo-code-row">
+            <input
+              type="text"
+              id="promo-code-input"
+              class="promo-code-input"
+              autocomplete="off"
+              data-i18n-placeholder="cart.promoPlaceholder"
+              placeholder="Промокод"
+            />
+            <button type="button" id="promo-code-apply" class="promo-code-apply-btn" data-i18n="cart.promoApply">Применить</button>
+          </div>
+          <p id="promo-code-message" class="promo-code-message" hidden></p>
           <div class="cart-total-row">
             <span data-i18n="cart.total">Итого</span>
             <span id="cart-total-value">0 ₸</span>

@@ -91,8 +91,45 @@
     query: ""
   };
 
+  // Aktif indirim kodu - zaman zaman degisecek/yenilenecek, sadece bu blogu
+  // guncelle (brand: data.js -> brands id'si, hangi markaya indirim uygulanacak).
+  const ACTIVE_PROMO = {
+    code: "NAOS",
+    discountPercent: 20,
+    brand: "bioderma"
+  };
+
   const CART_KEY = "cosmoderm-cart";
+  const PROMO_KEY = "cosmoderm-promo";
   let cart = {};
+  let appliedPromoCode = localStorage.getItem(PROMO_KEY) || "";
+
+  function normalizePromoCode(value) {
+    return (value || "").trim().toUpperCase();
+  }
+
+  function isPromoActive() {
+    return normalizePromoCode(appliedPromoCode) === normalizePromoCode(ACTIVE_PROMO.code);
+  }
+
+  function productDiscountPercent(product) {
+    return isPromoActive() && product.brand === ACTIVE_PROMO.brand ? ACTIVE_PROMO.discountPercent : 0;
+  }
+
+  function discountedPrice(product) {
+    const percent = productDiscountPercent(product);
+    if (!percent || !product.price) return product.price;
+    return Math.round((product.price * (100 - percent)) / 100);
+  }
+
+  function applyPromoCode(rawValue) {
+    const normalized = normalizePromoCode(rawValue);
+    if (!normalized) return "empty";
+    if (normalized !== normalizePromoCode(ACTIVE_PROMO.code)) return "invalid";
+    appliedPromoCode = normalized;
+    localStorage.setItem(PROMO_KEY, appliedPromoCode);
+    return "applied";
+  }
 
   function loadCart() {
     try {
@@ -124,7 +161,7 @@
   }
 
   function cartTotal() {
-    return getCartItems().reduce((sum, item) => sum + (item.product.price || 0) * item.qty, 0);
+    return getCartItems().reduce((sum, item) => sum + (discountedPrice(item.product) || 0) * item.qty, 0);
   }
 
   function changeCartQty(id, delta) {
@@ -158,7 +195,10 @@
     cartItems: document.getElementById("cart-items"),
     cartTotalValue: document.getElementById("cart-total-value"),
     cartWhatsappBtn: document.getElementById("cart-whatsapp-btn"),
-    cartClearBtn: document.getElementById("cart-clear-btn")
+    cartClearBtn: document.getElementById("cart-clear-btn"),
+    promoInput: document.getElementById("promo-code-input"),
+    promoApplyBtn: document.getElementById("promo-code-apply"),
+    promoMessage: document.getElementById("promo-code-message")
   };
 
   function t(key) {
@@ -324,7 +364,14 @@
   function priceMarkup(product) {
     if (!product.price) return "";
     const vol = product.volume ? `<span class="product-volume">${product.volume}</span>` : "";
-    return `<div class="product-price">${formatPrice(product.price)}${vol}</div>`;
+    const percent = productDiscountPercent(product);
+    if (!percent) return `<div class="product-price">${formatPrice(product.price)}${vol}</div>`;
+    return `<div class="product-price product-price-discounted">
+      <span class="product-price-old">${formatPrice(product.price)}</span>
+      <span class="product-price-new">${formatPrice(discountedPrice(product))}</span>
+      <span class="product-price-promo-tag">-${percent}%</span>
+      ${vol}
+    </div>`;
   }
 
   function cartStepperMarkup(product) {
@@ -470,9 +517,17 @@
     if (!el.promoSlide || promoProducts.length === 0) return;
     const product = promoProducts[promoIndex];
     const accent = lineAccent(product.line);
+    const showPromoRibbon = product.brand === ACTIVE_PROMO.brand;
     el.promoSlide.style.background = `linear-gradient(120deg, ${accent.bg}, #ffffff 70%)`;
     el.promoSlide.innerHTML = `
       <div class="promo-info">
+        ${
+          showPromoRibbon
+            ? `<div class="promo-discount-ribbon">${t("promo.discountRibbon")
+                .replace("{percent}", ACTIVE_PROMO.discountPercent)
+                .replace("{code}", ACTIVE_PROMO.code)}</div>`
+            : ""
+        }
         <span class="promo-brand">
           <span class="promo-brand-name">${brandName(product.brand)}</span>
           <span class="promo-line" style="color:${accent.fg}">${lineLabel(product.line)}</span>
@@ -482,7 +537,13 @@
         ${product.efficacy ? `<p class="promo-efficacy" style="color:${accent.fg}">${tr(product.efficacy)}</p>` : ""}
         <div class="tag-row">${renderTags(product.skinTypes)}</div>
         <div class="promo-actions">
-          ${product.price ? `<div class="promo-price-box">${formatPrice(product.price)}</div>` : ""}
+          ${
+            product.price
+              ? showPromoRibbon
+                ? `<div class="promo-price-box promo-price-box-discounted"><span class="promo-price-old">${formatPrice(product.price)}</span><span class="promo-price-new">${formatPrice(Math.round((product.price * (100 - ACTIVE_PROMO.discountPercent)) / 100))}</span></div>`
+                : `<div class="promo-price-box">${formatPrice(product.price)}</div>`
+              : ""
+          }
           <button type="button" class="btn btn-primary promo-cta">${t("product.detailsBtn")}</button>
         </div>
       </div>
@@ -605,6 +666,14 @@
       el.cartItems.innerHTML = items
         .map((item) => {
           const accent = lineAccent(item.product.line);
+          const percent = productDiscountPercent(item.product);
+          const priceCell = percent
+            ? `<span class="cart-line-price cart-line-price-discounted">
+                 <span class="cart-line-price-old">${formatPrice(item.product.price)}</span>
+                 <span class="cart-line-price-new">${formatPrice(discountedPrice(item.product))}</span>
+                 <span class="cart-line-promo-tag">-${percent}%</span>
+               </span>`
+            : `<span class="cart-line-price">${formatPrice(item.product.price)}</span>`;
           return `
             <div class="cart-line">
               <div class="cart-line-photo" style="background:${accent.bg}">
@@ -612,7 +681,7 @@
               </div>
               <div class="cart-line-body">
                 <span class="cart-line-name">${item.product.name}</span>
-                <span class="cart-line-price">${formatPrice(item.product.price)}</span>
+                ${priceCell}
                 <div class="cart-stepper has-qty" data-product-id="${item.product.id}">
                   <button type="button" class="stepper-btn stepper-minus" aria-label="-">−</button>
                   <span class="stepper-qty">${item.qty}</span>
@@ -627,6 +696,23 @@
     }
     if (el.cartTotalValue) el.cartTotalValue.textContent = formatPrice(cartTotal());
     if (el.cartWhatsappBtn) el.cartWhatsappBtn.disabled = items.length === 0;
+    if (el.promoInput && !el.promoInput.value && isPromoActive()) el.promoInput.value = appliedPromoCode;
+    updatePromoMessage(isPromoActive() ? "applied" : null);
+  }
+
+  function updatePromoMessage(status) {
+    if (!el.promoMessage) return;
+    if (status === "applied") {
+      el.promoMessage.textContent = t("cart.promoApplied").replace("{percent}", ACTIVE_PROMO.discountPercent).replace("{brand}", brandName(ACTIVE_PROMO.brand));
+      el.promoMessage.className = "promo-code-message promo-code-message-ok";
+      el.promoMessage.hidden = false;
+    } else if (status === "invalid") {
+      el.promoMessage.textContent = t("cart.promoInvalid");
+      el.promoMessage.className = "promo-code-message promo-code-message-error";
+      el.promoMessage.hidden = false;
+    } else {
+      el.promoMessage.hidden = true;
+    }
   }
 
   function syncCartUI() {
@@ -656,9 +742,12 @@
     const items = getCartItems();
     const lines = items.map((item, i) => {
       const volume = item.product.volume ? ` (${item.product.volume})` : "";
-      return `${i + 1}. ${brandName(item.product.brand)} · ${item.product.name}${volume} x${item.qty} = ${formatPrice((item.product.price || 0) * item.qty)}`;
+      const percent = productDiscountPercent(item.product);
+      const discountNote = percent ? ` (-${percent}%)` : "";
+      return `${i + 1}. ${brandName(item.product.brand)} · ${item.product.name}${volume} x${item.qty} = ${formatPrice(discountedPrice(item.product) * item.qty)}${discountNote}`;
     });
-    return [t("cart.waHeader"), "", ...lines, "", `${t("cart.waTotal")}: ${formatPrice(cartTotal())}`].join("\n");
+    const promoLine = isPromoActive() ? [`${t("cart.promoLabel")}: ${appliedPromoCode} (-${ACTIVE_PROMO.discountPercent}% ${brandName(ACTIVE_PROMO.brand)})`, ""] : [];
+    return [t("cart.waHeader"), "", ...lines, "", ...promoLine, `${t("cart.waTotal")}: ${formatPrice(cartTotal())}`].join("\n");
   }
 
   function renderInnovations() {
@@ -747,6 +836,21 @@
       if (getCartItems().length === 0) return;
       const msg = encodeURIComponent(buildWhatsAppMessage());
       window.open(`https://wa.me/77087685329?text=${msg}`, "_blank", "noopener");
+    });
+  }
+  if (el.promoApplyBtn) {
+    el.promoApplyBtn.addEventListener("click", () => {
+      const result = applyPromoCode(el.promoInput ? el.promoInput.value : "");
+      updatePromoMessage(result === "applied" ? "applied" : result === "invalid" ? "invalid" : null);
+      if (result === "applied") {
+        renderCartDrawer();
+        updateCartBadge();
+      }
+    });
+  }
+  if (el.promoInput) {
+    el.promoInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") el.promoApplyBtn && el.promoApplyBtn.click();
     });
   }
 

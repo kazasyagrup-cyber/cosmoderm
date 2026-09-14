@@ -55,7 +55,13 @@ window.UI_I18N = {
     "cart.orderWhatsApp": "Заказать в WhatsApp",
     "cart.clear": "Очистить корзину",
     "cart.waHeader": "Здравствуйте! Хочу заказать:",
-    "cart.waTotal": "Итого"
+    "cart.waTotal": "Итого",
+    "cart.promoPlaceholder": "Промокод",
+    "cart.promoApply": "Применить",
+    "cart.promoApplied": "Промокод применён: -{percent}% на {brand}",
+    "cart.promoInvalid": "Неверный или истёкший промокод",
+    "cart.promoLabel": "Промокод",
+    "promo.discountRibbon": "🎉 Скидка {percent}% по промокоду {code}"
   },
   kz: {
     "header.subtitle": "Дермокосметика каталогы",
@@ -113,6 +119,12 @@ window.UI_I18N = {
     "cart.orderWhatsApp": "WhatsApp арқылы тапсырыс беру",
     "cart.clear": "Себетті тазарту",
     "cart.waHeader": "Сәлеметсіз бе! Тапсырыс бергім келеді:",
-    "cart.waTotal": "Барлығы"
+    "cart.waTotal": "Барлығы",
+    "cart.promoPlaceholder": "Промокод",
+    "cart.promoApply": "Қолдану",
+    "cart.promoApplied": "Промокод қолданылды: {brand} өнімдеріне -{percent}%",
+    "cart.promoInvalid": "Промокод қате немесе мерзімі өткен",
+    "cart.promoLabel": "Промокод",
+    "promo.discountRibbon": "🎉 Промокод {code} бойынша {percent}% жеңілдік"
   }
 };
