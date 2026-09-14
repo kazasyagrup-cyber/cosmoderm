@@ -17,7 +17,7 @@
       ]
     },
     {
-      "source": "/assets/(app|data|i18n|styles)\\.(js|css)",
+      "source": "/assets/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
