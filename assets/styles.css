@@ -433,6 +433,12 @@ a {
   flex-wrap: wrap;
 }
 
+.cart-line-qty-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
 .cart-line-price-old {
   font-size: 0.75rem;
   text-decoration: line-through;

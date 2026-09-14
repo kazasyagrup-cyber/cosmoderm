@@ -668,13 +668,15 @@
         .map((item) => {
           const accent = lineAccent(item.product.line);
           const percent = productDiscountPercent(item.product);
+          const unitLabel = item.qty > 1 ? `<span class="cart-line-qty-label">${item.qty} × </span>` : "";
           const priceCell = percent
             ? `<span class="cart-line-price cart-line-price-discounted">
-                 <span class="cart-line-price-old">${formatPrice(item.product.price)}</span>
-                 <span class="cart-line-price-new">${formatPrice(discountedPrice(item.product))}</span>
+                 ${unitLabel}
+                 <span class="cart-line-price-old">${formatPrice(item.product.price * item.qty)}</span>
+                 <span class="cart-line-price-new">${formatPrice(discountedPrice(item.product) * item.qty)}</span>
                  <span class="cart-line-promo-tag">-${percent}%</span>
                </span>`
-            : `<span class="cart-line-price">${formatPrice(item.product.price)}</span>`;
+            : `<span class="cart-line-price">${unitLabel}${formatPrice(item.product.price * item.qty)}</span>`;
           return `
             <div class="cart-line">
               <div class="cart-line-photo" style="background:${accent.bg}">
