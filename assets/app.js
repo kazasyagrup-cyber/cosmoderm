@@ -72,14 +72,14 @@
   }
 
   const MISSING_PHOTOS = new Set([
-    "tolerance-extreme-creme-riche.jpg",
-    "anthelios-dermo-kids.jpg",
-    "eau-thermale-lingettes.jpg",
-    "liftactiv-peptide-c.jpg",
-    "aqualia-thermal-riche.jpg",
-    "topialyse-cica-plus.jpg",
-    "diopti-ice-effect.jpg",
-    "lait-creme-mist.jpg"
+    "tolerance-extreme-creme-riche.webp",
+    "anthelios-dermo-kids.webp",
+    "eau-thermale-lingettes.webp",
+    "liftactiv-peptide-c.webp",
+    "aqualia-thermal-riche.webp",
+    "topialyse-cica-plus.webp",
+    "diopti-ice-effect.webp",
+    "lait-creme-mist.webp"
   ]);
   const promoProducts = products.filter((p) => !MISSING_PHOTOS.has(p.image.split("/").pop()));
   let promoIndex = 0;
