@@ -529,9 +529,10 @@
       <div class="promo-info">
         ${
           showPromoRibbon
-            ? `<div class="promo-discount-ribbon">${t("promo.discountRibbon")
-                .replace("{percent}", ACTIVE_PROMO.discountPercent)
-                .replace("{code}", ACTIVE_PROMO.code)}</div>`
+            ? `<div class="promo-discount-ribbon">${t("promo.discountRibbon").replace(
+                "{percent}",
+                ACTIVE_PROMO.discountPercent
+              )} <span class="promo-ribbon-code">${ACTIVE_PROMO.code}</span></div>`
             : ""
         }
         <span class="promo-brand">

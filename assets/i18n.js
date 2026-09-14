@@ -18,7 +18,7 @@ window.UI_I18N = {
     "trust.badge1": "Оригинальная продукция",
     "trust.badge2": "Только проверенные бренды",
     "trust.badge3": "Официальный дилер — 100% оригинальная продукция",
-    "trust.badge4": "Корейская косметика — скоро в каталоге",
+    "trust.badge4": "Корейская косметика — скоро в продаже! Открытие продаж — большая скидка",
     "trust.badge5": "Алматы, Казахстан — доставка по всей стране",
     "filters.searchLabel": "Поиск средств",
     "filters.searchPlaceholder": "Например, Sensibio",
@@ -63,7 +63,7 @@ window.UI_I18N = {
     "cart.promoApplied": "Промокод применён: -{percent}% на {brand}",
     "cart.promoInvalid": "Неверный или истёкший промокод",
     "cart.promoLabel": "Промокод",
-    "promo.discountRibbon": "🎉 Скидка {percent}% по промокоду {code}"
+    "promo.discountRibbon": "Скидка {percent}% по промокоду"
   },
   kz: {
     "header.subtitle": "Дермокосметика каталогы",
@@ -83,7 +83,7 @@ window.UI_I18N = {
     "trust.badge1": "Түпнұсқа өнім",
     "trust.badge2": "Тек тексерілген брендтер",
     "trust.badge3": "Ресми дилер — 100% түпнұсқа өнім",
-    "trust.badge4": "Корей косметикасы — жақында каталогта",
+    "trust.badge4": "Корей косметикасы — жақында сатылымда! Ашылуға арнайы үлкен жеңілдік",
     "trust.badge5": "Алматы, Қазақстан — ел бойынша жеткізу",
     "filters.searchLabel": "Құралдарды іздеу",
     "filters.searchPlaceholder": "Мысалы, Sensibio",
@@ -128,6 +128,6 @@ window.UI_I18N = {
     "cart.promoApplied": "Промокод қолданылды: {brand} өнімдеріне -{percent}%",
     "cart.promoInvalid": "Промокод қате немесе мерзімі өткен",
     "cart.promoLabel": "Промокод",
-    "promo.discountRibbon": "🎉 Промокод {code} бойынша {percent}% жеңілдік"
+    "promo.discountRibbon": "Промокод бойынша {percent}% жеңілдік"
   }
 };

@@ -776,13 +776,26 @@ a {
 }
 
 .announce-item-soon {
-  opacity: 0.85;
   font-style: italic;
+  font-weight: 800;
+  animation: announce-blink 1.6s ease-in-out infinite;
 }
 
 .announce-item-soon::before {
   content: "✨ ";
   font-style: normal;
+}
+
+@keyframes announce-blink {
+  0%, 45% { opacity: 1; }
+  50%, 95% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .announce-item-soon {
+    animation: none;
+  }
 }
 
 .promo-viewport {
@@ -889,18 +902,25 @@ a {
 }
 
 .promo-discount-ribbon {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   align-self: flex-start;
   margin-bottom: 0.6rem;
-  padding: 0.4rem 0.9rem;
-  border-radius: 999px;
-  background: linear-gradient(100deg, #f59e0b, var(--sky));
+  padding: 0.45rem 1rem;
+  border-radius: 0.4rem;
+  background: var(--text-strong);
+  color: #f3d9a4;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  border: 1px solid #d4af6a;
+}
+
+.promo-discount-ribbon .promo-ribbon-code {
   color: #fff;
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 0.01em;
-  box-shadow: 0 4px 14px rgba(224, 20, 87, 0.35);
-  animation: promo-ribbon-pulse 2.2s ease-in-out infinite;
+  letter-spacing: 0.12em;
 }
 
 @keyframes promo-ribbon-pulse {
