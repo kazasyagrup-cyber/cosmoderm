@@ -101,6 +101,8 @@
   };
 
   const CART_KEY = "cosmoderm-cart";
+  const CART_UPDATED_KEY = "cosmoderm-cart-updated";
+  const CART_EXPIRY_MS = 2 * 60 * 1000; // 2 dakika hareketsizlikten sonra sepet otomatik bosalir
   let cart = {};
   // Promosyon kodu BILEREK kalici tutulmuyor (localStorage'a yazilmiyor) -
   // musteri her ziyarette/sayfa yenilemesinde kodu yeniden yazmali, sepete
@@ -139,6 +141,13 @@
 
   function loadCart() {
     try {
+      const updatedAt = parseInt(localStorage.getItem(CART_UPDATED_KEY) || "0", 10);
+      if (updatedAt && Date.now() - updatedAt > CART_EXPIRY_MS) {
+        cart = {};
+        localStorage.removeItem(CART_KEY);
+        localStorage.removeItem(CART_UPDATED_KEY);
+        return;
+      }
       const raw = localStorage.getItem(CART_KEY);
       cart = raw ? JSON.parse(raw) : {};
     } catch (e) {
@@ -149,6 +158,7 @@
   function saveCart() {
     try {
       localStorage.setItem(CART_KEY, JSON.stringify(cart));
+      localStorage.setItem(CART_UPDATED_KEY, String(Date.now()));
     } catch (e) {}
   }
 
