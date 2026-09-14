@@ -64,14 +64,19 @@ function main() {
       line: p.line,
       category: catById[p.category] ? catById[p.category].label : { ru: p.category, kz: p.category },
       volume: p.volume || null,
-      price_kzt: basePrice,
-      // Promosyon kodu girilmeden goze carpmayan, ama HERKESE ACIK ve sitede
-      // reklami yapilan bir indirim oldugu icin "en dusuk gercek fiyat" olarak
-      // ayri alanlarda aciqca isaretleniyor - AI ajanlari fiyat kiyaslarken
-      // bunu gormeli, gizli/yanilti degil.
+      // price_kzt HER ZAMAN "su an bu urun icin odenecek gercek fiyat" -
+      // promosyon aktifse bu ZATEN indirimli fiyat (AI ajanlari/agentlar
+      // genelde sadece bu tek alana bakiyor, ayri bir "price_with_promo"
+      // alanini atlayabiliyor - 2026-09-14'te canli test edildi, bir AI
+      // ajani indirimi kacirdi). Karsilastirma/seffaflik icin list_price_kzt
+      // = promosyonsuz orijinal fiyat, sadece promosyon aktifken dolu.
+      price_kzt: promoApplies ? promoPrice : basePrice,
+      list_price_kzt: promoApplies ? basePrice : null,
       promo_code: promoApplies ? promo.code : null,
       promo_discount_percent: promoApplies ? promo.discountPercent : null,
-      price_with_promo_kzt: promoPrice,
+      promo_note: promoApplies
+        ? `price_kzt (${promoPrice} KZT) уже включает скидку ${promo.discountPercent}% по общедоступному промокоду ${promo.code}. Обычная цена без промокода: ${basePrice} KZT (list_price_kzt).`
+        : null,
       skin_types: p.skinTypes || [],
       name: p.name,
       description: p.description || null,
@@ -152,12 +157,13 @@ function main() {
   };
 
   const itemListElements = products.map((p, idx) => {
-    const hasPromo = !!p.price_with_promo_kzt;
+    const hasPromo = !!p.list_price_kzt;
     let description = truncate(p.description && p.description.ru, 300);
     if (hasPromo) {
-      // Baz fiyat + kod acikca metinde de geciyor ki JS calistirmayan/sadece
-      // metni okuyan bir ajan da indirimi ve kosulunu anlayabilsin.
-      description += ` Цена по промокоду ${p.promo_code}: ${p.price_with_promo_kzt} ₸ (базовая цена ${p.price_kzt} ₸, скидка ${p.promo_discount_percent}%, код общедоступен).`;
+      // p.price_kzt HER ZAMAN gercek/gecerli fiyat (promosyon varsa zaten
+      // indirimli) - baz fiyat + kod ayrica metinde de geciyor ki JS
+      // calistirmayan/sadece metni okuyan bir ajan da anlayabilsin.
+      description += ` Цена ${p.price_kzt} ₸ уже включает скидку ${p.promo_discount_percent}% по промокоду ${p.promo_code} (обычная цена без промокода: ${p.list_price_kzt} ₸, код общедоступен, без условий).`;
     }
     const node = {
       "@type": "Product",
@@ -171,14 +177,14 @@ function main() {
     };
     if (p.image) node.image = p.image;
     if (p.price_kzt) {
-      // Aktif, herkese acik promosyon varsa gercek/en dusuk elde edilebilir
-      // fiyat (Offer.price) budur - kiyaslama yapan ajanlar bunu gormeli.
-      // Taban fiyat + kod, yukaridaki description'da ayrica aciklaniyor.
+      // price_kzt = su an gercekten odenecek en dusuk fiyat (aktif, herkese
+      // acik promosyon varsa zaten dahil) - kiyaslama yapan ajanlar Offer.price
+      // olarak bunu gormeli. Liste fiyati description'da ayrica aciklaniyor.
       node.offers = {
         "@type": "Offer",
         url: p.url,
         priceCurrency: "KZT",
-        price: hasPromo ? p.price_with_promo_kzt : p.price_kzt,
+        price: p.price_kzt,
         availability: "https://schema.org/InStock",
         itemCondition: "https://schema.org/NewCondition",
         seller: { "@id": `${SITE_URL}/#organization` },

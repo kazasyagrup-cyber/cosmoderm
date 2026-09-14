@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T09:06:15.655Z",
+  "generated_at": "2026-09-14T13:28:26.926Z",
   "store": {
     "name": "CosmoDerm",
     "url": "https://www.cosmoderm.kz",
@@ -48,10 +48,11 @@
         "kz": "Тазарту"
       },
       "volume": "200 мл",
-      "price_kzt": 9900,
+      "price_kzt": 7920,
+      "list_price_kzt": 9900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 7920,
+      "promo_note": "price_kzt (7920 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 9900 KZT (list_price_kzt).",
       "skin_types": [
         "oily-problem"
       ],
@@ -98,10 +99,11 @@
         "kz": "Тазарту"
       },
       "volume": "100 мл",
-      "price_kzt": 4500,
+      "price_kzt": 3600,
+      "list_price_kzt": 4500,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 3600,
+      "promo_note": "price_kzt (3600 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 4500 KZT (list_price_kzt).",
       "skin_types": [
         "oily-problem"
       ],
@@ -146,10 +148,11 @@
         "kz": "Тазарту"
       },
       "volume": "200 мл",
-      "price_kzt": 11900,
+      "price_kzt": 9520,
+      "list_price_kzt": 11900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 9520,
+      "promo_note": "price_kzt (9520 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 11900 KZT (list_price_kzt).",
       "skin_types": [
         "oily-problem"
       ],
@@ -196,10 +199,11 @@
         "kz": "Қалпына келтіру"
       },
       "volume": "30 мл",
-      "price_kzt": 13900,
+      "price_kzt": 11120,
+      "list_price_kzt": 13900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 11120,
+      "promo_note": "price_kzt (11120 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 13900 KZT (list_price_kzt).",
       "skin_types": [
         "oily-problem"
       ],
@@ -244,10 +248,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "40 мл",
-      "price_kzt": 10400,
+      "price_kzt": 8320,
+      "list_price_kzt": 10400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 8320,
+      "promo_note": "price_kzt (8320 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 10400 KZT (list_price_kzt).",
       "skin_types": [
         "oily-problem",
         "dehydrated"
@@ -293,10 +298,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "30 мл",
-      "price_kzt": 10900,
+      "price_kzt": 8720,
+      "list_price_kzt": 10900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 8720,
+      "promo_note": "price_kzt (8720 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 10900 KZT (list_price_kzt).",
       "skin_types": [
         "oily-problem"
       ],
@@ -341,10 +347,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "30 мл",
-      "price_kzt": 10900,
+      "price_kzt": 8720,
+      "list_price_kzt": 10900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 8720,
+      "promo_note": "price_kzt (8720 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 10900 KZT (list_price_kzt).",
       "skin_types": [
         "oily-problem"
       ],
@@ -389,10 +396,11 @@
         "kz": "Тазарту"
       },
       "volume": "850 мл",
-      "price_kzt": 15000,
+      "price_kzt": 12000,
+      "list_price_kzt": 15000,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 12000,
+      "promo_note": "price_kzt (12000 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 15000 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive",
         "dehydrated",
@@ -440,10 +448,11 @@
         "kz": "Тазарту"
       },
       "volume": "200 мл",
-      "price_kzt": 11900,
+      "price_kzt": 9520,
+      "list_price_kzt": 11900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 9520,
+      "promo_note": "price_kzt (9520 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 11900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -490,10 +499,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "40 мл",
-      "price_kzt": 9400,
+      "price_kzt": 7520,
+      "list_price_kzt": 9400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 7520,
+      "promo_note": "price_kzt (7520 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 9400 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -538,10 +548,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "30 мл",
-      "price_kzt": 17900,
+      "price_kzt": 14320,
+      "list_price_kzt": 17900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 14320,
+      "promo_note": "price_kzt (14320 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 17900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -586,10 +597,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "40 мл",
-      "price_kzt": 11400,
+      "price_kzt": 9120,
+      "list_price_kzt": 11400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 9120,
+      "promo_note": "price_kzt (9120 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 11400 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -634,10 +646,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "15 мл",
-      "price_kzt": 8400,
+      "price_kzt": 6720,
+      "list_price_kzt": 8400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 6720,
+      "promo_note": "price_kzt (6720 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 8400 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -682,10 +695,11 @@
         "kz": "Тазарту"
       },
       "volume": "100 мл",
-      "price_kzt": 4500,
+      "price_kzt": 3600,
+      "list_price_kzt": 4500,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 3600,
+      "promo_note": "price_kzt (3600 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 4500 KZT (list_price_kzt).",
       "skin_types": [
         "dehydrated",
         "sensitive"
@@ -731,10 +745,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "30 мл",
-      "price_kzt": 17900,
+      "price_kzt": 14320,
+      "list_price_kzt": 17900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 14320,
+      "promo_note": "price_kzt (14320 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 17900 KZT (list_price_kzt).",
       "skin_types": [
         "dehydrated",
         "sensitive",
@@ -781,10 +796,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "40 мл",
-      "price_kzt": 15400,
+      "price_kzt": 12320,
+      "list_price_kzt": 15400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 12320,
+      "promo_note": "price_kzt (12320 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 15400 KZT (list_price_kzt).",
       "skin_types": [
         "dehydrated"
       ],
@@ -829,10 +845,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "30 мл",
-      "price_kzt": 17900,
+      "price_kzt": 14320,
+      "list_price_kzt": 17900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 14320,
+      "promo_note": "price_kzt (14320 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 17900 KZT (list_price_kzt).",
       "skin_types": [
         "dehydrated"
       ],
@@ -877,10 +894,11 @@
         "kz": "Дене күтімі"
       },
       "volume": "100 мл",
-      "price_kzt": 5900,
+      "price_kzt": 4720,
+      "list_price_kzt": 5900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 4720,
+      "promo_note": "price_kzt (4720 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 5900 KZT (list_price_kzt).",
       "skin_types": [
         "dry-atopic",
         "sensitive"
@@ -926,10 +944,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "500 мл",
-      "price_kzt": 21900,
+      "price_kzt": 17520,
+      "list_price_kzt": 21900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 17520,
+      "promo_note": "price_kzt (17520 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 21900 KZT (list_price_kzt).",
       "skin_types": [
         "dry-atopic"
       ],
@@ -974,10 +993,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "500 мл",
-      "price_kzt": 12900,
+      "price_kzt": 10320,
+      "list_price_kzt": 12900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 10320,
+      "promo_note": "price_kzt (10320 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 12900 KZT (list_price_kzt).",
       "skin_types": [
         "dry-atopic"
       ],
@@ -1022,10 +1042,11 @@
         "kz": "Тазарту"
       },
       "volume": "500 мл",
-      "price_kzt": 11400,
+      "price_kzt": 9120,
+      "list_price_kzt": 11400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 9120,
+      "promo_note": "price_kzt (9120 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 11400 KZT (list_price_kzt).",
       "skin_types": [
         "dry-atopic",
         "sensitive"
@@ -1073,10 +1094,11 @@
         "kz": "Ерін күтімі"
       },
       "volume": "4 г",
-      "price_kzt": 5400,
+      "price_kzt": 4320,
+      "list_price_kzt": 5400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 4320,
+      "promo_note": "price_kzt (4320 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 5400 KZT (list_price_kzt).",
       "skin_types": [
         "dry-atopic",
         "sensitive"
@@ -1122,10 +1144,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "40 мл",
-      "price_kzt": 12900,
+      "price_kzt": 10320,
+      "list_price_kzt": 12900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 10320,
+      "promo_note": "price_kzt (10320 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 12900 KZT (list_price_kzt).",
       "skin_types": [
         "oily-problem",
         "sensitive"
@@ -1171,10 +1194,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "40 мл",
-      "price_kzt": 11900,
+      "price_kzt": 9520,
+      "list_price_kzt": 11900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 9520,
+      "promo_note": "price_kzt (9520 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 11900 KZT (list_price_kzt).",
       "skin_types": [
         "oily-problem",
         "pigmented"
@@ -1220,10 +1244,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "40 мл",
-      "price_kzt": 13900,
+      "price_kzt": 11120,
+      "list_price_kzt": 13900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 11120,
+      "promo_note": "price_kzt (11120 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 13900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -1268,10 +1293,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "100 мл",
-      "price_kzt": 14900,
+      "price_kzt": 11920,
+      "list_price_kzt": 14900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 11920,
+      "promo_note": "price_kzt (11920 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 14900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -1316,10 +1342,11 @@
         "kz": "Қалпына келтіру"
       },
       "volume": "40 мл",
-      "price_kzt": 8900,
+      "price_kzt": 7120,
+      "list_price_kzt": 8900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 7120,
+      "promo_note": "price_kzt (7120 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 8900 KZT (list_price_kzt).",
       "skin_types": [
         "dry-atopic",
         "sensitive"
@@ -1365,10 +1392,11 @@
         "kz": "Қалпына келтіру"
       },
       "volume": "40 мл",
-      "price_kzt": 8900,
+      "price_kzt": 7120,
+      "list_price_kzt": 8900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 7120,
+      "promo_note": "price_kzt (7120 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 8900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -1413,10 +1441,11 @@
         "kz": "Пигментацияны түзету"
       },
       "volume": "15 мл",
-      "price_kzt": 16000,
+      "price_kzt": 12800,
+      "list_price_kzt": 16000,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 12800,
+      "promo_note": "price_kzt (12800 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 16000 KZT (list_price_kzt).",
       "skin_types": [
         "pigmented"
       ],
@@ -1461,10 +1490,11 @@
         "kz": "Пигментацияны түзету"
       },
       "volume": "40 мл",
-      "price_kzt": 18000,
+      "price_kzt": 14400,
+      "list_price_kzt": 18000,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 14400,
+      "promo_note": "price_kzt (14400 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 18000 KZT (list_price_kzt).",
       "skin_types": [
         "pigmented",
         "sensitive"
@@ -1510,10 +1540,11 @@
         "kz": "Тазарту"
       },
       "volume": "200 мл",
-      "price_kzt": 11900,
+      "price_kzt": 9520,
+      "list_price_kzt": 11900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 9520,
+      "promo_note": "price_kzt (9520 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 11900 KZT (list_price_kzt).",
       "skin_types": [
         "pigmented"
       ],
@@ -1560,10 +1591,11 @@
         "kz": "Шаш және бас терісін күту"
       },
       "volume": "125 мл",
-      "price_kzt": 8900,
+      "price_kzt": 7120,
+      "list_price_kzt": 8900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 7120,
+      "promo_note": "price_kzt (7120 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 8900 KZT (list_price_kzt).",
       "skin_types": [],
       "name": "Nodé DS+",
       "description": {
@@ -1608,10 +1640,11 @@
         "kz": "Шаш және бас терісін күту"
       },
       "volume": "400 мл",
-      "price_kzt": 11900,
+      "price_kzt": 9520,
+      "list_price_kzt": 11900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 9520,
+      "promo_note": "price_kzt (9520 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 11900 KZT (list_price_kzt).",
       "skin_types": [],
       "name": "Nodé Fluid",
       "description": {
@@ -1654,10 +1687,11 @@
         "kz": "Шаш және бас терісін күту"
       },
       "volume": "400 мл",
-      "price_kzt": 11900,
+      "price_kzt": 9520,
+      "list_price_kzt": 11900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 9520,
+      "promo_note": "price_kzt (9520 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 11900 KZT (list_price_kzt).",
       "skin_types": [],
       "name": "Nodé Non-Poo",
       "description": {
@@ -1700,10 +1734,11 @@
         "kz": "Қалпына келтіру"
       },
       "volume": "150 мл",
-      "price_kzt": 18600,
+      "price_kzt": 14880,
+      "list_price_kzt": 18600,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 14880,
+      "promo_note": "price_kzt (14880 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 18600 KZT (list_price_kzt).",
       "skin_types": [
         "oily-problem"
       ],
@@ -1748,10 +1783,11 @@
         "kz": "Қалпына келтіру"
       },
       "volume": "30 мл",
-      "price_kzt": 13900,
+      "price_kzt": 11120,
+      "list_price_kzt": 13900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 11120,
+      "promo_note": "price_kzt (11120 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 13900 KZT (list_price_kzt).",
       "skin_types": [
         "oily-problem"
       ],
@@ -1796,10 +1832,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "30 мл",
-      "price_kzt": 13900,
+      "price_kzt": 11120,
+      "list_price_kzt": 13900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 11120,
+      "promo_note": "price_kzt (11120 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 13900 KZT (list_price_kzt).",
       "skin_types": [
         "oily-problem"
       ],
@@ -1844,10 +1881,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "30 мл",
-      "price_kzt": 10900,
+      "price_kzt": 8720,
+      "list_price_kzt": 10900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 8720,
+      "promo_note": "price_kzt (8720 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 10900 KZT (list_price_kzt).",
       "skin_types": [
         "oily-problem",
         "sensitive"
@@ -1893,10 +1931,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "30 мл",
-      "price_kzt": 17900,
+      "price_kzt": 14320,
+      "list_price_kzt": 17900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 14320,
+      "promo_note": "price_kzt (14320 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 17900 KZT (list_price_kzt).",
       "skin_types": [
         "oily-problem"
       ],
@@ -1941,10 +1980,11 @@
         "kz": "Тазарту"
       },
       "volume": "100 мл",
-      "price_kzt": 8400,
+      "price_kzt": 6720,
+      "list_price_kzt": 8400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 6720,
+      "promo_note": "price_kzt (6720 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 8400 KZT (list_price_kzt).",
       "skin_types": [
         "oily-problem"
       ],
@@ -1989,10 +2029,11 @@
         "kz": "Тазарту"
       },
       "volume": "200 мл",
-      "price_kzt": 11900,
+      "price_kzt": 9520,
+      "list_price_kzt": 11900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 9520,
+      "promo_note": "price_kzt (9520 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 11900 KZT (list_price_kzt).",
       "skin_types": [
         "oily-problem",
         "sensitive"
@@ -2040,10 +2081,11 @@
         "kz": "Тазарту"
       },
       "volume": "200 мл",
-      "price_kzt": 16900,
+      "price_kzt": 13520,
+      "list_price_kzt": 16900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 13520,
+      "promo_note": "price_kzt (13520 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 16900 KZT (list_price_kzt).",
       "skin_types": [
         "oily-problem"
       ],
@@ -2088,10 +2130,11 @@
         "kz": "Қалпына келтіру"
       },
       "volume": "200 мл",
-      "price_kzt": 16900,
+      "price_kzt": 13520,
+      "list_price_kzt": 16900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 13520,
+      "promo_note": "price_kzt (13520 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 16900 KZT (list_price_kzt).",
       "skin_types": [
         "oily-problem"
       ],
@@ -2136,10 +2179,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "40 мл",
-      "price_kzt": 14700,
+      "price_kzt": 11760,
+      "list_price_kzt": 14700,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 11760,
+      "promo_note": "price_kzt (11760 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 14700 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -2184,10 +2228,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "40 мл",
-      "price_kzt": 14700,
+      "price_kzt": 11760,
+      "list_price_kzt": 14700,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 11760,
+      "promo_note": "price_kzt (11760 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 14700 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -2232,10 +2277,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "40 мл",
-      "price_kzt": 11400,
+      "price_kzt": 9120,
+      "list_price_kzt": 11400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 9120,
+      "promo_note": "price_kzt (9120 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 11400 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -2280,10 +2326,11 @@
         "kz": "Тазарту"
       },
       "volume": "250 мл",
-      "price_kzt": 10400,
+      "price_kzt": 8320,
+      "list_price_kzt": 10400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 8320,
+      "promo_note": "price_kzt (8320 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 10400 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -2330,10 +2377,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "70 мл",
-      "price_kzt": 10900,
+      "price_kzt": 8720,
+      "list_price_kzt": 10900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 8720,
+      "promo_note": "price_kzt (8720 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 10900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -2378,10 +2426,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "40 мл",
-      "price_kzt": 9400,
+      "price_kzt": 7520,
+      "list_price_kzt": 9400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 7520,
+      "promo_note": "price_kzt (7520 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 9400 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -2426,10 +2475,11 @@
         "kz": "Тазарту"
       },
       "volume": "150 мл",
-      "price_kzt": 11500,
+      "price_kzt": 9200,
+      "list_price_kzt": 11500,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 9200,
+      "promo_note": "price_kzt (9200 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 11500 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -2474,10 +2524,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "30 мл",
-      "price_kzt": 17900,
+      "price_kzt": 14320,
+      "list_price_kzt": 17900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 14320,
+      "promo_note": "price_kzt (14320 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 17900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -2522,10 +2573,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "40 мл",
-      "price_kzt": 8900,
+      "price_kzt": 7120,
+      "list_price_kzt": 8900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 7120,
+      "promo_note": "price_kzt (7120 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 8900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive",
         "oily-problem"
@@ -2571,10 +2623,11 @@
         "kz": "Тазарту"
       },
       "volume": "200 мл",
-      "price_kzt": 11900,
+      "price_kzt": 9520,
+      "list_price_kzt": 11900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 9520,
+      "promo_note": "price_kzt (9520 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 11900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive",
         "oily-problem"
@@ -2622,10 +2675,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "15 мл",
-      "price_kzt": 8400,
+      "price_kzt": 6720,
+      "list_price_kzt": 8400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 6720,
+      "promo_note": "price_kzt (6720 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 8400 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -2670,10 +2724,11 @@
         "kz": "Тазарту"
       },
       "volume": "125 мл",
-      "price_kzt": 8700,
+      "price_kzt": 6960,
+      "list_price_kzt": 8700,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 6960,
+      "promo_note": "price_kzt (6960 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 8700 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -2718,10 +2773,11 @@
         "kz": "Тазарту"
       },
       "volume": "400 мл",
-      "price_kzt": 14400,
+      "price_kzt": 11520,
+      "list_price_kzt": 14400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 11520,
+      "promo_note": "price_kzt (11520 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 14400 KZT (list_price_kzt).",
       "skin_types": [
         "dehydrated"
       ],
@@ -2768,10 +2824,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "40 мл",
-      "price_kzt": 15400,
+      "price_kzt": 12320,
+      "list_price_kzt": 15400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 12320,
+      "promo_note": "price_kzt (12320 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 15400 KZT (list_price_kzt).",
       "skin_types": [
         "dehydrated"
       ],
@@ -2816,10 +2873,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "40 мл",
-      "price_kzt": 15400,
+      "price_kzt": 12320,
+      "list_price_kzt": 15400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 12320,
+      "promo_note": "price_kzt (12320 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 15400 KZT (list_price_kzt).",
       "skin_types": [
         "dehydrated",
         "dry-atopic"
@@ -2865,10 +2923,11 @@
         "kz": "Тазарту"
       },
       "volume": "1 л",
-      "price_kzt": 18400,
+      "price_kzt": 14720,
+      "list_price_kzt": 18400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 14720,
+      "promo_note": "price_kzt (14720 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 18400 KZT (list_price_kzt).",
       "skin_types": [
         "dry-atopic",
         "sensitive"
@@ -2916,10 +2975,11 @@
         "kz": "Дене күтімі"
       },
       "volume": "500 мл",
-      "price_kzt": 16400,
+      "price_kzt": 13120,
+      "list_price_kzt": 16400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 13120,
+      "promo_note": "price_kzt (13120 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 16400 KZT (list_price_kzt).",
       "skin_types": [
         "dry-atopic"
       ],
@@ -2964,10 +3024,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "100 мл",
-      "price_kzt": 12400,
+      "price_kzt": 9920,
+      "list_price_kzt": 12400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 9920,
+      "promo_note": "price_kzt (9920 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 12400 KZT (list_price_kzt).",
       "skin_types": [
         "dry-atopic"
       ],
@@ -3012,10 +3073,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "200 мл",
-      "price_kzt": 15400,
+      "price_kzt": 12320,
+      "list_price_kzt": 15400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 12320,
+      "promo_note": "price_kzt (12320 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 15400 KZT (list_price_kzt).",
       "skin_types": [
         "dry-atopic"
       ],
@@ -3060,10 +3122,11 @@
         "kz": "Ерін күтімі"
       },
       "volume": "15 мл",
-      "price_kzt": 6400,
+      "price_kzt": 5120,
+      "list_price_kzt": 6400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 5120,
+      "promo_note": "price_kzt (5120 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 6400 KZT (list_price_kzt).",
       "skin_types": [
         "dry-atopic"
       ],
@@ -3108,10 +3171,11 @@
         "kz": "Дене күтімі"
       },
       "volume": "50 мл",
-      "price_kzt": 4400,
+      "price_kzt": 3520,
+      "list_price_kzt": 4400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 3520,
+      "promo_note": "price_kzt (3520 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 4400 KZT (list_price_kzt).",
       "skin_types": [
         "dry-atopic"
       ],
@@ -3156,10 +3220,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "40 мл",
-      "price_kzt": 6400,
+      "price_kzt": 5120,
+      "list_price_kzt": 6400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 5120,
+      "promo_note": "price_kzt (5120 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 6400 KZT (list_price_kzt).",
       "skin_types": [
         "dry-atopic"
       ],
@@ -3204,10 +3269,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "40 мл",
-      "price_kzt": 10200,
+      "price_kzt": 8160,
+      "list_price_kzt": 10200,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 8160,
+      "promo_note": "price_kzt (8160 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 10200 KZT (list_price_kzt).",
       "skin_types": [
         "oily-problem"
       ],
@@ -3252,10 +3318,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "200 мл",
-      "price_kzt": 12900,
+      "price_kzt": 10320,
+      "list_price_kzt": 12900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 10320,
+      "promo_note": "price_kzt (10320 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 12900 KZT (list_price_kzt).",
       "skin_types": [
         "dry-atopic"
       ],
@@ -3300,10 +3367,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "100 мл",
-      "price_kzt": 15900,
+      "price_kzt": 12720,
+      "list_price_kzt": 15900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 12720,
+      "promo_note": "price_kzt (12720 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 15900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -3348,10 +3416,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "40 мл",
-      "price_kzt": 13400,
+      "price_kzt": 10720,
+      "list_price_kzt": 13400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 10720,
+      "promo_note": "price_kzt (10720 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 13400 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive",
         "dry-atopic"
@@ -3397,10 +3466,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "40 мл",
-      "price_kzt": 13900,
+      "price_kzt": 11120,
+      "list_price_kzt": 13900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 11120,
+      "promo_note": "price_kzt (11120 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 13900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -3445,10 +3515,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "40 мл",
-      "price_kzt": 13900,
+      "price_kzt": 11120,
+      "list_price_kzt": 13900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 11120,
+      "promo_note": "price_kzt (11120 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 13900 KZT (list_price_kzt).",
       "skin_types": [
         "pigmented"
       ],
@@ -3493,10 +3564,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "150 мл",
-      "price_kzt": 17400,
+      "price_kzt": 13920,
+      "list_price_kzt": 17400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 13920,
+      "promo_note": "price_kzt (13920 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 17400 KZT (list_price_kzt).",
       "skin_types": [
         "pigmented"
       ],
@@ -3541,10 +3613,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "100 мл",
-      "price_kzt": 14900,
+      "price_kzt": 11920,
+      "list_price_kzt": 14900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 11920,
+      "promo_note": "price_kzt (11920 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 14900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -3589,10 +3662,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "40 мл",
-      "price_kzt": 13900,
+      "price_kzt": 11120,
+      "list_price_kzt": 13900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 11120,
+      "promo_note": "price_kzt (11120 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 13900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -3637,10 +3711,11 @@
         "kz": "Дене күтімі"
       },
       "volume": "200 мл",
-      "price_kzt": 8400,
+      "price_kzt": 6720,
+      "list_price_kzt": 8400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 6720,
+      "promo_note": "price_kzt (6720 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 8400 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -3685,10 +3760,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "40 мл",
-      "price_kzt": 13900,
+      "price_kzt": 11120,
+      "list_price_kzt": 13900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 11120,
+      "promo_note": "price_kzt (11120 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 13900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -3733,10 +3809,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "40 мл",
-      "price_kzt": 10900,
+      "price_kzt": 8720,
+      "list_price_kzt": 10900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 8720,
+      "promo_note": "price_kzt (8720 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 10900 KZT (list_price_kzt).",
       "skin_types": [
         "pigmented"
       ],
@@ -3781,10 +3858,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "40 мл",
-      "price_kzt": 13400,
+      "price_kzt": 10720,
+      "list_price_kzt": 13400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 10720,
+      "promo_note": "price_kzt (10720 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 13400 KZT (list_price_kzt).",
       "skin_types": [
         "oily-problem"
       ],
@@ -3829,10 +3907,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "100 мл",
-      "price_kzt": 14900,
+      "price_kzt": 11920,
+      "list_price_kzt": 14900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 11920,
+      "promo_note": "price_kzt (11920 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 14900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -3877,10 +3956,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "100 мл",
-      "price_kzt": 14900,
+      "price_kzt": 11920,
+      "list_price_kzt": 14900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 11920,
+      "promo_note": "price_kzt (11920 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 14900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive",
         "dry-atopic"
@@ -3926,10 +4006,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "8 г",
-      "price_kzt": 10200,
+      "price_kzt": 8160,
+      "list_price_kzt": 10200,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 8160,
+      "promo_note": "price_kzt (8160 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 10200 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -3974,10 +4055,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "40 мл",
-      "price_kzt": 12900,
+      "price_kzt": 10320,
+      "list_price_kzt": 12900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 10320,
+      "promo_note": "price_kzt (10320 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 12900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -4022,10 +4104,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "40 мл",
-      "price_kzt": 12900,
+      "price_kzt": 10320,
+      "list_price_kzt": 12900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 10320,
+      "promo_note": "price_kzt (10320 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 12900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -4070,10 +4153,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "100 мл",
-      "price_kzt": 15900,
+      "price_kzt": 12720,
+      "list_price_kzt": 15900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 12720,
+      "promo_note": "price_kzt (12720 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 15900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -4118,10 +4202,11 @@
         "kz": "Күннен қорғау"
       },
       "volume": "40 мл",
-      "price_kzt": 12900,
+      "price_kzt": 10320,
+      "list_price_kzt": 12900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 10320,
+      "promo_note": "price_kzt (10320 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 12900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -4166,10 +4251,11 @@
         "kz": "Дене күтімі"
       },
       "volume": "50 мл",
-      "price_kzt": 8200,
+      "price_kzt": 6560,
+      "list_price_kzt": 8200,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 6560,
+      "promo_note": "price_kzt (6560 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 8200 KZT (list_price_kzt).",
       "skin_types": [
         "dry-atopic"
       ],
@@ -4214,10 +4300,11 @@
         "kz": "Тазарту"
       },
       "volume": "200 мл",
-      "price_kzt": 10900,
+      "price_kzt": 8720,
+      "list_price_kzt": 10900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 8720,
+      "promo_note": "price_kzt (8720 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 10900 KZT (list_price_kzt).",
       "skin_types": [
         "dry-atopic",
         "sensitive"
@@ -4265,10 +4352,11 @@
         "kz": "Қалпына келтіру"
       },
       "volume": "40 мл",
-      "price_kzt": 10900,
+      "price_kzt": 8720,
+      "list_price_kzt": 10900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 8720,
+      "promo_note": "price_kzt (8720 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 10900 KZT (list_price_kzt).",
       "skin_types": [
         "dry-atopic",
         "sensitive",
@@ -4315,10 +4403,11 @@
         "kz": "Ерін күтімі"
       },
       "volume": "10 мл",
-      "price_kzt": 6000,
+      "price_kzt": 4800,
+      "list_price_kzt": 6000,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 4800,
+      "promo_note": "price_kzt (4800 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 6000 KZT (list_price_kzt).",
       "skin_types": [
         "dry-atopic"
       ],
@@ -4363,10 +4452,11 @@
         "kz": "Қалпына келтіру"
       },
       "volume": "100 мл",
-      "price_kzt": 8900,
+      "price_kzt": 7120,
+      "list_price_kzt": 8900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 7120,
+      "promo_note": "price_kzt (7120 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 8900 KZT (list_price_kzt).",
       "skin_types": [
         "dry-atopic",
         "sensitive"
@@ -4412,10 +4502,11 @@
         "kz": "Тазарту"
       },
       "volume": "250 мл",
-      "price_kzt": 8400,
+      "price_kzt": 6720,
+      "list_price_kzt": 8400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 6720,
+      "promo_note": "price_kzt (6720 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 8400 KZT (list_price_kzt).",
       "skin_types": [
         "pigmented"
       ],
@@ -4460,10 +4551,11 @@
         "kz": "Пигментацияны түзету"
       },
       "volume": "50 мл",
-      "price_kzt": 22500,
+      "price_kzt": 18000,
+      "list_price_kzt": 22500,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 18000,
+      "promo_note": "price_kzt (18000 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 22500 KZT (list_price_kzt).",
       "skin_types": [
         "pigmented"
       ],
@@ -4508,10 +4600,11 @@
         "kz": "Пигментацияны түзету"
       },
       "volume": "75 мл",
-      "price_kzt": 11800,
+      "price_kzt": 9440,
+      "list_price_kzt": 11800,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 9440,
+      "promo_note": "price_kzt (9440 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 11800 KZT (list_price_kzt).",
       "skin_types": [
         "pigmented",
         "sensitive"
@@ -4557,10 +4650,11 @@
         "kz": "Тазарту"
       },
       "volume": "1 л",
-      "price_kzt": 15900,
+      "price_kzt": 12720,
+      "list_price_kzt": 15900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 12720,
+      "promo_note": "price_kzt (12720 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 15900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -4607,10 +4701,11 @@
         "kz": "Шаш және бас терісін күту"
       },
       "volume": "200 мл",
-      "price_kzt": 9400,
+      "price_kzt": 7520,
+      "list_price_kzt": 9400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 7520,
+      "promo_note": "price_kzt (7520 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 9400 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -4655,10 +4750,11 @@
         "kz": "Ылғалдандыру"
       },
       "volume": "40 мл",
-      "price_kzt": 9400,
+      "price_kzt": 7520,
+      "list_price_kzt": 9400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 7520,
+      "promo_note": "price_kzt (7520 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 9400 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive",
         "dry-atopic"
@@ -4704,10 +4800,11 @@
         "kz": "Дене күтімі"
       },
       "volume": "75 г",
-      "price_kzt": 9400,
+      "price_kzt": 7520,
+      "list_price_kzt": 9400,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 7520,
+      "promo_note": "price_kzt (7520 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 9400 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -4752,10 +4849,11 @@
         "kz": "Тазарту"
       },
       "volume": "100 мл",
-      "price_kzt": 4500,
+      "price_kzt": 3600,
+      "list_price_kzt": 4500,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 3600,
+      "promo_note": "price_kzt (3600 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 4500 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -4800,10 +4898,11 @@
         "kz": "Дене күтімі"
       },
       "volume": "100 мл",
-      "price_kzt": 5900,
+      "price_kzt": 4720,
+      "list_price_kzt": 5900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 4720,
+      "promo_note": "price_kzt (4720 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 5900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -4848,10 +4947,11 @@
         "kz": "Қалпына келтіру"
       },
       "volume": "7 x 0.6 мл",
-      "price_kzt": 17900,
+      "price_kzt": 14320,
+      "list_price_kzt": 17900,
       "promo_code": "NAOS",
       "promo_discount_percent": 20,
-      "price_with_promo_kzt": 14320,
+      "promo_note": "price_kzt (14320 KZT) уже включает скидку 20% по общедоступному промокоду NAOS. Обычная цена без промокода: 17900 KZT (list_price_kzt).",
       "skin_types": [
         "sensitive"
       ],
@@ -4897,9 +4997,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "oily-problem"
       ],
@@ -4947,9 +5048,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "oily-problem"
       ],
@@ -4995,9 +5097,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -5043,9 +5146,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive",
         "dry-atopic"
@@ -5092,9 +5196,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dehydrated",
         "dry-atopic"
@@ -5141,9 +5246,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -5189,9 +5295,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive",
         "dry-atopic"
@@ -5238,9 +5345,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -5286,9 +5394,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -5334,9 +5443,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -5382,9 +5492,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "oily-problem"
       ],
@@ -5432,9 +5543,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "oily-problem",
         "pigmented"
@@ -5481,9 +5593,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive",
         "dry-atopic"
@@ -5530,9 +5643,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -5578,9 +5692,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -5626,9 +5741,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -5674,9 +5790,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -5722,9 +5839,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -5772,9 +5890,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -5820,9 +5939,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -5870,9 +5990,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive",
         "dry-atopic"
@@ -5919,9 +6040,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -5967,9 +6089,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -6015,9 +6138,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -6063,9 +6187,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -6111,9 +6236,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "oily-problem",
         "sensitive"
@@ -6162,9 +6288,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -6210,9 +6337,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -6258,9 +6386,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "oily-problem"
       ],
@@ -6308,9 +6437,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "oily-problem",
         "pigmented"
@@ -6357,9 +6487,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -6405,9 +6536,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -6453,9 +6585,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -6501,9 +6634,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "pigmented"
       ],
@@ -6549,9 +6683,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "oily-problem"
       ],
@@ -6599,9 +6734,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "oily-problem"
       ],
@@ -6647,9 +6783,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dry-atopic",
         "dehydrated"
@@ -6696,9 +6833,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -6744,9 +6882,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "pigmented"
       ],
@@ -6792,9 +6931,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -6840,9 +6980,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [],
       "name": "Anaphase Anti-Hair Loss Shampoo",
       "description": {
@@ -6886,9 +7027,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [],
       "name": "Anaphase Serum",
       "description": {
@@ -6932,9 +7074,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -6980,9 +7123,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [],
       "name": "Squanorm Anti-Dandruff Shampoo — Dry Dandruff",
       "description": {
@@ -7026,9 +7170,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "oily-problem"
       ],
@@ -7074,9 +7219,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [],
       "name": "Huile Prodigieuse Multi-Purpose Dry Oil",
       "description": {
@@ -7120,9 +7266,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [],
       "name": "Huile Prodigieuse Florale",
       "description": {
@@ -7166,9 +7313,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dry-atopic",
         "sensitive"
@@ -7215,9 +7363,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -7263,9 +7412,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "oily-problem"
       ],
@@ -7313,9 +7463,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "oily-problem"
       ],
@@ -7361,9 +7512,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -7409,9 +7561,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive",
         "dry-atopic"
@@ -7458,9 +7611,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -7506,9 +7660,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -7554,9 +7709,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [],
       "name": "Diopti Anti-Fatigue Eye Contour Gel",
       "description": {
@@ -7600,9 +7756,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [],
       "name": "Diopti Ice-Effect Eye Contour Roll-On",
       "description": {
@@ -7646,9 +7803,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dry-atopic",
         "sensitive",
@@ -7696,9 +7854,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -7744,9 +7903,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -7792,9 +7952,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -7840,9 +8001,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "oily-problem"
       ],
@@ -7890,9 +8052,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dry-atopic",
         "sensitive"
@@ -7941,9 +8104,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -7989,9 +8153,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "pigmented"
       ],
@@ -8037,9 +8202,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "pigmented",
         "oily-problem"
@@ -8086,9 +8252,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -8134,9 +8301,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -8182,9 +8350,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -8230,9 +8399,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -8278,9 +8448,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -8326,9 +8497,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -8376,9 +8548,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -8424,9 +8597,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -8472,9 +8646,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -8522,9 +8697,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dry-atopic"
       ],
@@ -8570,9 +8746,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -8618,9 +8795,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -8666,9 +8844,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "dehydrated"
       ],
@@ -8716,9 +8895,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
@@ -8764,9 +8944,10 @@
       },
       "volume": null,
       "price_kzt": null,
+      "list_price_kzt": null,
       "promo_code": null,
       "promo_discount_percent": null,
-      "price_with_promo_kzt": null,
+      "promo_note": null,
       "skin_types": [
         "sensitive"
       ],
