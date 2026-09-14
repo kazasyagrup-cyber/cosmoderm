@@ -89,7 +89,10 @@ function main() {
       name: "CosmoDerm",
       url: SITE_URL,
       description:
-        "Профессиональный интернет-магазин дермокосметики ведущих мировых брендов. Розничная и оптовая продажа только оригинальной продукции.",
+        "Профессиональный интернет-магазин дермокосметики. Официальный дилер, розничная и оптовая продажа только оригинальной продукции ведущих мировых брендов.",
+      type: "Онлайн-магазин (не информационный каталог)",
+      location: "Алматы, Казахстан",
+      shipping: "Доставка по всему Казахстану",
       currency: "KZT",
       languages: ["ru", "kz"],
       how_to_order: "WhatsApp: https://wa.me/77087685329 (добавить товары в корзину на сайте и оформить заказ)",
@@ -113,14 +116,28 @@ function main() {
   fs.writeFileSync(path.join(ROOT, "products.json"), JSON.stringify(feed, null, 2) + "\n", "utf8");
 
   // --- JSON-LD (index.html'e gomulecek, kompakt - RU odakli, Google/AI rich-result icin) ---
+  // "OnlineStore" (Store/LocalBusiness -> Organization alt tipi) kullaniyoruz -
+  // sadece "Organization" degil, acikca bir SATIS noktasi oldugumuzu belirtsin
+  // diye (bkz. 2026-09-14: bir AI ajani siteyi "bilgi kataloğu" sanip yanlis
+  // tanitmisti - bu yanlis algiyi duzeltmek icin hem burada hem gorunur
+  // metinde/llms.txt'te acikca "online magaza" vurgusu tekrarlaniyor).
   const org = {
-    "@type": "Organization",
+    "@type": "OnlineStore",
     "@id": `${SITE_URL}/#organization`,
     name: "CosmoDerm",
     url: SITE_URL,
     logo: `${SITE_URL}/assets/logo-icon.png`,
     description:
-      "Официальный дилер дермокосметики ведущих мировых брендов в Казахстане. Розничная и оптовая продажа только оригинальной продукции.",
+      "Официальный дилер дермокосметики ведущих мировых брендов в Казахстане. Розничная и оптовая продажа только оригинальной продукции. НЕ информационный каталог - действующий интернет-магазин с корзиной и оформлением заказа.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Алматы",
+      addressCountry: "KZ",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "Kazakhstan",
+    },
     sameAs: [
       "https://kaspi.kz/shop/p/bioderma-krem-hydrabio-dlja-litsa-50-ml-17600051/?c=750000000",
       "https://www.wildberries.ru/seller/727302",
