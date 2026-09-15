@@ -1751,6 +1751,12 @@ a {
   color: var(--text);
 }
 
+#modal-content .info-block-inci p {
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
 #modal-content .note-block {
   background: var(--sky-50);
   border: 1px solid var(--sky-100);

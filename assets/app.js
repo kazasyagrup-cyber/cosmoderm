@@ -647,6 +647,11 @@
         <h4>${t("modal.activeIngredients")}</h4>
         <p>${tr(product.activeIngredients)}</p>
       </div>
+      ${
+        product.fullIngredients
+          ? `<div class="info-block info-block-inci"><h4>${t("modal.fullIngredients")}</h4><p>${product.fullIngredients}</p></div>`
+          : ""
+      }
       <div class="info-block">
         <h4>${t("modal.usage")}</h4>
         <ol>${steps}</ol>
