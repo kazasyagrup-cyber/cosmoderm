@@ -566,7 +566,7 @@
       <div class="promo-info">
         ${
           showPromoRibbon
-            ? `<div class="promo-discount-ribbon">${t("promo.discountRibbon").replace(
+            ? `<div class="promo-discount-ribbon"><img class="promo-ribbon-icon" src="/assets/naos-icon.png" alt="" /> ${t("promo.discountRibbon").replace(
                 "{percent}",
                 ACTIVE_PROMO.discountPercent
               )} <span class="promo-ribbon-code">${ACTIVE_PROMO.code}</span></div>`
