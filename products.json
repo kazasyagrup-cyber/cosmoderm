@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T17:37:26.341Z",
+  "generated_at": "2026-09-15T02:19:22.895Z",
   "store": {
     "name": "CosmoDerm",
     "url": "https://www.cosmoderm.kz",
@@ -487,7 +487,7 @@
         "ru": "Подходит для ежедневного очищения чувствительной и реактивной кожи.",
         "kz": "Сезімтал және реактивті теріні күнделікті тазартуға жарайды."
       },
-      "image": "https://www.cosmoderm.kz/products/sensibio-gel-moussant.webp"
+      "image": "https://www.cosmoderm.kz/products/sensibio-gel-moussant-v2.webp"
     },
     {
       "id": "bioderma-sensibio-defensive",
@@ -585,7 +585,7 @@
         "ru": "Подходит для чувствительной кожи с признаками реактивности и дискомфорта.",
         "kz": "Реактивтілік пен ыңғайсыздық белгілері бар сезімтал теріге жарайды."
       },
-      "image": "https://www.cosmoderm.kz/products/sensibio-defensive-serum.webp"
+      "image": "https://www.cosmoderm.kz/products/sensibio-defensive-serum-v2.webp"
     },
     {
       "id": "bioderma-sensibio-ar",
@@ -931,7 +931,7 @@
         "ru": "Рекомендован для обезвоженной кожи любого типа, включая чувствительную и склонную к сухости.",
         "kz": "Кез келген сусызданған тері түріне, соның ішінде сезімтал және құрғақтыққа бейім теріге ұсынылады."
       },
-      "image": "https://www.cosmoderm.kz/products/hydrabio-serum.webp"
+      "image": "https://www.cosmoderm.kz/products/hydrabio-serum-v2.webp"
     },
     {
       "id": "bioderma-hydrabio-gel-creme",
@@ -980,7 +980,7 @@
         "ru": "Рекомендован для обезвоженной кожи, в том числе комбинированной и склонной к жирности.",
         "kz": "Сусызданған теріге, соның ішінде аралас және майлылыққа бейім теріге ұсынылады."
       },
-      "image": "https://www.cosmoderm.kz/products/hydrabio-gel-creme.webp"
+      "image": "https://www.cosmoderm.kz/products/hydrabio-gel-creme-v2.webp"
     },
     {
       "id": "bioderma-hydrabio-hyalu-plus-serum",
@@ -1429,7 +1429,7 @@
         "ru": "Подходит для сухих, потрескавшихся и чувствительных губ, для взрослых и детей.",
         "kz": "Құрғақ, жарылған және сезімтал еріндерге, ересектер мен балаларға жарайды."
       },
-      "image": "https://www.cosmoderm.kz/products/atoderm-stick-levres.webp"
+      "image": "https://www.cosmoderm.kz/products/atoderm-stick-levres-v2.webp"
     },
     {
       "id": "bioderma-atoderm-pp-baume",
@@ -1825,7 +1825,7 @@
         "ru": "Подходит для чувствительной кожи, склонной к образованию синяков и гематом.",
         "kz": "Көгеру мен гематома түзуге бейім сезімтал теріге жарайды."
       },
-      "image": "https://www.cosmoderm.kz/products/cicabio-arnica-plus.webp"
+      "image": "https://www.cosmoderm.kz/products/cicabio-arnica-plus-v2.webp"
     },
     {
       "id": "bioderma-pigmentbio-c-concentrate",
@@ -1874,7 +1874,7 @@
         "ru": "Для кожи с пигментными пятнами и неровным тоном; обязательно используйте солнцезащитное средство днём.",
         "kz": "Пигментті дақтары бар және реңкі біркелкі емес теріге арналған; күндіз міндетті түрде күннен қорғаушы құрал қолданыңыз."
       },
-      "image": "https://www.cosmoderm.kz/products/pigmentbio-c-concentrate.webp"
+      "image": "https://www.cosmoderm.kz/products/pigmentbio-c-concentrate-v2.webp"
     },
     {
       "id": "bioderma-pigmentbio-daily-care-spf50",
@@ -1975,7 +1975,7 @@
         "ru": "Подходит для ежедневного очищения кожи с пигментными пятнами и неровным тоном.",
         "kz": "Пигментті дақтары бар және реңкі біркелкі емес теріні күнделікті тазартуға жарайды."
       },
-      "image": "https://www.cosmoderm.kz/products/pigmentbio-foaming-cream.webp"
+      "image": "https://www.cosmoderm.kz/products/pigmentbio-foaming-cream-v2.webp"
     },
     {
       "id": "bioderma-node-ds-plus",
@@ -2609,7 +2609,7 @@
         "ru": "Для жирной и комбинированной кожи, нуждающейся в еженедельном глубоком очищении.",
         "kz": "Апта сайын терең тазартуды қажет ететін майлы және аралас теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/sebium-exfoliating-gel.webp"
+      "image": "https://www.cosmoderm.kz/products/sebium-exfoliating-gel-v2.webp"
     },
     {
       "id": "bioderma-sebium-hydra-cleanser",
@@ -2808,7 +2808,7 @@
         "ru": "Для чувствительной кожи с покраснениями, желающей выровнять тон без плотного макияжа.",
         "kz": "Ауыр макияжсыз реңкін теңестіргісі келетін, қызаруы бар сезімтал теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/sensibio-ar-bb-cream.webp"
+      "image": "https://www.cosmoderm.kz/products/sensibio-ar-bb-cream-v2.webp"
     },
     {
       "id": "bioderma-sensibio-ar-cc-cream-spf50",
@@ -2857,7 +2857,7 @@
         "ru": "Для чувствительной кожи, склонной к покраснениям, для ежедневного использования как база под макияж.",
         "kz": "Макияж астында күнделікті қолдануға жарайтын, қызаруға бейім сезімтал теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/sensibio-ar-cc-cream-spf50.webp"
+      "image": "https://www.cosmoderm.kz/products/sensibio-ar-cc-cream-spf50-v2.webp"
     },
     {
       "id": "bioderma-sensibio-ar-cream",
@@ -2906,7 +2906,7 @@
         "ru": "Для чувствительной кожи, склонной к покраснениям и куперозу, для ежедневного применения.",
         "kz": "Күнделікті қолдануға арналған, қызару мен куперозға бейім сезімтал теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/sensibio-ar-cream.webp"
+      "image": "https://www.cosmoderm.kz/products/sensibio-ar-cream-v2.webp"
     },
     {
       "id": "bioderma-sensibio-ar-micellar-gel",
@@ -2957,7 +2957,7 @@
         "ru": "Для ежедневного очищения чувствительной кожи, склонной к покраснениям.",
         "kz": "Қызаруға бейім сезімтал теріні күнделікті тазартуға арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/sensibio-ar-micellar-gel.webp"
+      "image": "https://www.cosmoderm.kz/products/sensibio-ar-micellar-gel-v2.webp"
     },
     {
       "id": "bioderma-sensibio-ar-sos-spray",
@@ -3006,7 +3006,7 @@
         "ru": "Для чувствительной кожи с внезапными приливами и покраснениями.",
         "kz": "Кенеттен қызару мен ысынуы бар сезімтал теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/sensibio-ar-sos-spray.webp"
+      "image": "https://www.cosmoderm.kz/products/sensibio-ar-sos-spray-v2.webp"
     },
     {
       "id": "bioderma-sensibio-defensive-rich-cream",
@@ -3055,7 +3055,7 @@
         "ru": "Для сухой чувствительной кожи, склонной к покраснениям и стянутости.",
         "kz": "Қызару мен тартылуға бейім құрғақ сезімтал теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/sensibio-defensive-rich-cream.webp"
+      "image": "https://www.cosmoderm.kz/products/sensibio-defensive-rich-cream-v2.webp"
     },
     {
       "id": "bioderma-sensibio-micellar-cleansing-oil",
@@ -3104,7 +3104,7 @@
         "ru": "Для чувствительной кожи, нуждающейся в бережном снятии стойкого макияжа.",
         "kz": "Тұрақты макияжды жайлап кетіруді қажет ететін сезімтал теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/sensibio-micellar-cleansing-oil.webp"
+      "image": "https://www.cosmoderm.kz/products/sensibio-micellar-cleansing-oil-v2.webp"
     },
     {
       "id": "bioderma-sensibio-ar-bi-serum",
@@ -3153,7 +3153,7 @@
         "ru": "Для чувствительной кожи с покраснениями, желающей замедлить признаки старения.",
         "kz": "Жасқа байланысты белгілерді баяулатқысы келетін, қызаруы бар сезімтал теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/sensibio-ar-bi-serum.webp"
+      "image": "https://www.cosmoderm.kz/products/sensibio-ar-bi-serum-v2.webp"
     },
     {
       "id": "bioderma-sensibio-ds-cream",
@@ -3304,7 +3304,7 @@
         "ru": "Подходит для чувствительной кожи вокруг глаз, в том числе для тех, кто носит контактные линзы.",
         "kz": "Контактілі линза киетіндерге де жарайтын сезімтал көз айналасы теріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/sensibio-eye-contour-gel.webp"
+      "image": "https://www.cosmoderm.kz/products/sensibio-eye-contour-gel-v2.webp"
     },
     {
       "id": "bioderma-sensibio-h2o-eye",
@@ -3353,7 +3353,7 @@
         "ru": "Для самой чувствительной кожи вокруг глаз, включая обладательниц контактных линз.",
         "kz": "Контактілі линза киетіндерді қоса, ең сезімтал көз айналасы теріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/sensibio-h2o-eye.webp"
+      "image": "https://www.cosmoderm.kz/products/sensibio-h2o-eye-v2.webp"
     },
     {
       "id": "bioderma-hydrabio-foaming-gel",
@@ -3404,7 +3404,7 @@
         "ru": "Для ежедневного очищения обезвоженной кожи любого типа.",
         "kz": "Кез келген сусызданған теріні күнделікті тазартуға арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/hydrabio-foaming-gel.webp"
+      "image": "https://www.cosmoderm.kz/products/hydrabio-foaming-gel-v2.webp"
     },
     {
       "id": "bioderma-hydrabio-perfecteur-spf30",
@@ -3503,7 +3503,7 @@
         "ru": "Для сухой и очень сухой обезвоженной кожи, включая склонную к стянутости.",
         "kz": "Тартылуға бейімді қоса, құрғақ және өте құрғақ сусызданған теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/hydrabio-riche-cream.webp"
+      "image": "https://www.cosmoderm.kz/products/hydrabio-riche-cream-v2.webp"
     },
     {
       "id": "bioderma-atoderm-shower-gel",
@@ -3555,7 +3555,7 @@
         "ru": "Для ежедневного очищения сухой и чувствительной кожи лица и тела всей семьи.",
         "kz": "Бүкіл отбасының бет пен дене терісін күнделікті тазартуға арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/atoderm-shower-gel.webp"
+      "image": "https://www.cosmoderm.kz/products/atoderm-shower-gel-v2.webp"
     },
     {
       "id": "bioderma-atoderm-2in1-body-oil",
@@ -3653,7 +3653,7 @@
         "ru": "Для очень сухой и атопичной кожи вокруг глаз, склонной к зуду.",
         "kz": "Қышуға бейім, өте құрғақ және атопиялық көз айналасы теріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/atoderm-intensive-eye.webp"
+      "image": "https://www.cosmoderm.kz/products/atoderm-intensive-eye-v2.webp"
     },
     {
       "id": "bioderma-atoderm-intensive-gel-cream",
@@ -3702,7 +3702,7 @@
         "ru": "Для очень сухой и атопичной кожи всей семьи, включая младенцев.",
         "kz": "Нәрестелерді қоса, бүкіл отбасының өте құрғақ және атопиялық теріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/atoderm-intensive-gel-cream.webp"
+      "image": "https://www.cosmoderm.kz/products/atoderm-intensive-gel-cream-v2.webp"
     },
     {
       "id": "bioderma-atoderm-lip-balm",
@@ -3751,7 +3751,7 @@
         "ru": "Для очень сухих и потрескавшихся губ, нуждающихся в интенсивном питании.",
         "kz": "Қарқынды қоректенуді қажет ететін, өте құрғақ және жарылған еріндерге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/atoderm-lip-balm.webp"
+      "image": "https://www.cosmoderm.kz/products/atoderm-lip-balm-v2.webp"
     },
     {
       "id": "bioderma-atoderm-hand-nail-cream",
@@ -3800,7 +3800,7 @@
         "ru": "Для сухих и повреждённых рук, нуждающихся в частом уходе в течение дня.",
         "kz": "Күні бойы жиі күтімді қажет ететін құрғақ және зақымдалған қолға арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/atoderm-hand-nail-cream.webp"
+      "image": "https://www.cosmoderm.kz/products/atoderm-hand-nail-cream-v2.webp"
     },
     {
       "id": "bioderma-atoderm-nutrition-cream",
@@ -3849,7 +3849,7 @@
         "ru": "Для очень сухой и зрелой кожи лица, нуждающейся в интенсивном питании.",
         "kz": "Қарқынды қоректенуді қажет ететін, өте құрғақ және жасы үлкен бет теріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/atoderm-nutrition-cream.webp"
+      "image": "https://www.cosmoderm.kz/products/atoderm-nutrition-cream-v2.webp"
     },
     {
       "id": "bioderma-photoderm-akn-mat-spf30",
@@ -3947,7 +3947,7 @@
         "ru": "Для нормальной и сухой кожи, нуждающейся в увлажнении и защите одновременно.",
         "kz": "Бір мезгілде ылғалдандыру мен қорғанысты қажет ететін қалыпты және құрғақ теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/photoderm-cream-spf50.webp"
+      "image": "https://www.cosmoderm.kz/products/photoderm-cream-spf50-v2.webp"
     },
     {
       "id": "bioderma-photoderm-lait-ultra-spf50",
@@ -3996,7 +3996,7 @@
         "ru": "Для чувствительной кожи всей семьи, подходит для повседневного использования на солнце.",
         "kz": "Бүкіл отбасының сезімтал теріне, күн астында күнделікті қолдануға жарайды."
       },
-      "image": "https://www.cosmoderm.kz/products/photoderm-lait-ultra-spf50.webp"
+      "image": "https://www.cosmoderm.kz/products/photoderm-lait-ultra-spf50-v2.webp"
     },
     {
       "id": "bioderma-photoderm-mineral-fluid-spf50",
@@ -4095,7 +4095,7 @@
         "ru": "Для кожи, склонной к покраснениям и куперозу, нуждающейся в защите от солнца.",
         "kz": "Күннен қорғауды қажет ететін, қызару мен куперозға бейім теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/photoderm-ar-plus-ultra-fluid-spf50.webp"
+      "image": "https://www.cosmoderm.kz/products/photoderm-ar-plus-ultra-fluid-spf50-v2.webp"
     },
     {
       "id": "bioderma-photoderm-spot-age-spf50",
@@ -4193,7 +4193,7 @@
         "ru": "Для кожи, предрасположенной к гиперпигментации, включая мелазму.",
         "kz": "Мелазманы қоса, гиперпигментацияға бейім теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/photoderm-spot-spf50.webp"
+      "image": "https://www.cosmoderm.kz/products/photoderm-spot-spf50-v2.webp"
     },
     {
       "id": "bioderma-photoderm-spray-spf50",
@@ -4291,7 +4291,7 @@
         "ru": "Для всех типов кожи, включая чувствительную и область вокруг глаз.",
         "kz": "Көз айналасын қоса, барлық тері түріне, соның ішінде сезімтал теріге жарайды."
       },
-      "image": "https://www.cosmoderm.kz/products/photoderm-xdefense-ultra-fluid-spf50.webp"
+      "image": "https://www.cosmoderm.kz/products/photoderm-xdefense-ultra-fluid-spf50-v2.webp"
     },
     {
       "id": "bioderma-photoderm-after-sun-gel-cream",
@@ -4340,7 +4340,7 @@
         "ru": "Для всех типов кожи после пребывания на солнце, включая чувствительную.",
         "kz": "Күн астында болғаннан кейін сезімтал теріні қоса, барлық тері түріне жарайды."
       },
-      "image": "https://www.cosmoderm.kz/products/photoderm-after-sun-gel-cream.webp"
+      "image": "https://www.cosmoderm.kz/products/photoderm-after-sun-gel-cream-v2.webp"
     },
     {
       "id": "bioderma-photoderm-mineral-compact-light-spf50",
@@ -4438,7 +4438,7 @@
         "ru": "Для кожи с пигментными пятнами, чувствительной к синему свету экранов и солнцу.",
         "kz": "Экран мен күн көк жарығына сезімтал, пигментті дақтары бар теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/photoderm-m-spf50-light.webp"
+      "image": "https://www.cosmoderm.kz/products/photoderm-m-spf50-light-v2.webp"
     },
     {
       "id": "bioderma-photoderm-nude-touch-spf50",
@@ -4880,7 +4880,7 @@
         "ru": "Для повреждённых и раздражённых рук взрослых и детей от 3 лет.",
         "kz": "3 жастан асқан ересектер мен балалардың зақымдалған, тітіркенген қолына арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/cicabio-hand-cream.webp"
+      "image": "https://www.cosmoderm.kz/products/cicabio-hand-cream-v2.webp"
     },
     {
       "id": "bioderma-cicabio-cleansing-balm",
@@ -4932,7 +4932,7 @@
         "ru": "Для повреждённой и раздражённой кожи, нуждающейся в бережном очищении.",
         "kz": "Жайлы тазартуды қажет ететін зақымдалған және тітіркенген теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/cicabio-cleansing-balm.webp"
+      "image": "https://www.cosmoderm.kz/products/cicabio-cleansing-balm-v2.webp"
     },
     {
       "id": "bioderma-cicabio-cream-plus-spf50",
@@ -5032,7 +5032,7 @@
         "ru": "Для губ взрослых и детей от 3 лет, повреждённых сухостью или трещинами.",
         "kz": "Құрғақтықтан немесе жарылудан зақымдалған, 3 жастан асқан ересектер мен балалардың еріндеріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/cicabio-lip-repair.webp"
+      "image": "https://www.cosmoderm.kz/products/cicabio-lip-repair-v2.webp"
     },
     {
       "id": "bioderma-cicabio-lotion-spray",
@@ -5131,7 +5131,7 @@
         "ru": "Для ежедневного очищения кожи, склонной к появлению пигментных пятен.",
         "kz": "Пигментті дақтардың пайда болуына бейім теріні күнделікті тазартуға арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/pigmentbio-h2o.webp"
+      "image": "https://www.cosmoderm.kz/products/pigmentbio-h2o-v2.webp"
     },
     {
       "id": "bioderma-pigmentbio-night-renewer",
@@ -5180,7 +5180,7 @@
         "ru": "Для кожи с неровным тоном и пигментными пятнами, желающей усилить ночной уход.",
         "kz": "Түнгі күтімді күшейтуді қалайтын, реңкі біркелкі емес және пигментті дақтары бар теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/pigmentbio-night-renewer.webp"
+      "image": "https://www.cosmoderm.kz/products/pigmentbio-night-renewer-v2.webp"
     },
     {
       "id": "bioderma-pigmentbio-sensitive-areas",
@@ -5230,7 +5230,7 @@
         "ru": "Для потемневших чувствительных зон тела, склонных к раздражению.",
         "kz": "Тітіркенуге бейім, қараюы бар дененің сезімтал аймақтарына арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/pigmentbio-sensitive-areas.webp"
+      "image": "https://www.cosmoderm.kz/products/pigmentbio-sensitive-areas-v2.webp"
     },
     {
       "id": "bioderma-abcderm-foaming-cleanser",
@@ -5281,7 +5281,7 @@
         "ru": "Для ежедневного купания младенцев и детей, включая новорождённых.",
         "kz": "Жаңа туған нәрестелерді қоса, балаларды күнделікті шомылдыруға арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/abcderm-foaming-cleanser.webp"
+      "image": "https://www.cosmoderm.kz/products/abcderm-foaming-cleanser-v2.webp"
     },
     {
       "id": "bioderma-abcderm-gentle-shampoo",
@@ -5429,7 +5429,7 @@
         "ru": "Для профилактики и уменьшения пелёночного дерматита у младенцев с сухой кожей.",
         "kz": "Терісі құрғақ нәрестелердегі жаялық дерматитінің алдын алу және азайту үшін."
       },
-      "image": "https://www.cosmoderm.kz/products/abcderm-change-intensif.webp"
+      "image": "https://www.cosmoderm.kz/products/abcderm-change-intensif-v2.webp"
     },
     {
       "id": "bioderma-abcderm-h2o",
