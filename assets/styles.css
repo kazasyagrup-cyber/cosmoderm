@@ -1555,8 +1555,10 @@ a {
 
 .faq-item summary {
   padding-block: 0.85rem;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   color: var(--text-strong);
   cursor: pointer;
   list-style: none;
