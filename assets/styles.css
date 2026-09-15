@@ -65,6 +65,7 @@ a {
   top: 0;
   z-index: 20;
   background: rgba(255, 255, 255, 0.92);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
 }
@@ -176,50 +177,55 @@ a {
 .marketplace-badge {
   display: inline-flex;
   align-items: center;
-  padding: 0.35rem 0.7rem;
+  padding: 0.32rem 0.7rem;
   border-radius: 999px;
   font-size: 0.72rem;
   font-weight: 700;
-  color: #fff;
   text-decoration: none;
   white-space: nowrap;
-  transition: opacity 0.15s ease;
+  background: #fff;
+  border: 1.5px solid var(--badge-color, var(--border));
+  color: var(--badge-color, var(--text));
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
 .marketplace-badge:hover {
-  opacity: 0.85;
+  background: var(--badge-color, var(--border));
+  color: #fff;
 }
 
 .marketplace-kaspi {
-  background: #ed1c24;
+  --badge-color: #ed1c24;
 }
 
 .marketplace-wb {
-  background: #cb11ab;
+  --badge-color: #cb11ab;
 }
 
 .marketplace-ozon {
-  background: #005bff;
+  --badge-color: #005bff;
 }
 
 .contact-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  padding: 0.35rem 0.7rem;
+  padding: 0.32rem 0.7rem;
   border-radius: 999px;
   font-size: 0.72rem;
   font-weight: 700;
-  color: #fff;
-  background: #25d366;
   text-decoration: none;
   white-space: nowrap;
-  transition: opacity 0.15s ease;
+  background: #fff;
+  border: 1.5px solid #128c56;
+  color: #128c56;
+  transition: background 0.15s ease, color 0.15s ease;
   margin-left: 0.5rem;
 }
 
 .contact-badge:hover {
-  opacity: 0.85;
+  background: #128c56;
+  color: #fff;
 }
 
 .lang-switch {
@@ -779,6 +785,9 @@ a {
   font-style: italic;
   font-weight: 800;
   animation: announce-blink 1.6s ease-in-out infinite;
+  white-space: normal;
+  text-align: center;
+  max-width: 100%;
 }
 
 @keyframes announce-blink {
