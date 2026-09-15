@@ -781,11 +781,6 @@ a {
   animation: announce-blink 1.6s ease-in-out infinite;
 }
 
-.announce-item-soon::before {
-  content: "✨ ";
-  font-style: normal;
-}
-
 @keyframes announce-blink {
   0%, 45% { opacity: 1; }
   50%, 95% { opacity: 0.4; }
