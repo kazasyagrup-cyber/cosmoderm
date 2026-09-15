@@ -405,13 +405,35 @@
     const accent = lineAccent(product.line);
     return `
       <div class="product-photo">
-        <img src="${product.image}" alt="${product.name}" hidden />
+        <img data-src="${product.image}" alt="${product.name}" hidden />
         <div class="photo-fallback" style="background:${accent.bg};color:${accent.fg}">
           <span class="monogram" style="color:${accent.fg}">${monogram(product.line)}</span>
           <span class="soon-badge" style="color:${accent.fg}">${t("photo.soon")}</span>
         </div>
       </div>
     `;
+  }
+
+  // Grid photos start as <img data-src> (no fetch) and only get a real `src`
+  // once the card nears the viewport - a plain `loading="lazy"` doesn't work
+  // here because the img stays `hidden` (display:none) until it has loaded,
+  // and browsers never lazy-load an element with no layout box.
+  let gridPhotoObserver = null;
+  function getGridPhotoObserver() {
+    if (gridPhotoObserver || typeof IntersectionObserver === "undefined") return gridPhotoObserver;
+    gridPhotoObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const container = entry.target;
+          observer.unobserve(container);
+          const img = container.querySelector("img");
+          if (img && img.dataset.src) img.src = img.dataset.src;
+        });
+      },
+      { rootMargin: "400px 0px" }
+    );
+    return gridPhotoObserver;
   }
 
   function wirePhoto(container) {
@@ -424,6 +446,11 @@
     img.addEventListener("error", () => {
       img.hidden = true;
     });
+    // observe the (visible) photo container, not the hidden <img> itself -
+    // an element with no layout box never intersects.
+    const observer = getGridPhotoObserver();
+    if (observer) observer.observe(container);
+    else if (img.dataset.src) img.src = img.dataset.src;
   }
 
   function renderProductGrid(list) {
