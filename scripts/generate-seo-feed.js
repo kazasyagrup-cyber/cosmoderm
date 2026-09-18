@@ -136,9 +136,11 @@ function main() {
       "Официальный дилер дермокосметики ведущих мировых брендов в Казахстане. Розничная и оптовая продажа только оригинальной продукции. НЕ информационный каталог - действующий интернет-магазин с корзиной и оформлением заказа.",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "ул. Варламова 1/3, блок Б",
       addressLocality: "Алматы",
       addressCountry: "KZ",
     },
+    telephone: "+77272282125",
     areaServed: {
       "@type": "Country",
       name: "Kazakhstan",
@@ -151,6 +153,7 @@ function main() {
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",
+      telephone: "+77272282125",
       url: "https://wa.me/77087685329",
       availableLanguage: ["ru", "kz"],
     },
