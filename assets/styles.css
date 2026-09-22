@@ -1685,6 +1685,23 @@ a {
   color: var(--sky-dark);
 }
 
+.footer-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.footer-legal-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.footer-legal-links a:hover {
+  color: var(--sky-dark);
+}
+
 .footer-note {
   border-top: 1px solid var(--border);
   padding-block: 1.25rem;
@@ -1807,4 +1824,122 @@ a {
 
 #modal-content ol li + li {
   margin-top: 0.15rem;
+}
+
+/* Hukuki sayfalar: oferta, gizlilik, iade, teslimat (offer.html, privacy.html,
+   returns.html, delivery.html) — order-confirmation.html'deki gibi hafif,
+   bağımsız sayfa kalıbı. */
+.legal-wrap {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+.legal-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.legal-back {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.legal-lang-toggle {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.legal-lang-toggle button {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.legal-lang-toggle button.is-active {
+  background: var(--sky);
+  border-color: var(--sky);
+  color: #fff;
+}
+
+.legal-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.legal-card h1 {
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem;
+  color: var(--text-strong);
+}
+
+.legal-updated {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0 0 1.75rem;
+}
+
+.legal-card h2 {
+  font-size: 1.05rem;
+  margin: 1.75rem 0 0.6rem;
+  color: var(--text-strong);
+}
+
+.legal-card h2:first-of-type {
+  margin-top: 0;
+}
+
+.legal-card p,
+.legal-card li {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.legal-card ul,
+.legal-card ol {
+  padding-left: 1.2rem;
+  margin: 0.4rem 0;
+}
+
+.legal-card li + li {
+  margin-top: 0.35rem;
+}
+
+.legal-card strong {
+  color: var(--text-strong);
+}
+
+.legal-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.legal-nav a {
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: var(--sky-dark);
+  font-weight: 600;
+}
+
+[data-lang-block] {
+  display: none;
+}
+
+[data-lang-block].is-active {
+  display: block;
 }
