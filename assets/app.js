@@ -316,14 +316,33 @@
     el.searchResults.innerHTML = matches
       .map((p, i) => {
         const accent = lineAccent(p.line);
+        const price = p.price ? formatPrice(productDiscountPercent(p) ? discountedPrice(p) : p.price) : "";
         return `
       <button type="button" class="search-result-item" data-index="${i}">
-        <span class="result-brand" style="color:${accent.fg}">${brandName(p.brand)} · ${lineLabel(p.line)}</span>
-        <span class="result-name">${p.name}</span>
+        <span class="result-thumb" style="background:${accent.bg}">
+          <span class="result-mono" style="color:${accent.fg}">${monogram(p.line)}</span>
+          <img src="${p.image}" alt="" hidden />
+        </span>
+        <span class="result-text">
+          <span class="result-brand" style="color:${accent.fg}">${brandName(p.brand)} · ${lineLabel(p.line)}</span>
+          <span class="result-name">${p.name}</span>
+        </span>
+        ${price ? `<span class="result-price">${price}</span>` : ""}
       </button>
     `;
       })
       .join("");
+    // Küçük resimler: yüklenirse monogramın yerine geçer, yoksa monogram kalır
+    el.searchResults.querySelectorAll(".result-thumb img").forEach((img) => {
+      img.addEventListener("load", () => {
+        img.hidden = false;
+        const mono = img.parentElement.querySelector(".result-mono");
+        if (mono) mono.style.display = "none";
+      });
+      img.addEventListener("error", () => {
+        img.hidden = true;
+      });
+    });
     el.searchResults.querySelectorAll(".search-result-item").forEach((btn, i) => {
       btn.addEventListener("click", () => {
         openModal(matches[i]);
