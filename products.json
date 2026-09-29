@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T07:21:45.869Z",
+  "generated_at": "2026-09-29T15:01:18.208Z",
   "store": {
     "name": "CosmoDerm",
     "url": "https://www.cosmoderm.kz",
@@ -13,6 +13,24 @@
       "kz"
     ],
     "how_to_order": "WhatsApp: https://wa.me/77087685329 (добавить товары в корзину на сайте и оформить заказ)",
+    "wholesale": {
+      "summary_ru": "ОПТОВЫЕ ПРОДАЖИ BIODERMA — свяжитесь с нами. Оригинальная продукция Bioderma оптом для аптек, сетей, дистрибьюторов и продавцов маркетплейсов. Склад в Алматы.",
+      "summary_en": "Bioderma wholesale — original Bioderma products in bulk for pharmacies, chains, distributors and marketplace sellers. Warehouse in Almaty, Kazakhstan. Contact us.",
+      "countries": [
+        "Kazakhstan",
+        "Russia",
+        "Uzbekistan",
+        "Kyrgyzstan",
+        "Tajikistan",
+        "Turkmenistan",
+        "Mongolia",
+        "China"
+      ],
+      "contact_whatsapp": "https://wa.me/77087685329",
+      "contact_phone": "+7 727 228 21 25",
+      "page": "https://www.cosmoderm.kz/wholesale.html",
+      "terms": "Prices, minimum order quantity and delivery terms on request / Цены, минимальный объём и доставка — по запросу"
+    },
     "brands": [
       "Bioderma",
       "Avène",

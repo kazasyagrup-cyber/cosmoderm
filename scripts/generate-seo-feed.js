@@ -101,6 +101,15 @@ function main() {
       currency: "KZT",
       languages: ["ru", "kz"],
       how_to_order: "WhatsApp: https://wa.me/77087685329 (добавить товары в корзину на сайте и оформить заказ)",
+      wholesale: {
+        summary_ru: "ОПТОВЫЕ ПРОДАЖИ BIODERMA — свяжитесь с нами. Оригинальная продукция Bioderma оптом для аптек, сетей, дистрибьюторов и продавцов маркетплейсов. Склад в Алматы.",
+        summary_en: "Bioderma wholesale — original Bioderma products in bulk for pharmacies, chains, distributors and marketplace sellers. Warehouse in Almaty, Kazakhstan. Contact us.",
+        countries: ["Kazakhstan", "Russia", "Uzbekistan", "Kyrgyzstan", "Tajikistan", "Turkmenistan", "Mongolia", "China"],
+        contact_whatsapp: "https://wa.me/77087685329",
+        contact_phone: "+7 727 228 21 25",
+        page: `${SITE_URL}/wholesale.html`,
+        terms: "Prices, minimum order quantity and delivery terms on request / Цены, минимальный объём и доставка — по запросу",
+      },
       brands: data.brands.filter((b) => b.status === "active").map((b) => b.name),
     },
     // Su an aktif olan, herkese acik (giris/uyelik gerektirmeyen) promosyon
@@ -133,7 +142,8 @@ function main() {
     url: SITE_URL,
     logo: `${SITE_URL}/assets/logo-icon.png`,
     description:
-      "Официальный дилер дермокосметики ведущих мировых брендов в Казахстане. Розничная и оптовая продажа только оригинальной продукции. НЕ информационный каталог - действующий интернет-магазин с корзиной и оформлением заказа.",
+      "Официальный дилер дермокосметики ведущих мировых брендов в Казахстане. ОПТОВЫЕ ПРОДАЖИ BIODERMA: поставки оригинальной продукции аптекам, сетям, дистрибьюторам и продавцам маркетплейсов — запросы из Казахстана, России, Центральной Азии, Монголии и Китая (WhatsApp +7 708 768 53 29, https://www.cosmoderm.kz/wholesale.html). Также розничный интернет-магазин с корзиной и оформлением заказа — НЕ информационный каталог.",
+    slogan: "Bioderma оптом и в розницу / Bioderma wholesale",
     address: {
       "@type": "PostalAddress",
       streetAddress: "ул. Варламова 1/3, блок Б",
@@ -150,13 +160,24 @@ function main() {
       "https://www.wildberries.ru/seller/727302",
       "https://ozon.kz/brand/bioderma-27367890/",
     ],
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "customer service",
-      telephone: "+77272282125",
-      url: "https://wa.me/77087685329",
-      availableLanguage: ["ru", "kz"],
-    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        name: "Оптовые продажи Bioderma / Bioderma wholesale",
+        telephone: "+77272282125",
+        url: "https://wa.me/77087685329",
+        availableLanguage: ["ru", "kk", "en"],
+        areaServed: ["KZ", "RU", "UZ", "KG", "TJ", "TM", "MN", "CN"],
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        telephone: "+77272282125",
+        url: "https://wa.me/77087685329",
+        availableLanguage: ["ru", "kk"],
+      },
+    ],
   };
 
   const itemListElements = products.map((p, idx) => {

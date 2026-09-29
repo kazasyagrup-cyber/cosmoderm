@@ -781,25 +781,143 @@ a {
   white-space: nowrap;
 }
 
-.announce-item-soon {
-  font-style: italic;
-  font-weight: 800;
-  animation: announce-blink 1.6s ease-in-out infinite;
-  white-space: normal;
-  text-align: center;
-  max-width: 100%;
+/* Bioderma toptan satış duyurusu — duyuru çubuğunun büyük, ikinci satırı */
+.announce-bar .announce-wholesale-row {
+  padding-block: 0 0.6rem;
 }
 
-@keyframes announce-blink {
-  0%, 45% { opacity: 1; }
-  50%, 95% { opacity: 0.4; }
-  100% { opacity: 1; }
+.announce-wholesale {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem 0.9rem;
+  width: 100%;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  animation: wholesale-glow 2.4s ease-in-out infinite;
+}
+
+.announce-wholesale:hover,
+.announce-wholesale:focus-visible {
+  background: rgba(255, 255, 255, 0.26);
+}
+
+.announce-wholesale-main {
+  font-size: clamp(1rem, 2.4vw, 1.35rem);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.announce-wholesale-cta {
+  font-size: clamp(0.85rem, 1.8vw, 1rem);
+  font-weight: 700;
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--sky-dark);
+}
+
+.announce-wholesale-intl {
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+@keyframes wholesale-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+  50% { box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.28); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .announce-item-soon {
+  .announce-wholesale {
     animation: none;
   }
+}
+
+/* Bioderma toptan satış bölümü (ana sayfa) */
+.wholesale-section {
+  padding-block: 1.5rem 0.5rem;
+}
+
+.wholesale-card {
+  border-radius: var(--radius-xl);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: linear-gradient(120deg, var(--sky-50), var(--emerald-50));
+  border: 1px solid var(--sky-100);
+  box-shadow: var(--shadow-md);
+}
+
+.wholesale-eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--sky-dark);
+}
+
+.wholesale-title {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text-strong);
+}
+
+.wholesale-text {
+  margin: 0 0 0.6rem;
+  max-width: 62rem;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.wholesale-intl {
+  margin: 0 0 0.4rem;
+  max-width: 62rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.wholesale-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1rem;
+  margin-top: 1rem;
+}
+
+.wholesale-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid var(--sky);
+  color: var(--sky-dark);
+  background: var(--surface);
+}
+
+.wholesale-btn-primary {
+  background: var(--sky);
+  color: #fff;
+}
+
+.wholesale-btn:hover,
+.wholesale-btn:focus-visible {
+  filter: brightness(0.95);
+}
+
+.wholesale-link {
+  font-weight: 600;
+  color: var(--emerald-dark);
 }
 
 .promo-viewport {
