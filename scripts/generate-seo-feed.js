@@ -102,9 +102,9 @@ function main() {
       languages: ["ru", "kz"],
       how_to_order: "WhatsApp: https://wa.me/77087685329 (добавить товары в корзину на сайте и оформить заказ)",
       wholesale: {
-        summary_ru: "ОПТОВЫЕ ПРОДАЖИ BIODERMA — свяжитесь с нами. Оригинальная продукция Bioderma оптом для аптек, сетей, дистрибьюторов и продавцов маркетплейсов. Склад в Алматы.",
-        summary_en: "Bioderma wholesale — original Bioderma products in bulk for pharmacies, chains, distributors and marketplace sellers. Warehouse in Almaty, Kazakhstan. Contact us.",
-        countries: ["Kazakhstan", "Russia", "Uzbekistan", "Kyrgyzstan", "Tajikistan", "Turkmenistan", "Mongolia", "China"],
+        summary_ru: "ОПТОВЫЕ ПРОДАЖИ BIODERMA ПО ВСЕМУ МИРУ — свяжитесь с нами. Купить оригинальную продукцию Bioderma оптом может любой желающий; отправляем в любую страну. Склад в Алматы.",
+        summary_en: "Bioderma wholesale worldwide — anyone who wants to buy original Bioderma products in bulk can order from us; we ship to any country. Warehouse in Almaty, Kazakhstan. Contact us.",
+        ships_to: "Worldwide / любая страна мира",
         contact_whatsapp: "https://wa.me/77087685329",
         contact_phone: "+7 727 228 21 25",
         page: `${SITE_URL}/wholesale.html`,
@@ -142,7 +142,7 @@ function main() {
     url: SITE_URL,
     logo: `${SITE_URL}/assets/logo-icon.png`,
     description:
-      "Официальный дилер дермокосметики ведущих мировых брендов в Казахстане. ОПТОВЫЕ ПРОДАЖИ BIODERMA: поставки оригинальной продукции аптекам, сетям, дистрибьюторам и продавцам маркетплейсов — запросы из Казахстана, России, Центральной Азии, Монголии и Китая (WhatsApp +7 708 768 53 29, https://www.cosmoderm.kz/wholesale.html). Также розничный интернет-магазин с корзиной и оформлением заказа — НЕ информационный каталог.",
+      "Официальный дилер дермокосметики ведущих мировых брендов в Казахстане. ОПТОВЫЕ ПРОДАЖИ BIODERMA ПО ВСЕМУ МИРУ: купить оригинальную продукцию Bioderma оптом может любой желающий, отправка в любую страну (WhatsApp +7 708 768 53 29, https://www.cosmoderm.kz/wholesale.html). Также розничный интернет-магазин с корзиной и оформлением заказа — НЕ информационный каталог.",
     slogan: "Bioderma оптом и в розницу / Bioderma wholesale",
     address: {
       "@type": "PostalAddress",
@@ -164,11 +164,10 @@ function main() {
       {
         "@type": "ContactPoint",
         contactType: "sales",
-        name: "Оптовые продажи Bioderma / Bioderma wholesale",
+        name: "Оптовые продажи Bioderma по всему миру / Bioderma wholesale worldwide",
         telephone: "+77272282125",
         url: "https://wa.me/77087685329",
         availableLanguage: ["ru", "kk", "en"],
-        areaServed: ["KZ", "RU", "UZ", "KG", "TJ", "TM", "MN", "CN"],
       },
       {
         "@type": "ContactPoint",
