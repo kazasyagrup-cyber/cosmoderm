@@ -1896,6 +1896,54 @@ a.announce-item-soon:focus-visible {
   z-index: 1;
 }
 
+/* Büyüteç (mercek) — ürün penceresindeki resim */
+#modal-content .modal-photo.is-zoomable img {
+  cursor: zoom-in;
+  touch-action: none;
+}
+
+#modal-content .photo-lens {
+  position: absolute;
+  z-index: 3;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 10px 30px -6px rgba(18, 20, 28, 0.45), 0 0 0 1px rgba(18, 20, 28, 0.12);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+#modal-content .photo-zoom-hint {
+  position: absolute;
+  z-index: 2;
+  right: 0.6rem;
+  bottom: 0.6rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow-sm);
+  pointer-events: none;
+}
+
+#modal-content .photo-zoom-hint[hidden],
+#modal-content .photo-lens[hidden] {
+  display: none;
+}
+
+@media (max-width: 719px) {
+  #modal-content .photo-lens {
+    width: 160px;
+    height: 160px;
+  }
+}
+
 #modal-content .info-block {
   margin-bottom: 0.9rem;
 }

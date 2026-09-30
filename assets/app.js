@@ -696,8 +696,76 @@
       <div class="tag-row">${renderTags(product.skinTypes)}</div>
     `;
     const photoContainer = document.querySelector("#modal-content .modal-photo-wrap");
-    if (photoContainer) wirePhoto(photoContainer);
+    if (photoContainer) {
+      wirePhoto(photoContainer);
+      wireMagnifier(photoContainer);
+    }
     el.modal.hidden = false;
+  }
+
+  // Ürün penceresindeki resmin üzerinde büyüteç: imleç/parmak nereye giderse orası
+  // 2–3 kat büyütülmüş olarak yuvarlak mercekte gösterilir (resmin kendi çözünürlüğünü aşmadan).
+  function wireMagnifier(container) {
+    const img = container.querySelector("img");
+    if (!img) return;
+    const lens = document.createElement("div");
+    lens.className = "photo-lens";
+    lens.hidden = true;
+    container.appendChild(lens);
+    const hint = document.createElement("span");
+    hint.className = "photo-zoom-hint";
+    hint.setAttribute("aria-hidden", "true");
+    hint.textContent = "🔍";
+    hint.hidden = true;
+    container.appendChild(hint);
+    const enable = () => {
+      if (!img.naturalWidth) return;
+      hint.hidden = false;
+      container.classList.add("is-zoomable");
+    };
+    img.addEventListener("load", enable);
+    if (img.complete) enable();
+
+    function drawnRect() {
+      // object-fit: contain — resmin kutu içinde gerçekten çizildiği alan
+      const box = img.getBoundingClientRect();
+      const nw = img.naturalWidth;
+      const nh = img.naturalHeight;
+      if (!nw || !nh || !box.width) return null;
+      const ratio = Math.min(box.width / nw, box.height / nh);
+      const w = nw * ratio;
+      const h = nh * ratio;
+      return { left: box.left + (box.width - w) / 2, top: box.top + (box.height - h) / 2, w, h, nw };
+    }
+
+    function move(e) {
+      if (img.hidden) return;
+      const r = drawnRect();
+      if (!r) return;
+      const x = e.clientX - r.left;
+      const y = e.clientY - r.top;
+      if (x < 0 || y < 0 || x > r.w || y > r.h) {
+        lens.hidden = true;
+        return;
+      }
+      const zoom = Math.min(3, Math.max(2, r.nw / r.w));
+      const size = lens.offsetWidth || 220;
+      const cRect = container.getBoundingClientRect();
+      lens.hidden = false;
+      lens.style.left = `${e.clientX - cRect.left - size / 2}px`;
+      lens.style.top = `${e.clientY - cRect.top - size / 2}px`;
+      lens.style.backgroundImage = `url("${img.currentSrc || img.src}")`;
+      lens.style.backgroundSize = `${r.w * zoom}px ${r.h * zoom}px`;
+      lens.style.backgroundPosition = `${-(x * zoom - size / 2)}px ${-(y * zoom - size / 2)}px`;
+    }
+
+    img.addEventListener("pointermove", move);
+    img.addEventListener("pointerdown", move);
+    img.addEventListener("pointerleave", () => (lens.hidden = true));
+    img.addEventListener("pointerup", (e) => {
+      if (e.pointerType !== "mouse") lens.hidden = true;
+    });
+    img.addEventListener("pointercancel", () => (lens.hidden = true));
   }
 
   function photoMarkupModal(product) {
