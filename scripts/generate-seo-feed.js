@@ -268,4 +268,40 @@ function main() {
   console.log(`assets/product-ld.json yazildi (JSON-LD govdesi, ${itemListElements.length} Product node).`);
 }
 
+// Cloudflare "Browser Cache TTL" /assets/* dosyalarini tarayicida 4 saat sakliyor
+// (vercel.json'daki max-age=0'i eziyor) - bu yuzden guncellemeler ziyaretcilere
+// saatlerce ulasmiyordu. Cozum: tum *.html sayfalarinda /assets/*.js|css
+// baglantilarina icerik parmak izi (?v=<hash>) eklenir; dosya degisince adres
+// degisir, tarayici yenisini hemen indirir. Her varlik degisikliginden sonra bu
+// script calistirilmali (zaten data.js/ACTIVE_PROMO degisikliklerinde calisiyor).
+function versionAssets() {
+  const crypto = require("crypto");
+  const cache = {};
+  const hashOf = (rel) => {
+    if (!(rel in cache)) {
+      const p = path.join(ROOT, rel);
+      cache[rel] = fs.existsSync(p)
+        ? crypto.createHash("sha1").update(fs.readFileSync(p)).digest("hex").slice(0, 10)
+        : null;
+    }
+    return cache[rel];
+  };
+  const pages = fs.readdirSync(ROOT).filter((f) => f.endsWith(".html"));
+  let changed = 0;
+  for (const page of pages) {
+    const p = path.join(ROOT, page);
+    const html = fs.readFileSync(p, "utf8");
+    const out = html.replace(/((?:src|href)=")\/(assets\/[\w./-]+\.(?:js|css))(?:\?v=[\w-]+)?(")/g, (m, pre, rel, post) => {
+      const h = hashOf(rel);
+      return h ? `${pre}/${rel}?v=${h}${post}` : m;
+    });
+    if (out !== html) {
+      fs.writeFileSync(p, out, "utf8");
+      changed++;
+    }
+  }
+  console.log(`Varlik surumleri (?v=hash) guncellendi: ${changed}/${pages.length} sayfa.`);
+}
+
 main();
+versionAssets();
