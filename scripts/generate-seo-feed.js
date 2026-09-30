@@ -48,14 +48,16 @@ function main() {
   const promo = loadActivePromo();
   const brandById = Object.fromEntries(data.brands.map((b) => [b.id, b]));
   const catById = Object.fromEntries(data.categories.map((c) => [c.id, c]));
-  const promoBrandName = promo && brandById[promo.brand] ? brandById[promo.brand].name : promo && promo.brand;
+  // ACTIVE_PROMO artik birden fazla markaya uygulanabiliyor (brands: [...]); eski tekil "brand" alani da desteklenir.
+  const promoBrands = promo ? promo.brands || (promo.brand ? [promo.brand] : []) : [];
+  const promoBrandName = promoBrands.map((id) => (brandById[id] ? brandById[id].name : id)).join(", ");
 
   const products = data.products.map((p) => {
     const brand = brandById[p.brand];
     const imagePath = path.join(ROOT, p.image || "");
     const hasImage = !!p.image && fs.existsSync(imagePath);
     const basePrice = typeof p.price === "number" ? p.price : null;
-    const promoApplies = !!(promo && basePrice != null && p.brand === promo.brand);
+    const promoApplies = !!(promo && basePrice != null && promoBrands.includes(p.brand));
     const promoPrice = promoApplies ? Math.round((basePrice * (100 - promo.discountPercent)) / 100) : null;
     return {
       id: p.id,
@@ -120,7 +122,8 @@ function main() {
             code: promo.code,
             discount_percent: promo.discountPercent,
             applies_to_brand: promoBrandName,
-            how_to_use: `Введите промокод "${promo.code}" в корзине на сайте, скидка ${promo.discountPercent}% на товары бренда ${promoBrandName} применится автоматически. Код общедоступен, без регистрации/условий.`,
+            applies_to_brands: promoBrands.map((id) => (brandById[id] ? brandById[id].name : id)),
+            how_to_use: `Введите промокод "${promo.code}" в корзине на сайте, скидка ${promo.discountPercent}% на товары брендов ${promoBrandName} применится автоматически. Код общедоступен, без регистрации/условий.`,
           },
         ]
       : [],

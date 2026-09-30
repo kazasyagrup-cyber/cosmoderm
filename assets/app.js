@@ -27,13 +27,17 @@
     "cerave-moisturizers": { bg: "#e3f8f2", fg: "#0f766e" }, "cerave-cleansers": { bg: "#e6f4ea", fg: "#15803d" }, "cerave-sa": { bg: "#e3f8f2", fg: "#0f766e" },
     "sc-antioxidants": { bg: "#fef9e2", fg: "#a16207" }, "sc-hydrating": { bg: "#e0f7fa", fg: "#0e7490" },
     "mustela-bebe": { bg: "#e0e7ff", fg: "#1e3a8a" }, "mustela-stelatopia": { bg: "#cffafe", fg: "#0891b2" },
-    "mustela-maternite": { bg: "#fce7f3", fg: "#db2777" }, "mustela-soleil": { bg: "#fef9c3", fg: "#ca8a04" }
+    "mustela-maternite": { bg: "#fce7f3", fg: "#db2777" }, "mustela-soleil": { bg: "#fef9c3", fg: "#ca8a04" },
+    osmoclean: { bg: "#eef2f7", fg: "#475569" }, "esthe-white": { bg: "#f5f5f4", fg: "#57534e" },
+    "eau-cellulaire": { bg: "#eef2ff", fg: "#4f46e5" }, "esthederm-intensive": { bg: "#ede9fe", fg: "#5b21b6" },
+    "esthederm-anti-age": { bg: "#f5efe6", fg: "#92400e" }, "esthederm-sun": { bg: "#fff7ed", fg: "#c2410c" }
   };
 
   const NAV_CATEGORIES = ["cleansing", "moisturizing", "sun-protection", "body-care", "hair-care"];
 
   const brandLogos = {
     bioderma: "bioderma.png",
+    "institut-esthederm": "institut-esthederm.svg",
     avene: "avene.png",
     "la-roche-posay": "la-roche-posay.svg",
     uriage: "uriage.svg",
@@ -60,7 +64,8 @@
     embryolisse: "#ca8a04",
     cerave: "#4f46e5",
     skinceuticals: "#57534e",
-    mustela: "#0284c7"
+    mustela: "#0284c7",
+    "institut-esthederm": "#1e1b4b"
   };
 
   function lineAccent(lineId) {
@@ -79,7 +84,8 @@
     "aqualia-thermal-riche.webp",
     "topialyse-cica-plus.webp",
     "diopti-ice-effect.webp",
-    "lait-creme-mist.webp"
+    "lait-creme-mist.webp",
+    "esthederm-intensive-nad-serum-30ml.webp"
   ]);
   const promoProducts = products.filter((p) => !MISSING_PHOTOS.has(p.image.split("/").pop()));
   let promoIndex = 0;
@@ -93,12 +99,20 @@
   };
 
   // Aktif indirim kodu - zaman zaman degisecek/yenilenecek, sadece bu blogu
-  // guncelle (brand: data.js -> brands id'si, hangi markaya indirim uygulanacak).
+  // guncelle (brands: data.js -> brands id'leri, hangi markalara indirim uygulanacak).
   const ACTIVE_PROMO = {
     code: "NAOS",
     discountPercent: 20,
-    brand: "bioderma"
+    brands: ["bioderma", "institut-esthederm"]
   };
+
+  function promoAppliesTo(product) {
+    return ACTIVE_PROMO.brands.includes(product.brand);
+  }
+
+  function promoBrandNames() {
+    return ACTIVE_PROMO.brands.map(brandName).join(" / ");
+  }
 
   const CART_KEY = "cosmoderm-cart";
   const CART_UPDATED_KEY = "cosmoderm-cart-updated";
@@ -118,7 +132,7 @@
   }
 
   function productDiscountPercent(product) {
-    return isPromoActive() && product.brand === ACTIVE_PROMO.brand ? ACTIVE_PROMO.discountPercent : 0;
+    return isPromoActive() && promoAppliesTo(product) ? ACTIVE_PROMO.discountPercent : 0;
   }
 
   function discountedPrice(product) {
@@ -579,7 +593,7 @@
     if (!el.promoSlide || promoProducts.length === 0) return;
     const product = promoProducts[promoIndex];
     const accent = lineAccent(product.line);
-    const showPromoRibbon = product.brand === ACTIVE_PROMO.brand;
+    const showPromoRibbon = promoAppliesTo(product);
     el.promoSlide.style.background = `linear-gradient(120deg, ${accent.bg}, #ffffff 70%)`;
     el.promoSlide.innerHTML = `
       <div class="promo-info">
@@ -773,7 +787,7 @@
   function updatePromoMessage(status) {
     if (!el.promoMessage) return;
     if (status === "applied") {
-      el.promoMessage.textContent = t("cart.promoApplied").replace("{percent}", ACTIVE_PROMO.discountPercent).replace("{brand}", brandName(ACTIVE_PROMO.brand));
+      el.promoMessage.textContent = t("cart.promoApplied").replace("{percent}", ACTIVE_PROMO.discountPercent).replace("{brand}", promoBrandNames());
       el.promoMessage.className = "promo-code-message promo-code-message-ok";
       el.promoMessage.hidden = false;
     } else if (status === "invalid") {
@@ -816,7 +830,7 @@
       const discountNote = percent ? ` (-${percent}%)` : "";
       return `${i + 1}. ${brandName(item.product.brand)} · ${item.product.name}${volume} x${item.qty} = ${formatPrice(discountedPrice(item.product) * item.qty)}${discountNote}`;
     });
-    const promoLine = isPromoActive() ? [`${t("cart.promoLabel")}: ${appliedPromoCode} (-${ACTIVE_PROMO.discountPercent}% ${brandName(ACTIVE_PROMO.brand)})`, ""] : [];
+    const promoLine = isPromoActive() ? [`${t("cart.promoLabel")}: ${appliedPromoCode} (-${ACTIVE_PROMO.discountPercent}% ${promoBrandNames()})`, ""] : [];
     return [t("cart.waHeader"), "", ...lines, "", ...promoLine, `${t("cart.waTotal")}: ${formatPrice(cartTotal())}`].join("\n");
   }
 
