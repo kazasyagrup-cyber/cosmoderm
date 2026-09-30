@@ -76,6 +76,35 @@
     return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
   }
 
+  // Arama anahtari: yazim hatalarina toleransli ("estederm" -> Esthederm, "roche posay" -> Roche-Posay).
+  // Aksan, "h" harfi, bosluk/tire/nokta ve cift harfler yok sayilir.
+  function searchKey(s) {
+    return normalizeText(s).replace(/[\s\-'’.+]+/g, "").replace(/h/g, "").replace(/(.)\1+/g, "$1");
+  }
+
+  // Markalarin Kiril / yaygin yanlis yazilislari (aramada eslesmesi icin)
+  const BRAND_ALIASES = {
+    bioderma: "биодерма",
+    "institut-esthederm": "эстедерм эстэдерм естедерм esterderm",
+    avene: "авен авене",
+    "la-roche-posay": "ля рош позе ла рош позе лярошпозе lrp",
+    uriage: "урьяж урьяш",
+    vichy: "виши",
+    ducray: "дюкрей",
+    nuxe: "нюкс",
+    svr: "свр",
+    lierac: "лиерак",
+    embryolisse: "эмбриолис",
+    cerave: "цераве сераве",
+    skinceuticals: "скинсьютикалс",
+    mustela: "мустела"
+  };
+
+  function productSearchKey(p, withDescription) {
+    return searchKey(`${p.name} ${lineLabel(p.line)} ${brandName(p.brand)} ${BRAND_ALIASES[p.brand] || ""}` +
+      (withDescription ? ` ${tr(p.description)}` : ""));
+  }
+
   const MISSING_PHOTOS = new Set([
     "tolerance-extreme-creme-riche.webp",
     "anthelios-dermo-kids.webp",
@@ -308,25 +337,25 @@
   }
 
   function filterProducts() {
-    const query = normalizeText(state.query.trim());
+    const query = searchKey(state.query.trim());
     return products.filter((p) => {
       if (state.brand !== "all" && p.brand !== state.brand) return false;
       if (state.category !== "all" && p.category !== state.category) return false;
-      if (query && !normalizeText(`${p.name} ${lineLabel(p.line)} ${brandName(p.brand)} ${tr(p.description)}`).includes(query)) return false;
+      if (query && !productSearchKey(p, true).includes(query)) return false;
       return true;
     });
   }
 
   function renderSearchResults(rawQuery) {
     if (!el.searchResults) return;
-    const query = normalizeText(rawQuery.trim());
+    const query = searchKey(rawQuery.trim());
     if (!query) {
       el.searchResults.hidden = true;
       el.searchResults.innerHTML = "";
       return;
     }
     const matches = products
-      .filter((p) => normalizeText(`${p.name} ${lineLabel(p.line)} ${brandName(p.brand)}`).includes(query))
+      .filter((p) => productSearchKey(p, false).includes(query))
       .slice(0, 8);
 
     if (matches.length === 0) {
@@ -494,8 +523,13 @@
     else if (img.dataset.src) img.src = img.dataset.src;
   }
 
+  // Ana sayfada (filtre/arama yokken) sadece bu markalar acik; digerleri basliga tiklaninca acilir.
+  const OPEN_BRANDS = new Set(["bioderma", "institut-esthederm"]);
+  const expandedBrands = new Set();
+
   function renderProductGrid(list) {
     el.productGrid.innerHTML = "";
+    const collapsible = state.brand === "all" && state.category === "all" && !state.query.trim();
     if (list.length === 0) {
       const empty = document.createElement("p");
       empty.className = "empty-state";
@@ -514,14 +548,45 @@
     });
 
     let previousBrand = null;
+    let brandBody = el.productGrid;
     groups.forEach((group, groupIndex) => {
       const isFirstGroup = groupIndex === 0;
       if (group.brand !== previousBrand) {
+        brandBody = el.productGrid;
         if (!isFirstGroup) {
           const brandHeading = document.createElement("div");
           brandHeading.className = "brand-group-heading";
-          brandHeading.textContent = brandName(group.brand);
-          el.productGrid.appendChild(brandHeading);
+          if (collapsible && !OPEN_BRANDS.has(group.brand)) {
+            const brandId = group.brand;
+            const count = list.filter((p) => p.brand === brandId).length;
+            const open = expandedBrands.has(brandId);
+            brandBody = document.createElement("div");
+            brandBody.className = "brand-group-body";
+            brandBody.hidden = !open;
+            const toggle = document.createElement("button");
+            toggle.type = "button";
+            toggle.className = "brand-group-toggle";
+            toggle.setAttribute("aria-expanded", String(open));
+            toggle.innerHTML = `<span>${brandName(brandId)}</span>
+              <span class="brand-group-more">${t(open ? "catalog.hideBrand" : "catalog.showBrand")} (${count}) <span class="brand-group-arrow" aria-hidden="true">▾</span></span>`;
+            const body = brandBody;
+            toggle.addEventListener("click", () => {
+              const nowOpen = body.hidden;
+              body.hidden = !nowOpen;
+              if (nowOpen) expandedBrands.add(brandId);
+              else expandedBrands.delete(brandId);
+              toggle.setAttribute("aria-expanded", String(nowOpen));
+              toggle.querySelector(".brand-group-more").firstChild.textContent =
+                `${t(nowOpen ? "catalog.hideBrand" : "catalog.showBrand")} (${count}) `;
+            });
+            brandHeading.classList.add("is-collapsible");
+            brandHeading.appendChild(toggle);
+            el.productGrid.appendChild(brandHeading);
+            el.productGrid.appendChild(brandBody);
+          } else {
+            brandHeading.textContent = brandName(group.brand);
+            el.productGrid.appendChild(brandHeading);
+          }
         }
         previousBrand = group.brand;
       }
@@ -564,7 +629,7 @@
         grid.appendChild(card);
       });
       section.appendChild(grid);
-      el.productGrid.appendChild(section);
+      brandBody.appendChild(section);
     });
   }
 
