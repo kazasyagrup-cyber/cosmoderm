@@ -24,8 +24,6 @@
     sebiaclear: { bg: "#e6f4ea", fg: "#15803d" }, topialyse: { bg: "#e3f8f2", fg: "#0f766e" },
     "premium-lierac": { bg: "#fce7fa", fg: "#a21caf" }, diopti: { bg: "#e0f7fa", fg: "#0e7490" },
     "lait-creme-concentre": { bg: "#fef3e2", fg: "#b45309" },
-    "cerave-moisturizers": { bg: "#e3f8f2", fg: "#0f766e" }, "cerave-cleansers": { bg: "#e6f4ea", fg: "#15803d" }, "cerave-sa": { bg: "#e3f8f2", fg: "#0f766e" },
-    "sc-antioxidants": { bg: "#fef9e2", fg: "#a16207" }, "sc-hydrating": { bg: "#e0f7fa", fg: "#0e7490" },
     "mustela-bebe": { bg: "#e0e7ff", fg: "#1e3a8a" }, "mustela-stelatopia": { bg: "#cffafe", fg: "#0891b2" },
     "mustela-maternite": { bg: "#fce7f3", fg: "#db2777" }, "mustela-soleil": { bg: "#fef9c3", fg: "#ca8a04" },
     osmoclean: { bg: "#eef2f7", fg: "#475569" }, "esthe-white": { bg: "#f5f5f4", fg: "#57534e" },
@@ -47,7 +45,6 @@
     svr: "svr.png",
     lierac: "lierac.svg",
     embryolisse: "embryolisse.png",
-    cerave: "cerave.png",
     mustela: "mustela.png"
   };
 
@@ -62,8 +59,6 @@
     svr: "#0891b2",
     lierac: "#9333ea",
     embryolisse: "#ca8a04",
-    cerave: "#4f46e5",
-    skinceuticals: "#57534e",
     mustela: "#0284c7",
     "institut-esthederm": "#1e1b4b"
   };
@@ -95,8 +90,6 @@
     svr: "свр",
     lierac: "лиерак",
     embryolisse: "эмбриолис",
-    cerave: "цераве сераве",
-    skinceuticals: "скинсьютикалс",
     mustela: "мустела"
   };
 
