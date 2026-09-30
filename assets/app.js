@@ -57,7 +57,13 @@
     "isis-urelia": { bg: "#fce7f3", fg: "#9f1239" },
     "isis-uveblock": { bg: "#ffedd5", fg: "#c2410c" },
     "isis-neotone": { bg: "#dbeafe", fg: "#1d4ed8" },
-    "isis-secalia": { bg: "#ccfbf1", fg: "#0f766e" }
+    "isis-secalia": { bg: "#ccfbf1", fg: "#0f766e" },
+    "noreva-exfoliac": { bg: "#ecfccb", fg: "#4d7c0f" },
+    "noreva-sensidiane": { bg: "#fce7f3", fg: "#be185d" },
+    "noreva-aquareva": { bg: "#dbeafe", fg: "#2563eb" },
+    "noreva-xerodiane": { bg: "#dbeafe", fg: "#1d4ed8" },
+    "noreva-cicadiane": { bg: "#ede9fe", fg: "#6d28d9" },
+    "noreva-iklen": { bg: "#f1f5f9", fg: "#475569" }
   };
 
   const NAV_CATEGORIES = ["cleansing", "moisturizing", "sun-protection", "body-care", "hair-care"];
@@ -79,7 +85,8 @@
     topicrem: "topicrem.svg",
     caudalie: "caudalie.svg",
     filorga: "filorga.svg",
-    isispharma: "isispharma.svg"
+    isispharma: "isispharma.svg",
+    noreva: "noreva.svg"
   };
 
   const brandRingColors = {
@@ -99,7 +106,8 @@
     "topicrem": "#dc2626",
     "caudalie": "#7c2d5a",
     "filorga": "#1e293b",
-    "isispharma": "#be123c"
+    "isispharma": "#be123c",
+    "noreva": "#65a30d"
   };
 
   function lineAccent(lineId) {
@@ -134,7 +142,8 @@
     topicrem: "топикрем",
     caudalie: "кодали кадали",
     filorga: "филорга",
-    isispharma: "изисфарма исисфарма изис isis pharma"
+    isispharma: "изисфарма исисфарма изис isis pharma",
+    noreva: "норева"
   };
 
   function productSearchKey(p, withDescription) {
