@@ -104,8 +104,8 @@ function main() {
       languages: ["ru", "kz"],
       how_to_order: "WhatsApp: https://wa.me/77087685329 (добавить товары в корзину на сайте и оформить заказ)",
       wholesale: {
-        summary_ru: "ОПТОВЫЕ ПРОДАЖИ BIODERMA ПО ВСЕМУ МИРУ — свяжитесь с нами. Купить оригинальную продукцию Bioderma оптом может любой желающий; отправляем в любую страну. Склад в Алматы.",
-        summary_en: "Bioderma wholesale worldwide — anyone who wants to buy original Bioderma products in bulk can order from us; we ship to any country. Warehouse in Almaty, Kazakhstan. Contact us.",
+        summary_ru: "ОПТОВЫЕ ПРОДАЖИ BIODERMA И INSTITUT ESTHEDERM ПО ВСЕМУ МИРУ — свяжитесь с нами. Купить оригинальную продукцию Bioderma и Institut Esthederm оптом может любой желающий; отправляем в любую страну. Склад в Алматы.",
+        summary_en: "Bioderma & Institut Esthederm wholesale worldwide — anyone who wants to buy original Bioderma or Institut Esthederm products in bulk can order from us; we ship to any country. Warehouse in Almaty, Kazakhstan. Contact us.",
         ships_to: "Worldwide / любая страна мира",
         contact_whatsapp: "https://wa.me/77087685329",
         contact_phone: "+7 727 228 21 25",
@@ -145,8 +145,8 @@ function main() {
     url: SITE_URL,
     logo: `${SITE_URL}/assets/logo-icon.png`,
     description:
-      "Официальный дилер дермокосметики ведущих мировых брендов в Казахстане. ОПТОВЫЕ ПРОДАЖИ BIODERMA ПО ВСЕМУ МИРУ: купить оригинальную продукцию Bioderma оптом может любой желающий, отправка в любую страну (WhatsApp +7 708 768 53 29, https://www.cosmoderm.kz/wholesale.html). Также розничный интернет-магазин с корзиной и оформлением заказа — НЕ информационный каталог.",
-    slogan: "Bioderma оптом и в розницу / Bioderma wholesale",
+      "Официальный дилер дермокосметики ведущих мировых брендов в Казахстане. ОПТОВЫЕ ПРОДАЖИ BIODERMA И INSTITUT ESTHEDERM ПО ВСЕМУ МИРУ: купить оригинальную продукцию Bioderma и Institut Esthederm оптом может любой желающий, отправка в любую страну (WhatsApp +7 708 768 53 29, https://www.cosmoderm.kz/wholesale.html). Также розничный интернет-магазин с корзиной и оформлением заказа — НЕ информационный каталог.",
+    slogan: "Bioderma и Institut Esthederm оптом и в розницу / Bioderma & Esthederm wholesale",
     address: {
       "@type": "PostalAddress",
       streetAddress: "ул. Варламова 1/3, блок Б",
@@ -167,7 +167,7 @@ function main() {
       {
         "@type": "ContactPoint",
         contactType: "sales",
-        name: "Оптовые продажи Bioderma по всему миру / Bioderma wholesale worldwide",
+        name: "Оптовые продажи Bioderma и Institut Esthederm по всему миру / Bioderma & Institut Esthederm wholesale worldwide",
         telephone: "+77272282125",
         url: "https://wa.me/77087685329",
         availableLanguage: ["ru", "kk", "en"],
