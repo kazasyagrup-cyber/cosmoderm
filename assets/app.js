@@ -28,7 +28,30 @@
     "mustela-maternite": { bg: "#fce7f3", fg: "#db2777" }, "mustela-soleil": { bg: "#fef9c3", fg: "#ca8a04" },
     osmoclean: { bg: "#eef2f7", fg: "#475569" }, "esthe-white": { bg: "#f5f5f4", fg: "#57534e" },
     "eau-cellulaire": { bg: "#eef2ff", fg: "#4f46e5" }, "esthederm-intensive": { bg: "#ede9fe", fg: "#5b21b6" },
-    "esthederm-anti-age": { bg: "#f5efe6", fg: "#92400e" }, "esthederm-sun": { bg: "#fff7ed", fg: "#c2410c" }
+    "esthederm-anti-age": { bg: "#f5efe6", fg: "#92400e" }, "esthederm-sun": { bg: "#fff7ed", fg: "#c2410c" },
+    "aderma-exomega": { bg: "#ecfccb", fg: "#4d7c0f" },
+    "aderma-epitheliale": { bg: "#ede9fe", fg: "#7c3aed" },
+    "aderma-dermalibour": { bg: "#ccfbf1", fg: "#0f766e" },
+    "aderma-biology-ac": { bg: "#cffafe", fg: "#0e7490" },
+    "topicrem-da": { bg: "#ffe4e6", fg: "#be123c" },
+    "topicrem-ultra-hydratant": { bg: "#fce7f3", fg: "#db2777" },
+    "topicrem-dermo-specific": { bg: "#fee2e2", fg: "#b91c1c" },
+    "topicrem-cica": { bg: "#fee2e2", fg: "#dc2626" },
+    "topicrem-baby": { bg: "#dbeafe", fg: "#2563eb" },
+    "caudalie-vinopure": { bg: "#ecfccb", fg: "#4d7c0f" },
+    "caudalie-vinohydra": { bg: "#ffe4e6", fg: "#e11d48" },
+    "caudalie-resveratrol-lift": { bg: "#fce7f3", fg: "#be185d" },
+    "caudalie-vinoperfect": { bg: "#dbeafe", fg: "#1d4ed8" },
+    "caudalie-premier-cru": { bg: "#f3e8ff", fg: "#581c87" },
+    "caudalie-eau-de-beaute": { bg: "#fce7f3", fg: "#9d174d" },
+    "caudalie-vinoclean": { bg: "#d1fae5", fg: "#047857" },
+    "caudalie-vinotherapist": { bg: "#ede9fe", fg: "#6d28d9" },
+    "filorga-time-filler": { bg: "#e2e8f0", fg: "#334155" },
+    "filorga-optim-eyes": { bg: "#f1f5f9", fg: "#475569" },
+    "filorga-universal": { bg: "#f3f4f6", fg: "#374151" },
+    "filorga-meso-mask": { bg: "#ffe4e6", fg: "#9f1239" },
+    "filorga-hydra-hyal": { bg: "#e0f2fe", fg: "#0369a1" },
+    "filorga-skin-prep": { bg: "#f1f5f9", fg: "#475569" }
   };
 
   const NAV_CATEGORIES = ["cleansing", "moisturizing", "sun-protection", "body-care", "hair-care"];
@@ -45,7 +68,11 @@
     svr: "svr.png",
     lierac: "lierac.svg",
     embryolisse: "embryolisse.png",
-    mustela: "mustela.png"
+    mustela: "mustela.png",
+    "a-derma": "a-derma.svg",
+    topicrem: "topicrem.svg",
+    caudalie: "caudalie.svg",
+    filorga: "filorga.svg"
   };
 
   const brandRingColors = {
@@ -60,7 +87,11 @@
     lierac: "#9333ea",
     embryolisse: "#ca8a04",
     mustela: "#0284c7",
-    "institut-esthederm": "#1e1b4b"
+    "institut-esthederm": "#1e1b4b",
+    "a-derma": "#4d7c0f",
+    "topicrem": "#dc2626",
+    "caudalie": "#7c2d5a",
+    "filorga": "#1e293b"
   };
 
   function lineAccent(lineId) {
@@ -90,7 +121,11 @@
     svr: "свр",
     lierac: "лиерак",
     embryolisse: "эмбриолис",
-    mustela: "мустела"
+    mustela: "мустела",
+    "a-derma": "адерма а-дерма",
+    topicrem: "топикрем",
+    caudalie: "кодали кадали",
+    filorga: "филорга"
   };
 
   function productSearchKey(p, withDescription) {
