@@ -84,8 +84,7 @@
     "aqualia-thermal-riche.webp",
     "topialyse-cica-plus.webp",
     "diopti-ice-effect.webp",
-    "lait-creme-mist.webp",
-    "esthederm-intensive-nad-serum-30ml.webp"
+    "lait-creme-mist.webp"
   ]);
   const promoProducts = products.filter((p) => !MISSING_PHOTOS.has(p.image.split("/").pop()));
   let promoIndex = 0;
