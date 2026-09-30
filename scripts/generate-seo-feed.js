@@ -276,6 +276,23 @@ function main() {
 // script calistirilmali (zaten data.js/ACTIVE_PROMO degisikliklerinde calisiyor).
 function versionAssets() {
   const crypto = require("crypto");
+  // 1) resim parmak izleri -> assets/image-versions.js (app.js imgSrc() kullanir)
+  const imgMap = {};
+  const used = new Set(loadCatalog().products.map((p) => p.image).filter(Boolean));
+  for (const dir of ["products", "assets/brands"]) {
+    const abs = path.join(ROOT, dir);
+    if (!fs.existsSync(abs)) continue;
+    for (const f of fs.readdirSync(abs).sort()) {
+      if (!/\.(webp|png|jpe?g|svg|gif)$/i.test(f)) continue;
+      if (dir === "products" && !used.has(`/${dir}/${f}`)) continue; // sadece sitede kullanilan resimler
+      imgMap[`/${dir}/${f}`] = crypto.createHash("sha1").update(fs.readFileSync(path.join(abs, f))).digest("hex").slice(0, 8);
+    }
+  }
+  const ivPath = path.join(ROOT, "assets", "image-versions.js");
+  const ivJs = "/* scripts/generate-seo-feed.js tarafindan uretilir - elle duzenleme */\nwindow.IMAGE_VERSIONS = " + JSON.stringify(imgMap) + ";\n";
+  if (!fs.existsSync(ivPath) || fs.readFileSync(ivPath, "utf8") !== ivJs) fs.writeFileSync(ivPath, ivJs, "utf8");
+  console.log(`Resim surumleri: ${Object.keys(imgMap).length} dosya (assets/image-versions.js).`);
+
   const cache = {};
   const hashOf = (rel) => {
     if (!(rel in cache)) {

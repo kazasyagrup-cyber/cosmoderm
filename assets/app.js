@@ -87,6 +87,15 @@
     "lait-creme-mist.webp"
   ]);
   const promoProducts = products.filter((p) => !MISSING_PHOTOS.has(p.image.split("/").pop()));
+
+  // Resim adreslerine içerik parmak izi (?v=hash) — assets/image-versions.js'i
+  // scripts/generate-seo-feed.js üretir. Cloudflare tarayıcıda 4 saat önbellek
+  // tuttuğu için değişen/yeni eklenen resimler aksi halde geç görünüyordu.
+  const IMAGE_VERSIONS = window.IMAGE_VERSIONS || {};
+  function imgSrc(path) {
+    const v = path && IMAGE_VERSIONS[path];
+    return v ? `${path}?v=${v}` : path;
+  }
   let promoIndex = 0;
   let promoTimer = null;
 
@@ -334,7 +343,7 @@
       <button type="button" class="search-result-item" data-index="${i}">
         <span class="result-thumb" style="background:${accent.bg}">
           <span class="result-mono" style="color:${accent.fg}">${monogram(p.line)}</span>
-          <img src="${p.image}" alt="" hidden />
+          <img src="${imgSrc(p.image)}" alt="" hidden />
         </span>
         <span class="result-text">
           <span class="result-brand" style="color:${accent.fg}">${brandName(p.brand)} · ${lineLabel(p.line)}</span>
@@ -437,7 +446,7 @@
     const accent = lineAccent(product.line);
     return `
       <div class="product-photo">
-        <img data-src="${product.image}" alt="${product.name}" hidden />
+        <img data-src="${imgSrc(product.image)}" alt="${product.name}" hidden />
         <div class="photo-fallback" style="background:${accent.bg};color:${accent.fg}">
           <span class="monogram" style="color:${accent.fg}">${monogram(product.line)}</span>
           <span class="soon-badge" style="color:${accent.fg}">${t("photo.soon")}</span>
@@ -571,7 +580,7 @@
       btn.style.setProperty("--ring-color", ring);
       btn.innerHTML = `
         <span class="circle-frame">
-          ${logo ? `<img src="/assets/brands/${logo}" alt="${brand.name}" loading="lazy" />` : `<span>${brand.name.slice(0, 2).toUpperCase()}</span>`}
+          ${logo ? `<img src="${imgSrc(`/assets/brands/${logo}`)}" alt="${brand.name}" loading="lazy" />` : `<span>${brand.name.slice(0, 2).toUpperCase()}</span>`}
         </span>
         <span>${brand.name}</span>
       `;
@@ -624,7 +633,7 @@
         </div>
       </div>
       <div class="promo-photo">
-        <img src="${product.image}" alt="${product.name}" />
+        <img src="${imgSrc(product.image)}" alt="${product.name}" />
       </div>
     `;
     el.promoSlide.classList.remove("is-visible");
@@ -771,7 +780,7 @@
     const accent = lineAccents[product.line] || { bg: "#f7f2ea", fg: "#9c6b30" };
     return `
       <div class="modal-photo modal-photo-wrap">
-        <img src="${product.image}" alt="${product.name}" hidden />
+        <img src="${imgSrc(product.image)}" alt="${product.name}" hidden />
         <div class="photo-fallback" style="background:${accent.bg};color:${accent.fg}">
           <span class="monogram" style="color:${accent.fg}">${monogram(product.line)}</span>
           <span class="soon-badge" style="color:${accent.fg}">${t("photo.soon")}</span>
@@ -828,7 +837,7 @@
           return `
             <div class="cart-line">
               <div class="cart-line-photo" style="background:${accent.bg}">
-                <img src="${item.product.image}" alt="${item.product.name}" />
+                <img src="${imgSrc(item.product.image)}" alt="${item.product.name}" />
               </div>
               <div class="cart-line-body">
                 <span class="cart-line-name">${item.product.name}</span>
