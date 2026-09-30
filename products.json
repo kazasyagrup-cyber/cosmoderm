@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T01:06:40.949Z",
+  "generated_at": "2026-09-30T01:34:09.166Z",
   "store": {
     "name": "CosmoDerm",
     "url": "https://www.cosmoderm.kz",
@@ -6778,7 +6778,7 @@
         "ru": "Для жирной кожи с несовершенствами, для ежедневного применения.",
         "kz": "Кемшіліктері бар майлы теріге, күнделікті қолдануға арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/cleanance-gel-moussant.webp"
+      "image": "https://www.cosmoderm.kz/products/cleanance-gel-moussant-card.webp"
     },
     {
       "id": "avene-cleanance-comedomed",
@@ -6827,7 +6827,7 @@
         "ru": "Для жирной кожи с расширенными порами и чёрными точками.",
         "kz": "Кеуектері кеңейген және қара нүктелері бар майлы теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/cleanance-comedomed.webp"
+      "image": "https://www.cosmoderm.kz/products/cleanance-comedomed-card.webp"
     },
     {
       "id": "avene-tolerance-extreme-emulsion",
@@ -6876,7 +6876,7 @@
         "ru": "Для экстремально чувствительной и аллергичной кожи, в том числе после дерматологических процедур.",
         "kz": "Аса сезімтал және аллергиялы теріге, соның ішінде дерматологиялық процедурадан кейінгі теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/tolerance-extreme-emulsion.webp"
+      "image": "https://www.cosmoderm.kz/products/tolerance-extreme-emulsion-card.webp"
     },
     {
       "id": "avene-tolerance-extreme-creme-riche",
@@ -6976,7 +6976,7 @@
         "ru": "Для сухой обезвоженной кожи с ощущением стянутости.",
         "kz": "Тартылу сезімі бар құрғақ, сусызданған теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/hydrance-riche.webp"
+      "image": "https://www.cosmoderm.kz/products/hydrance-riche-card.webp"
     },
     {
       "id": "avene-hydrance-aqua-gel",
@@ -7025,7 +7025,7 @@
         "ru": "Для комбинированной и жирной обезвоженной кожи.",
         "kz": "Аралас және майлы сусызданған теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/hydrance-aqua-gel.webp"
+      "image": "https://www.cosmoderm.kz/products/hydrance-aqua-gel-card.webp"
     },
     {
       "id": "avene-cicalfate-plus-creme",
@@ -7075,7 +7075,7 @@
         "ru": "Для раздражённой, повреждённой кожи; не для открытых ран без консультации врача.",
         "kz": "Тітіркенген, зақымдалған теріге арналған; дәрігермен кеңеспей ашық жараларда қолданбаңыз."
       },
-      "image": "https://www.cosmoderm.kz/products/cicalfate-plus-creme.webp"
+      "image": "https://www.cosmoderm.kz/products/cicalfate-plus-creme-card.webp"
     },
     {
       "id": "avene-cicalfate-plus-lotion",
@@ -7124,7 +7124,7 @@
         "ru": "Для чувствительной кожи, нуждающейся в бережном очищении без раздражения.",
         "kz": "Тітіркенусіз жайлы тазартуды қажет ететін сезімтал теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/cicalfate-plus-lotion.webp"
+      "image": "https://www.cosmoderm.kz/products/cicalfate-plus-lotion-card.webp"
     },
     {
       "id": "avene-antirougeurs-fort",
@@ -7173,7 +7173,7 @@
         "ru": "Для кожи со стойкими покраснениями и куперозом.",
         "kz": "Тұрақты қызарулары мен куперозы бар теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/antirougeurs-fort.webp"
+      "image": "https://www.cosmoderm.kz/products/antirougeurs-fort-card.webp"
     },
     {
       "id": "avene-antirougeurs-jour",
@@ -7222,7 +7222,7 @@
         "ru": "Для кожи с покраснениями, нуждающейся в визуальной коррекции днём.",
         "kz": "Күндіз көзбен түзетуді қажет ететін қызарған теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/antirougeurs-jour.webp"
+      "image": "https://www.cosmoderm.kz/products/antirougeurs-jour-card.webp"
     },
     {
       "id": "lrp-effaclar-gel-moussant",
@@ -7273,7 +7273,7 @@
         "ru": "Для жирной кожи с расширенными порами и несовершенствами.",
         "kz": "Кеуектері кеңейген және кемшіліктері бар майлы теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/effaclar-gel-moussant.webp"
+      "image": "https://www.cosmoderm.kz/products/effaclar-gel-moussant-card.webp"
     },
     {
       "id": "lrp-effaclar-duo",
@@ -7323,7 +7323,7 @@
         "ru": "Для жирной кожи с акне и постакне пятнами.",
         "kz": "Акне мен акнеден кейінгі дақтары бар майлы теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/effaclar-duo.webp"
+      "image": "https://www.cosmoderm.kz/products/effaclar-duo-card.webp"
     },
     {
       "id": "lrp-cicaplast-baume-b5",
@@ -7373,7 +7373,7 @@
         "ru": "Для сухой, раздражённой и повреждённой кожи взрослых и детей.",
         "kz": "Ересектер мен балалардың құрғақ, тітіркенген және зақымдалған теріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/cicaplast-baume-b5.webp"
+      "image": "https://www.cosmoderm.kz/products/cicaplast-baume-b5-card.webp"
     },
     {
       "id": "lrp-cicaplast-gel-b5",
@@ -7422,7 +7422,7 @@
         "ru": "Для чувствительной кожи лица, склонной к раздражению после бритья или косметических процедур.",
         "kz": "Қырынудан немесе косметикалық процедурадан кейін тітіркенуге бейім сезімтал бет теріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/cicaplast-gel-b5.webp"
+      "image": "https://www.cosmoderm.kz/products/cicaplast-gel-b5-card.webp"
     },
     {
       "id": "lrp-anthelios-uvmune-fluide",
@@ -7471,7 +7471,7 @@
         "ru": "Для чувствительной кожи лица, требующей ежедневной защиты.",
         "kz": "Күнделікті қорғанысты қажет ететін сезімтал бет теріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/anthelios-uvmune-fluide.webp"
+      "image": "https://www.cosmoderm.kz/products/anthelios-uvmune-fluide-card.webp"
     },
     {
       "id": "lrp-anthelios-dermo-kids",
@@ -7569,7 +7569,7 @@
         "ru": "Для крайне чувствительной, реактивной кожи.",
         "kz": "Аса сезімтал, реактивті теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/toleriane-dermallegro.webp"
+      "image": "https://www.cosmoderm.kz/products/toleriane-dermallegro-card.webp"
     },
     {
       "id": "lrp-toleriane-caring-wash",
@@ -7620,7 +7620,7 @@
         "ru": "Для ежедневного очищения чувствительной и сухой кожи.",
         "kz": "Сезімтал және құрғақ теріні күнделікті тазартуға арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/toleriane-caring-wash.webp"
+      "image": "https://www.cosmoderm.kz/products/toleriane-caring-wash-card.webp"
     },
     {
       "id": "lrp-lipikar-baume-apm",
@@ -7669,7 +7669,7 @@
         "ru": "Для очень сухой и атопичной кожи всей семьи.",
         "kz": "Бүкіл отбасының өте құрғақ және атопиялық теріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/lipikar-baume-apm.webp"
+      "image": "https://www.cosmoderm.kz/products/lipikar-baume-apm-card.webp"
     },
     {
       "id": "lrp-lipikar-syndet-ap",
@@ -7720,7 +7720,7 @@
         "ru": "Для ежедневного очищения сухой и атопичной кожи всей семьи.",
         "kz": "Бүкіл отбасының құрғақ және атопиялық терісін күнделікті тазартуға арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/lipikar-syndet-ap.webp"
+      "image": "https://www.cosmoderm.kz/products/lipikar-syndet-ap-card.webp"
     },
     {
       "id": "uriage-bariederm-cica-creme",
@@ -7770,7 +7770,7 @@
         "ru": "Для сухой, раздражённой и повреждённой кожи.",
         "kz": "Құрғақ, тітіркенген және зақымдалған теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/bariederm-cica-creme.webp"
+      "image": "https://www.cosmoderm.kz/products/bariederm-cica-creme-card.webp"
     },
     {
       "id": "uriage-bariederm-cica-gel",
@@ -7819,7 +7819,7 @@
         "ru": "Для особо чувствительных зон и раздражённой кожи.",
         "kz": "Аса сезімтал аймақтар мен тітіркенген теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/bariederm-cica-gel.webp"
+      "image": "https://www.cosmoderm.kz/products/bariederm-cica-gel-card.webp"
     },
     {
       "id": "uriage-xemose-creme",
@@ -7868,7 +7868,7 @@
         "ru": "Для очень сухой и атопичной кожи всей семьи.",
         "kz": "Бүкіл отбасының өте құрғақ және атопиялық теріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/xemose-creme.webp"
+      "image": "https://www.cosmoderm.kz/products/xemose-creme-card.webp"
     },
     {
       "id": "uriage-xemose-huile-lavante",
@@ -7917,7 +7917,7 @@
         "ru": "Для ежедневного очищения сухой и атопичной кожи всей семьи.",
         "kz": "Бүкіл отбасының құрғақ және атопиялық терісін күнделікті тазартуға арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/xemose-huile-lavante.webp"
+      "image": "https://www.cosmoderm.kz/products/xemose-huile-lavante-card.webp"
     },
     {
       "id": "uriage-ds-laboratoire-creme",
@@ -7966,7 +7966,7 @@
         "ru": "Для кожи, склонной к себорейному дерматиту.",
         "kz": "Себорейлі дерматитке бейім теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/ds-laboratoire-creme.webp"
+      "image": "https://www.cosmoderm.kz/products/ds-laboratoire-creme-card.webp"
     },
     {
       "id": "uriage-ds-laboratoire-gel",
@@ -8018,7 +8018,7 @@
         "ru": "Для лица и кожи головы, склонных к себорее.",
         "kz": "Себореяға бейім бет пен бас терісіне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/ds-laboratoire-gel.webp"
+      "image": "https://www.cosmoderm.kz/products/ds-laboratoire-gel-card.webp"
     },
     {
       "id": "uriage-eau-thermale-brume",
@@ -8067,7 +8067,7 @@
         "ru": "Для всех типов чувствительной кожи, включая кожу после солнца.",
         "kz": "Барлық сезімтал тері түріне, соның ішінде күннен кейінгі теріге жарайды."
       },
-      "image": "https://www.cosmoderm.kz/products/eau-thermale-brume.webp"
+      "image": "https://www.cosmoderm.kz/products/eau-thermale-brume-card.webp"
     },
     {
       "id": "uriage-eau-thermale-lingettes",
@@ -8167,7 +8167,7 @@
         "ru": "Для жирной кожи с акне лёгкой и средней степени.",
         "kz": "Жеңіл және орташа дәрежедегі акнесі бар майлы теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/hyseac-gel-moussant.webp"
+      "image": "https://www.cosmoderm.kz/products/hyseac-gel-moussant-card.webp"
     },
     {
       "id": "uriage-hyseac-3-regul",
@@ -8217,7 +8217,7 @@
         "ru": "Для жирной кожи с акне и следами постакне.",
         "kz": "Акне мен акнеден кейінгі іздері бар майлы теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/hyseac-3-regul.webp"
+      "image": "https://www.cosmoderm.kz/products/hyseac-3-regul-card.webp"
     },
     {
       "id": "vichy-mineral89-booster",
@@ -8266,7 +8266,7 @@
         "ru": "Для всех типов кожи, испытывающих обезвоженность и внешнюю агрессию.",
         "kz": "Сусыздануды және сыртқы факторлардың әсерін сезінетін барлық тері түріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/mineral89-booster.webp"
+      "image": "https://www.cosmoderm.kz/products/mineral89-booster-card.webp"
     },
     {
       "id": "vichy-mineral89-eyes",
@@ -8315,7 +8315,7 @@
         "ru": "Для уставшей, обезвоженной кожи вокруг глаз.",
         "kz": "Шаршаған, сусызданған көз айналасы теріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/mineral89-eyes.webp"
+      "image": "https://www.cosmoderm.kz/products/mineral89-eyes-card.webp"
     },
     {
       "id": "vichy-liftactiv-collagen-specialist",
@@ -8364,7 +8364,7 @@
         "ru": "Для зрелой кожи с первыми признаками старения.",
         "kz": "Қартаюдың алғашқы белгілері бар піскен теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/liftactiv-collagen-specialist.webp"
+      "image": "https://www.cosmoderm.kz/products/liftactiv-collagen-specialist-card.webp"
     },
     {
       "id": "vichy-liftactiv-peptide-c",
@@ -8464,7 +8464,7 @@
         "ru": "Для жирной кожи с несовершенствами.",
         "kz": "Кемшіліктері бар майлы теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/normaderm-gel-moussant.webp"
+      "image": "https://www.cosmoderm.kz/products/normaderm-gel-moussant-card.webp"
     },
     {
       "id": "vichy-normaderm-phytosolution",
@@ -8513,7 +8513,7 @@
         "ru": "Для жирной кожи с акне, нуждающейся в увлажнении.",
         "kz": "Ылғалдандыруды қажет ететін, акнесі бар майлы теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/normaderm-phytosolution.webp"
+      "image": "https://www.cosmoderm.kz/products/normaderm-phytosolution-card.webp"
     },
     {
       "id": "vichy-aqualia-thermal-riche",
@@ -8612,7 +8612,7 @@
         "ru": "Для нормальной и комбинированной обезвоженной кожи.",
         "kz": "Қалыпты және аралас сусызданған теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/aqualia-thermal-leger.webp"
+      "image": "https://www.cosmoderm.kz/products/aqualia-thermal-leger-card.webp"
     },
     {
       "id": "vichy-capital-soleil-uv-age",
@@ -8661,7 +8661,7 @@
         "ru": "Для кожи, склонной к пигментации и фотостарению.",
         "kz": "Пигментацияға және фотоқартаюға бейім теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/capital-soleil-uv-age.webp"
+      "image": "https://www.cosmoderm.kz/products/capital-soleil-uv-age-card.webp"
     },
     {
       "id": "vichy-capital-soleil-lait",
@@ -8710,7 +8710,7 @@
         "ru": "Для чувствительной кожи лица и тела всей семьи.",
         "kz": "Бүкіл отбасының сезімтал бет пен дене теріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/capital-soleil-lait.webp"
+      "image": "https://www.cosmoderm.kz/products/capital-soleil-lait-card.webp"
     },
     {
       "id": "ducray-anaphase-shampoo",
@@ -8804,7 +8804,7 @@
         "ru": "Для реактивного и сезонного выпадения волос.",
         "kz": "Реактивті және маусымдық шаш түсуіне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/anaphase-serum.webp"
+      "image": "https://www.cosmoderm.kz/products/anaphase-serum-card.webp"
     },
     {
       "id": "ducray-kelual-ds-shampoo",
@@ -8853,7 +8853,7 @@
         "ru": "Для кожи головы со стойкой перхотью и себорейным дерматитом.",
         "kz": "Тұрақты қауызы және себорейлі дерматиті бар бас терісіне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/kelual-ds-shampoo.webp"
+      "image": "https://www.cosmoderm.kz/products/kelual-ds-shampoo-card.webp"
     },
     {
       "id": "ducray-squanorm-dry",
@@ -8949,7 +8949,7 @@
         "ru": "Для кожи головы с жирной перхотью.",
         "kz": "Майлы қауызы бар бас терісіне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/squanorm-oily.webp"
+      "image": "https://www.cosmoderm.kz/products/squanorm-oily-card.webp"
     },
     {
       "id": "nuxe-huile-prodigieuse-dry-oil",
@@ -8996,7 +8996,7 @@
         "ru": "Для всех типов кожи и волос, универсальное средство.",
         "kz": "Барлық тері мен шаш түріне арналған әмбебап құрал."
       },
-      "image": "https://www.cosmoderm.kz/products/huile-prodigieuse-dry-oil.webp"
+      "image": "https://www.cosmoderm.kz/products/huile-prodigieuse-dry-oil-card.webp"
     },
     {
       "id": "nuxe-huile-prodigieuse-florale",
@@ -9043,7 +9043,7 @@
         "ru": "Для нормальной и сухой кожи тела.",
         "kz": "Қалыпты және құрғақ дене теріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/huile-prodigieuse-florale.webp"
+      "image": "https://www.cosmoderm.kz/products/huile-prodigieuse-florale-card.webp"
     },
     {
       "id": "nuxe-reve-de-miel-face-cream",
@@ -9093,7 +9093,7 @@
         "ru": "Для сухой и очень сухой, раздражённой кожи лица.",
         "kz": "Құрғақ және өте құрғақ, тітіркенген бет теріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/reve-de-miel-face-cream.webp"
+      "image": "https://www.cosmoderm.kz/products/reve-de-miel-face-cream-card.webp"
     },
     {
       "id": "nuxe-reve-de-miel-lip-balm",
@@ -9142,7 +9142,7 @@
         "ru": "Для сухих и потрескавшихся губ.",
         "kz": "Құрғақ және жарылған еріндерге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/reve-de-miel-lip-balm.webp"
+      "image": "https://www.cosmoderm.kz/products/reve-de-miel-lip-balm-card.webp"
     },
     {
       "id": "svr-sebiaclear-gel-moussant",
@@ -9193,7 +9193,7 @@
         "ru": "Для жирной кожи, склонной к несовершенствам.",
         "kz": "Кемшіліктерге бейім майлы теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/sebiaclear-gel-moussant.webp"
+      "image": "https://www.cosmoderm.kz/products/sebiaclear-gel-moussant-card.webp"
     },
     {
       "id": "svr-sebiaclear-serum",
@@ -9242,7 +9242,7 @@
         "ru": "Для жирной кожи с акне лёгкой и средней степени.",
         "kz": "Жеңіл және орташа дәрежедегі акнесі бар майлы теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/sebiaclear-serum.webp"
+      "image": "https://www.cosmoderm.kz/products/sebiaclear-serum-card.webp"
     },
     {
       "id": "svr-topialyse-baume",
@@ -9291,7 +9291,7 @@
         "ru": "Для очень сухой, атопичной кожи всей семьи.",
         "kz": "Бүкіл отбасының өте құрғақ, атопиялық теріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/topialyse-baume.webp"
+      "image": "https://www.cosmoderm.kz/products/topialyse-baume-card.webp"
     },
     {
       "id": "svr-topialyse-cica-plus",
@@ -9390,7 +9390,7 @@
         "ru": "Для сухой зрелой кожи с признаками старения.",
         "kz": "Қартаю белгілері бар құрғақ, піскен теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/premium-creme-voluptueuse.webp"
+      "image": "https://www.cosmoderm.kz/products/premium-creme-voluptueuse-card.webp"
     },
     {
       "id": "lierac-premium-le-serum",
@@ -9439,7 +9439,7 @@
         "ru": "Для зрелой кожи с признаками потери упругости.",
         "kz": "Серпімділігін жоғалту белгілері бар піскен теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/premium-le-serum.webp"
+      "image": "https://www.cosmoderm.kz/products/premium-le-serum-card.webp"
     },
     {
       "id": "lierac-diopti-anti-fatigue",
@@ -9486,7 +9486,7 @@
         "ru": "Для уставшей кожи вокруг глаз, склонной к отёчности.",
         "kz": "Ісінуге бейім, шаршаған көз айналасы теріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/diopti-anti-fatigue.webp"
+      "image": "https://www.cosmoderm.kz/products/diopti-anti-fatigue-card.webp"
     },
     {
       "id": "lierac-diopti-ice-effect",
@@ -9584,7 +9584,7 @@
         "ru": "Универсальный уход для сухой, чувствительной и обезвоженной кожи, включая детскую.",
         "kz": "Құрғақ, сезімтал және сусызданған теріге, соның ішінде балалар терісіне арналған әмбебап күтім."
       },
-      "image": "https://www.cosmoderm.kz/products/lait-creme-concentre.webp"
+      "image": "https://www.cosmoderm.kz/products/lait-creme-concentre-card.webp"
     },
     {
       "id": "embryolisse-lait-creme-mist",
@@ -9682,7 +9682,7 @@
         "ru": "Для обезвоженной кожи, нуждающейся в ежедневной защите от солнца.",
         "kz": "Күнделікті күннен қорғанысты қажет ететін сусызданған теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/radiant-complexion-cream.webp"
+      "image": "https://www.cosmoderm.kz/products/radiant-complexion-cream-card.webp"
     },
     {
       "id": "cerave-moisturizing-cream",
@@ -9731,7 +9731,7 @@
         "ru": "Для сухой и очень сухой кожи лица и тела всей семьи.",
         "kz": "Бүкіл отбасының құрғақ және өте құрғақ бет пен дене теріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/cerave-moisturizing-cream.webp"
+      "image": "https://www.cosmoderm.kz/products/cerave-moisturizing-cream-card.webp"
     },
     {
       "id": "cerave-foaming-cleanser",
@@ -9782,7 +9782,7 @@
         "ru": "Для нормальной и жирной кожи лица.",
         "kz": "Қалыпты және майлы бет теріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/cerave-foaming-cleanser.webp"
+      "image": "https://www.cosmoderm.kz/products/cerave-foaming-cleanser-card.webp"
     },
     {
       "id": "cerave-hydrating-cleanser",
@@ -9834,7 +9834,7 @@
         "ru": "Для сухой и чувствительной кожи лица, не нарушает барьер.",
         "kz": "Барьерді бұзбайтын, құрғақ және сезімтал бет теріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/cerave-hydrating-cleanser.webp"
+      "image": "https://www.cosmoderm.kz/products/cerave-hydrating-cleanser-card.webp"
     },
     {
       "id": "cerave-sa-renewing-lotion",
@@ -9883,7 +9883,7 @@
         "ru": "Для сухой, шероховатой кожи тела.",
         "kz": "Құрғақ, кедір-бұдыр дене теріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/cerave-sa-renewing-lotion.webp"
+      "image": "https://www.cosmoderm.kz/products/cerave-sa-renewing-lotion-card.webp"
     },
     {
       "id": "skinceuticals-ce-ferulic",
@@ -9932,7 +9932,7 @@
         "ru": "Для кожи, подверженной воздействию солнца и признакам фотостарения.",
         "kz": "Күн әсеріне және фотоқартаю белгілеріне ұшыраған теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/sc-ce-ferulic.webp"
+      "image": "https://www.cosmoderm.kz/products/sc-ce-ferulic-card.webp"
     },
     {
       "id": "skinceuticals-phloretin-cf",
@@ -9982,7 +9982,7 @@
         "ru": "Для жирной и комбинированной кожи с неровным тоном.",
         "kz": "Реңкі біркелкі емес майлы және аралас теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/sc-phloretin-cf.webp"
+      "image": "https://www.cosmoderm.kz/products/sc-phloretin-cf-card.webp"
     },
     {
       "id": "skinceuticals-hydrating-b5",
@@ -10031,7 +10031,7 @@
         "ru": "Для всех типов обезвоженной кожи.",
         "kz": "Барлық сусызданған тері түріне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/sc-hydrating-b5.webp"
+      "image": "https://www.cosmoderm.kz/products/sc-hydrating-b5-card.webp"
     },
     {
       "id": "skinceuticals-triple-lipid",
@@ -10080,7 +10080,7 @@
         "ru": "Для зрелой сухой кожи с признаками потери упругости.",
         "kz": "Серпімділігін жоғалту белгілері бар піскен құрғақ теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/sc-triple-lipid.webp"
+      "image": "https://www.cosmoderm.kz/products/sc-triple-lipid-card.webp"
     },
     {
       "id": "mustela-hydra-bebe-lotion",
@@ -10129,7 +10129,7 @@
         "ru": "Подходит для чувствительной кожи новорождённых и детей.",
         "kz": "Жаңа туған нәрестелер мен балалардың сезімтал терісіне жарайды."
       },
-      "image": "https://www.cosmoderm.kz/products/mustela-hydra-bebe-lotion.webp"
+      "image": "https://www.cosmoderm.kz/products/mustela-hydra-bebe-lotion-card.webp"
     },
     {
       "id": "mustela-diaper-cream-123",
@@ -10178,7 +10178,7 @@
         "ru": "Для чувствительной кожи младенцев с первых дней жизни.",
         "kz": "Нәрестенің өмірінің алғашқы күндерінен бастап сезімтал терісіне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/mustela-diaper-cream-123.webp"
+      "image": "https://www.cosmoderm.kz/products/mustela-diaper-cream-123-card.webp"
     },
     {
       "id": "mustela-liniment",
@@ -10227,7 +10227,7 @@
         "ru": "Подходит для самой чувствительной кожи новорождённых.",
         "kz": "Жаңа туған нәрестенің ең сезімтал терісіне жарайды."
       },
-      "image": "https://www.cosmoderm.kz/products/mustela-liniment.webp"
+      "image": "https://www.cosmoderm.kz/products/mustela-liniment-card.webp"
     },
     {
       "id": "mustela-gentle-cleansing-gel",
@@ -10278,7 +10278,7 @@
         "ru": "Для чувствительной кожи и волос новорождённых и детей.",
         "kz": "Жаңа туған нәрестелер мен балалардың сезімтал терісі мен шашына арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/mustela-gentle-cleansing-gel.webp"
+      "image": "https://www.cosmoderm.kz/products/mustela-gentle-cleansing-gel-card.webp"
     },
     {
       "id": "mustela-baby-oil",
@@ -10327,7 +10327,7 @@
         "ru": "Подходит для чувствительной кожи малышей с первых дней жизни.",
         "kz": "Нәрестенің өмірінің алғашқы күндерінен сезімтал терісіне жарайды."
       },
-      "image": "https://www.cosmoderm.kz/products/mustela-baby-oil.webp"
+      "image": "https://www.cosmoderm.kz/products/mustela-baby-oil-card.webp"
     },
     {
       "id": "mustela-stelatopia-cream",
@@ -10376,7 +10376,7 @@
         "ru": "Для крайне сухой и атопичной кожи детей с рождения.",
         "kz": "Туылғаннан бастап балалардың өте құрғақ және атопиялық терісіне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/mustela-stelatopia-cream.webp"
+      "image": "https://www.cosmoderm.kz/products/mustela-stelatopia-cream-card.webp"
     },
     {
       "id": "mustela-stelatopia-cleansing-gel",
@@ -10427,7 +10427,7 @@
         "ru": "Для кожи, склонной к атопии, экземе и сильному зуду.",
         "kz": "Атопияға, экземаға және қатты қышуға бейім теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/mustela-stelatopia-cleansing-gel.webp"
+      "image": "https://www.cosmoderm.kz/products/mustela-stelatopia-cleansing-gel-card.webp"
     },
     {
       "id": "mustela-stelatopia-cleansing-oil",
@@ -10476,7 +10476,7 @@
         "ru": "Для крайне сухой и атопичной кожи с первых дней жизни.",
         "kz": "Өмірінің алғашқы күндерінен өте құрғақ және атопиялық теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/mustela-stelatopia-cleansing-oil.webp"
+      "image": "https://www.cosmoderm.kz/products/mustela-stelatopia-cleansing-oil-card.webp"
     },
     {
       "id": "mustela-stretch-marks-oil",
@@ -10525,7 +10525,7 @@
         "ru": "Для кожи будущих и молодых мам, склонной к потере эластичности.",
         "kz": "Серпімділігін жоғалтуға бейім болашақ және жас аналардың терісіне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/mustela-stretch-marks-oil.webp"
+      "image": "https://www.cosmoderm.kz/products/mustela-stretch-marks-oil-card.webp"
     },
     {
       "id": "mustela-stretch-marks-cream",
@@ -10574,7 +10574,7 @@
         "ru": "Для кожи живота и груди во время и после беременности.",
         "kz": "Жүктілік кезінде және одан кейін іш пен кеуде терісіне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/mustela-stretch-marks-cream.webp"
+      "image": "https://www.cosmoderm.kz/products/mustela-stretch-marks-cream-card.webp"
     },
     {
       "id": "mustela-nourishing-cleansing-gel",
@@ -10625,7 +10625,7 @@
         "ru": "Для сухой и чувствительной кожи во время беременности.",
         "kz": "Жүктілік кезіндегі құрғақ және сезімтал теріге арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/mustela-nourishing-cleansing-gel.webp"
+      "image": "https://www.cosmoderm.kz/products/mustela-nourishing-cleansing-gel-card.webp"
     },
     {
       "id": "mustela-sun-lotion-spf50",
@@ -10674,7 +10674,7 @@
         "ru": "Для чувствительной и склонной к атопии кожи детей и взрослых.",
         "kz": "Балалар мен ересектердің сезімтал және атопияға бейім терісіне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/mustela-sun-lotion-spf50.webp"
+      "image": "https://www.cosmoderm.kz/products/mustela-sun-lotion-spf50-card.webp"
     },
     {
       "id": "mustela-sun-stick-spf50",
@@ -10723,7 +10723,7 @@
         "ru": "Для чувствительной кожи лица детей и взрослых.",
         "kz": "Балалар мен ересектердің сезімтал бет терісіне арналған."
       },
-      "image": "https://www.cosmoderm.kz/products/mustela-sun-stick-spf50.webp"
+      "image": "https://www.cosmoderm.kz/products/mustela-sun-stick-spf50-card.webp"
     }
   ]
 }
