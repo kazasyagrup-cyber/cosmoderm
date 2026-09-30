@@ -51,7 +51,13 @@
     "filorga-universal": { bg: "#f3f4f6", fg: "#374151" },
     "filorga-meso-mask": { bg: "#ffe4e6", fg: "#9f1239" },
     "filorga-hydra-hyal": { bg: "#e0f2fe", fg: "#0369a1" },
-    "filorga-skin-prep": { bg: "#f1f5f9", fg: "#475569" }
+    "filorga-skin-prep": { bg: "#f1f5f9", fg: "#475569" },
+    "isis-ruboril": { bg: "#ffe4e6", fg: "#be123c" },
+    "isis-teen-derm": { bg: "#dcfce7", fg: "#15803d" },
+    "isis-urelia": { bg: "#fce7f3", fg: "#9f1239" },
+    "isis-uveblock": { bg: "#ffedd5", fg: "#c2410c" },
+    "isis-neotone": { bg: "#dbeafe", fg: "#1d4ed8" },
+    "isis-secalia": { bg: "#ccfbf1", fg: "#0f766e" }
   };
 
   const NAV_CATEGORIES = ["cleansing", "moisturizing", "sun-protection", "body-care", "hair-care"];
@@ -72,7 +78,8 @@
     "a-derma": "a-derma.svg",
     topicrem: "topicrem.svg",
     caudalie: "caudalie.svg",
-    filorga: "filorga.svg"
+    filorga: "filorga.svg",
+    isispharma: "isispharma.svg"
   };
 
   const brandRingColors = {
@@ -91,7 +98,8 @@
     "a-derma": "#4d7c0f",
     "topicrem": "#dc2626",
     "caudalie": "#7c2d5a",
-    "filorga": "#1e293b"
+    "filorga": "#1e293b",
+    "isispharma": "#be123c"
   };
 
   function lineAccent(lineId) {
@@ -125,7 +133,8 @@
     "a-derma": "адерма а-дерма",
     topicrem: "топикрем",
     caudalie: "кодали кадали",
-    filorga: "филорга"
+    filorga: "филорга",
+    isispharma: "изисфарма исисфарма изис isis pharma"
   };
 
   function productSearchKey(p, withDescription) {
