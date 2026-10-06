@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T06:40:25.451Z",
+  "generated_at": "2026-10-06T06:49:59.730Z",
   "store": {
     "name": "CosmoDerm",
     "url": "https://www.cosmoderm.kz",
@@ -2746,7 +2746,7 @@
         "ru": "Восстановление",
         "kz": "Қалпына келтіру"
       },
-      "volume": "200 мл",
+      "volume": "40 мл",
       "price_kzt": 13520,
       "list_price_kzt": 16900,
       "promo_code": "NAOS",

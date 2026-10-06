@@ -586,7 +586,7 @@
         efficacy: { ru: "Клинически подтверждён себорегулирующий эффект и снижение риска появления новых несовершенств.", kz: "Себорегуляторлық әсер және жаңа кемшіліктер қаупінің азаюы клиникалық түрде дәлелденген." },
         skinTypeNote: { ru: "Для жирной и комбинированной кожи, дополняет очищение перед нанесением сыворотки или крема.", kz: "Сарысу немесе крем жағар алдында тазартуды толықтыратын майлы және аралас теріге арналған." },
         image: "/products/sebium-lotion.webp" },
-      { id: "bioderma-sebium-night-peel", price: 16900, volume: "200 мл", name: "Sébium Night Peel", brand: "bioderma", line: "sebium", category: "repair", skinTypes: ["oily-problem"],
+      { id: "bioderma-sebium-night-peel", price: 16900, volume: "40 мл", name: "Sébium Night Peel", brand: "bioderma", line: "sebium", category: "repair", skinTypes: ["oily-problem"],
         description: { ru: "Ночная сыворотка-пилинг для обновления жирной кожи с чёрными точками и неровной текстурой.", kz: "Қара нүктелері мен бедері біркелкі емес майлы теріні жаңартуға арналған түнгі пилинг-сарысу." },
         activeIngredients: { ru: "Гликолевая кислота, D-пантенол и комплекс Fluidactiv™, поддерживающий баланс себума.", kz: "Гликол қышқылы, D-пантенол және себум теңгерімін қолдайтын Fluidactiv™ кешені." },
         fullIngredients: "Aqua/Water/Eau, Glycolic Acid (15%), Sodium Hydroxide, Panthenol, Ammonium Acryloyldimethyltaurate/VP Copolymer, Dipropylene Glycol, Hydroxyethylcellulose, Mannitol, Propyl Gallate, Xylitol, Sodium Metabisulfite, Rhamnose, Fructooligosaccharides, Caprylic/Capric Triglyceride, Laminaria Ochroleuca Extract, Fragrance (Parfum)",
