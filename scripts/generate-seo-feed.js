@@ -159,7 +159,7 @@ function main() {
       name: "Kazakhstan",
     },
     sameAs: [
-      "https://kaspi.kz/shop/p/bioderma-krem-hydrabio-dlja-litsa-50-ml-17600051/?c=750000000",
+      "https://kaspi.kz/shop/m/15383076/products/",
       "https://www.wildberries.ru/seller/727302",
       "https://ozon.kz/brand/bioderma-27367890/",
     ],
