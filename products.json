@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T07:00:47.365Z",
+  "generated_at": "2026-10-06T06:40:25.451Z",
   "store": {
     "name": "CosmoDerm",
     "url": "https://www.cosmoderm.kz",
@@ -1102,7 +1102,7 @@
         "ru": "Подходит для обезвоженной кожи любого типа, включая чувствительную.",
         "kz": "Кез келген сусызданған тері түріне, соның ішінде сезімтал теріге жарайды."
       },
-      "image": "https://www.cosmoderm.kz/products/hydrabio-h2o.webp"
+      "image": "https://www.cosmoderm.kz/products/hydrabio-h2o-v3.webp"
     },
     {
       "id": "bioderma-hydrabio-gel-creme",
@@ -1648,7 +1648,7 @@
         "ru": "Подходит для ежедневного очищения сухой и чувствительной кожи всей семьи.",
         "kz": "Бүкіл отбасының құрғақ және сезімтал терісін күнделікті тазартуға жарайды."
       },
-      "image": "https://www.cosmoderm.kz/products/atoderm-gel-moussant.webp"
+      "image": "https://www.cosmoderm.kz/products/atoderm-intensive-gel-moussant-500ml-v3.webp"
     },
     {
       "id": "bioderma-atoderm-stick-levres",
@@ -3885,7 +3885,7 @@
         "ru": "Защита от солнца",
         "kz": "Күннен қорғау"
       },
-      "volume": "200 мл",
+      "volume": "40 мл",
       "price_kzt": 10320,
       "list_price_kzt": 12900,
       "promo_code": "NAOS",
@@ -4462,7 +4462,7 @@
         "ru": "Для чувствительной кожи детей, подходит для нанесения на сухую и влажную кожу.",
         "kz": "Балалардың сезімтал теріне арналған, құрғақ және дымқыл теріге жағуға жарайды."
       },
-      "image": "https://www.cosmoderm.kz/products/photoderm-pediatrics-lait-spf50.webp"
+      "image": "https://www.cosmoderm.kz/products/photoderm-pediatrics-lait-v3.webp"
     },
     {
       "id": "bioderma-cicabio-hand-cream",
