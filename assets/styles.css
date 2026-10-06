@@ -255,6 +255,16 @@ a {
   color: #fff;
 }
 
+/* 06.10: NAOS kodu yalnız sitede — rozetlerin altında tek satır, sade (büyük banner yok) */
+.marketplace-note {
+  flex-basis: 100%;
+  font-size: 0.66rem;
+  font-weight: 600;
+  color: var(--muted, #6b7280);
+  line-height: 1.2;
+  padding-left: 0.2rem;
+}
+
 .marketplace-kaspi {
   --badge-color: #ed1c24;
 }
