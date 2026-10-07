@@ -154,6 +154,7 @@ function main() {
       addressCountry: "KZ",
     },
     telephone: "+77272282125",
+    email: "info@cosmoderm.kz",
     areaServed: {
       "@type": "Country",
       name: "Kazakhstan",
@@ -170,6 +171,7 @@ function main() {
         name: "Оптовые продажи Bioderma и Institut Esthederm по всему миру / Bioderma & Institut Esthederm wholesale worldwide",
         telephone: "+77272282125",
         url: "https://wa.me/77087685329",
+        email: "info@cosmoderm.kz",
         availableLanguage: ["ru", "kk", "en"],
       },
       {
@@ -177,6 +179,7 @@ function main() {
         contactType: "customer service",
         telephone: "+77272282125",
         url: "https://wa.me/77087685329",
+        email: "info@cosmoderm.kz",
         availableLanguage: ["ru", "kk"],
       },
     ],
