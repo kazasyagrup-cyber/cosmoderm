@@ -311,6 +311,28 @@ a {
   flex-basis: auto;
 }
 
+/* 07.10 kullanıcı: simgeler dil seçeneğine yanaşsın (sağa yaslı), %10 küçük */
+.header-top .header-marketplaces {
+  margin-left: auto;
+  align-items: flex-end;
+}
+
+.header-top .lang-switch {
+  margin-left: 0.4rem;
+}
+
+.social-ozon img,
+.social-wb img {
+  object-fit: cover;
+}
+
+@media (max-width: 640px) {
+  .header-top .header-marketplaces {
+    margin-left: 0;
+    align-items: flex-start;
+  }
+}
+
 .social-icons {
   display: flex;
   align-items: center;
@@ -318,8 +340,8 @@ a {
 }
 
 .social-icon {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
