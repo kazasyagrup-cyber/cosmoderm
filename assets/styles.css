@@ -299,6 +299,93 @@ a {
   color: #fff;
 }
 
+/* 07.10: yuvarlak marka simgeleri (bioderma.com.kz başlığındaki gibi).
+   Simgeler + NAOS notu alt alta: kapsayıcı genişliği ikisinin en genişi olsun (yan yana toplanıp dil/sepeti alt satıra itmesin) */
+.header-marketplaces {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+}
+
+.header-marketplaces .marketplace-note {
+  flex-basis: auto;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-decoration: none;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+.social-icon svg {
+  width: 60%;
+  height: 60%;
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.social-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+
+.social-whatsapp {
+  background: #25d366;
+}
+
+.social-whatsapp svg {
+  width: 64%;
+  height: 64%;
+}
+
+.social-kaspi {
+  background: #f14635;
+}
+
+.social-ozon {
+  background: #005bff;
+}
+
+.social-ozon span {
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: -0.02em;
+  font-style: italic;
+}
+
+.social-wb {
+  background: linear-gradient(135deg, #cb11ab 0%, #481173 100%);
+}
+
+.social-wb span {
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.82rem;
+}
+
 .lang-switch {
   margin-left: auto;
   display: flex;
