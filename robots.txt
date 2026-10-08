@@ -1,4 +1,6 @@
 User-agent: *
+Disallow: /k/
+Disallow: /api/
 Allow: /
 
 # Yapay zeka arama/ajan botlari - acikca izin verildi (belirsizlik olmasin diye,
