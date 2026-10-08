@@ -12,7 +12,7 @@ let cache = { at: 0, sold: null };
 
 async function kaspi(path, token) {
   const r = await fetch(API + path, { headers: { 'X-Auth-Token': token, Accept: 'application/vnd.api+json', 'Content-Type': 'application/vnd.api+json' } });
-  if (!r.ok) throw new Error('kaspi ' + r.status);
+  if (!r.ok) throw new Error('kaspi ' + r.status + ' ' + (await r.text()).slice(0, 80).replace(/\s+/g, ' '));
   return r.json();
 }
 
@@ -55,7 +55,7 @@ module.exports = async (req, res) => {
   let sold = {};
   if (process.env.KASPI_TOKEN) {
     try { sold = await soldSince(feed.baseline_ms, process.env.KASPI_TOKEN); }
-    catch (e) { res.statusCode = 503; res.end('orders unavailable'); return; }
+    catch (e) { res.statusCode = 503; res.end('orders unavailable: ' + String(e && e.message || e).slice(0, 120)); return; }
   } else if (!(req.query && req.query.test === '1')) {
     res.statusCode = 503; res.end('KASPI_TOKEN missing'); return;
   }
