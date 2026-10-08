@@ -61,5 +61,8 @@
       "source": "/k/:key",
       "destination": "/api/kaspi-feed?key=:key"
     }
+  ],
+  "regions": [
+    "fra1"
   ]
 }

@@ -11,9 +11,18 @@ const API = 'https://kaspi.kz/shop/api/v2';
 let cache = { at: 0, sold: null };
 
 async function kaspi(path, token) {
-  const r = await fetch(API + path, { headers: { 'X-Auth-Token': token, Accept: 'application/vnd.api+json', 'Content-Type': 'application/vnd.api+json' } });
-  if (!r.ok) throw new Error('kaspi ' + r.status + ' ' + (await r.text()).slice(0, 80).replace(/\s+/g, ' '));
-  return r.json();
+  // 08.10: Kaspi'ye ilk bağlantı ara sıra "fetch failed" veriyor → 3 deneme (0,4 / 1,2 sn arayla)
+  let last;
+  for (let i = 0; i < 3; i++) {
+    try {
+      const r = await fetch(API + path, { headers: { 'X-Auth-Token': token, Accept: 'application/vnd.api+json', 'Content-Type': 'application/vnd.api+json' } });
+      if (r.ok) return r.json();
+      last = new Error('kaspi ' + r.status + ' ' + (await r.text()).slice(0, 80).replace(/\s+/g, ' '));
+      if (r.status < 500 && r.status !== 429) break;  // 401/403/404 → tekrar denemenin anlamı yok
+    } catch (e) { last = e; }
+    await new Promise((ok) => setTimeout(ok, [400, 1200, 0][i]));
+  }
+  throw last;
 }
 
 async function soldSince(since, token) {
