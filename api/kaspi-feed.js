@@ -18,22 +18,24 @@ async function kaspi(path, token) {
 
 async function soldSince(since, token) {
   if (cache.sold && Date.now() - cache.at < 4 * 60 * 1000) return cache.sold;
-  const sold = {};
   const to = Date.now();
-  for (const state of STATES) {
+  // 08.10: hız — durumlar ve sipariş kalemleri PARALEL okunur (önce sıralı ~8,6 sn sürüyordu; Kaspi zaman aşımına düşmesin)
+  const listState = async (state) => {
+    const out = [];
     for (let page = 0; page < 20; page++) {
       const q = `/orders?page[number]=${page}&page[size]=100&filter[orders][creationDate][$ge]=${since}&filter[orders][creationDate][$le]=${to}&filter[orders][state]=${state}`;
       const o = await kaspi(q, token);
-      for (const od of o.data || []) {
-        if (CANCELLED.has(od.attributes.status)) continue;
-        const e = await kaspi(`/orders/${od.id}/entries`, token);
-        for (const en of e.data || []) {
-          const sku = en.attributes.offer && en.attributes.offer.code;
-          if (sku) sold[sku] = (sold[sku] || 0) + (en.attributes.quantity || 0);
-        }
-      }
+      out.push(...(o.data || []));
       if (!o.meta || page + 1 >= o.meta.pageCount) break;
     }
+    return out;
+  };
+  const orders = (await Promise.all(STATES.map(listState))).flat().filter((od) => !CANCELLED.has(od.attributes.status));
+  const entries = await Promise.all(orders.map((od) => kaspi(`/orders/${od.id}/entries`, token)));
+  const sold = {};
+  for (const e of entries) for (const en of e.data || []) {
+    const sku = en.attributes.offer && en.attributes.offer.code;
+    if (sku) sold[sku] = (sold[sku] || 0) + (en.attributes.quantity || 0);
   }
   cache = { at: Date.now(), sold };
   return sold;
@@ -76,6 +78,7 @@ module.exports = async (req, res) => {
   }
   out.push('</offers>');
   out.push('</kaspi_catalog>');
+  console.log('kaspi-feed', JSON.stringify({ mode: night ? 'night' : 'day', ua: req.headers['user-agent'] || '', ip: req.headers['x-forwarded-for'] || '', offers: feed.items.length }));  // Vercel Logs'ta Kaspi okumalarını görmek için
   res.setHeader('Content-Type', 'application/xml; charset=utf-8');
   res.setHeader('X-Feed-Mode', night ? 'night' : 'day');
   res.end(out.join('\n'));
