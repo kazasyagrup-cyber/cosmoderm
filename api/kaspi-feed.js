@@ -46,7 +46,8 @@ module.exports = async (req, res) => {
   res.setHeader('CDN-Cache-Control', 'no-store');
   res.setHeader('X-Robots-Tag', 'noindex, nofollow');
   const key = process.env.KASPI_FEED_KEY;
-  if (!key || (req.query && req.query.key) !== key) { res.statusCode = 404; res.end('Not found'); return; }
+  if (!key) { res.statusCode = 404; res.end('Not found (key not configured)'); return; }  // teşhis: Vercel'de KASPI_FEED_KEY yok
+  if (String((req.query && req.query.key) || '').trim() !== key.trim()) { res.statusCode = 404; res.end('Not found'); return; }
 
   const hour = (new Date().getUTCHours() + feed.tz_offset) % 24;
   const night = hour >= feed.night_from || hour < feed.night_to;
