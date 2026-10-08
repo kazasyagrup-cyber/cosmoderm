@@ -3,7 +3,7 @@
 "company": "cosmoderm.kz",
 "store": "PP1",
 "baseline_ms": 1791467640000,
-"night_from": 19,
+"night_from": 18,
 "night_to": 7,
 "tz_offset": 5,
 "items": [
@@ -1047,5 +1047,6 @@
 "night": 7760,
 "stock": 4
 }
-]
+],
+"night_start_ms": 1791550800000
 }

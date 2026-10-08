@@ -1,6 +1,6 @@
 // Kaspi otomatik fiyat listesi (cosmoderm.kz, merchant 15383076).
 // Kaspi bu adresi düzenli okur: /k/<KASPI_FEED_KEY> (vercel.json rewrite). Anahtar yalnızca Vercel ortam değişkeninde durur.
-// Almatı saatiyle 19:00–07:00 arası gece fiyatı (resmi rakibin %1 altı, en az %10 kâr), diğer saatlerde normal fiyat.
+// Almatı saatiyle 18:00–07:00 (feed.json night_from/night_to) arası gece fiyatı (resmi rakibin %1 altı, en az %10 kâr), diğer saatlerde normal fiyat.
 // Stok = api/_kaspi/feed.json'daki adet − baseline_ms'den beri Kaspi siparişlerinde satılan (iptaller hariç; KASPI_TOKEN ile).
 // Siparişler okunamazsa 503 döner: Kaspi eski listeyi korur, olmayan ürün satılmaz.
 const feed = require('./_kaspi/feed.json');
@@ -61,7 +61,7 @@ module.exports = async (req, res) => {
   if (String((req.query && req.query.key) || '').trim() !== key.trim()) { res.statusCode = 404; res.end('Not found'); return; }
 
   const hour = (new Date().getUTCHours() + feed.tz_offset) % 24;
-  const night = hour >= feed.night_from || hour < feed.night_to;
+  const night = Date.now() >= (feed.night_start_ms || 0) && (hour >= feed.night_from || hour < feed.night_to);  // night_start_ms öncesi hep gündüz fiyatı
 
   let sold = {};
   if (process.env.KASPI_TOKEN) {
