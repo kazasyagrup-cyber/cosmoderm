@@ -78,8 +78,13 @@ module.exports = async (req, res) => {
   out.push(`<company>${esc(feed.company)}</company>`);
   out.push(`<merchantid>${esc(feed.merchant)}</merchantid>`);
   out.push('<offers>');
+  // 10.10: ikiz kart ilanları (it.pool = ana ilanın sku'su) ana ilanla ORTAK stoğu paylaşır: stok = ana stok − havuzdaki tüm sku'ların satışı
+  const base = {}, poolSold = {};
+  for (const it of feed.items) if (!it.pool) base[it.sku] = it.stock;
+  for (const it of feed.items) { const g = it.pool || it.sku; poolSold[g] = (poolSold[g] || 0) + (sold[it.sku] || 0); }
   for (const it of feed.items) {
-    const stock = Math.max(0, it.stock - (sold[it.sku] || 0));
+    const g = it.pool || it.sku;
+    const stock = Math.max(0, (g in base ? base[g] : it.stock) - poolSold[g]);
     const price = night ? it.night : it.day;
     out.push(`<offer sku="${esc(it.sku)}"><model>${esc(it.model)}</model>${it.brand ? `<brand>${esc(it.brand)}</brand>` : ''}` +
       `<availabilities><availability available="${stock > 0 ? 'yes' : 'no'}" storeId="${esc(feed.store)}"${stock > 0 ? ` stockCount="${stock}"` : ''}/></availabilities>` +
