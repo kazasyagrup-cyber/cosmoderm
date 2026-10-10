@@ -112,6 +112,8 @@ async function ozonRecords(sinceMs, id, key) {
 
 // ---------- Birleştir
 const IDX = { kaspi: {}, wb: {}, ozon: {} };   // platform anahtarı → EAN
+const SETIDX = { kaspi: {}, wb: {}, ozon: {} }; // platform anahtarı → set tanımı {bilesen:[{ean,adet}], acik}
+for (const st of (MAP.setler || [])) SETIDX[st.platform][String(st.key)] = st;
 for (const [ean, s] of Object.entries(MAP.items)) {
   for (const k of s.kaspi) IDX.kaspi[k] = ean;
   for (const w of s.wb) IDX.wb[w.sku] = ean;
@@ -139,9 +141,16 @@ async function snapshot(env, opts = {}) {
   const add = (plat, recs) => {
     for (const r of recs) {
       const e = IDX[plat][r.key];
-      if (!e) continue;
-      if (r.ts >= base) { (sold[e] = sold[e] || { kaspi: 0, wb: 0, ozon: 0 })[plat] += r.q; }
-      if (r.ts >= Date.now() - 14 * 86400000) v14[e] = (v14[e] || 0) + r.q;
+      if (e) {
+        if (r.ts >= base) { (sold[e] = sold[e] || { kaspi: 0, wb: 0, ozon: 0 })[plat] += r.q; }
+        if (r.ts >= Date.now() - 14 * 86400000) v14[e] = (v14[e] || 0) + r.q;
+        continue;
+      }
+      const st = SETIDX[plat][String(r.key)];   // SET satışı → her bileşen adet×q düşer
+      if (st) for (const c of st.bilesen) {
+        if (r.ts >= base) { (sold[c.ean] = sold[c.ean] || { kaspi: 0, wb: 0, ozon: 0 })[plat] += r.q * c.adet; }
+        if (r.ts >= Date.now() - 14 * 86400000) v14[c.ean] = (v14[c.ean] || 0) + r.q * c.adet;
+      }
     }
   };
   if (Date.now() - base > 13 * 86400000) errors.push('baseline 13 günden eski → stok_rebaseline.py çalıştırılmalı (Kaspi siparişleri eksik okunur)');
@@ -151,7 +160,10 @@ async function snapshot(env, opts = {}) {
     const t = sold[ean] || { kaspi: 0, wb: 0, ozon: 0 };
     R[ean] = Math.max(0, s.B - t.kaspi - t.wb - t.ozon);
   }
-  return { R, sold, v14, errors, counts: { kaspi: kas.length, wb: wb.length, ozon: oz.length } };
+  // set kapasitesi = bileşenlerin kalanından kaç set çıkar (en dar bileşen)
+  const S = {};
+  for (const st of (MAP.setler || [])) S[st.platform + ':' + st.key] = Math.min(...st.bilesen.map((c) => Math.floor((R[c.ean] || 0) / c.adet)));
+  return { R, S, sold, v14, errors, counts: { kaspi: kas.length, wb: wb.length, ozon: oz.length } };
 }
 
-module.exports = { MAP, IDX, snapshot, http, ozonHeaders, WB_MP, OZON, sleep, creds };
+module.exports = { MAP, IDX, SETIDX, snapshot, http, ozonHeaders, WB_MP, OZON, sleep, creds };

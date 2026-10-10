@@ -11,6 +11,7 @@ module.exports = async (req, res) => {
       return { ean, ad: s.ad, B: s.B, kaspi: t.kaspi, wb: t.wb, ozon: t.ozon, R: snap.R[ean], satis14: snap.v14[ean] || 0, ilan: { kaspi: s.kaspi.length, wb: s.wb.length, ozon: s.ozon.length } };
     });
     res.setHeader('Content-Type', 'application/json; charset=utf-8');
-    res.end(JSON.stringify({ ok: !snap.errors.length, hatalar: snap.errors, baseline_ms: core.MAP.baseline_ms, sayim: snap.counts, items }));
+    const setler = (core.MAP.setler || []).map((st) => ({ platform: st.platform, key: st.key, ad: st.ad, acik: st.acik, kapasite: snap.S[st.platform + ':' + st.key], bilesen: st.bilesen }));
+    res.end(JSON.stringify({ ok: !snap.errors.length, hatalar: snap.errors, baseline_ms: core.MAP.baseline_ms, sayim: snap.counts, items, setler }));
   } catch (e) { res.statusCode = 500; res.end(JSON.stringify({ ok: false, error: String(e && e.message || e).slice(0, 200) })); }
 };
