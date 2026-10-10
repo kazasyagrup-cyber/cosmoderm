@@ -35,7 +35,8 @@ module.exports = async (req, res) => {
       for (const o of s.ozon) { const cur = ozCur[o]; if (cur != null && cur > R) { ozPlan.push({ ean, offer_id: o, cur, yeni: R }); eans.add(ean); } }
     }
     const total = Object.keys(core.MAP.items).length;
-    const brake = eans.size > 0.3 * total;
+    const fren = parseFloat(process.env.STOK_FREN_ORAN || '0.3');   // varsayılan %30; ilk açılış senkronu için kullanıcı Vercel'de GEÇİCİ 1 yapar, sonra siler
+    const brake = eans.size > fren * total;
     const out = { ok: true, mod: write ? 'YAZ' : 'GOLGE', ean: total, degisecek_ean: eans.size, fren: brake, wb: wbPlan, ozon: ozPlan, sayim: snap.counts };
     if (write && !brake) {
       const wbRes = [], ozRes = [];
