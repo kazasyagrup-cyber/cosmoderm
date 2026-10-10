@@ -14,8 +14,7 @@ jobs:
         env:
           K: ${{ secrets.STOK_SYNC_KEY }}
         run: |
-          K=$(printf '%s' "$K" | tr -d '
-	 ')   # secret'a yanlışlıkla giren boşluk/satır sonunu temizle
+          K=$(printf '%s' "$K" | tr -d '[:space:]')   # secret'a yanlışlıkla giren boşluk/satır sonunu temizle
           K=${K#STOK_SYNC_KEY=}                        # "ADI=" önekiyle yapıştırılmışsa at
           code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 90 --get --data-urlencode "key=$K" "https://www.cosmoderm.kz/api/stok-sync")
           echo "stok-sync HTTP $code"
