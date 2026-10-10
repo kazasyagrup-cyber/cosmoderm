@@ -1766,6 +1766,15 @@
 "night": 8400,
 "stock": 4,
 "pool": "102400298_15383076"
+},
+{
+"sku": "160497080_15383076",
+"model": "Bioderma лосьон Sebium Lotion Rebalancing Water 200 мл",
+"brand": "bioderma",
+"day": 16900,
+"night": 16900,
+"stock": 19,
+"pool": "17700783_659590"
 }
 ],
 "night_start_ms": 1791550800000
