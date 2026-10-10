@@ -1863,7 +1863,7 @@
 "platform":"ozon",
 "key":"370123431189N",
 "ad":"SENSIBIO Gel Moussant Гель мусс для умывания 500мл + SENSIBIO Eye+ Гель для контура глаз 15мл",
-"acik":false,
+"acik":true,
 "bilesen":[
 {
 "ean":"3701129800843",
@@ -1879,7 +1879,7 @@
 "platform":"ozon",
 "key":"3701129804958",
 "ad":"ATODERM Stick Levres Питательная помада для губ 4 г X 2",
-"acik":false,
+"acik":true,
 "bilesen":[
 {
 "ean":"3701129804957",
@@ -1891,7 +1891,7 @@
 "platform":"ozon",
 "key":"3701129810068",
 "ad":"ATODERM BAUME LEVRES Восстанавливающий бальзам для губ 15мл X 2",
-"acik":false,
+"acik":true,
 "bilesen":[
 {
 "ean":"3701129810064",
@@ -1903,7 +1903,7 @@
 "platform":"ozon",
 "key":"3701129812018",
 "ad":"SEBIUM H2O Мицеллярная вода для жирной кожи склонной к акне 2x500мл",
-"acik":false,
+"acik":true,
 "bilesen":[
 {
 "ean":"3701129812013",
@@ -1931,7 +1931,7 @@
 "platform":"ozon",
 "key":"3701129812108",
 "ad":"Bioderma SENSIBIO H2O Мицеллярная вода для чувствительной кожи 2x500мл",
-"acik":false,
+"acik":true,
 "bilesen":[
 {
 "ean":"3701129812105",
@@ -1987,7 +1987,7 @@
 "platform":"ozon",
 "key":"370120901853N",
 "ad":"SENSIBIO H2O мицеллярная вода100мл + Sensibio Eye+ гель для контура глаз 15мл",
-"acik":false,
+"acik":true,
 "bilesen":[
 {
 "ean":"3701129812075",
@@ -2019,7 +2019,7 @@
 "platform":"ozon",
 "key":"3701129811955X2",
 "ad":"1+1 Увлажняющий крем Sebium Mat Control для жирной кожи, 2 X 30 мл",
-"acik":false,
+"acik":true,
 "bilesen":[
 {
 "ean":"3701129811955",
@@ -2052,6 +2052,206 @@
 {
 "ean":"3701129804193",
 "adet":2
+}
+]
+},
+{
+"platform":"ozon",
+"key":"37011298035161",
+"ad":"PHOTODERM Creme SPF 50+ Claire Light Солнцезащитный крем для сухой кожи 40мл",
+"acik":true,
+"bilesen":[
+{
+"ean":"3701129803516",
+"adet":1
+}
+]
+},
+{
+"platform":"ozon",
+"key":"370121006117N",
+"ad":"Sensibio gel 200мл + Sensibio Eye+ гель для контура глаз 15мл",
+"acik":true,
+"bilesen":[
+{
+"ean":"3701129812037",
+"adet":1
+},
+{
+"ean":"3701129811467",
+"adet":1
+}
+]
+},
+{
+"platform":"ozon",
+"key":"370112981146N",
+"ad":"Набор SENSIBIO Gel Moussant Гель для умывания 200 мл + Defensive Увлажняющий крем 40 мл + Eye+ Крем для кожи вокруг глаз 15 мл",
+"acik":true,
+"bilesen":[
+{
+"ean":"3701129812037",
+"adet":1
+},
+{
+"ean":"3701129804452",
+"adet":1
+},
+{
+"ean":"3701129811467",
+"adet":1
+}
+]
+},
+{
+"platform":"ozon",
+"key":"3401575390408",
+"ad":"SENSIBIO H2O мицеллярная вода 250 мл + SENSIBIO Defensive Увлажняющий крем 40 мл",
+"acik":true,
+"bilesen":[
+{
+"ean":"3701129812068",
+"adet":1
+},
+{
+"ean":"3701129804452",
+"adet":1
+}
+]
+},
+{
+"platform":"ozon",
+"key":"3461020002868N",
+"ad":"Institut Esthederm набор для очищения кожи лица Esthe-White + Osmoclean",
+"acik":true,
+"bilesen":[
+{
+"ean":"3461020012690",
+"adet":1
+},
+{
+"ean":"3461020003667",
+"adet":1
+}
+]
+},
+{
+"platform":"ozon",
+"key":"34013206554192",
+"ad":"Подарочный Набор SENSIBIO TONIQUE Тоник 250мл + SENSIBIO Eye+ Крем вокруг глаза 15мл",
+"acik":true,
+"bilesen":[
+{
+"ean":"3401320655418",
+"adet":1
+},
+{
+"ean":"3701129811467",
+"adet":1
+}
+]
+},
+{
+"platform":"ozon",
+"key":"3701129812518N",
+"ad":"Sensibio AR+ BI serum Концентрированная сыворотка 30 мл + Sensibio гель для умывания 200 мл",
+"acik":true,
+"bilesen":[
+{
+"ean":"3701129812518",
+"adet":1
+},
+{
+"ean":"3701129812037",
+"adet":1
+}
+]
+},
+{
+"platform":"ozon",
+"key":"370112987456N",
+"ad":"Sensibio AR+ BI сыворотка 30мл + Sensibio тоник 250мл",
+"acik":true,
+"bilesen":[
+{
+"ean":"3701129812518",
+"adet":1
+},
+{
+"ean":"3401320655418",
+"adet":1
+}
+]
+},
+{
+"platform":"ozon",
+"key":"088",
+"ad":"PIGMENTBIO Daily Care SPF50+ Осветляющий дневной крем 40 мл",
+"acik":true,
+"bilesen":[
+{
+"ean":"3701129800072",
+"adet":1
+}
+]
+},
+{
+"platform":"ozon",
+"key":"370121918131N",
+"ad":"Sensibio AR+ BI Serum Концентрат против покраснений 30 мл + Sensibio AR+ Cream Крем против покраснений 40мл",
+"acik":true,
+"bilesen":[
+{
+"ean":"3701129812518",
+"adet":1
+},
+{
+"ean":"3701129812099",
+"adet":1
+}
+]
+},
+{
+"platform":"ozon",
+"key":"3461020002035N",
+"ad":"Institut Esthederm Eau Cellulaire & Intensive Pro-Collagen+ Duo Set Клеточная вода 200 мл + Крем с про-коллагеном 50 мл",
+"acik":true,
+"bilesen":[
+{
+"ean":"3461022003061",
+"adet":1
+},
+{
+"ean":"3461020002035",
+"adet":1
+}
+]
+},
+{
+"platform":"wb",
+"key":"2052038696913",
+"ad":"Sensibio гель для умывания чувствительной кожи 2×500 мл",
+"acik":true,
+"bilesen":[
+{
+"ean":"3701129800843",
+"adet":2
+}
+]
+},
+{
+"platform":"wb",
+"key":"2052038697279",
+"ad":"Набор Hydrabio гель для умывания 400 мл и гель-крем 40 мл",
+"acik":true,
+"bilesen":[
+{
+"ean":"3701129814390",
+"adet":1
+},
+{
+"ean":"3401329447809",
+"adet":1
 }
 ]
 }
