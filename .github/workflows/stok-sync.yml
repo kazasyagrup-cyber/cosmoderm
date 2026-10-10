@@ -1,0 +1,19 @@
+# Ortak stok senkronu tetikleyicisi (10.10.2026). Vercel Hobby cron'u günde 1 kez olduğu için her 5 dk burası çağırır.
+# Sır: STOK_SYNC_KEY (GitHub repo Settings → Secrets → Actions). Çıktı loga yazılmaz (repo public): sadece HTTP kodu.
+name: stok-sync
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Stok senkronu
+        env:
+          K: ${{ secrets.STOK_SYNC_KEY }}
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 90 "https://www.cosmoderm.kz/api/stok-sync?key=$K")
+          echo "stok-sync HTTP $code"
+          [ "$code" = "200" ]

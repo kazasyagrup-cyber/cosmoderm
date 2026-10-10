@@ -4,6 +4,7 @@
 // Stok = api/_kaspi/feed.json'daki adet − baseline_ms'den beri Kaspi siparişlerinde satılan (iptaller hariç; KASPI_TOKEN ile).
 // Siparişler okunamazsa 503 döner: Kaspi eski listeyi korur, olmayan ürün satılmaz.
 const feed = require('./_kaspi/feed.json');
+const core = require('./_stok/core');   // 10.10: ortak stok (Kaspi+WB+Ozon) — hata olursa eski Kaspi-only mantığa düşer
 
 const CANCELLED = new Set(['CANCELLED', 'CANCELLING', 'RETURNED', 'KASPI_DELIVERY_RETURN_REQUESTED', 'RETURN_ACCEPTED_BY_MERCHANT']);
 const STATES = ['NEW', 'SIGN_REQUIRED', 'PICKUP', 'DELIVERY', 'KASPI_DELIVERY', 'ARCHIVE'];
@@ -63,10 +64,15 @@ module.exports = async (req, res) => {
   const hour = (new Date().getUTCHours() + feed.tz_offset) % 24;
   const night = Date.now() >= (feed.night_start_ms || 0) && (hour >= feed.night_from || hour < feed.night_to);  // night_start_ms öncesi hep gündüz fiyatı
 
-  let sold = {};
+  let sold = {}, snap = null;
   if (process.env.KASPI_TOKEN) {
+    // ortak stok anlık görüntüsü (WB+Ozon+Kaspi) Kaspi-only okumayla PARALEL; başarısız/yavaşsa eski mantık (çifte satış koruması azalır ama liste servis edilir)
+    const snapP = Promise.race([core.snapshot(process.env), new Promise((_, no) => setTimeout(() => no(new Error('zaman aşımı 15 sn')), 15000))]).catch((e) => ({ errors: ['snapshot: ' + String(e && e.message || e).slice(0, 100)] }));
     try { sold = await soldSince(feed.baseline_ms, process.env.KASPI_TOKEN); }
     catch (e) { res.statusCode = 503; res.end('orders unavailable: ' + String(e && e.message || e).slice(0, 120)); return; }
+    const sn = await snapP;
+    if (sn && sn.R && !(sn.errors || []).length) snap = sn;
+    else console.log('stok-ortak devre dışı', JSON.stringify((sn && sn.errors) || []));
   } else if (!(req.query && req.query.test === '1')) {
     res.statusCode = 503; res.end('KASPI_TOKEN missing'); return;
   }
@@ -84,7 +90,8 @@ module.exports = async (req, res) => {
   for (const it of feed.items) { const g = it.pool || it.sku; poolSold[g] = (poolSold[g] || 0) + (sold[it.sku] || 0); }
   for (const it of feed.items) {
     const g = it.pool || it.sku;
-    const stock = Math.max(0, (g in base ? base[g] : it.stock) - poolSold[g]);
+    const ean = snap && core.IDX.kaspi[it.sku];   // EAN havuzundaki ilan → kalan R (üç platformun satışı düşülmüş)
+    const stock = ean ? snap.R[ean] : Math.max(0, (g in base ? base[g] : it.stock) - poolSold[g]);
     const price = night ? it.night : it.day;
     out.push(`<offer sku="${esc(it.sku)}"><model>${esc(it.model)}</model>${it.brand ? `<brand>${esc(it.brand)}</brand>` : ''}` +
       `<availabilities><availability available="${stock > 0 ? 'yes' : 'no'}" storeId="${esc(feed.store)}"${stock > 0 ? ` stockCount="${stock}"` : ''}/></availabilities>` +
@@ -92,7 +99,7 @@ module.exports = async (req, res) => {
   }
   out.push('</offers>');
   out.push('</kaspi_catalog>');
-  console.log('kaspi-feed', JSON.stringify({ mode: night ? 'night' : 'day', ua: req.headers['user-agent'] || '', ip: req.headers['x-forwarded-for'] || '', offers: feed.items.length }));  // Vercel Logs'ta Kaspi okumalarını görmek için
+  console.log('kaspi-feed', JSON.stringify({ mode: night ? 'night' : 'day', ortak: !!snap, ua: req.headers['user-agent'] || '', ip: req.headers['x-forwarded-for'] || '', offers: feed.items.length }));  // Vercel Logs'ta Kaspi okumalarını görmek için
   res.setHeader('Content-Type', 'application/xml; charset=utf-8');
   res.setHeader('X-Feed-Mode', night ? 'night' : 'day');
   res.end(out.join('\n'));
