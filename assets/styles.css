@@ -2270,3 +2270,32 @@ a.announce-item-soon:focus-visible {
 [data-lang-block].is-active {
   display: block;
 }
+
+/* 13.10: yenilikler tıklanır başlık + tek panel */
+.innovation-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.innovation-chip {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-strong);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.innovation-chip[aria-expanded="true"] { background: var(--text-strong); color: #fff; }
+.innovation-panel {
+  margin-top: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 1rem 1.25rem;
+  max-width: 40rem;
+}
+.innovation-panel h3 { margin: 0; font-size: 1rem; color: var(--text-strong); }
+.innovation-panel .fullname { margin: 0.15rem 0 0.5rem; font-size: 0.75rem; color: var(--text-muted); }
+.innovation-panel .desc { margin: 0; font-size: 0.875rem; color: var(--text-muted); }
+.footer-brands ul { list-style: none; padding: 0; margin: 0; }
+.footer-brands a { color: inherit; text-decoration: none; }
+.footer-brands a:hover { text-decoration: underline; }
+.innovations-grid { display: block; }

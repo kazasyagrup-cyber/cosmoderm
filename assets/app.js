@@ -585,6 +585,8 @@
     }
     const groups = [];
     const groupIndexByLine = new Map();
+    // 13.10: ana ekranda (filtre/arama yokken) sadece Bioderma + Esthederm gösterilir; diğer markalara üstteki marka şeridi / alt bilgideki marka bağlantıları / arama ile ulaşılır
+    list = collapsible ? list.filter((p) => OPEN_BRANDS.has(p.brand)) : list;
     list.forEach((product) => {
       if (!groupIndexByLine.has(product.line)) {
         groupIndexByLine.set(product.line, groups.length);
@@ -1021,19 +1023,41 @@
     return [t("cart.waHeader"), "", ...lines, "", ...promoLine, `${t("cart.waTotal")}: ${formatPrice(cartTotal())}`].join("\n");
   }
 
+  // 13.10: uzun kart listesi yerine tıklanır başlıklar; tıklanınca açıklama tek bir panelde görünür
   function renderInnovations() {
-    el.innovationsList.innerHTML = innovations
-      .map(
-        (item) => `
-      <div class="innovation-card">
-        <h3>${tr(item.name)}</h3>
-        ${item.fullName ? `<p class="fullname">${item.fullName}</p>` : ""}
-        <p class="desc">${tr(item.description)}</p>
-      </div>
-    `
-      )
+    const chips = innovations
+      .map((item, i) => `<button type="button" class="innovation-chip" data-i="${i}" aria-expanded="false">${tr(item.name)}</button>`)
       .join("");
+    el.innovationsList.innerHTML = `<div class="innovation-chips">${chips}</div><div class="innovation-panel" hidden></div>`;
+    const panel = el.innovationsList.querySelector(".innovation-panel");
+    el.innovationsList.querySelectorAll(".innovation-chip").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const wasOpen = btn.getAttribute("aria-expanded") === "true";
+        el.innovationsList.querySelectorAll(".innovation-chip").forEach((b) => b.setAttribute("aria-expanded", "false"));
+        if (wasOpen) {
+          panel.hidden = true;
+          return;
+        }
+        const item = innovations[Number(btn.dataset.i)];
+        btn.setAttribute("aria-expanded", "true");
+        panel.innerHTML = `<h3>${tr(item.name)}</h3>${item.fullName ? `<p class="fullname">${item.fullName}</p>` : ""}<p class="desc">${tr(item.description)}</p>`;
+        panel.hidden = false;
+      });
+    });
   }
+
+  // 13.10: alt bilgideki marka adları bağlantı; tıklanınca ana ekranda o markanın ürünleri açılır
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("[data-brand-link]");
+    if (!a) return;
+    e.preventDefault();
+    state.brand = a.dataset.brandLink;
+    state.category = "all";
+    state.query = "";
+    if (el.searchInput) el.searchInput.value = "";
+    render();
+    document.getElementById("catalog").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
 
   function render() {
     renderNavQuick();
