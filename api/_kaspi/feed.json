@@ -52,7 +52,7 @@
 "model": "Bioderma лосьон-тоник Sebium Lotion 200 мл",
 "brand": "bioderma",
 "day": 16900,
-"night": 15646,
+"night": 15734,
 "stock": 19
 },
 {
@@ -68,7 +68,7 @@
 "model": "Bioderma Sensibio AR SPF30 BB крем Clair Light 40 мл",
 "brand": "bioderma",
 "day": 14700,
-"night": 13950,
+"night": 13762,
 "stock": 19
 },
 {
@@ -76,7 +76,7 @@
 "model": "Bioderma крем Atoderm Creme Ultra для лица 200 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8491,
+"night": 8235,
 "stock": 14
 },
 {
@@ -84,7 +84,7 @@
 "model": "Bioderma крем Sebium Pore Refiner для сужения пор для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9850,
+"night": 9500,
 "stock": 9
 },
 {
@@ -116,7 +116,7 @@
 "model": "Bioderma крем Sensibio Defensive для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 8736,
+"night": 8735,
 "stock": 4
 },
 {
@@ -132,7 +132,7 @@
 "model": "Bioderma крем Sebium Mat Control матирующий для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9522,
+"night": 9500,
 "stock": 19
 },
 {
@@ -140,7 +140,7 @@
 "model": "Bioderma Sebium Hydra для умывания бальзам 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11774,
+"night": 11849,
 "stock": 14
 },
 {
@@ -188,7 +188,7 @@
 "model": "Bioderma крем Sensibio Defensive Rich для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 8746,
+"night": 8710,
 "stock": 4
 },
 {
@@ -204,7 +204,7 @@
 "model": "Bioderma сыворотка Hydrabio Hyalu+ для лица 30 мл",
 "brand": "bioderma",
 "day": 17900,
-"night": 17692,
+"night": 17785,
 "stock": 4
 },
 {
@@ -348,7 +348,7 @@
 "model": "Bioderma Atoderm масло 1000",
 "brand": "bioderma",
 "day": 20900,
-"night": 18200,
+"night": 20335,
 "stock": 4
 },
 {
@@ -372,7 +372,7 @@
 "model": "Bioderma Sensibio H2O мицеллярная вода 850 мл",
 "brand": "bioderma",
 "day": 15000,
-"night": 14200,
+"night": 14388,
 "stock": 4
 },
 {
@@ -420,7 +420,7 @@
 "model": "Bioderma Atoderm intensive foaming gel гель 1000",
 "brand": "bioderma",
 "day": 17400,
-"night": 16571,
+"night": 16480,
 "stock": 4
 },
 {
@@ -436,7 +436,7 @@
 "model": "Bioderma крем-гель Sensibio Eye+ для области вокруг глаз 15 мл",
 "brand": "bioderma",
 "day": 8400,
-"night": 7915,
+"night": 7974,
 "stock": 4
 },
 {
@@ -500,7 +500,7 @@
 "model": "Bioderma Atoderm mains & ongles крем для рук 50 мл",
 "brand": "Bioderma",
 "day": 4400,
-"night": 4192,
+"night": 4150,
 "stock": 4
 },
 {
@@ -532,7 +532,7 @@
 "model": "Bioderma Cicabio Baume Lavant бальзам 200 мл",
 "brand": "Bioderma",
 "day": 10900,
-"night": 10649,
+"night": 9950,
 "stock": 2
 },
 {
@@ -620,7 +620,7 @@
 "model": "Bioderma Hydrabio H2O мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7420,
+"night": 7356,
 "stock": 4
 },
 {
@@ -916,7 +916,7 @@
 "model": "Bioderma Sebium Gel Moussant гель 400 мл",
 "brand": "Bioderma",
 "day": 14900,
-"night": 14449,
+"night": 14448,
 "stock": 11
 },
 {
@@ -924,7 +924,7 @@
 "model": "Bioderma Sebium Moussant гель 45 мл",
 "brand": "Bioderma",
 "day": 4056,
-"night": 3803,
+"night": 4050,
 "stock": 4
 },
 {
@@ -932,7 +932,7 @@
 "model": "Bioderma Sebium H2O 100 мл мицеллярная вода",
 "brand": "Bioderma",
 "day": 4500,
-"night": 3920,
+"night": 3978,
 "stock": 4
 },
 {
@@ -956,7 +956,7 @@
 "model": "Bioderma Sensibio H20 AR мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 8400,
-"night": 7763,
+"night": 7850,
 "stock": 4
 },
 {
@@ -988,7 +988,7 @@
 "model": "Bioderma Sensibio H2O мицеллярная вода 100 мл",
 "brand": "Bioderma",
 "day": 4500,
-"night": 4227,
+"night": 3920,
 "stock": 4
 },
 {
@@ -1044,7 +1044,7 @@
 "model": "Bioderma крем Sensibio Forte против покраснения для лица 40 мл",
 "brand": "Bioderma",
 "day": 8900,
-"night": 8329,
+"night": 8155,
 "stock": 4
 },
 {
@@ -1124,7 +1124,7 @@
 "model": "Bioderma эмульсия Sebium Pore Refiner для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9776,
+"night": 9689,
 "stock": 9,
 "pool": "17700013_15383076"
 },
@@ -1187,7 +1187,7 @@
 "model": "Bioderma крем Pigmentbio Daily Care SPF50+ для лица 40 мл",
 "brand": "bioderma",
 "day": 18000,
-"night": 17950,
+"night": 18000,
 "stock": 1,
 "pool": "100309236_391253203"
 },
@@ -1205,7 +1205,7 @@
 "model": "Bioderma крем Sensibio Defensive Rich, активный успокаивающий крем, 40 мл для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 9298,
+"night": 9349,
 "stock": 4,
 "pool": "104596412_814862873"
 },
@@ -1286,7 +1286,7 @@
 "model": "Bioderma сыворотка Sensibio AR+ BI сыворотка для лица 30 мл",
 "brand": "bioderma",
 "day": 17900,
-"night": 17849,
+"night": 17818,
 "stock": 4,
 "pool": "131512476_861368864"
 },
@@ -1313,7 +1313,7 @@
 "model": "Bioderma крем Sebium kerato+ для лица 30 мл",
 "brand": "bioderma",
 "day": 13900,
-"night": 13900,
+"night": 13849,
 "stock": 9,
 "pool": "108213483_211504924"
 },
@@ -1340,7 +1340,7 @@
 "model": "Bioderma бальзам Atoderm Levres 15 мл",
 "brand": "Bioderma",
 "day": 6200,
-"night": 5681,
+"night": 6093,
 "stock": 4,
 "pool": "102415463_15383076"
 },
@@ -1727,7 +1727,7 @@
 "model": "Bioderma P02642 мицеллярная вода 500 мл",
 "brand": "Bioderma",
 "day": 11000,
-"night": 10950,
+"night": 11000,
 "stock": 9,
 "pool": "21900212_15383076"
 },
