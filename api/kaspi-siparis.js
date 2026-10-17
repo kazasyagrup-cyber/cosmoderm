@@ -1,5 +1,6 @@
 // Kaspi son siparişler (SALT OKUMA, gizli anahtarlı): yerel bilgisayardan kaspi.kz'ye ulaşılamadığında siparişleri (saat, ürün, adet) Vercel üzerinden görmek için.
 // Kullanım: /api/kaspi-siparis?key=<STOK_SYNC_KEY>&days=3&q=ultra   (days en çok 7; q: ürün adı veya sku içinde aranır, isteğe bağlı)
+// 17.10: geçmiş dönem için &from=2026-09-23&to=2026-10-06 (Almatı günü, aralık en çok 14 gün — Kaspi API sınırı)
 const API = 'https://kaspi.kz/shop/api/v2';
 const STATES = ['NEW', 'SIGN_REQUIRED', 'PICKUP', 'DELIVERY', 'KASPI_DELIVERY', 'ARCHIVE'];
 
@@ -24,7 +25,10 @@ module.exports = async (req, res) => {
   if (!process.env.KASPI_TOKEN) { res.statusCode = 503; res.end(JSON.stringify({ ok: false, error: 'KASPI_TOKEN yok' })); return; }
   const days = Math.min(7, Math.max(1, parseInt((req.query && req.query.days) || '3', 10) || 3));
   const q = String((req.query && req.query.q) || '').trim().toLowerCase();
-  const to = Date.now(), since = to - days * 86400000;
+  let to = Date.now(), since = to - days * 86400000;
+  const gun = (v) => (/^\d{4}-\d{2}-\d{2}$/.test(String(v || '')) ? Date.parse(v + 'T00:00:00+05:00') : NaN);
+  const f = gun(req.query && req.query.from), t = gun(req.query && req.query.to);
+  if (!isNaN(f)) { since = f; to = Math.min(Date.now(), (isNaN(t) ? f + 13 * 86400000 : t) + 86400000 - 1); if (to - since > 14 * 86400000) to = since + 14 * 86400000 - 1; }
   try {
     const listState = async (state) => {
       const out = [];
@@ -50,6 +54,6 @@ module.exports = async (req, res) => {
     }));
     const out = rows.filter((r) => !q || r.kalemler.some((k) => String(k.ad || '').toLowerCase().includes(q) || String(k.sku || '').toLowerCase().includes(q))).sort((x, y) => y.ms - x.ms);
     res.setHeader('Content-Type', 'application/json; charset=utf-8');
-    res.end(JSON.stringify({ ok: true, gun: days, adet: out.length, siparisler: out }));
+    res.end(JSON.stringify({ ok: true, gun: days, aralik: [since, to], adet: out.length, siparisler: out }));
   } catch (e) { res.statusCode = 500; res.end(JSON.stringify({ ok: false, error: String(e && e.message || e).slice(0, 200) })); }
 };
