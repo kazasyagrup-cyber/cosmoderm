@@ -42,6 +42,9 @@ module.exports = async (req, res) => {
       return {
         siparis: a.code || od.id, tarih_almati: new Date((a.creationDate || 0) + 5 * 3600 * 1000).toISOString().slice(0, 16).replace('T', ' '), ms: a.creationDate,
         durum: a.state, statu: a.status, toplam: a.totalPrice,
+        // 17.10: teslimat maliyeti (müşteri adı/adresi gibi kişisel alanlar YOK)
+        teslimat: { mod: a.deliveryMode, kaspi_teslimat: a.isKaspiDelivery, ucret: a.deliveryCost, satici_odedi: a.deliveryCostForSeller, odeme: a.paymentMode,
+          kd: a.kaspiDelivery ? Object.fromEntries(Object.entries(a.kaspiDelivery).filter(([k]) => !/address|phone|name|courier/i.test(k))) : null },
         kalemler: (e.data || []).map((en) => ({ sku: en.attributes.offer && en.attributes.offer.code, ad: en.attributes.offer && en.attributes.offer.name, adet: en.attributes.quantity, fiyat: en.attributes.basePrice })),
       };
     }));
