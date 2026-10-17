@@ -5,6 +5,15 @@
 // Siparişler okunamazsa 503 döner: Kaspi eski listeyi korur, olmayan ürün satılmaz.
 const feed = require('./_kaspi/feed.json');
 const core = require('./_stok/core');   // 10.10: ortak stok (Kaspi+WB+Ozon) — hata olursa eski Kaspi-only mantığa düşer
+const { runSync } = require('./_stok/sync');
+let lastSync = 0;   // 17.10: Kaspi okuması WB/Ozon senkronunu da tetikler (en fazla 4 dk'da bir, bu örnek içinde)
+
+// Yanıt gönderildikten sonra iş sürdürmek için Vercel'in waitUntil'i (@vercel/functions'ın kullandığı istek bağlamı; paket kurmadan)
+function afterResponse(p) {
+  const ctx = globalThis[Symbol.for('@vercel/request-context')];
+  const w = ctx && ctx.get && ctx.get();
+  if (w && w.waitUntil) w.waitUntil(p);
+}
 
 const CANCELLED = new Set(['CANCELLED', 'CANCELLING', 'RETURNED', 'KASPI_DELIVERY_RETURN_REQUESTED', 'RETURN_ACCEPTED_BY_MERCHANT']);
 const STATES = ['NEW', 'SIGN_REQUIRED', 'PICKUP', 'DELIVERY', 'KASPI_DELIVERY', 'ARCHIVE'];
@@ -103,4 +112,11 @@ module.exports = async (req, res) => {
   res.setHeader('Content-Type', 'application/xml; charset=utf-8');
   res.setHeader('X-Feed-Mode', night ? 'night' : 'day');
   res.end(out.join('\n'));
+  // 17.10: aynı anlık görüntüyle WB/Ozon'u da düşür (Cloudflare tetikleyicisine ek güvence). Yanıttan sonra çalışır, Kaspi beklemez.
+  if (snap && process.env.STOK_YAZ === '1' && Date.now() - lastSync > 4 * 60 * 1000) {
+    lastSync = Date.now();
+    afterResponse(runSync(process.env, { write: true, snap })
+      .then((o) => console.log('stok-sync (kaspi)', JSON.stringify({ degisecek: o.degisecek_ean, wb: (o.wb || []).length, ozon: (o.ozon || []).length, fren: o.fren })))
+      .catch((e) => console.log('stok-sync (kaspi) HATA', String(e && e.message || e).slice(0, 200))));
+  }
 };
