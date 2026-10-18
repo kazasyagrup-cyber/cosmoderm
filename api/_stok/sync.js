@@ -15,26 +15,28 @@ async function runSync(env, { write, snap } = {}) {
   const setler = core.MAP.setler || [];
   const wbSkus = Object.values(core.MAP.items).flatMap((s) => s.wb.map((w) => w.sku)).concat(setler.filter((x) => x.platform === 'wb').map((x) => String(x.key)));
   const ozOffers = Object.values(core.MAP.items).flatMap((s) => s.ozon).concat(setler.filter((x) => x.platform === 'ozon').map((x) => String(x.key)));
-  const wbCur = {}, ozCur = {};
+  // 18.10: Ozon 'present' paketlenmeyi bekleyen (rezerve) siparişleri DE içerir; yazılan 'stock' ise rezerv HARİÇ satışa açık adettir
+  // (denendi: present 16/rezerv 1 iken 15 yazınca present 16 kaldı). Karşılaştırma present − reserved ile, yazılan değer R.
+  const wbCur = {}, ozCur = {}, ozRez = {};
   for (let i = 0; i < wbSkus.length; i += 1000) {
     const d = await core.http(`${core.WB_MP}/api/v3/stocks/${WB_WH}`, { method: 'POST', headers: H_WB, body: JSON.stringify({ skus: wbSkus.slice(i, i + 1000) }) });
     for (const x of d.stocks || []) wbCur[x.sku] = x.amount;
   }
   for (let i = 0; i < ozOffers.length; i += 1000) {
     const d = await core.http(`${core.OZON}/v4/product/info/stocks`, { method: 'POST', headers: H_OZ_R, body: JSON.stringify({ filter: { offer_id: ozOffers.slice(i, i + 1000), visibility: 'ALL' }, limit: 1000, cursor: '' }) });
-    for (const it of d.items || []) { const f = (it.stocks || []).find((s) => s.type === 'fbs'); if (f) ozCur[it.offer_id] = f.present; }
+    for (const it of d.items || []) { const f = (it.stocks || []).find((s) => s.type === 'fbs'); if (f) { ozCur[it.offer_id] = f.present; ozRez[it.offer_id] = f.reserved || 0; } }
   }
   // değişiklik planı (yalnız düşüş)
   const wbPlan = [], ozPlan = [], eans = new Set();
   for (const [ean, s] of Object.entries(core.MAP.items)) {
     const R = snap.R[ean];
     for (const w of s.wb) { const cur = wbCur[w.sku]; if (cur != null && cur > R) { wbPlan.push({ ean, nm: w.nm, sku: w.sku, cur, yeni: R }); eans.add(ean); } }
-    for (const o of s.ozon) { const cur = ozCur[o]; if (cur != null && cur > R) { ozPlan.push({ ean, offer_id: o, cur, yeni: R }); eans.add(ean); } }
+    for (const o of s.ozon) { const cur = ozCur[o] == null ? null : ozCur[o] - (ozRez[o] || 0); if (cur != null && cur > R) { ozPlan.push({ ean, offer_id: o, cur, rezerv: ozRez[o] || 0, yeni: R }); eans.add(ean); } }
   }
   // SETLER: kapasite = bileşenlerden çıkan set sayısı. 'acik' (kullanıcı onaylı) setlerde stok = kapasite (artış dahil); kapalı setlerde yalnız düşüş (0 kalır).
   for (const st of setler) {
     const cap = snap.S[st.platform + ':' + st.key];
-    const cur = st.platform === 'wb' ? wbCur[String(st.key)] : ozCur[String(st.key)];
+    const cur = st.platform === 'wb' ? wbCur[String(st.key)] : (ozCur[String(st.key)] == null ? null : ozCur[String(st.key)] - (ozRez[String(st.key)] || 0));
     if (cur == null) continue;
     if (st.acik ? cur !== cap : cur > cap) {
       (st.platform === 'wb' ? wbPlan : ozPlan).push(st.platform === 'wb' ? { ean: 'set:' + st.key, nm: null, sku: String(st.key), cur, yeni: cap } : { ean: 'set:' + st.key, offer_id: String(st.key), cur, yeni: cap });
