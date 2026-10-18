@@ -12,6 +12,10 @@ module.exports = async (req, res) => {
     });
     res.setHeader('Content-Type', 'application/json; charset=utf-8');
     const setler = (core.MAP.setler || []).map((st) => ({ platform: st.platform, key: st.key, ad: st.ad, acik: st.acik, kapasite: snap.S[st.platform + ':' + st.key], bilesen: st.bilesen }));
-    res.end(JSON.stringify({ ok: !snap.errors.length, hatalar: snap.errors, baseline_ms: core.MAP.baseline_ms, sayim: snap.counts, items, setler }));
+    const out = { ok: !snap.errors.length, hatalar: snap.errors, baseline_ms: core.MAP.baseline_ms, sayim: snap.counts, items, setler };
+    if (req.query && req.query.denetim) {   // 18.10: stoklu ama ortak stoka bağlı olmayan ilanlar (sabah maili kullanır)
+      try { out.bagsiz = await require('./_stok/denetim').denetim(process.env); } catch (e) { out.denetim_hata = String(e && e.message || e).slice(0, 200); }
+    }
+    res.end(JSON.stringify(out));
   } catch (e) { res.statusCode = 500; res.end(JSON.stringify({ ok: false, error: String(e && e.message || e).slice(0, 200) })); }
 };
