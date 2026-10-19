@@ -1,0 +1,37 @@
+# Kaspi GECE FİYATI günlük yenileme (19.10.2026) — bilgisayardan bağımsız. Eskiden yerel Görev Zamanlayıcı «Kaspi gece fiyati yenile - her gun 1700».
+# Sır: KASPI_ALIS ({sku: alış}, yerelde naos-kz-rapor/kaspiapi/kaspi_alis_secret.json). Repo public: loga fiyat yazılmaz.
+# Gece penceresi 18:00'de başlar; GitHub zamanlayıcısı birkaç dk–yarım saat gecikebilir, bu yüzden 17:00.
+name: kaspi-gece
+on:
+  schedule:
+    - cron: '0 12 * * *'   # 17:00 Almatı (UTC+5)
+  workflow_dispatch:
+    inputs:
+      kuru:
+        description: 'Sadece hesapla, feed.json yazma (deneme)'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency: kaspi-gece
+jobs:
+  gece:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Gece fiyatlarini hesapla
+        env:
+          KASPI_ALIS: ${{ secrets.KASPI_ALIS }}
+        run: python3 .github/scripts/kaspi_gece.py ${{ inputs.kuru && '--kuru' || '' }}
+      - name: Commit + push
+        if: ${{ !inputs.kuru }}
+        run: |
+          git add api/_kaspi/feed.json
+          if git diff --cached --quiet; then echo "degisiklik yok — push yok"; exit 0; fi
+          git -c user.name=kazasyagrup -c user.email=kazasyagrup@gmail.com commit -q -m "Kaspi gece fiyatlari yenilendi (bulut, $(TZ=Asia/Almaty date '+%d.%m %H:%M')): resmi rakibin 50 tenge alti"
+          for i in 1 2 3; do
+            git pull -q --rebase origin master && git push -q origin HEAD:master && echo "PUSH TAMAM $(git rev-parse --short HEAD)" && exit 0
+            sleep 5
+          done
+          exit 1
