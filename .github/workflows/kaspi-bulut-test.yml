@@ -1,0 +1,43 @@
+﻿# Kaspi gece fiyati — BULUT DENEMESI (19.10.2026). Kaspi vitrini GitHub sunucusundan (ABD) okunabiliyor mu?
+# Repo public: loga sadece sayilar yazilir (fiyat/alis yok).
+name: kaspi-bulut-test
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths: ['.github/workflows/kaspi-bulut-test.yml']
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Kaspi erisim denemesi
+        shell: python
+        run: |
+          import json, urllib.request, http.cookiejar, time
+          UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36', 'Accept-Language': 'ru-RU,ru;q=0.9'}
+          OP = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+          ip = urllib.request.urlopen('https://ipinfo.io/json', timeout=15).read().decode()
+          print('sunucu ulkesi:', json.loads(ip).get('country'))
+          try:
+              r = OP.open(urllib.request.Request('https://kaspi.kz/shop/', headers=UA), timeout=30); r.read()
+              print('kaspi.kz/shop HTTP', r.status)
+          except Exception as e:
+              print('kaspi.kz/shop HATA', type(e).__name__, str(e)[:120])
+          ok = 0
+          for pid in ['112596890', '109450800', '117334671']:
+              body = json.dumps({'cityId': '750000000', 'id': pid, 'merchantUID': [], 'limit': 50, 'page': 0, 'sortOption': 'PRICE', 'highRating': None,
+                                 'searchText': None, 'isExcellentMerchant': False, 'zoneId': ['Magnum_ZONE1'], 'installationId': '-1'}).encode()
+              req = urllib.request.Request('https://kaspi.kz/yml/offer-view/offers/' + pid, data=body, headers={
+                  **UA, 'Content-Type': 'application/json; charset=UTF-8', 'Accept': 'application/json, text/*', 'X-KS-City': '750000000',
+                  'Referer': f'https://kaspi.kz/shop/p/-{pid}/'})
+              try:
+                  j = json.load(OP.open(req, timeout=30)); o = j.get('offers') or []
+                  resmi = bool(o) and 'isBrandOfficialPartner' in o[0]
+                  print(f'kart {pid}: {len(o)} teklif, resmi satici alani: {"VAR" if resmi else "YOK"}')
+                  ok += resmi
+              except Exception as e:
+                  print(f'kart {pid}: HATA', type(e).__name__, str(e)[:120])
+              time.sleep(1)
+          print('SONUC:', 'BASARILI' if ok == 3 else f'BASARISIZ ({ok}/3)')
+          assert ok == 3
