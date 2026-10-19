@@ -97,14 +97,17 @@ async function ozonRecords(sinceMs, id, key) {
     const H = ozonHeaders(id, key);
     const since = new Date(sinceMs).toISOString().slice(0, 19) + 'Z', to = new Date().toISOString().slice(0, 19) + 'Z';
     const recs = [];
-    for (let off = 0; off < 5000; off += 100) {
-      const r = (await http(`${OZON}/v3/posting/fbs/list`, { method: 'POST', headers: H, body: JSON.stringify({ dir: 'DESC', filter: { since, to }, limit: 100, offset: off, with: {} }) })).result || {};
+    // 19.10: v3/posting/fbs/list Ozon'da kapatılıyor (sürekli 429) → v4, sayfalama offset yerine cursor
+    let cursor = '';
+    for (let page = 0; page < 50; page++) {
+      const r = await http(`${OZON}/v4/posting/fbs/list`, { method: 'POST', headers: H, body: JSON.stringify({ dir: 'DESC', filter: { since, to }, limit: 100, cursor, with: {} }) });
       for (const p of r.postings || []) {
         if (p.status === 'cancelled') continue;
         const ts = Date.parse(p.in_process_at || p.created_at) || 0;
         for (const pr of p.products || []) recs.push({ ts, key: pr.offer_id, q: pr.quantity || 1 });
       }
-      if (!r.has_next) break;
+      if (!r.has_next || !r.cursor) break;
+      cursor = r.cursor;
     }
     return recs;
   });
