@@ -1,0 +1,23 @@
+# Kaspi RAKİP İZLEME (19.10.2026) — saatte bir mavi tikli rakip fiyatlarını kaydeder, FİYATA DOKUNMAZ.
+# Kayıt artifact olarak (repoya commit yok → Vercel deploy yok). 24.10'dan sonra betik kendiliğinden çalışmaz.
+# Kaspi fiyat listemizi her saat :02'de okuyor; :35'te ölçüm = bizim değişikliğimizden ~30 dk sonrası.
+name: kaspi-izle
+on:
+  schedule:
+    - cron: '35 * * * *'
+  workflow_dispatch:
+concurrency: kaspi-izle
+jobs:
+  izle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rakip fiyatlarini kaydet
+        run: python3 .github/scripts/kaspi_izle.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: izle-${{ github.run_id }}
+          path: izle.json.gz
+          if-no-files-found: ignore
+          retention-days: 30
