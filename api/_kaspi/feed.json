@@ -188,6 +188,51 @@
 "stock": 29
 },
 {
+"sku": "17600091_15383076",
+"model": "Bioderma крем Sensibio AR Anti-Redness Care для лица 40 мл",
+"brand": "bioderma",
+"day": 11400,
+"night": 11400,
+"stock": 29,
+"pool": "131462171_342517855"
+},
+{
+"sku": "144246517_15383076",
+"model": "Bioderma крем SENSIBIO AR Увлажняющий крем от покраснений для чувствительной кожи с куперозом и розацеей, 40 мл для лица 40 мл",
+"brand": "bioderma",
+"day": 11400,
+"night": 11400,
+"stock": 29,
+"pool": "131462171_342517855"
+},
+{
+"sku": "169409041_15383076",
+"model": "Bioderma крем Sensibio AR крем против покраснений для лица 40 мл",
+"brand": "bioderma",
+"day": 11400,
+"night": 11400,
+"stock": 29,
+"pool": "131462171_342517855"
+},
+{
+"sku": "141098331_15383076",
+"model": "Bioderma крем Sensibio AR, средство для уменьшения видимых покраснений, 40 мл для лица 40 мл",
+"brand": "bioderma",
+"day": 11400,
+"night": 11400,
+"stock": 29,
+"pool": "131462171_342517855"
+},
+{
+"sku": "133867971_15383076",
+"model": "Bioderma крем Крем для чувствительной кожи с куперозами для лица 40 мл",
+"brand": "bioderma",
+"day": 11400,
+"night": 11400,
+"stock": 29,
+"pool": "131462171_342517855"
+},
+{
 "sku": "17600150_15383076",
 "model": "Bioderma крем Sebium Global для лица 30 мл",
 "brand": "bioderma",
@@ -236,12 +281,30 @@
 "stock": 4
 },
 {
+"sku": "168953562_15383076",
+"model": "Bioderma Atoderm Gel Moussant гель 1000 мл",
+"brand": "bioderma",
+"day": 18400,
+"night": 18400,
+"stock": 4,
+"pool": "105802986_709319647"
+},
+{
 "sku": "116776896_001634553",
 "model": "Bioderma сыворотка Hydrabio Hyalu+ для лица 30 мл",
 "brand": "bioderma",
 "day": 17900,
 "night": 17850,
 "stock": 4
+},
+{
+"sku": "147496132_15383076",
+"model": "Bioderma сыворотка Bioderma Hydrabio Serum для лица 30 мл",
+"brand": "bioderma",
+"day": 17900,
+"night": 17900,
+"stock": 4,
+"pool": "116776896_001634553"
 },
 {
 "sku": "117085705_146480592",
@@ -608,6 +671,15 @@
 {
 "sku": "168888011_15383076",
 "model": "Bioderma Atoderm гель для душа 500 мл гель 500 мл",
+"brand": "Bioderma",
+"day": 10800,
+"night": 10800,
+"stock": 4,
+"pool": "150575248_15383076"
+},
+{
+"sku": "110884949_15383076",
+"model": "Bioderma Atoderm гель 500 мл",
 "brand": "Bioderma",
 "day": 10800,
 "night": 10800,
@@ -1449,6 +1521,15 @@
 "brand": "bioderma",
 "day": 9400,
 "night": 9350,
+"stock": 4,
+"pool": "104596412_814862873"
+},
+{
+"sku": "17600094_15383076",
+"model": "Bioderma Sensibio Riche Насыщенный успокаивающий крем для сухой и чувствительной кожи 40 мл",
+"brand": "bioderma",
+"day": 9400,
+"night": 9400,
 "stock": 4,
 "pool": "104596412_814862873"
 },
