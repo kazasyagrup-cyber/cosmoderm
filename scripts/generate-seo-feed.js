@@ -54,6 +54,7 @@ function main() {
 
   const products = data.products.map((p) => {
     const brand = brandById[p.brand];
+    const hasPage = typeof p.price === "number"; // fiyatli (satista) urunlerin kendi sayfasi var: /urun/<id>.html
     const imagePath = path.join(ROOT, p.image || "");
     const hasImage = !!p.image && fs.existsSync(imagePath);
     const basePrice = typeof p.price === "number" ? p.price : null;
@@ -61,7 +62,7 @@ function main() {
     const promoPrice = promoApplies ? Math.round((basePrice * (100 - promo.discountPercent)) / 100) : null;
     return {
       id: p.id,
-      url: `${SITE_URL}/#${p.id}`,
+      url: hasPage ? `${SITE_URL}/urun/${p.id}.html` : `${SITE_URL}/#${p.id}`,
       brand: brand ? brand.name : p.brand,
       line: p.line,
       category: catById[p.category] ? catById[p.category].label : { ru: p.category, kz: p.category },
@@ -269,6 +270,213 @@ function main() {
 
   console.log(`products.json yazildi (${products.length} urun).`);
   console.log(`assets/product-ld.json yazildi (JSON-LD govdesi, ${itemListElements.length} Product node).`);
+
+  generateProductPages(data, products, promo);
+}
+
+// --- Urun sayfalari (GEO, 20.10.2026) ---
+// Ana sayfa urunleri JS ile ciziyor ve /#<id> adresleri ayri sayfa sayilmiyor; JS
+// calistirmayan arama/AI botlari urunleri goremiyordu. Her fiyatli urune duz HTML
+// sayfa (/urun/<id>.html, RU+KZ, kendi Product JSON-LD'si), /urun/ katalog sayfasi
+// ve sitemap.xml buradan uretilir. Gorunum wholesale.html ile ayni (legal-* stilleri).
+function esc(s) {
+  return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+function fmtPrice(n) {
+  return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "\u00a0") + "\u00a0₸"; // bolunmeyen bosluk: fiyat satir sonunda kirilmasin
+}
+
+function generateProductPages(data, products, promo) {
+  const crypto = require("crypto");
+  const dir = path.join(ROOT, "urun");
+  fs.mkdirSync(dir, { recursive: true });
+  const raw = Object.fromEntries(data.products.map((p) => [p.id, p]));
+  const lineLabel = Object.fromEntries(data.lines.map((l) => [l.id, l.label]));
+  const skinLabel = Object.fromEntries(data.skinTypes.map((s) => [s.id, s.label]));
+  const fileHash = (rel) => {
+    const abs = path.join(ROOT, rel);
+    return fs.existsSync(abs) ? crypto.createHash("sha1").update(fs.readFileSync(abs)).digest("hex") : "";
+  };
+  const imgV = (img) => `${img}?v=${fileHash(img).slice(0, 8)}`;
+  const cssV = `/assets/styles.css?v=${fileHash("assets/styles.css").slice(0, 10)}`;
+  const jsV = `/assets/legal.js?v=${fileHash("assets/legal.js").slice(0, 10)}`;
+  const paged = products.filter((p) => p.url.includes("/urun/"));
+  const wa = (text) => `https://wa.me/77087685329?text=${encodeURIComponent(text)}`;
+
+  const head = (title, desc, url, image, ld) => `<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>${esc(title)}</title>
+    <meta name="description" content="${esc(desc)}" />
+    <link rel="canonical" href="${url}" />
+    <meta property="og:type" content="product" />
+    <meta property="og:site_name" content="CosmoDerm" />
+    <meta property="og:title" content="${esc(title)}" />
+    <meta property="og:description" content="${esc(desc)}" />
+    <meta property="og:url" content="${url}" />
+    <meta property="og:image" content="${image}" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="stylesheet" href="${cssV}" />
+    <style>
+      .urun-head{display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap}
+      .urun-img{flex:0 0 260px;max-width:100%;aspect-ratio:1;object-fit:contain;background:#fff;border-radius:16px}
+      .urun-info{flex:1 1 280px;min-width:0}
+      .legal-card .urun-price{font-size:1.6rem;font-weight:800;color:#c2185b;margin:12px 0 4px}
+      .legal-card .urun-old{text-decoration:line-through;color:#555;opacity:.7;font-weight:400;font-size:1rem;margin-left:10px}
+      .urun-cta{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+      .urun-cta a{display:inline-block;padding:12px 20px;border-radius:999px;font-weight:600;text-decoration:none;background:#003a70;color:#fff}
+      .urun-cta a.wa{background:#25d366}
+      .urun-inci{font-size:.85rem;opacity:.8}
+      .urun-list{columns:2 260px;padding-left:18px}
+    </style>
+    <script type="application/ld+json">${JSON.stringify(ld).replace(/</g, "\\u003c")}</script>
+  </head>
+  <body>
+    <div class="legal-wrap">
+      <div class="legal-top">
+        <a class="legal-back" href="/">← CosmoDerm</a>
+        <div class="legal-lang-toggle" id="legal-lang-toggle">
+          <button type="button" data-lang="ru">RU</button>
+          <button type="button" data-lang="kz">ҚАЗ</button>
+        </div>
+      </div>
+      <div class="legal-card">
+`;
+  const foot = `        <nav class="legal-nav">
+          <a href="/">Каталог / Catalog</a>
+          <a href="/urun/">Все товары / Барлық өнімдер</a>
+          <a href="/wholesale.html">Оптом / Көтерме</a>
+          <a href="/delivery.html">Оплата и доставка / Төлем және жеткізу</a>
+        </nav>
+      </div>
+    </div>
+    <script src="${jsV}"></script>
+  </body>
+</html>
+`;
+
+  const T = {
+    ru: { desc: "Описание", act: "Активные компоненты", eff: "Эффективность", skin: "Тип кожи", use: "Как применять", inci: "Состав (INCI)", line: "Другие средства линии", order: "Заказать на сайте", wa: "Заказать в WhatsApp", promo: (p) => `Цена со скидкой ${p.promo_discount_percent}% по промокоду ${p.promo_code} (код общедоступен, введите в корзине)`, store: "Оригинальная продукция, официальный дилер. CosmoDerm — интернет-магазин дермокосметики в Алматы, доставка по всему Казахстану.", vol: "Объём" },
+    kz: { desc: "Сипаттама", act: "Белсенді компоненттер", eff: "Тиімділігі", skin: "Тері түрі", use: "Қолдану тәсілі", inci: "Құрамы (INCI)", line: "Желінің басқа құралдары", order: "Сайтта тапсырыс беру", wa: "WhatsApp арқылы тапсырыс", promo: (p) => `${p.promo_code} промокоды бойынша ${p.promo_discount_percent}% жеңілдікпен баға (код барлығына ашық, себетте енгізіңіз)`, store: "Түпнұсқа өнім, ресми дилер. CosmoDerm — Алматыдағы дермокосметика интернет-дүкені, бүкіл Қазақстан бойынша жеткізу.", vol: "Көлемі" },
+  };
+
+  for (const p of paged) {
+    const r = raw[p.id];
+    const full = `${p.brand} ${p.name}${p.volume ? " " + p.volume : ""}`;
+    const img = r.image && fs.existsSync(path.join(ROOT, r.image)) ? r.image : null;
+    const imgAbs = img ? `${SITE_URL}${img}` : `${SITE_URL}/assets/logo-icon.png`;
+    const sameLine = paged.filter((x) => x.id !== p.id && raw[x.id].line === r.line && raw[x.id].brand === r.brand);
+    const priceTxt = p.list_price_kzt ? `${fmtPrice(p.price_kzt)} (обычная цена ${fmtPrice(p.list_price_kzt)}, −${p.promo_discount_percent}% по коду ${p.promo_code})` : fmtPrice(p.price_kzt);
+    const title = `${full} — купить в Алматы, цена ${fmtPrice(p.price_kzt)} | CosmoDerm`;
+    const desc = truncate(`${full}: ${(p.description && p.description.ru) || ""} Цена ${priceTxt}. Оригинал, доставка по Казахстану.`, 300);
+
+    const ld = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Product",
+          "@id": `${p.url}#product`,
+          sku: p.id,
+          name: full,
+          brand: { "@type": "Brand", name: p.brand },
+          category: p.category && p.category.ru,
+          url: p.url,
+          image: imgAbs,
+          description: truncate(p.description && p.description.ru, 500),
+          offers: {
+            "@type": "Offer",
+            url: p.url,
+            priceCurrency: "KZT",
+            price: p.price_kzt,
+            availability: "https://schema.org/InStock",
+            itemCondition: "https://schema.org/NewCondition",
+            seller: { "@type": "OnlineStore", "@id": `${SITE_URL}/#organization`, name: "CosmoDerm", url: SITE_URL },
+          },
+        },
+        {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "CosmoDerm", item: `${SITE_URL}/` },
+            { "@type": "ListItem", position: 2, name: "Все товары", item: `${SITE_URL}/urun/` },
+            { "@type": "ListItem", position: 3, name: full, item: p.url },
+          ],
+        },
+      ],
+    };
+
+    const block = (lang) => {
+      const t = T[lang];
+      const L = (f) => (f && (f[lang] || f.ru)) || "";
+      const skins = (r.skinTypes || []).map((s) => L(skinLabel[s])).filter(Boolean).join(", ");
+      const steps = (r.usageSteps && (r.usageSteps[lang] || r.usageSteps.ru)) || [];
+      const sec = (h, body) => (body ? `          <h2>${h}</h2>\n          ${body}\n` : "");
+      const promoLine = p.list_price_kzt
+        ? `<p class="urun-price">${fmtPrice(p.price_kzt)}<span class="urun-old">${fmtPrice(p.list_price_kzt)}</span></p>\n            <p>${esc(t.promo(p))}</p>`
+        : `<p class="urun-price">${fmtPrice(p.price_kzt)}</p>`;
+      return `        <div data-lang-block="${lang}">
+          <div class="urun-head">
+            ${img ? `<img class="urun-img" src="${imgV(img)}" alt="${esc(full)}" width="260" height="260" />` : ""}
+            <div class="urun-info">
+            <p class="legal-updated">${esc(p.brand)} · ${esc(lineLabel[r.line] || r.line || "")} · ${esc(L(p.category))}</p>
+            <h1>${esc(full)}</h1>
+            ${p.volume ? `<p>${t.vol}: ${esc(p.volume)}</p>` : ""}
+            ${promoLine}
+            <div class="urun-cta"><a href="/#${p.id}">${t.order}</a><a class="wa" href="${esc(wa(`Здравствуйте! Хочу заказать: ${full}`))}" rel="nofollow">${t.wa}</a></div>
+            <p>${esc(t.store)}</p>
+            </div>
+          </div>
+${sec(t.desc, L(r.description) && `<p>${esc(L(r.description))}</p>`)}${sec(t.act, L(r.activeIngredients) && `<p>${esc(L(r.activeIngredients))}</p>`)}${sec(t.eff, L(r.efficacy) && `<p>${esc(L(r.efficacy))}</p>`)}${sec(t.skin, (skins || L(r.skinTypeNote)) && `<p>${esc([skins, L(r.skinTypeNote)].filter(Boolean).join(". "))}</p>`)}${sec(t.use, steps.length && `<ol>${steps.map((s) => `<li>${esc(s)}</li>`).join("")}</ol>`)}${sec(t.inci, r.fullIngredients && `<p class="urun-inci">${esc(r.fullIngredients)}</p>`)}${sec(t.line, sameLine.length && `<ul class="urun-list">${sameLine.map((x) => `<li><a href="/urun/${x.id}.html">${esc(`${x.name}${x.volume ? " " + x.volume : ""}`)}</a></li>`).join("")}</ul>`)}        </div>
+`;
+    };
+
+    const html = head(title, desc, p.url, imgAbs, ld) + block("ru") + block("kz") + foot;
+    const out = path.join(dir, `${p.id}.html`);
+    if (!fs.existsSync(out) || fs.readFileSync(out, "utf8") !== html) fs.writeFileSync(out, html, "utf8");
+  }
+  // artik fiyatsiz/silinmis urunlerin eski sayfalari kalmasin
+  const keep = new Set(paged.map((p) => `${p.id}.html`).concat("index.html"));
+  for (const f of fs.readdirSync(dir)) if (f.endsWith(".html") && !keep.has(f)) fs.unlinkSync(path.join(dir, f));
+
+  // /urun/ katalog sayfasi: marka -> linya -> urun linkleri
+  const byBrand = {};
+  for (const p of paged) ((byBrand[p.brand] = byBrand[p.brand] || {})[lineLabel[raw[p.id].line] || raw[p.id].line] ||= []).push(p);
+  const listHtml = (lang) =>
+    Object.entries(byBrand)
+      .map(([b, lines]) => `          <h2>${esc(b)}</h2>\n` + Object.entries(lines).map(([l, ps]) => `          <h3>${esc(l)}</h3>\n          <ul class="urun-list">${ps.map((x) => `<li><a href="/urun/${x.id}.html">${esc(`${x.name}${x.volume ? " " + x.volume : ""}`)}</a> — ${fmtPrice(x.price_kzt)}</li>`).join("")}</ul>\n`).join(""))
+      .join("");
+  const catUrl = `${SITE_URL}/urun/`;
+  const catLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${catUrl}#webpage`,
+    url: catUrl,
+    name: "Bioderma и Institut Esthederm — все товары CosmoDerm",
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    mainEntity: { "@type": "ItemList", numberOfItems: paged.length, itemListElement: paged.map((p, i) => ({ "@type": "ListItem", position: i + 1, url: p.url, name: `${p.brand} ${p.name}` })) },
+  };
+  const catHtml =
+    head("Bioderma и Institut Esthederm — все товары и цены | CosmoDerm, Алматы", `Каталог оригинальной продукции Bioderma и Institut Esthederm в CosmoDerm (Алматы): ${paged.length} товаров с ценами, описанием, составом и способом применения. Доставка по Казахстану.`, catUrl, `${SITE_URL}/assets/logo-icon.png`, catLd).replace('content="product"', 'content="website"') +
+    `        <div data-lang-block="ru">\n          <h1>Все товары Bioderma и Institut Esthederm</h1>\n          <p class="legal-updated">${paged.length} товаров · цены в тенге · ${promo ? `скидка ${promo.discountPercent}% по коду ${esc(promo.code)} уже учтена` : ""}</p>\n${listHtml("ru")}        </div>\n` +
+    `        <div data-lang-block="kz">\n          <h1>Bioderma және Institut Esthederm — барлық өнімдер</h1>\n          <p class="legal-updated">${paged.length} өнім · бағалар теңгемен · ${promo ? `${esc(promo.code)} коды бойынша ${promo.discountPercent}% жеңілдік ескерілген` : ""}</p>\n${listHtml("kz")}        </div>\n` +
+    foot;
+  const catPath = path.join(dir, "index.html");
+  if (!fs.existsSync(catPath) || fs.readFileSync(catPath, "utf8") !== catHtml) fs.writeFileSync(catPath, catHtml, "utf8");
+
+  // sitemap.xml (tum statik sayfalar + katalog + urun sayfalari)
+  const today = new Date().toISOString().slice(0, 10);
+  const urls = [
+    [`${SITE_URL}/`, "daily", "1.0"],
+    [`${SITE_URL}/wholesale.html`, "weekly", "0.9"],
+    [catUrl, "daily", "0.9"],
+    ...paged.map((p) => [p.url, "weekly", "0.8"]),
+    ...["delivery.html", "returns.html", "offer.html", "privacy.html"].filter((f) => fs.existsSync(path.join(ROOT, f))).map((f) => [`${SITE_URL}/${f}`, "monthly", "0.3"]),
+  ];
+  const sm = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(([u, c, pr]) => `  <url>\n    <loc>${u}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${c}</changefreq>\n    <priority>${pr}</priority>\n  </url>`).join("\n")}\n</urlset>\n`;
+  fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sm, "utf8");
+  console.log(`Urun sayfalari: ${paged.length} + /urun/ katalog; sitemap.xml ${urls.length} adres.`);
 }
 
 // Cloudflare "Browser Cache TTL" /assets/* dosyalarini tarayicida 4 saat sakliyor
