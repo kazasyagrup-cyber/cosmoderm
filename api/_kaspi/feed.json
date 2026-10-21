@@ -690,9 +690,10 @@
 "sku": "117334671_15383076",
 "model": "Bioderma бальзам Atoderm Intensive для лица 45 мл",
 "brand": "Bioderma",
-"day": 2808,
-"night": 2808,
-"stock": 0
+"day": 2950,
+"night": 2950,
+"stock": 0,
+"sabit_gece": true
 },
 {
 "sku": "17600911_15383076",
@@ -2344,24 +2345,27 @@
 "model": "Bioderma NODE A Shampooing шампунь 400 мл",
 "brand": "Bioderma",
 "day": 14900,
-"night": 14900,
-"stock": 0
+"night": 13410,
+"stock": 0,
+"sabit_gece": true
 },
 {
 "sku": "163359791_15383076",
 "model": "Bioderma NODE G Shampooing шампунь 400 мл",
 "brand": "Bioderma",
 "day": 14900,
-"night": 14900,
-"stock": 0
+"night": 13410,
+"stock": 0,
+"sabit_gece": true
 },
 {
 "sku": "161062571_15383076",
 "model": "Bioderma NODE P шампунь 400 мл",
 "brand": "Bioderma",
 "day": 14900,
-"night": 14900,
-"stock": 0
+"night": 13410,
+"stock": 0,
+"sabit_gece": true
 },
 {
 "sku": "119839206_15383076",

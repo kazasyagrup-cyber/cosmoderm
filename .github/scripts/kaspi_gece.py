@@ -5,6 +5,7 @@ Yerel naos-kz-rapor/kaspi_gece_guncelle.py ile AYNI kural (kullanıcı 12.10):
   - en az %10 net kâr tabanı (taban = alış/0,6, 10'a yukarı yuvarlı); rakip tabanın altındaysa taban
   - asla gündüz fiyatından yüksek olmaz; resmi rakip yoksa / zaten en ucuzsak gece = gündüz
   - gündüz fiyatı (day) DEĞİŞMEZ
+  - feed.json'da "sabit_gece": true olan ilanın gece fiyatına dokunulmaz (21.10)
 Alış fiyatları secret KASPI_ALIS'ta ({sku: alış}; yerelde kaspiapi/kaspi_alis_secret.json'dan yüklenir).
 Repo PUBLIC: loga fiyat/alış YAZILMAZ, sadece sayılar. feed.json'u yazar; commit/push workflow'da.
   python .github/scripts/kaspi_gece.py            hesapla + feed.json yaz
@@ -55,6 +56,9 @@ for it in items:
     pid = SKU_PID.get(sku, sku.split('_')[0])
     cost = ALIS.get(sku)
     yeni, neden = day, ''
+    if it.get('sabit_gece'):   # 21.10 kullanıcı: elle sabitlenen gece fiyatı (Node A/G/P gündüz −%10, Atoderm Baume 45 2950) — görev DOKUNMAZ
+        nedenler['elle sabit'] = nedenler.get('elle sabit', 0) + 1
+        continue
     if not pid.isdigit() or not cost:
         yeni, neden = day, 'kart/alış bilinmiyor'
     else:
