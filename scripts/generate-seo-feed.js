@@ -163,7 +163,8 @@ function main() {
     sameAs: [
       "https://kaspi.kz/shop/m/15383076/products/",
       "https://www.wildberries.ru/seller/727302",
-      "https://ozon.kz/brand/bioderma-27367890/",
+      "https://ozon.kz/seller/all-in-one-5841969/",
+      "https://www.instagram.com/cosmoderm.kz/",
     ],
     contactPoint: [
       {
