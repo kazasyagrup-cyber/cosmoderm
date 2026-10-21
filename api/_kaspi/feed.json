@@ -2411,6 +2411,22 @@
 "day": 24900,
 "night": 24900,
 "stock": 0
+},
+{
+"sku": "3401399373237",
+"model": "Bioderma Atoderm Gel Douche гель для душа 200 мл",
+"brand": "Bioderma",
+"day": 6136,
+"night": 6136,
+"stock": 0
+},
+{
+"sku": "3701129810125",
+"model": "Bioderma Sebium Gel Moussant Actif гель-мусс 45 мл",
+"brand": "Bioderma",
+"day": 4888,
+"night": 4888,
+"stock": 0
 }
 ],
 "night_start_ms": 1791550800000
