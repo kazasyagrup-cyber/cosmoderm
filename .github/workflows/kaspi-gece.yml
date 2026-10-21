@@ -1,7 +1,9 @@
 # Kaspi GECE FİYATI günlük yenileme (19.10.2026) — bilgisayardan bağımsız. Eskiden yerel Görev Zamanlayıcı «Kaspi gece fiyati yenile - her gun 1700».
 # Sır: KASPI_ALIS ({sku: alış}, yerelde naos-kz-rapor/kaspiapi/kaspi_alis_secret.json). Repo public: loga fiyat yazılmaz.
-# Gece penceresi 18:00'de başlar; GitHub zamanlayıcısı birkaç dk–yarım saat gecikebilir, bu yüzden 17:00.
+# Gece penceresi 18:00'de başlar. 21.10: GitHub zamanlayıcısı 4–6 saat gecikti (21:10, 23:07) → asıl tetik Cloudflare Worker
+# cosmoderm-stok-cron 17:00'de workflow_dispatch (kaynak=worker). Aşağıdaki schedule YEDEK: o gün worker tetiği başarılıysa atlar.
 name: kaspi-gece
+run-name: kaspi-gece ${{ inputs.kaynak || github.event_name }}
 on:
   schedule:
     - cron: '0 12 * * *'   # 17:00 Almatı (UTC+5)
@@ -11,21 +13,38 @@ on:
         description: 'Sadece hesapla, feed.json yazma (deneme)'
         type: boolean
         default: false
+      kaynak:
+        description: 'Tetikleyen (worker = Cloudflare 17:00)'
+        type: string
+        default: 'elle'
 permissions:
   contents: write
+  actions: read
 concurrency: kaspi-gece
 jobs:
   gece:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      - name: Yedek zamanlayici - bugun worker zaten calistirdi mi
+        id: kontrol
+        if: github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BUGUN=$(TZ=Asia/Almaty date +%F)
+          N=$(gh api "repos/${{ github.repository }}/actions/workflows/kaspi-gece.yml/runs?status=success&per_page=20"             --jq "[.workflow_runs[] | select(.display_title == \"kaspi-gece worker\") | select((.created_at | fromdate + 18000 | strftime(\"%Y-%m-%d\")) == \"$BUGUN\")] | length")
+          echo "bugun basarili worker calismasi: $N"
+          if [ "$N" -gt 0 ]; then echo "atla=1" >> "$GITHUB_OUTPUT"; fi
       - uses: actions/checkout@v4
+        if: steps.kontrol.outputs.atla != '1'
       - name: Gece fiyatlarini hesapla
+        if: steps.kontrol.outputs.atla != '1'
         env:
           KASPI_ALIS: ${{ secrets.KASPI_ALIS }}
         run: python3 .github/scripts/kaspi_gece.py ${{ inputs.kuru && '--kuru' || '' }}
       - name: Commit + push
-        if: ${{ !inputs.kuru }}
+        if: ${{ !inputs.kuru && steps.kontrol.outputs.atla != '1' }}
         run: |
           git add api/_kaspi/feed.json
           if git diff --cached --quiet; then echo "degisiklik yok — push yok"; exit 0; fi
