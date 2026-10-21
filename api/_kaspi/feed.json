@@ -2314,6 +2314,103 @@
 "night": 21850,
 "stock": 0,
 "pool": "169415444_15383076"
+},
+{
+"sku": "161063249_15383076",
+"model": "Bioderma крем-гель ATODERM Intensive Gel-Creme для лица 200 мл",
+"brand": "Bioderma",
+"day": 12800,
+"night": 12800,
+"stock": 0
+},
+{
+"sku": "113153137_15383076",
+"model": "Bioderma бальзам Atoderm PP для лица 200 мл",
+"brand": "Bioderma",
+"day": 11400,
+"night": 11400,
+"stock": 0
+},
+{
+"sku": "148040259_15383076",
+"model": "Bioderma Atoderm PP Baume 500 бальзам для тела 500 мл",
+"brand": "Bioderma",
+"day": 14900,
+"night": 14900,
+"stock": 0
+},
+{
+"sku": "163358900_15383076",
+"model": "Bioderma NODE A Shampooing шампунь 400 мл",
+"brand": "Bioderma",
+"day": 14900,
+"night": 14900,
+"stock": 0
+},
+{
+"sku": "163359791_15383076",
+"model": "Bioderma NODE G Shampooing шампунь 400 мл",
+"brand": "Bioderma",
+"day": 14900,
+"night": 14900,
+"stock": 0
+},
+{
+"sku": "161062571_15383076",
+"model": "Bioderma NODE P шампунь 400 мл",
+"brand": "Bioderma",
+"day": 14900,
+"night": 14900,
+"stock": 0
+},
+{
+"sku": "119839206_15383076",
+"model": "Bioderma крем Photoderm Nude Touch SPF 50+ very light Cолнцезащитный для лица 40 мл",
+"brand": "Bioderma",
+"day": 10296,
+"night": 10296,
+"stock": 0
+},
+{
+"sku": "132466264_15383076",
+"model": "Bioderma Sensibio AR+ Мицеллярный гель мицеллярный гель для снятия макияжа 250 мл",
+"brand": "Bioderma",
+"day": 10400,
+"night": 10400,
+"stock": 0
+},
+{
+"sku": "17700614_15383076",
+"model": "Bioderma флюид Photoderm AKN Mat для лица 40 мл",
+"brand": "Bioderma",
+"day": 13080,
+"night": 13080,
+"stock": 0
+},
+{
+"sku": "117138798_15383076",
+"model": "Institut Esthederm сыворотка Intensive Pro-Collagen+ для лица 30 мл",
+"brand": "Institut Esthederm",
+"day": 20737,
+"night": 20737,
+"stock": 0
+},
+{
+"sku": "148941670_15383076",
+"model": "Institut Esthederm сыворотка Intensive Pro Collagen Serum для лица 30 мл",
+"brand": "Institut Esthederm",
+"day": 20737,
+"night": 20737,
+"stock": 0,
+"pool": "117138798_15383076"
+},
+{
+"sku": "112317618_15383076",
+"model": "Institut Esthederm крем Lift Repair Absolute Smoothing Cream для лица 50 мл",
+"brand": "Institut Esthederm",
+"day": 24900,
+"night": 24900,
+"stock": 0
 }
 ],
 "night_start_ms": 1791550800000
