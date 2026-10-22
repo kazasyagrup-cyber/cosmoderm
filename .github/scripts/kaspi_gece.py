@@ -6,6 +6,8 @@ Yerel naos-kz-rapor/kaspi_gece_guncelle.py ile AYNI kural (kullanıcı 12.10):
   - asla gündüz fiyatından yüksek olmaz; resmi rakip yoksa / zaten en ucuzsak gece = gündüz
   - gündüz fiyatı (day) DEĞİŞMEZ
   - feed.json'da "sabit_gece": true olan ilanın gece fiyatına dokunulmaz (21.10)
+  - 23.10 TESLİMAT EŞİĞİ (kullanıcı): Kaspi'nin satıcıdan kestiği teslimat sipariş TUTARINA göre kademeli (<3.000 173 · <5.000 231 ·
+    <10.000 927 · ≥10.000 1.507). Gece fiyatı 9.990 / 4.990'ın hemen üstündeyse ve eşiğe inmek net kârı ARTIRIYORSA (ve kâr ≥%10) → eşiğe iner.
 Alış fiyatları secret KASPI_ALIS'ta ({sku: alış}; yerelde kaspiapi/kaspi_alis_secret.json'dan yüklenir).
 Repo PUBLIC: loga fiyat/alış YAZILMAZ, sadece sayılar. feed.json'u yazar; commit/push workflow'da.
   python .github/scripts/kaspi_gece.py            hesapla + feed.json yaz
@@ -13,6 +15,10 @@ Repo PUBLIC: loga fiyat/alış YAZILMAZ, sadece sayılar. feed.json'u yazar; com
 import hashlib, http.cookiejar, json, math, os, sys, time, urllib.request
 
 MID = '15383076'; EXP = 0.30; MIN_KAR = 0.10; INDIRIM = 50
+KOM, VERGI = 0.125, 0.03; ESIKLER = (9990, 4990)   # 23.10: teslimat eşiği kuralı (naos-kz-rapor/kaspi_karlilik_esik.py ile aynı varsayım)
+
+def teslimat(p): return 173 if p < 3000 else 231 if p < 5000 else 927 if p < 10000 else 1507
+def net(p, c): return p * (1 - KOM - VERGI) - teslimat(p) - c
 KURU = '--kuru' in sys.argv
 FEED = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'api', '_kaspi', 'feed.json')
 
@@ -80,6 +86,10 @@ for it in items:
                 elif hedef >= taban: yeni, neden = hedef, 'resmi rakip − 50'
                 elif taban < day: yeni, neden = taban, '%10 kâr tabanı'
                 else: yeni, neden = day, 'taban ≥ gündüz'
+    if cost:   # 23.10 teslimat eşiği: kademenin hemen üstündeki fiyat → eşiğe in (yalnız net kâr artıyorsa)
+        for e in ESIKLER:
+            if e < yeni and teslimat(e) < teslimat(yeni) and net(e, cost) >= net(yeni, cost) and net(e, cost) >= MIN_KAR * e:
+                yeni, neden = e, 'teslimat eşiği'; break
     yeni = int(yeni)
     if yeni != old: degisen += 1
     nedenler[neden] = nedenler.get(neden, 0) + 1
