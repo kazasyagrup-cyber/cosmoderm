@@ -39,7 +39,9 @@ module.exports = async (req, res) => {
       }
       return out;
     };
-    const orders = (await Promise.all(STATES.map(listState))).flat();
+    // 22.10: Kaspi aynı siparişi birden çok durum listesinde (DELIVERY + KASPI_DELIVERY) döndürüyor → sipariş id'sine göre tekilleştir (yoksa satış 2 kez düşülüyordu)
+    const gor = new Set();
+    const orders = (await Promise.all(STATES.map(listState))).flat().filter((od) => !gor.has(od.id) && gor.add(od.id));
     const rows = await Promise.all(orders.map(async (od) => {
       const e = await kaspi(`/orders/${od.id}/entries`, process.env.KASPI_TOKEN);
       const a = od.attributes || {};

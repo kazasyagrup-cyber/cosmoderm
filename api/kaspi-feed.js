@@ -49,7 +49,9 @@ async function soldSince(since, token) {
     }
     return out;
   };
-  const orders = (await Promise.all(STATES.map(listState))).flat().filter((od) => !CANCELLED.has(od.attributes.status));
+  // 22.10: Kaspi aynı siparişi birden çok durum listesinde (DELIVERY + KASPI_DELIVERY) döndürüyor → sipariş id'sine göre tekilleştir (yoksa satış 2 kez düşülüyordu)
+  const gor = new Set();
+  const orders = (await Promise.all(STATES.map(listState))).flat().filter((od) => !CANCELLED.has(od.attributes.status) && !gor.has(od.id) && gor.add(od.id));
   const entries = await Promise.all(orders.map((od) => kaspi(`/orders/${od.id}/entries`, token)));
   const sold = {};
   for (const e of entries) for (const en of e.data || []) {

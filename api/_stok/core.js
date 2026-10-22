@@ -47,7 +47,9 @@ async function kaspiRecords(sinceMs, token) {
       }
       return out;
     };
-    const orders = (await Promise.all(KASPI_STATES.map(listState))).flat().filter((od) => !KASPI_CANCELLED.has(od.attributes.status));
+    // 22.10: Kaspi aynı siparişi birden çok durum listesinde (DELIVERY + KASPI_DELIVERY) döndürüyor → sipariş id'sine göre tekilleştir (yoksa satış 2 kez düşülüyordu)
+    const gor = new Set();
+    const orders = (await Promise.all(KASPI_STATES.map(listState))).flat().filter((od) => !KASPI_CANCELLED.has(od.attributes.status) && !gor.has(od.id) && gor.add(od.id));
     const entries = await Promise.all(orders.map((od) => http(`${KASPI_API}/orders/${od.id}/entries`, { headers: H })));
     const recs = [];
     entries.forEach((e, i) => {
