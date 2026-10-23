@@ -9,8 +9,9 @@ module.exports = async (req, res) => {
   const key = process.env.STOK_SYNC_KEY;
   if (!key || String((req.query && req.query.key) || '').trim() !== key.trim()) { res.statusCode = 404; res.end('Not found'); return; }
   const write = process.env.STOK_YAZ === '1' && !(req.query && req.query.dry === '1');
+  const artir = !!(req.query && req.query.artir === '1');   // 23.10: Worker günde bir (03:00 Almatı) → eksik kalan WB/Ozon stoğunu R'ye yükselt
   try {
-    const out = await runSync(process.env, { write });
+    const out = await runSync(process.env, { write, artir });
     if (!out.ok) { res.statusCode = 503; res.end(JSON.stringify(out)); return; }
     console.log('stok-sync', JSON.stringify({ mod: out.mod, ean: out.ean, degisecek: out.degisecek_ean, wb: out.wb.length, ozon: out.ozon.length, fren: out.fren, sayim: out.sayim, ua: req.headers['user-agent'] || '' }));
     res.setHeader('Content-Type', 'application/json; charset=utf-8');

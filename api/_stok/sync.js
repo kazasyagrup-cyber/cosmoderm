@@ -2,11 +2,14 @@
 // Çağıranlar: /api/stok-sync (Cloudflare Worker her 5 dk + GitHub Actions yedek) ve kaspi-feed.js (Kaspi listeyi her okuduğunda, yanıttan sonra).
 // Kurallar: yalnız DÜŞÜŞ yazılır (platform stoğu R'den büyükse); artış/mal gelişi map.json B güncellenerek + stok_artis_yaz.py ile yapılır.
 // Bozuk veri freni: bir turda >%30 EAN değişecekse yazılmaz. Yazma yalnız Vercel env STOK_YAZ=1 iken.
+// 23.10: artir=true (Worker'ın günde bir 03:00 Almatı turu) → platform stoğu R'den KÜÇÜKSE de R yazılır (iptal sonrası WB/Ozon'da eksik kalan stok;
+// WB sipariş gelince kendisi düşürüyor, iptalde geri koymuyor). Elle ayarlanan ilanlar ./artirma_haric.json'da (EAN listesi) → artırılmaz.
 const core = require('./core');
+const HARIC = new Set(require('./artirma_haric.json').ean);
 const WB_WH = 778307, OZON_WH = 1020005030096510;
 
 // snap verilirse yeniden hesaplanmaz (kaspi-feed zaten hesaplamış olur)
-async function runSync(env, { write, snap } = {}) {
+async function runSync(env, { write, snap, artir } = {}) {
   snap = snap || await core.snapshot(env);
   if (snap.errors.length) return { ok: false, errors: snap.errors };
   const H_WB = { Authorization: env.WB_TOKEN, 'Content-Type': 'application/json' };
@@ -26,12 +29,13 @@ async function runSync(env, { write, snap } = {}) {
     const d = await core.http(`${core.OZON}/v4/product/info/stocks`, { method: 'POST', headers: H_OZ_R, body: JSON.stringify({ filter: { offer_id: ozOffers.slice(i, i + 1000), visibility: 'ALL' }, limit: 1000, cursor: '' }) });
     for (const it of d.items || []) { const f = (it.stocks || []).find((s) => s.type === 'fbs'); if (f) { ozCur[it.offer_id] = f.present; ozRez[it.offer_id] = f.reserved || 0; } }
   }
-  // değişiklik planı (yalnız düşüş)
+  // değişiklik planı (düşüş; artir turunda artış da)
   const wbPlan = [], ozPlan = [], eans = new Set();
   for (const [ean, s] of Object.entries(core.MAP.items)) {
     const R = snap.R[ean];
-    for (const w of s.wb) { const cur = wbCur[w.sku]; if (cur != null && cur > R) { wbPlan.push({ ean, nm: w.nm, sku: w.sku, cur, yeni: R }); eans.add(ean); } }
-    for (const o of s.ozon) { const cur = ozCur[o] == null ? null : ozCur[o] - (ozRez[o] || 0); if (cur != null && cur > R) { ozPlan.push({ ean, offer_id: o, cur, rezerv: ozRez[o] || 0, yeni: R }); eans.add(ean); } }
+    const yaz = (cur) => cur != null && (cur > R || (artir && cur < R && !HARIC.has(ean)));
+    for (const w of s.wb) { const cur = wbCur[w.sku]; if (yaz(cur)) { wbPlan.push({ ean, nm: w.nm, sku: w.sku, cur, yeni: R }); eans.add(ean); } }
+    for (const o of s.ozon) { const cur = ozCur[o] == null ? null : ozCur[o] - (ozRez[o] || 0); if (yaz(cur)) { ozPlan.push({ ean, offer_id: o, cur, rezerv: ozRez[o] || 0, yeni: R }); eans.add(ean); } }
   }
   // SETLER: kapasite = bileşenlerden çıkan set sayısı. 'acik' (kullanıcı onaylı) setlerde stok = kapasite (artış dahil); kapalı setlerde yalnız düşüş (0 kalır).
   for (const st of setler) {
@@ -46,7 +50,7 @@ async function runSync(env, { write, snap } = {}) {
   const total = Object.keys(core.MAP.items).length + setler.length;
   const fren = parseFloat(env.STOK_FREN_ORAN || '0.3');   // varsayılan %30; ilk açılış senkronu için kullanıcı Vercel'de GEÇİCİ 1 yapar, sonra siler
   const brake = eans.size > fren * total;
-  const out = { ok: true, mod: write ? 'YAZ' : 'GOLGE', ean: total, degisecek_ean: eans.size, fren: brake, wb: wbPlan, ozon: ozPlan, sayim: snap.counts };
+  const out = { ok: true, mod: (write ? 'YAZ' : 'GOLGE') + (artir ? '+ARTIR' : ''), ean: total, degisecek_ean: eans.size, fren: brake, wb: wbPlan, ozon: ozPlan, sayim: snap.counts };
   if (write && !brake) {
     for (let i = 0; i < wbPlan.length; i += 1000) {
       await core.http(`${core.WB_MP}/api/v3/stocks/${WB_WH}`, { method: 'PUT', headers: H_WB, body: JSON.stringify({ stocks: wbPlan.slice(i, i + 1000).map((p) => ({ sku: p.sku, amount: p.yeni })) }) });
