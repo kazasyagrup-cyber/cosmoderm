@@ -60,7 +60,7 @@
 "model": "Bioderma Sensibio DS+ Gel Мусс гель 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11203,
+"night": 11255,
 "stock": 4
 },
 {
@@ -141,7 +141,7 @@
 "model": "Bioderma крем Sebium сенситив для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 10850,
+"night": 10900,
 "stock": 9,
 "pool": "17600066_15383076"
 },
@@ -716,7 +716,7 @@
 "model": "Bioderma крем Atoderm Nutritive для лица 40 мл",
 "brand": "Bioderma",
 "day": 6400,
-"night": 4990,
+"night": 6029,
 "stock": 2
 },
 {
@@ -1292,7 +1292,7 @@
 "model": "Bioderma Sensibio H2O Eye мицеллярная вода 125 мл",
 "brand": "Bioderma",
 "day": 8700,
-"night": 8598,
+"night": 8650,
 "stock": 1
 },
 {
@@ -1773,7 +1773,7 @@
 "model": "Bioderma Atoderm интенсивный гель 500 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 11275,
+"night": 11400,
 "stock": 4,
 "pool": "17600911_15383076"
 },
@@ -2295,7 +2295,7 @@
 "model": "Bioderma бальзам Atoderm интенсивный бальзам-уход для сухой атопичной кожи для лица 500 мл",
 "brand": "Bioderma",
 "day": 21900,
-"night": 21602,
+"night": 21867,
 "stock": 0
 },
 {
