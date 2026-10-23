@@ -54,7 +54,8 @@ module.exports = async (req, res) => {
         kalemler: (e.data || []).map((en) => ({ sku: en.attributes.offer && en.attributes.offer.code, ad: en.attributes.offer && en.attributes.offer.name, adet: en.attributes.quantity, fiyat: en.attributes.basePrice })),
       };
     }));
-    const out = rows.filter((r) => !q || r.kalemler.some((k) => String(k.ad || '').toLowerCase().includes(q) || String(k.sku || '').toLowerCase().includes(q))).sort((x, y) => y.ms - x.ms);
+    // 23.10: Kaspi bazı durum listelerinde creationDate filtresini uygulamıyor (eski günlerin siparişleri de geliyor) → tarihe göre süz
+    const out = rows.filter((r) => r.ms >= since && r.ms <= to).filter((r) => !q || r.kalemler.some((k) => String(k.ad || '').toLowerCase().includes(q) || String(k.sku || '').toLowerCase().includes(q))).sort((x, y) => y.ms - x.ms);
     res.setHeader('Content-Type', 'application/json; charset=utf-8');
     res.end(JSON.stringify({ ok: true, gun: days, aralik: [since, to], adet: out.length, siparisler: out }));
   } catch (e) { res.statusCode = 500; res.end(JSON.stringify({ ok: false, error: String(e && e.message || e).slice(0, 200) })); }
