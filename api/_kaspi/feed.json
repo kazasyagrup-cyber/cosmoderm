@@ -60,7 +60,7 @@
 "model": "Bioderma Sensibio DS+ Gel Мусс гель 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11203,
+"night": 11199,
 "stock": 4
 },
 {
@@ -76,7 +76,7 @@
 "model": "Bioderma крем Atoderm Creme Ultra для лица 200 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8192,
+"night": 8235,
 "stock": 14
 },
 {
@@ -162,7 +162,7 @@
 "model": "Bioderma крем Sebium Mat Control матирующий для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9750,
+"night": 9698,
 "stock": 19
 },
 {
@@ -222,7 +222,7 @@
 "model": "Bioderma крем Sensibio AR крем против покраснений для лица 40 мл",
 "brand": "bioderma",
 "day": 11400,
-"night": 11349,
+"night": 11298,
 "stock": 29,
 "pool": "131462171_342517855"
 },
@@ -231,7 +231,7 @@
 "model": "Bioderma крем Sensibio AR, средство для уменьшения видимых покраснений, 40 мл для лица 40 мл",
 "brand": "bioderma",
 "day": 11400,
-"night": 11349,
+"night": 11298,
 "stock": 29,
 "pool": "131462171_342517855"
 },
@@ -289,7 +289,7 @@
 "model": "Bioderma Atoderm Ultra-Gentle гель 1000",
 "brand": "bioderma",
 "day": 18400,
-"night": 18149,
+"night": 18098,
 "stock": 4
 },
 {
@@ -1206,7 +1206,7 @@
 "model": "Bioderma Sebium H2O 100 мл мицеллярная вода",
 "brand": "Bioderma",
 "day": 4500,
-"night": 3949,
+"night": 3920,
 "stock": 4
 },
 {
@@ -1304,7 +1304,7 @@
 "model": "Bioderma Sensibio H2O Eye мицеллярная вода 125 мл",
 "brand": "Bioderma",
 "day": 8700,
-"night": 8598,
+"night": 8547,
 "stock": 1
 },
 {
@@ -1443,7 +1443,7 @@
 "model": "Bioderma эмульсия Sebium Pore Refiner для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9725,
+"night": 9674,
 "stock": 9,
 "pool": "17700013_15383076"
 },
@@ -1557,7 +1557,7 @@
 "model": "Bioderma крем Sensibio Defensive Rich, активный успокаивающий крем, 40 мл для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 9247,
+"night": 9196,
 "stock": 4,
 "pool": "104596412_814862873"
 },
@@ -1638,7 +1638,7 @@
 "model": "Bioderma крем-гель Hydrabio, гель-крем, 40 мл для лица 40 мл",
 "brand": "bioderma",
 "day": 13000,
-"night": 12949,
+"night": 12898,
 "stock": 18,
 "pool": "17600052_15383076"
 },
@@ -1773,7 +1773,7 @@
 "model": "Bioderma бальзам Atoderm 15 мл",
 "brand": "Bioderma",
 "day": 6200,
-"night": 6148,
+"night": 6097,
 "stock": 4,
 "pool": "102415463_15383076"
 },
@@ -1782,7 +1782,7 @@
 "model": "Bioderma бальзам Atoderm 15 мл",
 "brand": "Bioderma",
 "day": 6200,
-"night": 6149,
+"night": 6098,
 "stock": 4,
 "pool": "102415463_15383076"
 },
