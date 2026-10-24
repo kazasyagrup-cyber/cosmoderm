@@ -8,9 +8,10 @@ const core = require('./core');
 const HARIC = new Set(require('./artirma_haric.json').ean);
 const WB_WH = 778307, OZON_WH = 1020005030096510;
 
-// 24.10 KULLANICI KURALI: kalan 1 adet → YALNIZ Kaspi'de satılır, WB/Ozon'da 0 (Rusya'ya giden WB/Ozon siparişinde para ~60 günde,
-// Kaspi'de 2–7 günde döner). Kalan ≥2 → her yerde gerçek adet (hızlı senkron ~1 dk; Kaspi'de "1 eksik göster" kaldırıldı).
-const wbOzHedef = (r) => (r === 1 ? 0 : r);
+// 24.10 KULLANICI KURALI (son hâli, 16:00): son 1 adet dahil HER PAZAR YERİNDE gerçek kalan satışta — ayırma yok
+// (ör. Node G yalnız Rusya'dan alınıyor, Esthederm yavaş dönüyor; hızlı senkron ~1 dk). Aynı gün denenen "son 1 adet yalnız Kaspi" (15:45) geri alındı.
+// Bir platforma ayırma gerekirse burası değiştirilir (sync düşüş + gece artırma + set kapasitesi + stok_artis_yaz.py aynı kuralı kullanır).
+const wbOzHedef = (r) => r;
 
 // snap verilirse yeniden hesaplanmaz (kaspi-feed zaten hesaplamış olur)
 async function runSync(env, { write, snap, artir } = {}) {
