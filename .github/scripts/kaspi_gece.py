@@ -8,6 +8,8 @@ Yerel naos-kz-rapor/kaspi_gece_guncelle.py ile AYNI kural (kullanıcı 12.10):
   - feed.json'da "sabit_gece": true olan ilanın gece fiyatına dokunulmaz (21.10)
   - 23.10 TESLİMAT EŞİĞİ (kullanıcı): Kaspi'nin satıcıdan kestiği teslimat sipariş TUTARINA göre kademeli (<3.000 173 · <5.000 231 ·
     <10.000 927 · ≥10.000 1.507). Gece fiyatı 9.990 / 4.990'ın hemen üstündeyse ve eşiğe inmek net kârı ARTIRIYORSA (ve kâr ≥%10) → eşiğe iner.
+  - 24.10 BOT FRENİ (kullanıcı): BOT_RAKIP'teki satıcı (DERMA COSMETOLOGY) bir kartta mevcut gece/gündüz fiyatımızın 1–5 ₸ ALTINDAYSA
+    (bizi 1 ₸ altından takip eden bot) o kartta rakip hesabına KATILMAZ → kovalama durur, fiyat diğer resmi rakiplere göre belirlenir.
 Alış fiyatları secret KASPI_ALIS'ta ({sku: alış}; yerelde kaspiapi/kaspi_alis_secret.json'dan yüklenir).
 Repo PUBLIC: loga fiyat/alış YAZILMAZ, sadece sayılar. feed.json'u yazar; commit/push workflow'da.
   python .github/scripts/kaspi_gece.py            hesapla + feed.json yaz
@@ -16,6 +18,7 @@ import hashlib, http.cookiejar, json, math, os, sys, time, urllib.request
 
 MID = '15383076'; EXP = 0.30; MIN_KAR = 0.10; INDIRIM = 50
 KOM, VERGI = 0.125, 0.03; ESIKLER = (9990, 4990)   # 23.10: teslimat eşiği kuralı (naos-kz-rapor/kaspi_karlilik_esik.py ile aynı varsayım)
+BOT_RAKIP, BOT_FARK = {'30348533'}, 5   # 24.10: DERMA COSMETOLOGY — fiyatımızın 1 ₸ altına inen bot; 1..BOT_FARK ₸ altımızdaysa yok sayılır
 
 def teslimat(p): return 173 if p < 3000 else 231 if p < 5000 else 927 if p < 10000 else 1507
 def net(p, c): return p * (1 - KOM - VERGI) - teslimat(p) - c
@@ -56,7 +59,7 @@ feed_txt = open(FEED, encoding='utf-8').read()
 feed = json.loads(feed_txt)
 items = feed['items']
 
-cache, hata, degisen, nedenler = {}, 0, 0, {}
+cache, hata, degisen, nedenler, fren = {}, 0, 0, {}, 0
 for it in items:
     sku = it['sku']; day = it['day']; old = it['night']
     pid = SKU_PID.get(sku, sku.split('_')[0])
@@ -76,7 +79,10 @@ for it in items:
         if offs is None:
             yeni, neden = day, 'teklifler okunamadı'
         else:
-            resmi = [o['price'] for o in offs if o.get('isBrandOfficialPartner') and str(o.get('merchantId')) != MID and o.get('price')]
+            rakip = [(str(o.get('merchantId')), o['price']) for o in offs if o.get('isBrandOfficialPartner') and str(o.get('merchantId')) != MID and o.get('price')]
+            bot = [(m, p) for m, p in rakip if m in BOT_RAKIP and any(1 <= ref - p <= BOT_FARK for ref in (old, day))]
+            if bot: fren += 1   # 24.10 bot freni: bizi 1 ₸ altından takip eden botu kovalama
+            resmi = [p for m, p in rakip if (m, p) not in bot]
             if not resmi:
                 yeni, neden = day, 'resmi rakip yok'
             else:
@@ -99,6 +105,7 @@ ind = [it for it in items if it['night'] < it['day']]
 print(f'{len(items)} ilan, {len(cache)} kart okundu, {hata} hata, {degisen} gece fiyatı değişti')
 print(f'gece inen ilan: {len(ind)} | ort. indirim %{(sum(1 - it["night"] / it["day"] for it in ind) / max(1, len(ind))) * 100:.1f}')
 print('nedenler:', nedenler)
+print('bot freni (DERMA yok sayıldı):', fren, 'ilan')
 print('parmak izi:', hashlib.sha256(json.dumps([[it['sku'], it['night']] for it in items]).encode()).hexdigest()[:12])
 
 if hata > len(cache) * 0.3:
