@@ -1,0 +1,35 @@
+# KONTROL OTOMASYONU — bekçinin bekçisi (24.10.2026). Asıl kontroller Cloudflare Worker "cosmoderm-stok-cron"da saatte bir çalışır (kontrol.js).
+# Bu iş Cloudflare'den BAĞIMSIZ: Worker'ın son kontrolü 150 dk'dan eskiyse ya da site / Kaspi feed'i çalışmıyorsa çalışma BAŞARISIZ olur
+# → GitHub, repo sahibine (kazasyagrup) "Run failed" maili atar. Repo public: loga anahtar/ayrıntı yazılmaz.
+name: kontrol-bekci
+on:
+  schedule:
+    - cron: '25 */2 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency: kontrol-bekci
+jobs:
+  bekci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Cloudflare kontrol otomasyonu calisiyor mu
+        run: |
+          j=$(curl -s -m 30 https://cosmoderm-stok-cron.cosmoderm-kz.workers.dev/kontrol/nabiz || echo '{}')
+          echo "$j"
+          yas=$(echo "$j" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('yas_dk') if d.get('yas_dk') is not None else 9999)" 2>/dev/null || echo 9999)
+          if [ "$yas" -gt 150 ]; then echo "::error::Cloudflare Kontrol Otomasyonu ${yas} dakikadir calismiyor (saatte bir olmali). Claude Code'a 'kontrol otomasyonu' deyin."; exit 1; fi
+      - name: Site aciliyor mu
+        run: |
+          k=$(curl -s -o /dev/null -w '%{http_code}' -m 30 https://www.cosmoderm.kz/)
+          echo "site HTTP $k"
+          if [ "$k" != "200" ]; then echo "::error::cosmoderm.kz HTTP $k"; exit 1; fi
+      - name: Kaspi feed calisiyor mu
+        env:
+          KASPI_FEED_KEY: ${{ secrets.KASPI_FEED_KEY }}
+        run: |
+          if [ -z "$KASPI_FEED_KEY" ]; then echo "KASPI_FEED_KEY secret yok - feed kontrolu atlandi"; exit 0; fi
+          k=$(curl -s -o /dev/null -w '%{http_code}' -m 90 "https://www.cosmoderm.kz/k/$KASPI_FEED_KEY")
+          echo "feed HTTP $k"
+          if [ "$k" != "200" ]; then echo "::error::Kaspi feed HTTP $k - Kaspi eski fiyat/stokta kalir"; exit 1; fi
