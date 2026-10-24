@@ -38,12 +38,17 @@ async function kaspiRecords(sinceMs, token) {
   return withCache('kaspi', async () => {
     const to = Date.now();
     const H = { 'X-Auth-Token': token, Accept: 'application/vnd.api+json', 'Content-Type': 'application/vnd.api+json' };
+    // 24.10: Kaspi tek sorguda ~15 günden uzun creationDate aralığını reddediyor (400 "Exceeded the maximum difference") → 14 günlük pencereler
+    const WINDOW_MS = 14 * 24 * 3600 * 1000;
     const listState = async (state) => {
       const out = [];
-      for (let page = 0; page < 20; page++) {
-        const o = await http(`${KASPI_API}/orders?page[number]=${page}&page[size]=100&filter[orders][creationDate][$ge]=${sinceMs}&filter[orders][creationDate][$le]=${to}&filter[orders][state]=${state}`, { headers: H });
-        out.push(...(o.data || []));
-        if (!o.meta || page + 1 >= o.meta.pageCount) break;
+      for (let from = sinceMs; from <= to; from += WINDOW_MS) {
+        const until = Math.min(to, from + WINDOW_MS - 1);
+        for (let page = 0; page < 20; page++) {
+          const o = await http(`${KASPI_API}/orders?page[number]=${page}&page[size]=100&filter[orders][creationDate][$ge]=${from}&filter[orders][creationDate][$le]=${until}&filter[orders][state]=${state}`, { headers: H });
+          out.push(...(o.data || []));
+          if (!o.meta || page + 1 >= o.meta.pageCount) break;
+        }
       }
       return out;
     };

@@ -19,6 +19,7 @@ const CANCELLED = new Set(['CANCELLED', 'CANCELLING', 'RETURNED', 'KASPI_DELIVER
 const STATES = ['NEW', 'SIGN_REQUIRED', 'PICKUP', 'DELIVERY', 'KASPI_DELIVERY', 'ARCHIVE'];
 const API = 'https://kaspi.kz/shop/api/v2';
 let cache = { at: 0, sold: null };
+const WINDOW_MS = 14 * 24 * 3600 * 1000;
 
 async function kaspi(path, token) {
   // 08.10: Kaspi'ye ilk bağlantı ara sıra "fetch failed" veriyor → 3 deneme (0,4 / 1,2 sn arayla)
@@ -39,13 +40,17 @@ async function soldSince(since, token) {
   if (cache.sold && Date.now() - cache.at < 4 * 60 * 1000) return cache.sold;
   const to = Date.now();
   // 08.10: hız — durumlar ve sipariş kalemleri PARALEL okunur (önce sıralı ~8,6 sn sürüyordu; Kaspi zaman aşımına düşmesin)
+  // 24.10: Kaspi tek sorguda ~15 günden uzun creationDate aralığını reddediyor (400 "Exceeded the maximum difference") → 14 günlük pencereler
   const listState = async (state) => {
     const out = [];
-    for (let page = 0; page < 20; page++) {
-      const q = `/orders?page[number]=${page}&page[size]=100&filter[orders][creationDate][$ge]=${since}&filter[orders][creationDate][$le]=${to}&filter[orders][state]=${state}`;
-      const o = await kaspi(q, token);
-      out.push(...(o.data || []));
-      if (!o.meta || page + 1 >= o.meta.pageCount) break;
+    for (let from = since; from <= to; from += WINDOW_MS) {
+      const until = Math.min(to, from + WINDOW_MS - 1);
+      for (let page = 0; page < 20; page++) {
+        const q = `/orders?page[number]=${page}&page[size]=100&filter[orders][creationDate][$ge]=${from}&filter[orders][creationDate][$le]=${until}&filter[orders][state]=${state}`;
+        const o = await kaspi(q, token);
+        out.push(...(o.data || []));
+        if (!o.meta || page + 1 >= o.meta.pageCount) break;
+      }
     }
     return out;
   };
