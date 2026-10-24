@@ -12,6 +12,8 @@ const CACHE_MS = 4 * 60 * 1000;
 const cache = {};
 
 const sleep = (ms) => new Promise((ok) => setTimeout(ok, ms));
+// 24.10: hızlı senkron (api/stok-hizli) yeni sipariş görünce önbelleği temizler — yoksa 4 dk'lık eski liste yeni satışı kaçırır
+function cacheTemizle() { for (const k of Object.keys(cache)) delete cache[k]; }
 async function withCache(name, fn) {
   const c = cache[name];
   if (c && Date.now() - c.at < CACHE_MS) return c.v;
@@ -176,4 +178,4 @@ async function snapshot(env, opts = {}) {
   return { R, S, sold, v14, errors, counts: { kaspi: kas.length, wb: wb.length, ozon: oz.length } };
 }
 
-module.exports = { MAP, IDX, SETIDX, snapshot, http, ozonHeaders, WB_MP, OZON, sleep, creds };
+module.exports = { MAP, IDX, SETIDX, snapshot, http, ozonHeaders, WB_MP, OZON, KASPI_API, KASPI_STATES, sleep, creds, cacheTemizle };
