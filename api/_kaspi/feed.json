@@ -60,7 +60,7 @@
 "model": "Bioderma Sensibio DS+ Gel Мусс гель 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11254,
+"night": 11203,
 "stock": 4
 },
 {
@@ -196,7 +196,7 @@
 "model": "Bioderma крем Sensibio AR+ для кожи с покраснениями для лица 40 мл",
 "brand": "bioderma",
 "day": 11400,
-"night": 9939,
+"night": 9930,
 "stock": 29
 },
 {
@@ -204,7 +204,7 @@
 "model": "Bioderma крем Sensibio AR Anti-Redness Care для лица 40 мл",
 "brand": "bioderma",
 "day": 11400,
-"night": 11298,
+"night": 11247,
 "stock": 29,
 "pool": "131462171_342517855"
 },
@@ -213,7 +213,7 @@
 "model": "Bioderma крем SENSIBIO AR Увлажняющий крем от покраснений для чувствительной кожи с куперозом и розацеей, 40 мл для лица 40 мл",
 "brand": "bioderma",
 "day": 11400,
-"night": 11298,
+"night": 11247,
 "stock": 29,
 "pool": "131462171_342517855"
 },
@@ -240,7 +240,7 @@
 "model": "Bioderma крем Крем для чувствительной кожи с куперозами для лица 40 мл",
 "brand": "bioderma",
 "day": 11400,
-"night": 11349,
+"night": 11298,
 "stock": 29,
 "pool": "131462171_342517855"
 },
@@ -570,7 +570,7 @@
 "model": "Bioderma сыворотка Sebium для лица 30 мл",
 "brand": "bioderma",
 "day": 17900,
-"night": 16955,
+"night": 16904,
 "stock": 4
 },
 {
@@ -1157,7 +1157,7 @@
 "model": "Bioderma сыворотка Pigmentbio Serum C-Concentrate для лица 15 мл",
 "brand": "Bioderma",
 "day": 16000,
-"night": 15949,
+"night": 15898,
 "stock": 1
 },
 {
@@ -1304,7 +1304,7 @@
 "model": "Bioderma Sensibio H2O Eye мицеллярная вода 125 мл",
 "brand": "Bioderma",
 "day": 8700,
-"night": 8649,
+"night": 8598,
 "stock": 1
 },
 {
@@ -1371,7 +1371,7 @@
 "model": "Bioderma лосьон-тоник Sebium 200 мл",
 "brand": "bioderma",
 "day": 16900,
-"night": 16899,
+"night": 16847,
 "stock": 19,
 "pool": "17700783_659590"
 },
@@ -1443,7 +1443,7 @@
 "model": "Bioderma эмульсия Sebium Pore Refiner для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9776,
+"night": 9725,
 "stock": 9,
 "pool": "17700013_15383076"
 },
@@ -1557,7 +1557,7 @@
 "model": "Bioderma крем Sensibio Defensive Rich, активный успокаивающий крем, 40 мл для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 9298,
+"night": 9247,
 "stock": 4,
 "pool": "104596412_814862873"
 },
@@ -1755,7 +1755,7 @@
 "model": "Bioderma крем Sebium kerato+ для лица 30 мл",
 "brand": "bioderma",
 "day": 13900,
-"night": 13747,
+"night": 13696,
 "stock": 9,
 "pool": "108213483_211504924"
 },
@@ -1764,7 +1764,7 @@
 "model": "Bioderma крем-гель Sebium Керато+ крем для лица 30 мл",
 "brand": "bioderma",
 "day": 13900,
-"night": 12949,
+"night": 12898,
 "stock": 9,
 "pool": "108213483_211504924"
 },
@@ -1998,7 +1998,7 @@
 "model": "Bioderma крем Pigmentbio ночной крем для лица 50 мл",
 "brand": "Bioderma",
 "day": 22500,
-"night": 20949,
+"night": 20898,
 "stock": 1,
 "pool": "100309098_15383076"
 },
@@ -2169,7 +2169,7 @@
 "model": "Bioderma Sensibio H2O Micellar Water: мицеллярная вода 500 мл",
 "brand": "Bioderma",
 "day": 11000,
-"night": 9879,
+"night": 9829,
 "stock": 9,
 "pool": "21900212_15383076"
 },
@@ -2416,7 +2416,7 @@
 "model": "Bioderma Sensibio AR+ Мицеллярный гель мицеллярный гель для снятия макияжа 250 мл",
 "brand": "Bioderma",
 "day": 10400,
-"night": 9830,
+"night": 9060,
 "stock": 0
 },
 {
