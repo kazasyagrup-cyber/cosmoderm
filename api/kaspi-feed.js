@@ -20,8 +20,6 @@ const STATES = ['NEW', 'SIGN_REQUIRED', 'PICKUP', 'DELIVERY', 'KASPI_DELIVERY', 
 const API = 'https://kaspi.kz/shop/api/v2';
 let cache = { at: 0, sold: null };
 const WINDOW_MS = 14 * 24 * 3600 * 1000;
-const GUVENLIK_ESIK = 2;   // 24.10: kalan ≤2 adet ve WB/Ozon'da da ilanlıysa Kaspi'de 1 eksik göster (0 yaparak kapatılır)
-
 async function kaspi(path, token) {
   // 08.10: Kaspi'ye ilk bağlantı ara sıra "fetch failed" veriyor → 3 deneme (0,4 / 1,2 sn arayla)
   let last;
@@ -108,10 +106,9 @@ module.exports = async (req, res) => {
   for (const it of feed.items) {
     const g = it.pool || it.sku;
     const ean = snap && core.IDX.kaspi[it.sku];   // EAN havuzundaki ilan → kalan R (üç platformun satışı düşülmüş)
-    let stock = ean ? snap.R[ean] : Math.max(0, (g in base ? base[g] : it.stock) - poolSold[g]);
-    // 24.10 GÜVENLİK PAYI (kullanıcı: "güvenlik şart"): Kaspi feed'i saatte bir okur → WB/Ozon'da satılan son adet Kaspi'de 1 saate kadar görünür (çifte satış).
-    // Ortak stoktaki ürün WB veya Ozon'da da ilanlıysa ve kalan 1–2 adetse Kaspi'de 1 EKSİK gösterilir. WB/Ozon dakikada bir senkronlandığı için son adet orada satılır.
-    if (ean && stock > 0 && stock <= GUVENLIK_ESIK && core.MAP.items[ean] && (core.MAP.items[ean].wb.length || core.MAP.items[ean].ozon.length)) stock -= 1;
+    // 24.10 (kullanıcı, 2. karar): son 1 adet YALNIZ Kaspi'de satılır → WB/Ozon'da 0 yazılır (./_stok/sync.js wbOzHedef); Kaspi her zaman gerçek kalanı gösterir.
+    // (Aynı gün önce denenen "Kaspi'de 1 eksik göster" güvenlik payı KALDIRILDI.)
+    const stock = ean ? snap.R[ean] : Math.max(0, (g in base ? base[g] : it.stock) - poolSold[g]);
     // 24.10: süreli kampanya — it.kampanya {fiyat, bas, bit (ISO, Almatı +05:00)}: pencere içinde gece+gündüz min(kampanya, normal); bitişte KENDİLİĞİNDEN normale döner (iş/zamanlayıcı gerekmez)
     const k = it.kampanya, normal = night ? it.night : it.day;
     const price = k && Date.now() >= Date.parse(k.bas) && Date.now() < Date.parse(k.bit) ? Math.min(k.fiyat, normal) : normal;

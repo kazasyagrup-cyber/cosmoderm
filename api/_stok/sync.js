@@ -8,6 +8,10 @@ const core = require('./core');
 const HARIC = new Set(require('./artirma_haric.json').ean);
 const WB_WH = 778307, OZON_WH = 1020005030096510;
 
+// 24.10 KULLANICI KURALI: kalan 1 adet → YALNIZ Kaspi'de satılır, WB/Ozon'da 0 (Rusya'ya giden WB/Ozon siparişinde para ~60 günde,
+// Kaspi'de 2–7 günde döner). Kalan ≥2 → her yerde gerçek adet (hızlı senkron ~1 dk; Kaspi'de "1 eksik göster" kaldırıldı).
+const wbOzHedef = (r) => (r === 1 ? 0 : r);
+
 // snap verilirse yeniden hesaplanmaz (kaspi-feed zaten hesaplamış olur)
 async function runSync(env, { write, snap, artir } = {}) {
   snap = snap || await core.snapshot(env);
@@ -32,14 +36,14 @@ async function runSync(env, { write, snap, artir } = {}) {
   // değişiklik planı (düşüş; artir turunda artış da)
   const wbPlan = [], ozPlan = [], eans = new Set();
   for (const [ean, s] of Object.entries(core.MAP.items)) {
-    const R = snap.R[ean];
+    const R = wbOzHedef(snap.R[ean]);   // 24.10: son 1 adet yalnız Kaspi'de
     const yaz = (cur) => cur != null && (cur > R || (artir && cur < R && !HARIC.has(ean)));
     for (const w of s.wb) { const cur = wbCur[w.sku]; if (yaz(cur)) { wbPlan.push({ ean, nm: w.nm, sku: w.sku, cur, yeni: R }); eans.add(ean); } }
     for (const o of s.ozon) { const cur = ozCur[o] == null ? null : ozCur[o] - (ozRez[o] || 0); if (yaz(cur)) { ozPlan.push({ ean, offer_id: o, cur, rezerv: ozRez[o] || 0, yeni: R }); eans.add(ean); } }
   }
   // SETLER: kapasite = bileşenlerden çıkan set sayısı. 'acik' (kullanıcı onaylı) setlerde stok = kapasite (artış dahil); kapalı setlerde yalnız düşüş (0 kalır).
   for (const st of setler) {
-    const cap = snap.S[st.platform + ':' + st.key];
+    const cap = Math.min(...st.bilesen.map((c) => Math.floor(wbOzHedef(snap.R[c.ean] || 0) / c.adet)));   // 24.10: bileşenin son adedi Kaspi'ye ayrılır
     const cur = st.platform === 'wb' ? wbCur[String(st.key)] : (ozCur[String(st.key)] == null ? null : ozCur[String(st.key)] - (ozRez[String(st.key)] || 0));
     if (cur == null) continue;
     if (st.acik ? cur !== cap : cur > cap) {
