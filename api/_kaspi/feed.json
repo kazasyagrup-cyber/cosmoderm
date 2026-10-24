@@ -76,7 +76,7 @@
 "model": "Bioderma крем Atoderm Creme Ultra для лица 200 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8235,
+"night": 8192,
 "stock": 14
 },
 {
@@ -728,7 +728,7 @@
 "model": "Bioderma крем Atoderm Nutritive для лица 40 мл",
 "brand": "Bioderma",
 "day": 6400,
-"night": 6029,
+"night": 6028,
 "stock": 2
 },
 {
@@ -858,7 +858,7 @@
 "model": "Bioderma Hydrabio H2O мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7454,
+"night": 7403,
 "stock": 4
 },
 {
@@ -1443,7 +1443,7 @@
 "model": "Bioderma эмульсия Sebium Pore Refiner для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9521,
+"night": 9500,
 "stock": 9,
 "pool": "17700013_15383076"
 },
