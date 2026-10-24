@@ -594,7 +594,7 @@
 "model": "Bioderma Atoderm intensive foaming gel гель 1000",
 "brand": "bioderma",
 "day": 17400,
-"night": 16376,
+"night": 16325,
 "stock": 4
 },
 {
@@ -858,7 +858,7 @@
 "model": "Bioderma Hydrabio H2O мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7403,
+"night": 7352,
 "stock": 4
 },
 {
@@ -1416,7 +1416,7 @@
 "model": "Bioderma Atoderm крем для лица 200 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8747,
+"night": 8696,
 "stock": 14,
 "pool": "182626"
 },
@@ -2034,7 +2034,7 @@
 "model": "Bioderma Sebium H2O для чувствительной кожи мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7442,
+"night": 7391,
 "stock": 4,
 "pool": "21900307_15383076"
 },
