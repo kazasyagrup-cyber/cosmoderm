@@ -108,7 +108,9 @@ module.exports = async (req, res) => {
     const g = it.pool || it.sku;
     const ean = snap && core.IDX.kaspi[it.sku];   // EAN havuzundaki ilan → kalan R (üç platformun satışı düşülmüş)
     const stock = ean ? snap.R[ean] : Math.max(0, (g in base ? base[g] : it.stock) - poolSold[g]);
-    const price = night ? it.night : it.day;
+    // 24.10: süreli kampanya — it.kampanya {fiyat, bas, bit (ISO, Almatı +05:00)}: pencere içinde gece+gündüz min(kampanya, normal); bitişte KENDİLİĞİNDEN normale döner (iş/zamanlayıcı gerekmez)
+    const k = it.kampanya, normal = night ? it.night : it.day;
+    const price = k && Date.now() >= Date.parse(k.bas) && Date.now() < Date.parse(k.bit) ? Math.min(k.fiyat, normal) : normal;
     out.push(`<offer sku="${esc(it.sku)}"><model>${esc(it.model)}</model>${it.brand ? `<brand>${esc(it.brand)}</brand>` : ''}` +
       `<availabilities><availability available="${stock > 0 ? 'yes' : 'no'}" storeId="${esc(feed.store)}"${stock > 0 ? ` stockCount="${stock}"` : ''}/></availabilities>` +
       `<price>${price}</price></offer>`);

@@ -93,7 +93,13 @@
 "brand": "bioderma",
 "day": 10400,
 "night": 9749,
-"stock": 49
+"stock": 49,
+"kampanya": {
+"fiyat": 9990,
+"bas": "2026-10-24T08:45:00+05:00",
+"bit": "2026-10-27T07:00:00+05:00",
+"not": "24.10 kullanıcı: KZ tatili (Cmt-Pzt) kampanyası, gece+gündüz 9.990; Salı 07:00 kendiliğinden normale döner"
+}
 },
 {
 "sku": "101924457_597309",
@@ -101,7 +107,13 @@
 "brand": "bioderma",
 "day": 11900,
 "night": 9990,
-"stock": 4
+"stock": 4,
+"kampanya": {
+"fiyat": 9990,
+"bas": "2026-10-24T08:45:00+05:00",
+"bit": "2026-10-27T07:00:00+05:00",
+"not": "24.10 kullanıcı: KZ tatili (Cmt-Pzt) kampanyası, gece+gündüz 9.990; Salı 07:00 kendiliğinden normale döner"
+}
 },
 {
 "sku": "24100491_779211",
@@ -1442,7 +1454,13 @@
 "day": 10400,
 "night": 9990,
 "stock": 49,
-"pool": "17600059_15383076"
+"pool": "17600059_15383076",
+"kampanya": {
+"fiyat": 9990,
+"bas": "2026-10-24T08:45:00+05:00",
+"bit": "2026-10-27T07:00:00+05:00",
+"not": "24.10 kullanıcı: KZ tatili (Cmt-Pzt) kampanyası, gece+gündüz 9.990; Salı 07:00 kendiliğinden normale döner"
+}
 },
 {
 "sku": "169409058_15383076",
@@ -1451,7 +1469,13 @@
 "day": 10400,
 "night": 9990,
 "stock": 49,
-"pool": "17600059_15383076"
+"pool": "17600059_15383076",
+"kampanya": {
+"fiyat": 9990,
+"bas": "2026-10-24T08:45:00+05:00",
+"bit": "2026-10-27T07:00:00+05:00",
+"not": "24.10 kullanıcı: KZ tatili (Cmt-Pzt) kampanyası, gece+gündüz 9.990; Salı 07:00 kendiliğinden normale döner"
+}
 },
 {
 "sku": "143137825_15383076",
@@ -1460,7 +1484,13 @@
 "day": 11900,
 "night": 11900,
 "stock": 4,
-"pool": "101924457_597309"
+"pool": "101924457_597309",
+"kampanya": {
+"fiyat": 9990,
+"bas": "2026-10-24T08:45:00+05:00",
+"bit": "2026-10-27T07:00:00+05:00",
+"not": "24.10 kullanıcı: KZ tatili (Cmt-Pzt) kampanyası, gece+gündüz 9.990; Salı 07:00 kendiliğinden normale döner"
+}
 },
 {
 "sku": "121490666_15383076",
@@ -1469,7 +1499,13 @@
 "day": 11900,
 "night": 11900,
 "stock": 4,
-"pool": "101924457_597309"
+"pool": "101924457_597309",
+"kampanya": {
+"fiyat": 9990,
+"bas": "2026-10-24T08:45:00+05:00",
+"bit": "2026-10-27T07:00:00+05:00",
+"not": "24.10 kullanıcı: KZ tatili (Cmt-Pzt) kampanyası, gece+gündüz 9.990; Salı 07:00 kendiliğinden normale döner"
+}
 },
 {
 "sku": "116751716_15383076",
