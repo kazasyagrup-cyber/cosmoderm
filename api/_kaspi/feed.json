@@ -153,7 +153,7 @@
 "model": "Bioderma крем Sebium сенситив для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 10850,
+"night": 10900,
 "stock": 9,
 "pool": "17600066_15383076"
 },
@@ -594,7 +594,7 @@
 "model": "Bioderma Atoderm intensive foaming gel гель 1000",
 "brand": "bioderma",
 "day": 17400,
-"night": 16427,
+"night": 16376,
 "stock": 4
 },
 {
@@ -728,7 +728,7 @@
 "model": "Bioderma крем Atoderm Nutritive для лица 40 мл",
 "brand": "Bioderma",
 "day": 6400,
-"night": 6028,
+"night": 5978,
 "stock": 2
 },
 {
@@ -1304,7 +1304,7 @@
 "model": "Bioderma Sensibio H2O Eye мицеллярная вода 125 мл",
 "brand": "Bioderma",
 "day": 8700,
-"night": 8394,
+"night": 8343,
 "stock": 1
 },
 {
@@ -1416,7 +1416,7 @@
 "model": "Bioderma Atoderm крем для лица 200 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8798,
+"night": 8747,
 "stock": 14,
 "pool": "182626"
 },
@@ -1557,7 +1557,7 @@
 "model": "Bioderma крем Sensibio Defensive Rich, активный успокаивающий крем, 40 мл для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 9094,
+"night": 9043,
 "stock": 4,
 "pool": "104596412_814862873"
 },
@@ -1809,7 +1809,7 @@
 "model": "Bioderma Atoderm интенсивный гель 500 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 11275,
+"night": 11400,
 "stock": 4,
 "pool": "17600911_15383076"
 },
@@ -2034,7 +2034,7 @@
 "model": "Bioderma Sebium H2O для чувствительной кожи мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7493,
+"night": 7442,
 "stock": 4,
 "pool": "21900307_15383076"
 },
