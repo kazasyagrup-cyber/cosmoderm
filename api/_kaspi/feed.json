@@ -60,7 +60,7 @@
 "model": "Bioderma Sensibio DS+ Gel Мусс гель 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11255,
+"night": 11254,
 "stock": 4
 },
 {
@@ -128,7 +128,7 @@
 "model": "Bioderma крем Sensibio Defensive для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 8190,
+"night": 8839,
 "stock": 4
 },
 {
@@ -281,7 +281,7 @@
 "model": "Bioderma крем Sensibio Defensive Rich для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 8190,
+"night": 8640,
 "stock": 4
 },
 {
@@ -594,7 +594,7 @@
 "model": "Bioderma Atoderm intensive foaming gel гель 1000",
 "brand": "bioderma",
 "day": 17400,
-"night": 16428,
+"night": 16479,
 "stock": 4
 },
 {
@@ -728,7 +728,7 @@
 "model": "Bioderma крем Atoderm Nutritive для лица 40 мл",
 "brand": "Bioderma",
 "day": 6400,
-"night": 6029,
+"night": 6028,
 "stock": 2
 },
 {
@@ -736,7 +736,7 @@
 "model": "Bioderma бальзам Atoderm Stick Levres 4 г",
 "brand": "Bioderma",
 "day": 5400,
-"night": 4710,
+"night": 4940,
 "stock": 4
 },
 {
@@ -858,7 +858,7 @@
 "model": "Bioderma Hydrabio H2O мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7399,
+"night": 7454,
 "stock": 4
 },
 {
@@ -1304,7 +1304,7 @@
 "model": "Bioderma Sensibio H2O Eye мицеллярная вода 125 мл",
 "brand": "Bioderma",
 "day": 8700,
-"night": 8650,
+"night": 8649,
 "stock": 1
 },
 {
@@ -1328,7 +1328,7 @@
 "model": "Bioderma тоник Sensibio Tonique 250 мл",
 "brand": "Bioderma",
 "day": 8400,
-"night": 7320,
+"night": 7906,
 "stock": 4
 },
 {
@@ -1416,7 +1416,7 @@
 "model": "Bioderma Atoderm крем для лица 200 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8798,
+"night": 8849,
 "stock": 14,
 "pool": "182626"
 },
@@ -1443,7 +1443,7 @@
 "model": "Bioderma эмульсия Sebium Pore Refiner для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9725,
+"night": 9776,
 "stock": 9,
 "pool": "17700013_15383076"
 },
@@ -2034,7 +2034,7 @@
 "model": "Bioderma Sebium H2O для чувствительной кожи мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 6920,
+"night": 7544,
 "stock": 4,
 "pool": "21900307_15383076"
 },
@@ -2373,7 +2373,7 @@
 "model": "Bioderma Atoderm PP Baume 500 бальзам для тела 500 мл",
 "brand": "Bioderma",
 "day": 14900,
-"night": 14900,
+"night": 12980,
 "stock": 0
 },
 {
