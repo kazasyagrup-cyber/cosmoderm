@@ -1,0 +1,26 @@
+# 25.10.2026 kullanıcı: DERMA COSMETOLOGY ile ortak Kaspi kartlarında 1 hafta gece indirimi yok (kaspi_gece.py DERMA_ORTAK)
+# → her sabah bu kartların satış raporu maili (yalnız kazasyagrup@gmail.com, Worker /belge). Deneme 01.11 07:00 biter, son rapor 02.11 (sonra betik kendiliğinden çıkar).
+# Sır: STOK_SYNC_KEY. Repo public: loga fiyat/ciro yazılmaz.
+name: derma-rapor
+on:
+  schedule:
+    - cron: '15 4 * * *'   # 09:15 Almatı (UTC+5); GitHub zamanlayıcısı gecikebilir
+  workflow_dispatch:
+    inputs:
+      kuru:
+        description: 'Mail gönderme (deneme)'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency: derma-rapor
+jobs:
+  rapor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rapor + mail
+        env:
+          STOK_SYNC_KEY: ${{ secrets.STOK_SYNC_KEY }}
+        run: python3 .github/scripts/derma_rapor.py ${{ inputs.kuru && '--kuru' || '' }}

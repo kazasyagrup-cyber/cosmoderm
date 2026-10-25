@@ -1,0 +1,1050 @@
+{
+"not": "25.10.2026 kullanıcı: DERMA COSMETOLOGY (30348533) ile ortak Kaspi kartları — gece indirimi YOK (gece=gündüz), deneme 25.10 18:00 → 01.11 07:00. Fiyatlar 25.10 sabah taraması (kaspi offers). derma_rapor.py + kaspi_gece.py okur.",
+"bas": "2026-10-25T18:00:00+05:00",
+"bit": "2026-11-01T07:00:00+05:00",
+"kartlar": {
+"131462171": {
+"ad": "Bioderma крем Sensibio AR+ для кожи с покраснениями для лица 40 мл",
+"yorum": 745,
+"satici": 36,
+"derma_2510": 9890,
+"biz_2510": 11400
+},
+"21900212": {
+"ad": "Bioderma Sensibio H2O мицеллярная вода 500 мл",
+"yorum": 1759,
+"satici": 40,
+"derma_2510": 11000,
+"biz_2510": 11000
+},
+"169409058": {
+"ad": "Bioderma крем Sebium Hydra увлажняющий крем для лица 40 мл",
+"yorum": 18,
+"satici": 5,
+"derma_2510": 13000,
+"biz_2510": 9990
+},
+"138723579": {
+"ad": "Bioderma бальзам Atoderm Stick Levres 4 г",
+"yorum": 235,
+"satici": 18,
+"derma_2510": 4990,
+"biz_2510": 5400
+},
+"100309098": {
+"ad": "Bioderma ночной крем Pigmentbio для лица 50 мл",
+"yorum": 285,
+"satici": 19,
+"derma_2510": 19129,
+"biz_2510": 22500
+},
+"104596412": {
+"ad": "Bioderma крем Sensibio Defensive Rich для лица 40 мл",
+"yorum": 202,
+"satici": 25,
+"derma_2510": 12500,
+"biz_2510": 9400
+},
+"138744763": {
+"ad": "Bioderma Atoderm Huile De Douche Масло косметическое для душа 500 ml масло 500 мл",
+"yorum": 95,
+"satici": 20,
+"derma_2510": 18700,
+"biz_2510": 16400
+},
+"121490666": {
+"ad": "Bioderma Sebium Actif гель 200 мл",
+"yorum": 39,
+"satici": 2,
+"derma_2510": 14000,
+"biz_2510": 9990
+},
+"116624773": {
+"ad": "Bioderma ABCDerm гель 1000 мл",
+"yorum": 138,
+"satici": 17,
+"derma_2510": 18000,
+"biz_2510": 15900
+},
+"17600051": {
+"ad": "Bioderma крем Hydrabio для лица 50 мл",
+"yorum": 135,
+"satici": 21,
+"derma_2510": 13998,
+"biz_2510": 13999
+},
+"17600055": {
+"ad": "Bioderma крем Sebium Mat Control матирующий для лица 30 мл",
+"yorum": 123,
+"satici": 22,
+"derma_2510": 9748,
+"biz_2510": 10900
+},
+"144246517": {
+"ad": "Bioderma крем SENSIBIO AR Увлажняющий крем от покраснений для чувствительной кожи с куперозом и розацеей, 40 мл для лица 40 мл",
+"yorum": 45,
+"satici": 2,
+"derma_2510": 11297,
+"biz_2510": 11400
+},
+"117085705": {
+"ad": "Bioderma крем Photoderm Nude Touch Claire Light SPF50+ для лица 40 мл",
+"yorum": 94,
+"satici": 4,
+"derma_2510": 16000,
+"biz_2510": 13400
+},
+"141098332": {
+"ad": "Bioderma лосьон Sensibio Tonique, тонизирующий лосьон, 250 мл 250 мл",
+"yorum": 23,
+"satici": 4,
+"derma_2510": 9499,
+"biz_2510": 8400
+},
+"143144513": {
+"ad": "Bioderma лосьон-тоник Sebium 200 мл",
+"yorum": 6,
+"satici": 2,
+"derma_2510": 16846,
+"biz_2510": 16900
+},
+"143144519": {
+"ad": "Bioderma Sébium H2O мицеллярная вода 500 мл",
+"yorum": 14,
+"satici": 12,
+"derma_2510": 11000,
+"biz_2510": 11000
+},
+"143137823": {
+"ad": "Bioderma Atoderm интенсивный гель 1000 мл",
+"yorum": 6,
+"satici": 2,
+"derma_2510": 19000,
+"biz_2510": 17400
+},
+"142823057": {
+"ad": "Bioderma крем Atoderm Nutritive Nourishing Cream для лица 40 мл",
+"yorum": 13,
+"satici": 5,
+"derma_2510": 8200,
+"biz_2510": 6400
+},
+"150575248": {
+"ad": "Bioderma Atoderm Gel Douche гель 500 мл",
+"yorum": 29,
+"satici": 10,
+"derma_2510": 12349,
+"biz_2510": 10800
+},
+"106527429": {
+"ad": "Bioderma Sensibio H2O eye мицелярная вода 125 мл",
+"yorum": 7,
+"satici": 3,
+"derma_2510": 12500,
+"biz_2510": 8700
+},
+"146453608": {
+"ad": "Bioderma Sensibio Н2О мицеллярная вода 500 мл",
+"yorum": 9,
+"satici": 9,
+"derma_2510": 9990,
+"biz_2510": 11000
+},
+"143144521": {
+"ad": "Bioderma крем Pigmentbio Daily Care SPF50+ для лица 40 мл",
+"yorum": 6,
+"satici": 7,
+"derma_2510": 19500,
+"biz_2510": 18000
+},
+"145209273": {
+"ad": "Bioderma Sensibio H2O Micellar Water мицеллярная вода 500 мл",
+"yorum": 10,
+"satici": 7,
+"derma_2510": 11000,
+"biz_2510": 11000
+},
+"147496132": {
+"ad": "Bioderma сыворотка Bioderma Hydrabio Serum для лица 30 мл",
+"yorum": 5,
+"satici": 2,
+"derma_2510": 19000,
+"biz_2510": 17900
+},
+"143144520": {
+"ad": "Bioderma Hydrabio H2O мицеллярная вода 500 мл",
+"yorum": 6,
+"satici": 8,
+"derma_2510": 10999,
+"biz_2510": 11000
+},
+"143137820": {
+"ad": "Bioderma Pigmentbio крем 200 мл",
+"yorum": 5,
+"satici": 5,
+"derma_2510": 12500,
+"biz_2510": 11900
+},
+"141098331": {
+"ad": "Bioderma крем Sensibio AR, средство для уменьшения видимых покраснений, 40 мл для лица 40 мл",
+"yorum": 2,
+"satici": 2,
+"derma_2510": 11348,
+"biz_2510": 11400
+},
+"143144540": {
+"ad": "Bioderma Hydrabio H2O мицеллярная вода 250 мл",
+"yorum": 1,
+"satici": 5,
+"derma_2510": 8400,
+"biz_2510": 7900
+},
+"143144523": {
+"ad": "Bioderma Hydrabio H2O мицеллярная вода 100 мл",
+"yorum": 0,
+"satici": 5,
+"derma_2510": 3999,
+"biz_2510": 4500
+},
+"133388211": {
+"ad": "Bioderma крем Sebium kerato+ для лица 30 мл",
+"yorum": 2,
+"satici": 3,
+"derma_2510": 14900,
+"biz_2510": 13900
+},
+"142799732": {
+"ad": "Bioderma флюид Photoderm Nude Touch Mineral Sun Active Defense Claire Light SPF50 для лица 40 мл",
+"yorum": 0,
+"satici": 3,
+"derma_2510": 16000,
+"biz_2510": 13400
+},
+"145195926": {
+"ad": "Bioderma бальзам Atoderm Stick, ультраувлажняющий, 4 г 4 г",
+"yorum": 0,
+"satici": 2,
+"derma_2510": 4990,
+"biz_2510": 5400
+},
+"143144512": {
+"ad": "Bioderma Atoderm крем для рук 50 мл",
+"yorum": 14,
+"satici": 3,
+"derma_2510": 4990,
+"biz_2510": 4400
+},
+"143144530": {
+"ad": "Bioderma Atoderm Ultra крем для тела 200 мл",
+"yorum": 56,
+"satici": 6,
+"derma_2510": 9895,
+"biz_2510": 8900
+},
+"169409041": {
+"ad": "Bioderma крем Sensibio AR крем против покраснений для лица 40 мл",
+"yorum": 9,
+"satici": 2,
+"derma_2510": 11297,
+"biz_2510": 11400
+},
+"143144505": {
+"ad": "Bioderma Pigmentbio Sensitive Areas крем для тела 75 мл",
+"yorum": 10,
+"satici": 4,
+"derma_2510": 11248,
+"biz_2510": 11800
+},
+"147134562": {
+"ad": "Bioderma Sebium Kerato+Body спрей для тела 150 мл",
+"yorum": 48,
+"satici": 18,
+"derma_2510": 17660,
+"biz_2510": 18600
+},
+"21900307": {
+"ad": "Bioderma Sebium H2O 250 мл мицеллярная вода",
+"yorum": 260,
+"satici": 36,
+"derma_2510": 7239,
+"biz_2510": 7900
+},
+"143144538": {
+"ad": "Bioderma лосьон-тоник Hydrabio 250 мл",
+"yorum": 10,
+"satici": 5,
+"derma_2510": 9500,
+"biz_2510": 8400
+},
+"21900211": {
+"ad": "Bioderma Sebium H2O Purifying мицеллярная вода 500 мл",
+"yorum": 581,
+"satici": 37,
+"derma_2510": 11000,
+"biz_2510": 11000
+},
+"17600150": {
+"ad": "Bioderma крем Sebium Global для лица 30 мл",
+"yorum": 271,
+"satici": 27,
+"derma_2510": 9990,
+"biz_2510": 10900
+},
+"147974357": {
+"ad": "Bioderma Hydrabio gel moussant гель 400 мл",
+"yorum": 45,
+"satici": 23,
+"derma_2510": 13397,
+"biz_2510": 14400
+},
+"143144503": {
+"ad": "Bioderma крем-гель Sebium Керато+ крем для лица 30 мл",
+"yorum": 19,
+"satici": 5,
+"derma_2510": 14900,
+"biz_2510": 13900
+},
+"116667672": {
+"ad": "Bioderma Sebium Moussant гель 45 мл",
+"yorum": 228,
+"satici": 4,
+"derma_2510": 4045,
+"biz_2510": 4056
+},
+"147495818": {
+"ad": "Bioderma сыворотка Pigmentbio Serum C-Concentrate для лица 15 мл",
+"yorum": 8,
+"satici": 3,
+"derma_2510": 15897,
+"biz_2510": 16000
+},
+"143144509": {
+"ad": "Bioderma крем Sebium сенситив для лица 30 мл",
+"yorum": 21,
+"satici": 7,
+"derma_2510": 13896,
+"biz_2510": 10900
+},
+"24100628": {
+"ad": "Bioderma Node K кератолитический при псориазе шампунь 150 мл",
+"yorum": 137,
+"satici": 20,
+"derma_2510": 9990,
+"biz_2510": 11400
+},
+"144402933": {
+"ad": "Bioderma Sensibio H2O Micellar Water 500 мл мицеллярная вода 500 мл",
+"yorum": 19,
+"satici": 8,
+"derma_2510": 9986,
+"biz_2510": 11000
+},
+"17600088": {
+"ad": "Bioderma Atoderm Creme Ultra Nourishing для лица и тела 500 мл",
+"yorum": 1037,
+"satici": 34,
+"derma_2510": 16000,
+"biz_2510": 12900
+},
+"141059830": {
+"ad": "Bioderma Atoderm, Main & Ongles, ультрапитательный крем, 50 мл крем для рук 50 г",
+"yorum": 13,
+"satici": 5,
+"derma_2510": 4500,
+"biz_2510": 4400
+},
+"143144516": {
+"ad": "Bioderma крем Atoderm Nutritive для лица 40 мл",
+"yorum": 14,
+"satici": 2,
+"derma_2510": 8200,
+"biz_2510": 6400
+},
+"17600091": {
+"ad": "Bioderma крем Sensibio AR Anti-Redness Care для лица 40 мл",
+"yorum": 135,
+"satici": 2,
+"derma_2510": 11297,
+"biz_2510": 11400
+},
+"17600093": {
+"ad": "Bioderma гель Sensibio Eye для области вокруг глаз 15 мл",
+"yorum": 86,
+"satici": 5,
+"derma_2510": 8400,
+"biz_2510": 8400
+},
+"141098362": {
+"ad": "Bioderma крем Sebium Hydra, 40 мл для лица 40 мл",
+"yorum": 32,
+"satici": 7,
+"derma_2510": 13000,
+"biz_2510": 9990
+},
+"21900327": {
+"ad": "Bioderma Sebium H2O 100 мл мицеллярная вода",
+"yorum": 229,
+"satici": 33,
+"derma_2510": 3948,
+"biz_2510": 4500
+},
+"143144544": {
+"ad": "Bioderma крем-гель Hydrabio для лица 40 мл",
+"yorum": 8,
+"satici": 4,
+"derma_2510": 12999,
+"biz_2510": 13000
+},
+"141098324": {
+"ad": "Bioderma крем Hydrabio, крем для насыщенного увлажнения, 50 мл для лица 50 мл",
+"yorum": 0,
+"satici": 2,
+"derma_2510": 13998,
+"biz_2510": 13999
+},
+"121931424": {
+"ad": "Bioderma тоник Sensibio 250 мл",
+"yorum": 19,
+"satici": 4,
+"derma_2510": 9990,
+"biz_2510": 8400
+},
+"101102301": {
+"ad": "Bioderma Sebium H2O для чувствительной кожи мицеллярная вода 250 мл",
+"yorum": 25,
+"satici": 9,
+"derma_2510": 7595,
+"biz_2510": 7900
+},
+"160497080": {
+"ad": "Bioderma лосьон Sebium Lotion Rebalancing Water 200 мл",
+"yorum": 2,
+"satici": 4,
+"derma_2510": 15990,
+"biz_2510": 16900
+},
+"102456025": {
+"ad": "Bioderma тоник Hydrabio Tonique 250 мл",
+"yorum": 494,
+"satici": 29,
+"derma_2510": 9500,
+"biz_2510": 8400
+},
+"21900404": {
+"ad": "Bioderma Sensibio гель 500 мл",
+"yorum": 2270,
+"satici": 33,
+"derma_2510": 17800,
+"biz_2510": 15900
+},
+"17600066": {
+"ad": "Bioderma крем Sebium Sensitive для чувствительной жирной кожи для лица 30 мл",
+"yorum": 367,
+"satici": 30,
+"derma_2510": 12400,
+"biz_2510": 10900
+},
+"17700783": {
+"ad": "Bioderma лосьон-тоник Sebium Lotion 200 мл",
+"yorum": 291,
+"satici": 25,
+"derma_2510": 16900,
+"biz_2510": 16900
+},
+"17600059": {
+"ad": "Bioderma крем Sebium Hydra для лица 40 мл",
+"yorum": 1497,
+"satici": 26,
+"derma_2510": 13000,
+"biz_2510": 9990
+},
+"163145900": {
+"ad": "Bioderma крем BIODERMA CREM ULTRA ORG STORE для лица, для области вокруг глаз 200 мл",
+"yorum": 209,
+"satici": 4,
+"derma_2510": 9990,
+"biz_2510": 8900
+},
+"116751718": {
+"ad": "Bioderma сыворотка Sebium для лица 30 мл",
+"yorum": 258,
+"satici": 13,
+"derma_2510": 16954,
+"biz_2510": 17900
+},
+"21900205": {
+"ad": "Bioderma Hydrabio H2O мицеллярная вода 100 мл",
+"yorum": 99,
+"satici": 30,
+"derma_2510": 4500,
+"biz_2510": 4500
+},
+"100943775": {
+"ad": "Bioderma Sensibio DS+ гель-мусс 200 мл",
+"yorum": 110,
+"satici": 16,
+"derma_2510": 14500,
+"biz_2510": 11900
+},
+"17600052": {
+"ad": "Bioderma крем-гель Hydrabio для лица 40 мл",
+"yorum": 268,
+"satici": 15,
+"derma_2510": 12999,
+"biz_2510": 13000
+},
+"117085707": {
+"ad": "Bioderma крем Photoderm Spot-Age invisible SPF 50+ для лица, для зоны декольте 40 мл",
+"yorum": 81,
+"satici": 9,
+"derma_2510": 19000,
+"biz_2510": 13900
+},
+"21900206": {
+"ad": "Bioderma Hydrabio H2O мицеллярная вода 250 мл",
+"yorum": 112,
+"satici": 30,
+"derma_2510": 7625,
+"biz_2510": 7900
+},
+"116776896": {
+"ad": "Bioderma сыворотка Hydrabio Hyalu+ для лица 30 мл",
+"yorum": 247,
+"satici": 15,
+"derma_2510": 17900,
+"biz_2510": 17900
+},
+"148040259": {
+"ad": "Bioderma Atoderm PP Baume 500 бальзам для тела 500 мл",
+"yorum": 35,
+"satici": 5,
+"derma_2510": 20498,
+"biz_2510": 14900
+},
+"132792449": {
+"ad": "Bioderma Atoderm гель 1000 мл",
+"yorum": 230,
+"satici": 10,
+"derma_2510": 17399,
+"biz_2510": 17400
+},
+"21900326": {
+"ad": "Bioderma Sensibio H2O мицеллярная вода 250 мл",
+"yorum": 465,
+"satici": 37,
+"derma_2510": 8400,
+"biz_2510": 7900
+},
+"135135128": {
+"ad": "Bioderma Atoderm гель 500 мл",
+"yorum": 69,
+"satici": 16,
+"derma_2510": 12398,
+"biz_2510": 10800
+},
+"100319370": {
+"ad": "Bioderma Atoderm Intensive гель 1000 мл",
+"yorum": 207,
+"satici": 14,
+"derma_2510": 19000,
+"biz_2510": 17400
+},
+"17600099": {
+"ad": "Bioderma крем Photoderm SPF50 для лица 40 мл",
+"yorum": 176,
+"satici": 12,
+"derma_2510": 12500,
+"biz_2510": 12900
+},
+"101924408": {
+"ad": "Bioderma ABCDERM Интенсив крем для тела 75 г",
+"yorum": 30,
+"satici": 7,
+"derma_2510": 10500,
+"biz_2510": 9400
+},
+"113153137": {
+"ad": "Bioderma бальзам Atoderm PP для лица 200 мл",
+"yorum": 49,
+"satici": 6,
+"derma_2510": 19000,
+"biz_2510": 11400
+},
+"116667670": {
+"ad": "Bioderma сыворотка Sensibio Defensive для лица 30 мл",
+"yorum": 141,
+"satici": 8,
+"derma_2510": 21000,
+"biz_2510": 16000
+},
+"145209260": {
+"ad": "Bioderma Sensibio Gel Moussant гель-мусс 500 мл",
+"yorum": 82,
+"satici": 15,
+"derma_2510": 19500,
+"biz_2510": 15900
+},
+"106940807": {
+"ad": "Bioderma Pigmentbio крем 200 мл",
+"yorum": 286,
+"satici": 22,
+"derma_2510": 17000,
+"biz_2510": 11900
+},
+"112596890": {
+"ad": "Bioderma крем Atoderm Creme Ultra для лица 200 мл",
+"yorum": 2250,
+"satici": 33,
+"derma_2510": 9990,
+"biz_2510": 8900
+},
+"132481173": {
+"ad": "Bioderma сыворотка Sensibio AR+ BI сыворотка для лица 30 мл",
+"yorum": 77,
+"satici": 7,
+"derma_2510": 21000,
+"biz_2510": 17900
+},
+"104694321": {
+"ad": "Bioderma крем Atoderm Intensive для области вокруг глаз 100 мл",
+"yorum": 122,
+"satici": 17,
+"derma_2510": 14900,
+"biz_2510": 12400
+},
+"21900308": {
+"ad": "Bioderma Sensibio H2O мицеллярная вода 100 мл",
+"yorum": 414,
+"satici": 44,
+"derma_2510": 4500,
+"biz_2510": 4500
+},
+"17600911": {
+"ad": "Bioderma Atoderm Intensive гель 500 мл",
+"yorum": 313,
+"satici": 19,
+"derma_2510": 12500,
+"biz_2510": 11400
+},
+"101924457": {
+"ad": "Bioderma Sebium Actif гель 200 мл",
+"yorum": 323,
+"satici": 26,
+"derma_2510": 14900,
+"biz_2510": 9990
+},
+"116776901": {
+"ad": "Bioderma сыворотка-концентрат Pigmentbio для лица 15 мл",
+"yorum": 322,
+"satici": 12,
+"derma_2510": 25000,
+"biz_2510": 16000
+},
+"117992665": {
+"ad": "Bioderma крем PHOTODERM Spot Age для лица 40 мл",
+"yorum": 85,
+"satici": 6,
+"derma_2510": 15500,
+"biz_2510": 13900
+},
+"17700614": {
+"ad": "Bioderma флюид Photoderm AKN Mat для лица 40 мл",
+"yorum": 239,
+"satici": 5,
+"derma_2510": 17000,
+"biz_2510": 13080
+},
+"106940502": {
+"ad": "Bioderma Sensibio AR SPF30 BB крем универсальный 40 мл",
+"yorum": 150,
+"satici": 16,
+"derma_2510": 14900,
+"biz_2510": 14700
+},
+"100309236": {
+"ad": "Bioderma крем Pigmentbio Daily Care SPF50 для лица 40 мл",
+"yorum": 181,
+"satici": 23,
+"derma_2510": 21000,
+"biz_2510": 18000
+},
+"161063249": {
+"ad": "Bioderma крем-гель ATODERM Intensive Gel-Creme для лица 200 мл",
+"yorum": 54,
+"satici": 8,
+"derma_2510": 14000,
+"biz_2510": 12800
+},
+"108213483": {
+"ad": "Bioderma крем-гель Sebium Kerato для лица 30 мл",
+"yorum": 196,
+"satici": 22,
+"derma_2510": 13249,
+"biz_2510": 13900
+},
+"101924443": {
+"ad": "Bioderma крем Atoderm Nutritive для лица 40 мл",
+"yorum": 225,
+"satici": 20,
+"derma_2510": 8200,
+"biz_2510": 6400
+},
+"110037980": {
+"ad": "Bioderma Sensibio H2O мицеллярная вода 850 мл",
+"yorum": 767,
+"satici": 29,
+"derma_2510": 17000,
+"biz_2510": 15000
+},
+"104103847": {
+"ad": "Bioderma крем Sensibio Defensive для лица 40 мл",
+"yorum": 400,
+"satici": 23,
+"derma_2510": 9400,
+"biz_2510": 9400
+},
+"145532761": {
+"ad": "Bioderma Pigmentbio Крем-пенка для умывания 200 мл крем-пенка 200 мл",
+"yorum": 31,
+"satici": 8,
+"derma_2510": 14015,
+"biz_2510": 11900
+},
+"131512476": {
+"ad": "Bioderma сыворотка Sensibio AR+ BI для лица 30 мл",
+"yorum": 28,
+"satici": 9,
+"derma_2510": 19000,
+"biz_2510": 17900
+},
+"119816497": {
+"ad": "Bioderma крем Photoderm Nude Touch SPF 50+ Claire Cолнцезащитный для лица 40 мл",
+"yorum": 113,
+"satici": 2,
+"derma_2510": 16000,
+"biz_2510": 13400
+},
+"102415463": {
+"ad": "Bioderma бальзам Atoderm Restorative 15 мл",
+"yorum": 27,
+"satici": 10,
+"derma_2510": 5948,
+"biz_2510": 6200
+},
+"109450800": {
+"ad": "Bioderma крем Cicabio Arnica+ для лица 40 мл",
+"yorum": 54,
+"satici": 14,
+"derma_2510": 8900,
+"biz_2510": 8900
+},
+"142545077": {
+"ad": "Bioderma Sensibio AR+ Sos спрей для тела и лица 70 мл",
+"yorum": 31,
+"satici": 14,
+"derma_2510": 12500,
+"biz_2510": 10900
+},
+"105802986": {
+"ad": "Bioderma Atoderm Ultra-Gentle гель 1000 мл",
+"yorum": 57,
+"satici": 14,
+"derma_2510": 18148,
+"biz_2510": 18400
+},
+"141060520": {
+"ad": "Bioderma лосьон Hydrabio Tonique, тонизирующий лосьон, 250 мл 250 мл",
+"yorum": 5,
+"satici": 5,
+"derma_2510": 8249,
+"biz_2510": 8400
+},
+"132155142": {
+"ad": "Bioderma P02642 мицеллярная вода 500 мл",
+"yorum": 8,
+"satici": 2,
+"derma_2510": 11000,
+"biz_2510": 11000
+},
+"143144548": {
+"ad": "Bioderma Sensibio Н20 мицеллярная вода 250 мл",
+"yorum": 2,
+"satici": 3,
+"derma_2510": 7900,
+"biz_2510": 7900
+},
+"143144542": {
+"ad": "Bioderma крем Hydrabio для лица 50 мл",
+"yorum": 3,
+"satici": 4,
+"derma_2510": 14890,
+"biz_2510": 13999
+},
+"169409069": {
+"ad": "Bioderma крем Sebium Global комплексный уход против прыщей для лица 30 мл",
+"yorum": 2,
+"satici": 3,
+"derma_2510": 12500,
+"biz_2510": 10900
+},
+"143144524": {
+"ad": "Bioderma крем Pigmentbio ночной крем для лица 50 мл",
+"yorum": 9,
+"satici": 3,
+"derma_2510": 20948,
+"biz_2510": 22500
+},
+"141059754": {
+"ad": "Bioderma бальзам Atoderm Stick 4 г",
+"yorum": 0,
+"satici": 3,
+"derma_2510": 4990,
+"biz_2510": 5400
+},
+"104087775": {
+"ad": "Bioderma эмульсия Sebium Pore Refiner для лица 30 мл",
+"yorum": 46,
+"satici": 7,
+"derma_2510": 9827,
+"biz_2510": 10900
+},
+"151443460": {
+"ad": "Bioderma Sensibio H2O Micellar Water Makeup Remover мицеллярная вода 250 мл",
+"yorum": 12,
+"satici": 7,
+"derma_2510": 7600,
+"biz_2510": 7900
+},
+"164315518": {
+"ad": "Bioderma Atoderm интенсивный гель 500 мл",
+"yorum": 4,
+"satici": 4,
+"derma_2510": 12500,
+"biz_2510": 11400
+},
+"17601067": {
+"ad": "Bioderma крем Photoderm Spot-Age SPF50 для лица 40 мл",
+"yorum": 16,
+"satici": 5,
+"derma_2510": 16000,
+"biz_2510": 13900
+},
+"143144511": {
+"ad": "Bioderma крем Sebium крем для сужения пор для лица 30 мл",
+"yorum": 0,
+"satici": 4,
+"derma_2510": 11799,
+"biz_2510": 10900
+},
+"147143892": {
+"ad": "Bioderma Sensibio H2O Micellar Water: мицеллярная вода 500 мл",
+"yorum": 0,
+"satici": 6,
+"derma_2510": 9879,
+"biz_2510": 11000
+},
+"141071973": {
+"ad": "Bioderma гель Sensibio Eye, гель для кожи вокруг глаз, 15 мл для области вокруг глаз 15 мл",
+"yorum": 1,
+"satici": 2,
+"derma_2510": 8630,
+"biz_2510": 8400
+},
+"168937326": {
+"ad": "Bioderma Sebium мицеллярная вода 250 мл",
+"yorum": 0,
+"satici": 3,
+"derma_2510": 7599,
+"biz_2510": 7900
+},
+"119910802": {
+"ad": "Bioderma крем Photoderm Cолнцезащитный Spot Age SPF50+ для лица 40 мл",
+"yorum": 1,
+"satici": 3,
+"derma_2510": 17500,
+"biz_2510": 13900
+},
+"168953562": {
+"ad": "Bioderma Atoderm Gel Moussant гель 1000 мл",
+"yorum": 1,
+"satici": 3,
+"derma_2510": 18297,
+"biz_2510": 18400
+},
+"168887721": {
+"ad": "Bioderma Sebium Kerato+ Body спрей для тела спрей для тела 150 мл",
+"yorum": 0,
+"satici": 4,
+"derma_2510": 16799,
+"biz_2510": 18600
+},
+"168937329": {
+"ad": "Bioderma Sensibio H2O мицеллярная вода 500 мл",
+"yorum": 1,
+"satici": 3,
+"derma_2510": 13676,
+"biz_2510": 11000
+},
+"141098328": {
+"ad": "Bioderma крем Sensibio Defensive, активный успокаивающий крем, без запаха, 40 мл для лица 40 мл",
+"yorum": 0,
+"satici": 3,
+"derma_2510": 13400,
+"biz_2510": 9400
+},
+"166335354": {
+"ad": "3401345935571 мицеллярная вода 500 мл",
+"yorum": 1,
+"satici": 3,
+"derma_2510": 13699,
+"biz_2510": 11000
+},
+"110884949": {
+"ad": "Bioderma Atoderm гель 500 мл",
+"yorum": 4,
+"satici": 2,
+"derma_2510": 14000,
+"biz_2510": 10800
+},
+"168888011": {
+"ad": "Bioderma Atoderm гель для душа 500 мл гель 500 мл",
+"yorum": 0,
+"satici": 3,
+"derma_2510": 14900,
+"biz_2510": 10800
+},
+"157517624": {
+"ad": "Sebium H2O мицеллярная вода 500 мл",
+"yorum": 0,
+"satici": 2,
+"derma_2510": 11000,
+"biz_2510": 11000
+},
+"145067075": {
+"ad": "Bioderma Sensibio H2O Micellar Water, мицеллярная вода 500 мл",
+"yorum": 1,
+"satici": 7,
+"derma_2510": 11000,
+"biz_2510": 11000
+},
+"133867971": {
+"ad": "Bioderma крем Крем для чувствительной кожи с куперозами для лица 40 мл",
+"yorum": 1,
+"satici": 2,
+"derma_2510": 11297,
+"biz_2510": 11400
+},
+"141098323": {
+"ad": "Bioderma крем Pigmentbio, ежедневный уход, 40 мл для лица 40 мл",
+"yorum": 1,
+"satici": 3,
+"derma_2510": 21000,
+"biz_2510": 18000
+},
+"143137986": {
+"ad": "Bioderma ABCDERM гель 1000 мл",
+"yorum": 2,
+"satici": 2,
+"derma_2510": 19000,
+"biz_2510": 15900
+},
+"148948759": {
+"ad": "Sensibio мицеллярная вода 250 мл",
+"yorum": 1,
+"satici": 4,
+"derma_2510": 9980,
+"biz_2510": 7900
+},
+"166737168": {
+"ad": "Sensibio H2O мицеллярная вода 500 мл",
+"yorum": 0,
+"satici": 4,
+"derma_2510": 10950,
+"biz_2510": 11000
+},
+"166200010": {
+"ad": "Sébium H2O мицеллярная вода 500 мл",
+"yorum": 0,
+"satici": 3,
+"derma_2510": 11000,
+"biz_2510": 11000
+},
+"169462030": {
+"ad": "Bioderma Atoderm масло 1000 мл",
+"yorum": 0,
+"satici": 3,
+"derma_2510": 20848,
+"biz_2510": 20900
+},
+"168937554": {
+"ad": "Bioderma бальзам Atoderm 15 мл",
+"yorum": 0,
+"satici": 3,
+"derma_2510": 6097,
+"biz_2510": 6200
+},
+"169539946": {
+"ad": "Bioderma бальзам Atoderm 15 мл",
+"yorum": 0,
+"satici": 2,
+"derma_2510": 6096,
+"biz_2510": 6200
+},
+"178241073": {
+"ad": "Bioderma крем-сыворотка Sebium Pore Refiner для лица 30 мл",
+"yorum": 0,
+"satici": 3,
+"derma_2510": 9998,
+"biz_2510": 10900
+},
+"163994061": {
+"ad": "Bioderma ВОДА МИЦЕЛЛЯРНАЯ SENSIBIO H2O ДЛЯ ЧУВСТВИТЕЛЬНОЙ КОЖИ мицеллярная вода 250 мл",
+"yorum": 0,
+"satici": 3,
+"derma_2510": 9990,
+"biz_2510": 7900
+},
+"171803891": {
+"ad": "Bioderma МSensibio H2O Легендарный бестселлер и выбор дерматологов №1 мицеллярная вода 500 мл",
+"yorum": 0,
+"satici": 3,
+"derma_2510": 11000,
+"biz_2510": 11000
+},
+"145161801": {
+"ad": "Bioderma Sensibio H2O мицеллярная вода 500 мл",
+"yorum": 0,
+"satici": 2,
+"derma_2510": 11000,
+"biz_2510": 11000
+},
+"141098337": {
+"ad": "Bioderma крем-гель Hydrabio, гель-крем, 40 мл для лица 40 мл",
+"yorum": 0,
+"satici": 2,
+"derma_2510": 12948,
+"biz_2510": 13000
+},
+"17700013": {
+"ad": "Bioderma крем Sebium Pore Refiner для сужения пор для лица 30 мл",
+"yorum": 392,
+"satici": 25,
+"derma_2510": 9899,
+"biz_2510": 10900
+},
+"17601073": {
+"ad": "Bioderma бальзам Atoderm Intensive для лица, для зоны декольте 200 мл",
+"yorum": 319,
+"satici": 41,
+"derma_2510": 17500,
+"biz_2510": 15400
+},
+"100085580": {
+"ad": "Bioderma Atoderm Huile de Douche масло 1000 мл",
+"yorum": 752,
+"satici": 29,
+"derma_2510": 21300,
+"biz_2510": 20900
+}
+}
+}

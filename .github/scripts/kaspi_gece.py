@@ -14,11 +14,16 @@ Alış fiyatları secret KASPI_ALIS'ta ({sku: alış}; yerelde kaspiapi/kaspi_al
 Repo PUBLIC: loga fiyat/alış YAZILMAZ, sadece sayılar. feed.json'u yazar; commit/push workflow'da.
   python .github/scripts/kaspi_gece.py            hesapla + feed.json yaz
   python .github/scripts/kaspi_gece.py --kuru     yalnız hesapla (deneme)"""
-import hashlib, http.cookiejar, json, math, os, sys, time, urllib.request
+import datetime, hashlib, http.cookiejar, json, math, os, sys, time, urllib.request
 
 MID = '15383076'; EXP = 0.30; MIN_KAR = 0.10; INDIRIM = 50
 KOM, VERGI = 0.125, 0.03; ESIKLER = (9990, 4990)   # 23.10: teslimat eşiği kuralı (naos-kz-rapor/kaspi_karlilik_esik.py ile aynı varsayım)
 BOT_RAKIP, BOT_FARK = {'30348533'}, 5   # 24.10: DERMA COSMETOLOGY — fiyatımızın 1 ₸ altına inen bot; 1..BOT_FARK ₸ altımızdaysa yok sayılır
+
+# 25.10 kullanıcı: DERMA COSMETOLOGY ile ortak kartlarda gece indirimi YOK (gece = gündüz = indirimsiz fiyat; rakip −50 ve teslimat eşiği uygulanmaz).
+# 1 haftalık deneme: derma_ortak.json 'bit' tarihinden sonra kendiliğinden eski kurala döner. Günlük rapor: derma_rapor.py
+_DO = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'derma_ortak.json'), encoding='utf-8'))
+DERMA_ORTAK = set(_DO['kartlar']) if datetime.datetime.now(datetime.timezone.utc) < datetime.datetime.fromisoformat(_DO['bit']) else set()
 
 def teslimat(p): return 173 if p < 3000 else 231 if p < 5000 else 927 if p < 10000 else 1507
 def net(p, c): return p * (1 - KOM - VERGI) - teslimat(p) - c
@@ -67,6 +72,11 @@ for it in items:
     yeni, neden = day, ''
     if it.get('sabit_gece'):   # 21.10 kullanıcı: elle sabitlenen gece fiyatı (Node A/G/P gündüz −%10, Atoderm Baume 45 2950) — görev DOKUNMAZ
         nedenler['elle sabit'] = nedenler.get('elle sabit', 0) + 1
+        continue
+    if pid in DERMA_ORTAK:
+        if day != old: degisen += 1
+        nedenler['DERMA ortak: indirimsiz'] = nedenler.get('DERMA ortak: indirimsiz', 0) + 1
+        it['night'] = day
         continue
     if not pid.isdigit() or not cost:
         yeni, neden = day, 'kart/alış bilinmiyor'
