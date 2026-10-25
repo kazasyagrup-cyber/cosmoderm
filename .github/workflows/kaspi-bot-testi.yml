@@ -1,0 +1,63 @@
+# Kaspi BOT TESTİ (26.10.2026, kullanıcı onayı 25.10) — 5 kartta gündüz fiyatımızı saat saat değiştirip 8 firmanın bot taban/tavan/tepkisini ölçer.
+# Tetik: Cloudflare Worker cosmoderm-stok-cron 26.10 07:15 Almatı (GitHub zamanlayıcısı güvenilmez). Elle: workflow_dispatch (kuru=true → hiçbir şey yazmaz).
+# İki parça (iş sınırı 6 saat): parca1 07:15–13:10, parca2 13:10–16:40. Hata/iptal → "geri al" adımı orijinal fiyatları yazar.
+# Kayıtlar artifact (repo public: loga fiyat yazılmaz). Betik: .github/scripts/kaspi_bot_testi.py
+name: kaspi-bot-testi
+on:
+  workflow_dispatch:
+    inputs:
+      kuru:
+        description: 'Deneme: fiyat yazma, 3 tur oku'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency: kaspi-bot-testi
+jobs:
+  parca1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test parca 1 (07:15-13:10)
+        env:
+          KASPI_FEED_KEY: ${{ secrets.KASPI_FEED_KEY }}
+        run: python3 .github/scripts/kaspi_bot_testi.py --parca 1 ${{ inputs.kuru && '--kuru' || '' }}
+      - name: Hata/iptal - fiyatlari geri al
+        if: ${{ (failure() || cancelled()) && !inputs.kuru }}
+        env:
+          KASPI_FEED_KEY: ${{ secrets.KASPI_FEED_KEY }}
+        run: python3 .github/scripts/kaspi_bot_testi.py --geri
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bot-testi-parca1
+          path: bot_testi/
+          retention-days: 30
+  parca2:
+    needs: parca1
+    if: ${{ always() && !inputs.kuru }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: bot-testi-parca1
+          path: bot_testi/
+      - name: Test parca 2 (13:10-16:40)
+        if: ${{ needs.parca1.result == 'success' }}
+        env:
+          KASPI_FEED_KEY: ${{ secrets.KASPI_FEED_KEY }}
+        run: python3 .github/scripts/kaspi_bot_testi.py --parca 2
+      - name: Fiyatlari geri al (parca1 basarisizsa ya da parca2 hata/iptal)
+        if: ${{ always() && (needs.parca1.result != 'success' || failure() || cancelled()) }}
+        env:
+          KASPI_FEED_KEY: ${{ secrets.KASPI_FEED_KEY }}
+        run: python3 .github/scripts/kaspi_bot_testi.py --geri
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bot-testi-parca2
+          path: bot_testi/
+          retention-days: 30
