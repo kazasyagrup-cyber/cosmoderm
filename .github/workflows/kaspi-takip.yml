@@ -1,0 +1,26 @@
+# Kaspi SIK RAKİP TAKİBİ (25.10.2026) — büyük satıcıların / botların fiyat mantığını çözmek için 10 dakikada bir ölçüm. FİYATA DOKUNMAZ.
+# Bir iş ~5,5 saat döngüde ölçer; zamanlayıcı 3 saatte bir başlatır (GitHub gecikmesine karşı üst üste biner, concurrency sıraya koyar).
+# Kayıt artifact (commit yok → Vercel deploy yok). 29.10 sonrası betik kendiliğinden çıkar.
+name: kaspi-takip
+on:
+  schedule:
+    - cron: '0 */3 * * *'
+  workflow_dispatch:
+concurrency: kaspi-takip
+jobs:
+  takip:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rakip fiyatlarini 10 dakikada bir kaydet
+        run: python3 .github/scripts/kaspi_takip.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: takip-${{ github.run_id }}
+          path: |
+            takip.jsonl.gz
+            takip_adlar.json
+          if-no-files-found: ignore
+          retention-days: 30
