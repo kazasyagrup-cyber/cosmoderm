@@ -21,11 +21,12 @@ async function kaspi(path, token) {
 }
 
 const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-function telefon(t) {   // Kaspi 10 hane (7071234567) verir → wa.me 11 hane (77071234567)
+function telefon(t) {   // Kaspi 10 hane (7071234567) verir → wa.me 11 hane (77071234567). 26.10: API numarayı gizliyor (0000000…) → null
   const d = String(t || '').replace(/\D/g, '');
+  if (!d || /^0+$/.test(d.slice(0, 7))) return null;
   if (d.length === 10) return '7' + d;
   if (d.length === 11 && (d[0] === '8' || d[0] === '7')) return '7' + d.slice(1);
-  return d || null;
+  return d;
 }
 function mesaj(s) {
   const urun = s.kalemler.map((k) => `${k.ad}${k.adet > 1 ? ` × ${k.adet}` : ''}`).join(', ');
@@ -34,18 +35,24 @@ function mesaj(s) {
 }
 
 function sayfa(list, days) {
-  const kart = list.map((s) => {
+  const kart = list.map((s, i) => {
     const m = mesaj(s), tel = telefon(s.tel);
-    const wa = tel ? `https://wa.me/${tel}?text=${encodeURIComponent(m)}` : null;
+    const wa = tel ? `https://wa.me/${tel}?text=${encodeURIComponent(m)}` : '';
     return `<div class="k"><div class="b"><b>№ ${esc(s.kod)}</b><span>${esc(s.tarih)} · ${esc(s.durum)}</span></div>
 <div>${s.kalemler.map((k) => `${esc(k.ad)} × ${k.adet}`).join('<br>')}</div>
-<div class="m">${esc(s.isim || '—')} · ${esc(tel ? '+' + tel : 'telefon yok')}</div>
-${wa ? `<a class="w" href="${esc(wa)}" target="_blank" rel="noopener">WhatsApp'ta gönder</a>` : '<div class="m">Telefon bulunamadı — Kaspi kabinetinden yazın.</div>'}
+<div class="m">${esc(s.isim || '—')} · ${esc(tel ? '+' + tel : 'Kaspi numarayı gizliyor')}</div>
+<textarea id="m${i}" hidden>${esc(m)}</textarea>
+<button class="c" onclick="kopyala(${i},this)">Mesajı kopyala</button>
+<div class="t"><input id="t${i}" inputmode="tel" placeholder="Telefon (ör. 7071234567)" value="${esc(tel || '')}"><button class="w" onclick="wa(${i})">WhatsApp</button></div>
 <details><summary>Mesajı gör</summary><pre>${esc(m)}</pre></details></div>`;
   }).join('');
   return `<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Kaspi uyarı mesajları</title>
-<style>body{font-family:system-ui,Arial,sans-serif;background:#f6f3ee;color:#222;margin:0;padding:16px;max-width:640px;margin:auto}h1{font-size:20px}.k{background:#fff;border-radius:12px;padding:14px;margin:12px 0;box-shadow:0 1px 3px #0002}.b{display:flex;justify-content:space-between;gap:8px;margin-bottom:6px}.b span,.m{color:#666;font-size:14px}.m{margin:6px 0}.w{display:block;text-align:center;background:#25d366;color:#fff;text-decoration:none;font-weight:600;padding:12px;border-radius:10px;margin:10px 0 4px}pre{white-space:pre-wrap;font-family:inherit;font-size:14px;background:#faf8f5;padding:10px;border-radius:8px}</style></head>
-<body><h1>Uyarılı kart siparişleri</h1><p class="m">Son ${days} gün, açık siparişler: <b>${list.length}</b>. Düğmeye basınca WhatsApp mesaj yazılı açılır, «Gönder»e basmanız yeterli.</p>${kart || '<p>Şu an uyarı gerektiren açık sipariş yok.</p>'}</body></html>`;
+<style>body{font-family:system-ui,Arial,sans-serif;background:#f6f3ee;color:#222;margin:0;padding:16px;max-width:640px;margin:auto}h1{font-size:20px}.k{background:#fff;border-radius:12px;padding:14px;margin:12px 0;box-shadow:0 1px 3px #0002}.b{display:flex;justify-content:space-between;gap:8px;margin-bottom:6px}.b span,.m{color:#666;font-size:14px}.m{margin:6px 0}button{font:inherit;font-weight:600;border:0;border-radius:10px;padding:12px;cursor:pointer}.c{display:block;width:100%;background:#2b4c7e;color:#fff;margin:10px 0 6px}.t{display:flex;gap:8px}.t input{flex:1;min-width:0;font:inherit;padding:10px;border:1px solid #ccc;border-radius:10px}.w{background:#25d366;color:#fff}pre{white-space:pre-wrap;font-family:inherit;font-size:14px;background:#faf8f5;padding:10px;border-radius:8px}</style></head>
+<body><h1>Uyarılı kart siparişleri</h1><p class="m">Son ${days} gün, açık siparişler: <b>${list.length}</b>. «Mesajı kopyala» → müşteriye yapıştırın. Numara biliniyorsa kutuya yazıp «WhatsApp»a basın: mesaj yazılı açılır.</p>${kart || '<p>Şu an uyarı gerektiren açık sipariş yok.</p>'}
+<script>
+function kopyala(i,b){const t=document.getElementById('m'+i).value;const ok=()=>{b.textContent='Kopyalandı ✓';setTimeout(()=>b.textContent='Mesajı kopyala',2000)};if(navigator.clipboard)navigator.clipboard.writeText(t).then(ok,()=>{});else{const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();ok()}}
+function wa(i){let d=document.getElementById('t'+i).value.replace(/\D/g,'');if(d.length===10)d='7'+d;else if(d.length===11&&d[0]==='8')d='7'+d.slice(1);if(d.length!==11){alert('Numara 10 haneli olmalı (ör. 7071234567)');return}location.href='https://wa.me/'+d+'?text='+encodeURIComponent(document.getElementById('m'+i).value)}
+</script></body></html>`;
 }
 
 module.exports = async (req, res) => {
