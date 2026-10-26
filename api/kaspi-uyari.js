@@ -1,5 +1,6 @@
 // Kaspi UYARILI KART siparişleri (26.10.2026, gizli anahtarlı): görseli/hacmi gerçek ürünle tutmayan kartlardaki ilanlarımızdan (api/_kaspi/uyari.json)
-// gelen açık siparişleri listeler; her sipariş için müşteriye hazır metinli tek tık WhatsApp (wa.me) düğmesi verir. Mesajı kullanıcı kendi WhatsApp'ından gönderir.
+// gelen açık siparişleri listeler; her sipariş için müşteriye hazır bilgilendirme mesajı + «Mesajı kopyala» düğmesi verir.
+// 26.10: Kaspi API müşteri telefonunu gizliyor (0000000…) → kullanıcı mesajı Kaspi kabinetindeki sohbetten, sipariş numarasıyla bulup gönderir.
 // Kullanım: /api/kaspi-uyari?key=<STOK_SYNC_KEY>&days=3   ·   ya da ?t=<sayfa kodu> (= sha256(STOK_SYNC_KEY + ':kaspi-uyari') ilk 32 hane; Worker'ın mailindeki bağlantı — ana anahtarı açığa çıkarmaz)   ·   &json=1 → yalnız sipariş kodları (Worker'ın yeni sipariş maili için; telefon/isim YOK)
 const crypto = require('crypto');
 const U = require('./_kaspi/uyari.json');
@@ -37,21 +38,20 @@ function mesaj(s) {
 function sayfa(list, days) {
   const kart = list.map((s, i) => {
     const m = mesaj(s), tel = telefon(s.tel);
-    const wa = tel ? `https://wa.me/${tel}?text=${encodeURIComponent(m)}` : '';
-    return `<div class="k"><div class="b"><b>№ ${esc(s.kod)}</b><span>${esc(s.tarih)} · ${esc(s.durum)}</span></div>
+        return `<div class="k"><div class="b"><b>№ ${esc(s.kod)}</b><span>${esc(s.tarih)} · ${esc(s.durum)}</span></div>
 <div>${s.kalemler.map((k) => `${esc(k.ad)} × ${k.adet}`).join('<br>')}</div>
-<div class="m">${esc(s.isim || '—')} · ${esc(tel ? '+' + tel : 'Kaspi numarayı gizliyor')}</div>
+<div class="m">Müşteri: ${esc(s.isim || '—')}${tel ? ' · +' + esc(tel) : ''}</div>
 <textarea id="m${i}" hidden>${esc(m)}</textarea>
-<button class="c" onclick="kopyala(${i},this)">Mesajı kopyala</button>
-<div class="t"><input id="t${i}" inputmode="tel" placeholder="Telefon (ör. 7071234567)" value="${esc(tel || '')}"><button class="w" onclick="wa(${i})">WhatsApp</button></div>
+<button class="c" data-kod="${esc(s.kod)}" onclick="kopyala(${i},this)">Mesajı kopyala</button>
+${tel ? `<a class="w" href="https://wa.me/${tel}?text=${encodeURIComponent(m)}" target="_blank" rel="noopener">WhatsApp</a>` : ''}
 <details><summary>Mesajı gör</summary><pre>${esc(m)}</pre></details></div>`;
   }).join('');
   return `<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Kaspi uyarı mesajları</title>
-<style>body{font-family:system-ui,Arial,sans-serif;background:#f6f3ee;color:#222;margin:0;padding:16px;max-width:640px;margin:auto}h1{font-size:20px}.k{background:#fff;border-radius:12px;padding:14px;margin:12px 0;box-shadow:0 1px 3px #0002}.b{display:flex;justify-content:space-between;gap:8px;margin-bottom:6px}.b span,.m{color:#666;font-size:14px}.m{margin:6px 0}button{font:inherit;font-weight:600;border:0;border-radius:10px;padding:12px;cursor:pointer}.c{display:block;width:100%;background:#2b4c7e;color:#fff;margin:10px 0 6px}.t{display:flex;gap:8px}.t input{flex:1;min-width:0;font:inherit;padding:10px;border:1px solid #ccc;border-radius:10px}.w{background:#25d366;color:#fff}pre{white-space:pre-wrap;font-family:inherit;font-size:14px;background:#faf8f5;padding:10px;border-radius:8px}</style></head>
-<body><h1>Uyarılı kart siparişleri</h1><p class="m">Son ${days} gün, açık siparişler: <b>${list.length}</b>. «Mesajı kopyala» → müşteriye yapıştırın. Numara biliniyorsa kutuya yazıp «WhatsApp»a basın: mesaj yazılı açılır.</p>${kart || '<p>Şu an uyarı gerektiren açık sipariş yok.</p>'}
+<style>body{font-family:system-ui,Arial,sans-serif;background:#f6f3ee;color:#222;margin:0;padding:16px;max-width:640px;margin:auto}h1{font-size:20px}.k{background:#fff;border-radius:12px;padding:14px;margin:12px 0;box-shadow:0 1px 3px #0002}.b{display:flex;justify-content:space-between;gap:8px;margin-bottom:6px}.b span,.m{color:#666;font-size:14px}.m{margin:6px 0}button{font:inherit;font-weight:600;border:0;border-radius:10px;padding:12px;cursor:pointer}.c{display:block;width:100%;background:#2b4c7e;color:#fff;margin:10px 0 6px}.w{display:block;text-align:center;text-decoration:none;font-weight:600;padding:12px;border-radius:10px;background:#25d366;color:#fff}.k.ok{opacity:.55}pre{white-space:pre-wrap;font-family:inherit;font-size:14px;background:#faf8f5;padding:10px;border-radius:8px}</style></head>
+<body><h1>Uyarılı kart siparişleri</h1><p class="m">Son ${days} gün, açık siparişler: <b>${list.length}</b>. «Mesajı kopyala» → Kaspi kabinetinde siparişi numarasıyla açın → müşteri sohbetine yapıştırıp gönderin. Kopyalanan sipariş soluklaşır (bu cihazda hatırlanır).</p>${kart || '<p>Şu an uyarı gerektiren açık sipariş yok.</p>'}
 <script>
-function kopyala(i,b){const t=document.getElementById('m'+i).value;const ok=()=>{b.textContent='Kopyalandı ✓';setTimeout(()=>b.textContent='Mesajı kopyala',2000)};if(navigator.clipboard)navigator.clipboard.writeText(t).then(ok,()=>{});else{const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();ok()}}
-function wa(i){let d=document.getElementById('t'+i).value.replace(/\D/g,'');if(d.length===10)d='7'+d;else if(d.length===11&&d[0]==='8')d='7'+d.slice(1);if(d.length!==11){alert('Numara 10 haneli olmalı (ör. 7071234567)');return}location.href='https://wa.me/'+d+'?text='+encodeURIComponent(document.getElementById('m'+i).value)}
+function kopyala(i,b){const t=document.getElementById('m'+i).value;const ok=()=>{b.textContent='Kopyalandı ✓';b.closest('.k').classList.add('ok');try{localStorage.setItem('kopya-'+b.dataset.kod,'1')}catch(e){}setTimeout(()=>b.textContent='Mesajı kopyala',2000)};if(navigator.clipboard)navigator.clipboard.writeText(t).then(ok,()=>{});else{const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();ok()}}
+document.querySelectorAll('.c').forEach(b=>{try{if(localStorage.getItem('kopya-'+b.dataset.kod))b.closest('.k').classList.add('ok')}catch(e){}});
 </script></body></html>`;
 }
 
