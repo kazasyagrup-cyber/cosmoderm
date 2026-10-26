@@ -40,17 +40,18 @@ function sayfa(list, days) {
     const m = mesaj(s), tel = telefon(s.tel);
         return `<div class="k"><div class="b"><b>№ ${esc(s.kod)}</b><span>${esc(s.tarih)} · ${esc(s.durum)}</span></div>
 <div>${s.kalemler.map((k) => `${esc(k.ad)} × ${k.adet}`).join('<br>')}</div>
-<div class="m">Müşteri: ${esc(s.isim || '—')}${tel ? ' · +' + esc(tel) : ''}</div>
+<div class="m">Müşteri / Покупатель: ${esc(s.isim || '—')}${tel ? ' · +' + esc(tel) : ''}</div>
 <textarea id="m${i}" hidden>${esc(m)}</textarea>
-<button class="c" data-kod="${esc(s.kod)}" onclick="kopyala(${i},this)">Mesajı kopyala</button>
+<button class="c" data-kod="${esc(s.kod)}" onclick="kopyala(${i},this)">Mesajı kopyala / Скопировать</button>
 ${tel ? `<a class="w" href="https://wa.me/${tel}?text=${encodeURIComponent(m)}" target="_blank" rel="noopener">WhatsApp</a>` : ''}
-<details><summary>Mesajı gör</summary><pre>${esc(m)}</pre></details></div>`;
+<details><summary>Mesajı gör / Показать текст</summary><pre>${esc(m)}</pre></details></div>`;
   }).join('');
   return `<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Kaspi uyarı mesajları</title>
 <style>body{font-family:system-ui,Arial,sans-serif;background:#f6f3ee;color:#222;margin:0;padding:16px;max-width:640px;margin:auto}h1{font-size:20px}.k{background:#fff;border-radius:12px;padding:14px;margin:12px 0;box-shadow:0 1px 3px #0002}.b{display:flex;justify-content:space-between;gap:8px;margin-bottom:6px}.b span,.m{color:#666;font-size:14px}.m{margin:6px 0}button{font:inherit;font-weight:600;border:0;border-radius:10px;padding:12px;cursor:pointer}.c{display:block;width:100%;background:#2b4c7e;color:#fff;margin:10px 0 6px}.w{display:block;text-align:center;text-decoration:none;font-weight:600;padding:12px;border-radius:10px;background:#25d366;color:#fff}.k.ok{opacity:.55}pre{white-space:pre-wrap;font-family:inherit;font-size:14px;background:#faf8f5;padding:10px;border-radius:8px}</style></head>
-<body><h1>Uyarılı kart siparişleri</h1><p class="m">Son ${days} gün, açık siparişler: <b>${list.length}</b>. «Mesajı kopyala» → Kaspi kabinetinde siparişi numarasıyla açın → müşteri sohbetine yapıştırıp gönderin. Kopyalanan sipariş soluklaşır (bu cihazda hatırlanır).</p>${kart || '<p>Şu an uyarı gerektiren açık sipariş yok.</p>'}
+<body><h1>Uyarılı kart siparişleri / Заказы из карточек с неверным фото</h1><p class="m">Son ${days} gün, açık siparişler: <b>${list.length}</b>. «Mesajı kopyala» → Kaspi kabinetinde siparişi numarasıyla açın → müşteri sohbetine yapıştırıp gönderin. Kopyalanan sipariş soluklaşır (bu cihazda hatırlanır).</p>
+<p class="m">За ${days} дн., открытых заказов: <b>${list.length}</b>. «Скопировать» → откройте заказ по номеру в кабинете Kaspi → вставьте сообщение в чат с покупателем и отправьте. Скопированный заказ становится бледным (запоминается на этом устройстве).</p>${kart || '<p>Şu an uyarı gerektiren açık sipariş yok. / Сейчас таких заказов нет.</p>'}
 <script>
-function kopyala(i,b){const t=document.getElementById('m'+i).value;const ok=()=>{b.textContent='Kopyalandı ✓';b.closest('.k').classList.add('ok');try{localStorage.setItem('kopya-'+b.dataset.kod,'1')}catch(e){}setTimeout(()=>b.textContent='Mesajı kopyala',2000)};if(navigator.clipboard)navigator.clipboard.writeText(t).then(ok,()=>{});else{const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();ok()}}
+function kopyala(i,b){const t=document.getElementById('m'+i).value;const ok=()=>{b.textContent='Kopyalandı / Скопировано ✓';b.closest('.k').classList.add('ok');try{localStorage.setItem('kopya-'+b.dataset.kod,'1')}catch(e){}setTimeout(()=>b.textContent='Mesajı kopyala / Скопировать',2000)};if(navigator.clipboard)navigator.clipboard.writeText(t).then(ok,()=>{});else{const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();ok()}}
 document.querySelectorAll('.c').forEach(b=>{try{if(localStorage.getItem('kopya-'+b.dataset.kod))b.closest('.k').classList.add('ok')}catch(e){}});
 </script></body></html>`;
 }
