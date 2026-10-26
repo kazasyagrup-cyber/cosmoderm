@@ -32,7 +32,8 @@ function telefon(t) {   // Kaspi 10 hane (7071234567) verir → wa.me 11 hane (7
 function mesaj(s) {
   const urun = s.kalemler.map((k) => `${k.ad}${k.adet > 1 ? ` × ${k.adet}` : ''}`).join(', ');
   const fark = [...new Set(s.kalemler.map((k) => k.fark))].join('\n');
-  return U.sablon.replace('{isim}', s.isim ? ', ' + s.isim : '').replace('{kod}', s.kod).replace('{urun}', urun).replace('{fark}', fark);
+  const alt = [...new Set(s.kalemler.map((k) => k.alternatif).filter(Boolean))].map((a) => '\n\n' + a).join('');   // 26.10: pompalı ürün bizim ilanımızdan (ek satış, sipariş iptal ettirilmez)
+  return U.sablon.replace('{isim}', s.isim ? ', ' + s.isim : '').replace('{kod}', s.kod).replace('{urun}', urun).replace('{fark}', fark + alt);
 }
 
 function sayfa(list, days) {
@@ -81,7 +82,7 @@ module.exports = async (req, res) => {
       const e = await kaspi(`/orders/${od.id}/entries`, process.env.KASPI_TOKEN);
       const kalemler = (e.data || []).map((en) => {
         const sku = en.attributes.offer && en.attributes.offer.code, u = U.ilanlar[sku];
-        return u ? { sku, ad: u.ad, fark: u.fark, adet: en.attributes.quantity } : null;
+        return u ? { sku, ad: u.ad, fark: u.fark, alternatif: u.alternatif, adet: en.attributes.quantity } : null;
       }).filter(Boolean);
       if (!kalemler.length) return null;
       const a = od.attributes || {}, c = a.customer || {};
