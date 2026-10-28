@@ -1316,8 +1316,9 @@
 "model": "Bioderma Sensibio H2O Eye мицеллярная вода 125 мл",
 "brand": "Bioderma",
 "day": 8700,
-"night": 8547,
-"stock": 1
+"night": 9030,
+"stock": 1,
+"sabit_gece": true
 },
 {
 "sku": "116785619_15383076",
@@ -1428,9 +1429,10 @@
 "model": "Bioderma Atoderm крем для лица 200 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8849,
+"night": 9290,
 "stock": 14,
-"pool": "182626"
+"pool": "182626",
+"sabit_gece": true
 },
 {
 "sku": "143144511_15383076",
@@ -1557,9 +1559,10 @@
 "model": "Bioderma крем Sensibio Defensive Rich, активный успокаивающий крем, 40 мл для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 9247,
+"night": 9760,
 "stock": 4,
-"pool": "104596412_814862873"
+"pool": "104596412_814862873",
+"sabit_gece": true
 },
 {
 "sku": "17600094_15383076",
