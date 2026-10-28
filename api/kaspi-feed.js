@@ -22,15 +22,17 @@ let cache = { at: 0, sold: null };
 const WINDOW_MS = 14 * 24 * 3600 * 1000;
 async function kaspi(path, token) {
   // 08.10: Kaspi'ye ilk bağlantı ara sıra "fetch failed" veriyor → 3 deneme (0,4 / 1,2 sn arayla)
-  let last;
+  // 28.10: Kaspi 429 (çok istek) → 2 / 5 sn bekle (0,4 / 1,2 sn yetmiyordu, feed ara sıra 503 veriyordu)
+  let last, cok = false;
   for (let i = 0; i < 3; i++) {
     try {
       const r = await fetch(API + path, { headers: { 'X-Auth-Token': token, Accept: 'application/vnd.api+json', 'Content-Type': 'application/vnd.api+json' } });
       if (r.ok) return r.json();
       last = new Error('kaspi ' + r.status + ' ' + (await r.text()).slice(0, 80).replace(/\s+/g, ' '));
+      cok = r.status === 429;
       if (r.status < 500 && r.status !== 429) break;  // 401/403/404 → tekrar denemenin anlamı yok
-    } catch (e) { last = e; }
-    await new Promise((ok) => setTimeout(ok, [400, 1200, 0][i]));
+    } catch (e) { last = e; cok = false; }
+    await new Promise((ok) => setTimeout(ok, (cok ? [2000, 5000, 0] : [400, 1200, 0])[i]));
   }
   throw last;
 }

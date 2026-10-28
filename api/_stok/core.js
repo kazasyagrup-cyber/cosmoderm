@@ -22,15 +22,16 @@ async function withCache(name, fn) {
   return v;
 }
 async function http(url, opts, tries = 3) {
-  let last;
+  let last, cok = false;   // 28.10: 429 → 2 / 5 sn bekle
   for (let i = 0; i < tries; i++) {
     try {
       const r = await fetch(url, Object.assign({ signal: AbortSignal.timeout(20000) }, opts));
       if (r.ok) { const t = await r.text(); return t ? JSON.parse(t) : {}; }
       last = new Error(url.split('?')[0].replace(/^https:\/\//, '') + ' ' + r.status + ' ' + (await r.text()).slice(0, 80).replace(/\s+/g, ' '));
+      cok = r.status === 429;
       if (r.status < 500 && r.status !== 429) break;
-    } catch (e) { last = e; }
-    await sleep([400, 1200, 0][i]);
+    } catch (e) { last = e; cok = false; }
+    await sleep((cok ? [2000, 5000, 0] : [400, 1200, 0])[i]);
   }
   throw last;
 }
