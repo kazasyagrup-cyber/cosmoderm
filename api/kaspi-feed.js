@@ -89,13 +89,18 @@ module.exports = async (req, res) => {
 
   let sold = {}, snap = null;
   if (process.env.KASPI_TOKEN) {
-    // ortak stok anlık görüntüsü (WB+Ozon+Kaspi) Kaspi-only okumayla PARALEL; başarısız/yavaşsa eski mantık (çifte satış koruması azalır ama liste servis edilir)
-    const snapP = Promise.race([core.snapshot(process.env), new Promise((_, no) => setTimeout(() => no(new Error('zaman aşımı 15 sn')), 15000))]).catch((e) => ({ errors: ['snapshot: ' + String(e && e.message || e).slice(0, 100)] }));
+    // ortak stok anlık görüntüsü (WB+Ozon+Kaspi) Kaspi-only okumayla PARALEL
+    // 28.10: soğuk başlangıçta 15 sn yetmiyordu → eski mantığa düşüp feed.json'daki eski adetlerle ~120 ilanı "available=no" gönderiyordu (Kaspi'de satıştan düşüyordu).
+    // Artık 40 sn beklenir; yine gelmezse 503 → Kaspi son doğru listeyi korur.
+    const snapP = Promise.race([core.snapshot(process.env), new Promise((_, no) => setTimeout(() => no(new Error('zaman aşımı 40 sn')), 40000))]).catch((e) => ({ errors: ['snapshot: ' + String(e && e.message || e).slice(0, 100)] }));
     try { sold = await soldSince(feed.baseline_ms, process.env.KASPI_TOKEN); }
     catch (e) { res.statusCode = 503; res.end('orders unavailable: ' + String(e && e.message || e).slice(0, 120)); return; }
     const sn = await snapP;
     if (sn && sn.R && !(sn.errors || []).length) snap = sn;
-    else console.log('stok-ortak devre dışı', JSON.stringify((sn && sn.errors) || []));
+    else {
+      console.log('stok-ortak devre dışı', JSON.stringify((sn && sn.errors) || []));
+      res.statusCode = 503; res.end('stok unavailable: ' + String(((sn && sn.errors) || []).join('; ')).slice(0, 160)); return;
+    }
   } else if (!(req.query && req.query.test === '1')) {
     res.statusCode = 503; res.end('KASPI_TOKEN missing'); return;
   }
