@@ -7,6 +7,12 @@ const U = require('./_kaspi/uyari.json');
 const API = 'https://kaspi.kz/shop/api/v2';
 const STATES = ['NEW', 'SIGN_REQUIRED', 'PICKUP', 'DELIVERY', 'KASPI_DELIVERY'];   // açık siparişler (ARCHIVE = teslim/iptal, mesaj için geç)
 
+// 28.10: Kaspi'ye aynı anda en fazla 8 istek (yüzlerce paralel /entries isteği soğuk başlangıçta 429 → feed 503 veriyordu)
+async function sinirli(list, fn, n = 8) {
+  const out = new Array(list.length); let i = 0;
+  await Promise.all(Array.from({ length: Math.min(n, list.length) }, async () => { while (i < list.length) { const k = i++; out[k] = await fn(list[k], k); } }));
+  return out;
+}
 async function kaspi(path, token) {
   let last;
   for (let i = 0; i < 3; i++) {
@@ -78,7 +84,7 @@ module.exports = async (req, res) => {
     };
     const tekil = new Map();   // Kaspi aynı siparişi DELIVERY ve KASPI_DELIVERY listesinde iki kez döndürebiliyor (22.10 dersi)
     for (const od of (await Promise.all(STATES.map(listState))).flat()) tekil.set(od.id, od);
-    const rows = await Promise.all([...tekil.values()].map(async (od) => {
+    const rows = await sinirli([...tekil.values()], async (od) => {
       const e = await kaspi(`/orders/${od.id}/entries`, process.env.KASPI_TOKEN);
       const kalemler = (e.data || []).map((en) => {
         const sku = en.attributes.offer && en.attributes.offer.code, u = U.ilanlar[sku];
@@ -88,7 +94,7 @@ module.exports = async (req, res) => {
       const a = od.attributes || {}, c = a.customer || {};
       return { kod: a.code || od.id, ms: a.creationDate, tarih: new Date((a.creationDate || 0) + 5 * 3600 * 1000).toISOString().slice(0, 16).replace('T', ' '),
         durum: a.state, isim: (c.firstName || c.name || '').trim(), tel: c.cellPhone, kalemler };
-    }));
+    });
     const list = rows.filter(Boolean).sort((x, y) => y.ms - x.ms);
     if (req.query && req.query.json) {
       res.setHeader('Content-Type', 'application/json; charset=utf-8');

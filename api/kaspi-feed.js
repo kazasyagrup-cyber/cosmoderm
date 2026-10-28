@@ -20,6 +20,12 @@ const STATES = ['NEW', 'SIGN_REQUIRED', 'PICKUP', 'DELIVERY', 'KASPI_DELIVERY', 
 const API = 'https://kaspi.kz/shop/api/v2';
 let cache = { at: 0, sold: null };
 const WINDOW_MS = 14 * 24 * 3600 * 1000;
+// 28.10: Kaspi'ye aynı anda en fazla 8 istek (yüzlerce paralel /entries isteği soğuk başlangıçta 429 → feed 503 veriyordu)
+async function sinirli(list, fn, n = 8) {
+  const out = new Array(list.length); let i = 0;
+  await Promise.all(Array.from({ length: Math.min(n, list.length) }, async () => { while (i < list.length) { const k = i++; out[k] = await fn(list[k], k); } }));
+  return out;
+}
 async function kaspi(path, token) {
   // 08.10: Kaspi'ye ilk bağlantı ara sıra "fetch failed" veriyor → 3 deneme (0,4 / 1,2 sn arayla)
   // 28.10: Kaspi 429 (çok istek) → 2 / 5 sn bekle (0,4 / 1,2 sn yetmiyordu, feed ara sıra 503 veriyordu)
@@ -58,7 +64,7 @@ async function soldSince(since, token) {
   // 22.10: Kaspi aynı siparişi birden çok durum listesinde (DELIVERY + KASPI_DELIVERY) döndürüyor → sipariş id'sine göre tekilleştir (yoksa satış 2 kez düşülüyordu)
   const gor = new Set();
   const orders = (await Promise.all(STATES.map(listState))).flat().filter((od) => !CANCELLED.has(od.attributes.status) && !gor.has(od.id) && gor.add(od.id));
-  const entries = await Promise.all(orders.map((od) => kaspi(`/orders/${od.id}/entries`, token)));
+  const entries = await sinirli(orders, (od) => kaspi(`/orders/${od.id}/entries`, token));
   const sold = {};
   for (const e of entries) for (const en of e.data || []) {
     const sku = en.attributes.offer && en.attributes.offer.code;

@@ -14,6 +14,12 @@ const cache = {};
 const sleep = (ms) => new Promise((ok) => setTimeout(ok, ms));
 // 24.10: hızlı senkron (api/stok-hizli) yeni sipariş görünce önbelleği temizler — yoksa 4 dk'lık eski liste yeni satışı kaçırır
 function cacheTemizle() { for (const k of Object.keys(cache)) delete cache[k]; }
+// 28.10: Kaspi'ye aynı anda en fazla 8 istek (yüzlerce paralel /entries isteği soğuk başlangıçta 429 → feed 503 veriyordu)
+async function sinirli(list, fn, n = 8) {
+  const out = new Array(list.length); let i = 0;
+  await Promise.all(Array.from({ length: Math.min(n, list.length) }, async () => { while (i < list.length) { const k = i++; out[k] = await fn(list[k], k); } }));
+  return out;
+}
 async function withCache(name, fn) {
   const c = cache[name];
   if (c && Date.now() - c.at < CACHE_MS) return c.v;
@@ -58,7 +64,7 @@ async function kaspiRecords(sinceMs, token) {
     // 22.10: Kaspi aynı siparişi birden çok durum listesinde (DELIVERY + KASPI_DELIVERY) döndürüyor → sipariş id'sine göre tekilleştir (yoksa satış 2 kez düşülüyordu)
     const gor = new Set();
     const orders = (await Promise.all(KASPI_STATES.map(listState))).flat().filter((od) => !KASPI_CANCELLED.has(od.attributes.status) && !gor.has(od.id) && gor.add(od.id));
-    const entries = await Promise.all(orders.map((od) => http(`${KASPI_API}/orders/${od.id}/entries`, { headers: H })));
+    const entries = await sinirli(orders, (od) => http(`${KASPI_API}/orders/${od.id}/entries`, { headers: H }));
     const recs = [];
     entries.forEach((e, i) => {
       const ts = orders[i].attributes.creationDate || 0;
