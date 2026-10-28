@@ -2,9 +2,8 @@
 # → her sabah bu kartların satış raporu maili (yalnız kazasyagrup@gmail.com, Worker /belge). Deneme 01.11 07:00 biter, son rapor 02.11 (sonra betik kendiliğinden çıkar).
 # Sır: STOK_SYNC_KEY. Repo public: loga fiyat/ciro yazılmaz.
 name: derma-rapor
+# 28.10: GitHub zamanlayıcısı 5–6 saat geciktiği için schedule kaldırıldı → Cloudflare Worker (cosmoderm-stok-cron) 09:15 Almatı'da workflow_dispatch ile başlatır.
 on:
-  schedule:
-    - cron: '15 4 * * *'   # 09:15 Almatı (UTC+5); GitHub zamanlayıcısı gecikebilir
   workflow_dispatch:
     inputs:
       kuru:
