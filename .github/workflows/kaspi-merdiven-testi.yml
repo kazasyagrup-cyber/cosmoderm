@@ -1,0 +1,36 @@
+# Kaspi "YUKARI MERDİVEN" ÖLÇÜMÜ (28.10.2026, kullanıcı: "ok uygula — hep gece yapalım, bu gece başlasın").
+# 3 kartta (ФАРМАКОМ ×2, Raus ×1) GECE fiyatını saat saat yukarı / bot −2 oynatıp botların yukarı takibini ölçer. Tek iş (~5,5 saat).
+# Elle: workflow_dispatch (kuru=true → hiçbir şey yazmaz, 3 tur okur + planı loga yazar). Hata/iptal → "geri al" adımı orijinal gece fiyatlarını yazar.
+# Kayıtlar artifact (repo public: loga fiyat yazılmaz). Betik: .github/scripts/kaspi_merdiven_testi.py
+name: kaspi-merdiven-testi
+on:
+  workflow_dispatch:
+    inputs:
+      kuru:
+        description: 'Deneme: fiyat yazma, 3 tur oku'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency: kaspi-merdiven-testi
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+      - name: Merdiven testi
+        env:
+          KASPI_FEED_KEY: ${{ secrets.KASPI_FEED_KEY }}
+        run: python3 .github/scripts/kaspi_merdiven_testi.py ${{ inputs.kuru && '--kuru' || '' }}
+      - name: Hata/iptal - gece fiyatlarini geri al
+        if: ${{ (failure() || cancelled()) && !inputs.kuru }}
+        env:
+          KASPI_FEED_KEY: ${{ secrets.KASPI_FEED_KEY }}
+        run: python3 .github/scripts/kaspi_merdiven_testi.py --geri
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: merdiven-testi
+          path: merdiven_testi/
+          retention-days: 30
