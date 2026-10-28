@@ -4,8 +4,8 @@
 const API = 'https://kaspi.kz/shop/api/v2';
 const STATES = ['NEW', 'SIGN_REQUIRED', 'PICKUP', 'DELIVERY', 'KASPI_DELIVERY', 'ARCHIVE'];
 
-// 28.10: Kaspi'ye aynı anda en fazla 8 istek (yüzlerce paralel /entries isteği soğuk başlangıçta 429 → feed 503 veriyordu)
-async function sinirli(list, fn, n = 8) {
+// 28.10: Kaspi'ye aynı anda en fazla 16 istek (yüzlerce paralel /entries isteği soğuk başlangıçta 429 → feed 503 veriyordu)
+async function sinirli(list, fn, n = 16) {
   const out = new Array(list.length); let i = 0;
   await Promise.all(Array.from({ length: Math.min(n, list.length) }, async () => { while (i < list.length) { const k = i++; out[k] = await fn(list[k], k); } }));
   return out;

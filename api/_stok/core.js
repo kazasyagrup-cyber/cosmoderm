@@ -14,8 +14,8 @@ const cache = {};
 const sleep = (ms) => new Promise((ok) => setTimeout(ok, ms));
 // 24.10: hızlı senkron (api/stok-hizli) yeni sipariş görünce önbelleği temizler — yoksa 4 dk'lık eski liste yeni satışı kaçırır
 function cacheTemizle() { for (const k of Object.keys(cache)) delete cache[k]; }
-// 28.10: Kaspi'ye aynı anda en fazla 8 istek (yüzlerce paralel /entries isteği soğuk başlangıçta 429 → feed 503 veriyordu)
-async function sinirli(list, fn, n = 8) {
+// 28.10: Kaspi'ye aynı anda en fazla 16 istek (yüzlerce paralel /entries isteği soğuk başlangıçta 429 → feed 503 veriyordu)
+async function sinirli(list, fn, n = 16) {
   const out = new Array(list.length); let i = 0;
   await Promise.all(Array.from({ length: Math.min(n, list.length) }, async () => { while (i < list.length) { const k = i++; out[k] = await fn(list[k], k); } }));
   return out;
