@@ -391,14 +391,6 @@
 "stock": 20
 },
 {
-"sku": "119973907_374000765",
-"model": "Bioderma крем Atoderm Creme Ultra для лица 500 мл",
-"brand": "bioderma",
-"day": 12900,
-"night": 12900,
-"stock": 11
-},
-{
 "sku": "276173177",
 "model": "Сумочка набор бдля рукоделья \"сделай сам\"",
 "brand": "",
@@ -1574,40 +1566,12 @@
 "pool": "104596412_814862873"
 },
 {
-"sku": "143144526_15383076",
-"model": "Bioderma Atoderm Ultra крем для тела 500 мл",
-"brand": "bioderma",
-"day": 12900,
-"night": 12900,
-"stock": 11,
-"pool": "119973907_374000765"
-},
-{
-"sku": "144965167_15383076",
-"model": "Bioderma Atoderm Ultra-Nourishing крем для тела 500 мл",
-"brand": "bioderma",
-"day": 12900,
-"night": 12900,
-"stock": 11,
-"pool": "119973907_374000765"
-},
-{
 "sku": "17600088_15383076",
 "model": "Bioderma Atoderm Creme Ultra Nourishing для лица и тела 500 мл",
 "brand": "bioderma",
 "day": 12900,
 "night": 12900,
-"stock": 11,
-"pool": "119973907_374000765"
-},
-{
-"sku": "17601419_15383076",
-"model": "Bioderma Atoderm Питательный крем для тела 500 мл",
-"brand": "bioderma",
-"day": 12900,
-"night": 12900,
-"stock": 11,
-"pool": "119973907_374000765"
+"stock": 11
 },
 {
 "sku": "143144542_15383076",
@@ -2464,30 +2428,12 @@
 "stock": 0
 },
 {
-"sku": "3401399373237",
-"model": "Bioderma Atoderm Gel Douche гель для душа 200 мл",
-"brand": "Bioderma",
-"day": 6136,
-"night": 6136,
-"stock": 0,
-"pool": "116667671_15383076"
-},
-{
 "sku": "119716013_15383076",
 "model": "Bioderma Sebium Gel Moussant Actif гель-мусс 45 мл",
 "brand": "Bioderma",
 "day": 4888,
 "night": 4888,
 "stock": 0
-},
-{
-"sku": "3701129810125",
-"model": "Bioderma Sebium Gel Moussant Actif гель-мусс 45 мл",
-"brand": "Bioderma",
-"day": 4888,
-"night": 4888,
-"stock": 0,
-"pool": "119716013_15383076"
 },
 {
 "sku": "134848837_15383076",
