@@ -42,6 +42,14 @@ async function http(url, opts, tries = 3) {
   throw last;
 }
 
+// 28.10: sipariş kalemleri sipariş başına BİR KEZ sorulur (örnek ömrü boyunca saklanır; kaspi-feed.js de bunu kullanır).
+// Önce feed ile ortak stok aynı ~540 /entries isteğini aynı anda atıyordu → Kaspi 429 → soğuk feed 40 sn'yi aşıyordu.
+const entP = {};
+function kaspiEntries(id, token) {
+  const H = { 'X-Auth-Token': token, Accept: 'application/vnd.api+json', 'Content-Type': 'application/vnd.api+json' };
+  return entP[id] || (entP[id] = http(`${KASPI_API}/orders/${id}/entries`, { headers: H }).catch((e) => { delete entP[id]; throw e; }));
+}
+
 // ---------- KASPI (kaspi-feed.js'teki mantığın aynısı; kayıt = {ts, key: sku, q})
 async function kaspiRecords(sinceMs, token) {
   return withCache('kaspi', async () => {
@@ -64,7 +72,7 @@ async function kaspiRecords(sinceMs, token) {
     // 22.10: Kaspi aynı siparişi birden çok durum listesinde (DELIVERY + KASPI_DELIVERY) döndürüyor → sipariş id'sine göre tekilleştir (yoksa satış 2 kez düşülüyordu)
     const gor = new Set();
     const orders = (await Promise.all(KASPI_STATES.map(listState))).flat().filter((od) => !KASPI_CANCELLED.has(od.attributes.status) && !gor.has(od.id) && gor.add(od.id));
-    const entries = await sinirli(orders, (od) => http(`${KASPI_API}/orders/${od.id}/entries`, { headers: H }));
+    const entries = await sinirli(orders, (od) => kaspiEntries(od.id, token));
     const recs = [];
     entries.forEach((e, i) => {
       const ts = orders[i].attributes.creationDate || 0;
@@ -185,4 +193,4 @@ async function snapshot(env, opts = {}) {
   return { R, S, sold, v14, errors, counts: { kaspi: kas.length, wb: wb.length, ozon: oz.length } };
 }
 
-module.exports = { MAP, IDX, SETIDX, snapshot, http, ozonHeaders, WB_MP, OZON, KASPI_API, KASPI_STATES, sleep, creds, cacheTemizle };
+module.exports = { MAP, IDX, SETIDX, snapshot, http, ozonHeaders, WB_MP, OZON, KASPI_API, KASPI_STATES, sleep, creds, cacheTemizle, kaspiEntries };
