@@ -443,7 +443,7 @@
 "sku": "17600051_15383076",
 "model": "Bioderma крем Hydrabio для лица 50 мл",
 "brand": "bioderma",
-"day": 13999,
+"day": 15400,
 "night": 13999,
 "stock": 28
 },
@@ -451,7 +451,7 @@
 "sku": "17600052_15383076",
 "model": "Bioderma крем-гель Hydrabio для лица 40 мл",
 "brand": "bioderma",
-"day": 13000,
+"day": 14800,
 "night": 13000,
 "stock": 18
 },
@@ -646,7 +646,7 @@
 "sku": "102415463_15383076",
 "model": "Bioderma бальзам Atoderm Restorative 15 мл",
 "brand": "Bioderma",
-"day": 6200,
+"day": 6400,
 "night": 6200,
 "stock": 4
 },
@@ -662,7 +662,7 @@
 "sku": "150575248_15383076",
 "model": "Bioderma Atoderm Gel Douche гель 500 мл",
 "brand": "Bioderma",
-"day": 10800,
+"day": 12400,
 "night": 10800,
 "stock": 4
 },
@@ -670,7 +670,7 @@
 "sku": "168888011_15383076",
 "model": "Bioderma Atoderm гель для душа 500 мл гель 500 мл",
 "brand": "Bioderma",
-"day": 10800,
+"day": 12400,
 "night": 10800,
 "stock": 4,
 "pool": "150575248_15383076"
@@ -679,7 +679,7 @@
 "sku": "110884949_15383076",
 "model": "Bioderma Atoderm гель 500 мл",
 "brand": "Bioderma",
-"day": 10800,
+"day": 12400,
 "night": 10800,
 "stock": 4,
 "pool": "150575248_15383076"
@@ -1315,7 +1315,7 @@
 "sku": "116785619_15383076",
 "model": "Bioderma Sensibio Lait молочко для снятия макияжа 250 мл",
 "brand": "Bioderma",
-"day": 8736,
+"day": 9200,
 "night": 7850,
 "stock": 1
 },
@@ -1574,7 +1574,7 @@
 "sku": "143144542_15383076",
 "model": "Bioderma крем Hydrabio для лица 50 мл",
 "brand": "bioderma",
-"day": 13999,
+"day": 15400,
 "night": 13999,
 "stock": 28,
 "pool": "17600051_15383076"
@@ -1583,7 +1583,7 @@
 "sku": "141098324_15383076",
 "model": "Bioderma крем Hydrabio, крем для насыщенного увлажнения, 50 мл для лица 50 мл",
 "brand": "bioderma",
-"day": 13999,
+"day": 15400,
 "night": 13999,
 "stock": 28,
 "pool": "17600051_15383076"
@@ -1592,7 +1592,7 @@
 "sku": "143144544_15383076",
 "model": "Bioderma крем-гель Hydrabio для лица 40 мл",
 "brand": "bioderma",
-"day": 13000,
+"day": 14800,
 "night": 13000,
 "stock": 18,
 "pool": "17600052_15383076"
@@ -1601,7 +1601,7 @@
 "sku": "141098337_15383076",
 "model": "Bioderma крем-гель Hydrabio, гель-крем, 40 мл для лица 40 мл",
 "brand": "bioderma",
-"day": 13000,
+"day": 14800,
 "night": 13000,
 "stock": 18,
 "pool": "17600052_15383076"
@@ -1736,7 +1736,7 @@
 "sku": "169539946_15383076",
 "model": "Bioderma бальзам Atoderm 15 мл",
 "brand": "Bioderma",
-"day": 6200,
+"day": 6400,
 "night": 6200,
 "stock": 4,
 "pool": "102415463_15383076"
@@ -1745,7 +1745,7 @@
 "sku": "168937554_15383076",
 "model": "Bioderma бальзам Atoderm 15 мл",
 "brand": "Bioderma",
-"day": 6200,
+"day": 6400,
 "night": 6200,
 "stock": 4,
 "pool": "102415463_15383076"
@@ -1754,7 +1754,7 @@
 "sku": "100057262_15383076",
 "model": "Bioderma бальзам Atoderm Levres 15 мл",
 "brand": "Bioderma",
-"day": 6200,
+"day": 6400,
 "night": 4990,
 "stock": 4,
 "pool": "102415463_15383076"
@@ -1763,7 +1763,7 @@
 "sku": "135135128_15383076",
 "model": "Bioderma Atoderm гель 500 мл",
 "brand": "Bioderma",
-"day": 10800,
+"day": 12400,
 "night": 10800,
 "stock": 4,
 "pool": "150575248_15383076"
@@ -2420,7 +2420,7 @@
 "sku": "116667671_15383076",
 "model": "Bioderma Atoderm Gel Douche гель для душа 200 мл",
 "brand": "Bioderma",
-"day": 6136,
+"day": 8900,
 "night": 6136,
 "stock": 0
 },
