@@ -114,7 +114,7 @@
 "model": "Bioderma Node DS+ для лечения шампунь 125 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8645,
+"night": 8621,
 "stock": 29
 },
 {
@@ -588,7 +588,7 @@
 "model": "Bioderma Node Fluid шампунь 400 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11645,
+"night": 11594,
 "stock": 1
 },
 {
@@ -1308,7 +1308,7 @@
 "model": "Bioderma Sensibio H2O Eye мицеллярная вода 125 мл",
 "brand": "Bioderma",
 "day": 8700,
-"night": 8394,
+"night": 8343,
 "stock": 1
 },
 {
@@ -1549,7 +1549,7 @@
 "model": "Bioderma крем Sensibio Defensive Rich, активный успокаивающий крем, 40 мл для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 9145,
+"night": 9094,
 "stock": 4,
 "pool": "104596412_814862873"
 },
