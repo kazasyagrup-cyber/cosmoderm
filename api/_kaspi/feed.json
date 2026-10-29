@@ -2440,6 +2440,69 @@
 "night": 24700,
 "stock": 0,
 "pool": "112317618_15383076"
+},
+{
+"sku": "175542867_15383076",
+"model": "Bioderma N3401572288297N мицеллярная вода 250 мл",
+"brand": "Bioderma",
+"day": 7900,
+"night": 7900,
+"stock": 4,
+"pool": "21900307_15383076"
+},
+{
+"sku": "143144514_15383076",
+"model": "Bioderma Atoderm интенсивный гель 500 мл",
+"brand": "Bioderma",
+"day": 11400,
+"night": 11400,
+"stock": 4,
+"pool": "17600911_15383076"
+},
+{
+"sku": "173373767_15383076",
+"model": "Bioderma крем BIODERMA Pigmentbio Sensitive для зоны декольте 75 мл",
+"brand": "Bioderma",
+"day": 11800,
+"night": 11800,
+"stock": 1,
+"pool": "110037985_15383076"
+},
+{
+"sku": "17600921_15383076",
+"model": "Bioderma Atoderm PP Cream крем для тела 500 мл",
+"brand": "Bioderma",
+"day": 14900,
+"night": 14900,
+"stock": 0,
+"pool": "148040259_15383076"
+},
+{
+"sku": "143144515_15383076",
+"model": "Bioderma крем Photoderm солнцезащитный крем AKH Mat SPF30 для лица 40 мл",
+"brand": "Bioderma",
+"day": 13080,
+"night": 13080,
+"stock": 0,
+"pool": "17700614_15383076"
+},
+{
+"sku": "19600447_15383076",
+"model": "Маска для лица Institut Esthederm крем Lightening Buffing 75 мл",
+"brand": "Institut Esthederm",
+"day": 17800,
+"night": 17800,
+"stock": 1,
+"pool": "133397321_15383076"
+},
+{
+"sku": "19600436_15383076",
+"model": "Institut Esthederm Gentle Deep Pore Cleanser крем 75 мл",
+"brand": "Institut Esthederm",
+"day": 8700,
+"night": 8700,
+"stock": 1,
+"pool": "152687550_15383076"
 }
 ],
 "night_start_ms": 1791550800000
