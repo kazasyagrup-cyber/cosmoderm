@@ -283,7 +283,7 @@
 "model": "Bioderma Atoderm Ultra-Gentle гель 1000",
 "brand": "bioderma",
 "day": 18400,
-"night": 17994,
+"night": 17943,
 "stock": 4
 },
 {
@@ -532,7 +532,7 @@
 "model": "Bioderma Sensibio H2O мицеллярная вода 850 мл",
 "brand": "bioderma",
 "day": 15000,
-"night": 13196,
+"night": 13145,
 "stock": 4
 },
 {
@@ -844,7 +844,7 @@
 "model": "Bioderma Hydrabio H2O мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7336,
+"night": 7285,
 "stock": 4
 },
 {
@@ -1217,7 +1217,7 @@
 "model": "Bioderma Sebium H2O для жирной и комбинированной кожи мицеллярная вода 500 мл",
 "brand": "Bioderma",
 "day": 11000,
-"night": 10796,
+"night": 10745,
 "stock": 4
 },
 {
@@ -1420,7 +1420,7 @@
 "model": "Bioderma Atoderm крем для лица 200 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8696,
+"night": 8645,
 "stock": 14,
 "pool": "182626"
 },
@@ -1998,7 +1998,7 @@
 "model": "Bioderma Sebium H2O для чувствительной кожи мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7340,
+"night": 7289,
 "stock": 4,
 "pool": "21900307_15383076"
 },
