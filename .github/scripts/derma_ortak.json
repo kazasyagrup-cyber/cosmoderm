@@ -1,7 +1,7 @@
 {
-"not": "25.10.2026 kullanıcı: DERMA COSMETOLOGY (30348533) ile ortak Kaspi kartları — gece indirimi YOK (gece=gündüz), deneme 25.10 18:00 → 01.11 07:00. Fiyatlar 25.10 sabah taraması (kaspi offers). derma_rapor.py + kaspi_gece.py okur.",
+"not": "25.10.2026 kullanıcı: DERMA COSMETOLOGY (30348533) ile ortak Kaspi kartları — gece indirimi YOK (gece=gündüz), deneme 25.10 18:00 → 01.11 07:00 (30.10 kullanıcı: erken bitirildi, bit 30.10 07:00 — DERMA kartlarında gece satışı −%35). Fiyatlar 25.10 sabah taraması (kaspi offers). derma_rapor.py + kaspi_gece.py okur.",
 "bas": "2026-10-25T18:00:00+05:00",
-"bit": "2026-11-01T07:00:00+05:00",
+"bit": "2026-10-30T07:00:00+05:00",
 "kartlar": {
 "131462171": {
 "ad": "Bioderma крем Sensibio AR+ для кожи с покраснениями для лица 40 мл",
