@@ -114,7 +114,7 @@
 "model": "Bioderma Node DS+ для лечения шампунь 125 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8849,
+"night": 8798,
 "stock": 29
 },
 {
@@ -300,7 +300,7 @@
 "model": "Bioderma сыворотка Hydrabio Hyalu+ для лица 30 мл",
 "brand": "bioderma",
 "day": 17900,
-"night": 16579,
+"night": 17078,
 "stock": 4
 },
 {
@@ -588,7 +588,7 @@
 "model": "Bioderma Node Fluid шампунь 400 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11849,
+"night": 11798,
 "stock": 1
 },
 {
@@ -1151,7 +1151,7 @@
 "model": "Bioderma сыворотка-концентрат Pigmentbio для лица 15 мл",
 "brand": "Bioderma",
 "day": 16000,
-"night": 15674,
+"night": 15635,
 "stock": 1,
 "pool": "147495818_15383076"
 },
@@ -1308,7 +1308,7 @@
 "model": "Bioderma Sensibio H2O Eye мицеллярная вода 125 мл",
 "brand": "Bioderma",
 "day": 8700,
-"night": 8649,
+"night": 8598,
 "stock": 1
 },
 {
@@ -1447,7 +1447,7 @@
 "model": "Bioderma эмульсия Sebium Pore Refiner для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9776,
+"night": 9725,
 "stock": 9,
 "pool": "17700013_15383076"
 },
@@ -1549,7 +1549,7 @@
 "model": "Bioderma крем Sensibio Defensive Rich, активный успокаивающий крем, 40 мл для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 9094,
+"night": 9043,
 "stock": 4,
 "pool": "104596412_814862873"
 },
@@ -1935,7 +1935,7 @@
 "model": "Bioderma Pigmentbio крем 200 мл",
 "brand": "Bioderma",
 "day": 11900,
-"night": 11371,
+"night": 11492,
 "stock": 1,
 "pool": "167402598_15383076"
 },
