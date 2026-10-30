@@ -60,7 +60,7 @@
 "model": "Bioderma Sensibio DS+ Gel Мусс гель 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11737,
+"night": 11686,
 "stock": 4
 },
 {
@@ -156,7 +156,7 @@
 "model": "Bioderma крем Sebium Mat Control матирующий для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9547,
+"night": 9500,
 "stock": 19
 },
 {
@@ -283,7 +283,7 @@
 "model": "Bioderma Atoderm Ultra-Gentle гель 1000",
 "brand": "bioderma",
 "day": 18400,
-"night": 18096,
+"night": 18045,
 "stock": 4
 },
 {
@@ -460,7 +460,7 @@
 "model": "Bioderma крем Cicabio Arnica+ для лица 40 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8747,
+"night": 8707,
 "stock": 4
 },
 {
@@ -532,7 +532,7 @@
 "model": "Bioderma Sensibio H2O мицеллярная вода 850 мл",
 "brand": "bioderma",
 "day": 15000,
-"night": 13298,
+"night": 13247,
 "stock": 4
 },
 {
@@ -588,7 +588,7 @@
 "model": "Bioderma Node Fluid шампунь 400 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11696,
+"night": 11645,
 "stock": 1
 },
 {
@@ -844,7 +844,7 @@
 "model": "Bioderma Hydrabio H2O мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7438,
+"night": 7387,
 "stock": 4
 },
 {
@@ -1217,7 +1217,7 @@
 "model": "Bioderma Sebium H2O для жирной и комбинированной кожи мицеллярная вода 500 мл",
 "brand": "Bioderma",
 "day": 11000,
-"night": 10898,
+"night": 10847,
 "stock": 4
 },
 {
@@ -1308,7 +1308,7 @@
 "model": "Bioderma Sensibio H2O Eye мицеллярная вода 125 мл",
 "brand": "Bioderma",
 "day": 8700,
-"night": 8496,
+"night": 8445,
 "stock": 1
 },
 {
@@ -1420,7 +1420,7 @@
 "model": "Bioderma Atoderm крем для лица 200 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8798,
+"night": 8747,
 "stock": 14,
 "pool": "182626"
 },
@@ -1447,7 +1447,7 @@
 "model": "Bioderma эмульсия Sebium Pore Refiner для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9623,
+"night": 9572,
 "stock": 9,
 "pool": "17700013_15383076"
 },
@@ -1549,7 +1549,7 @@
 "model": "Bioderma крем Sensibio Defensive Rich, активный успокаивающий крем, 40 мл для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 8941,
+"night": 8890,
 "stock": 4,
 "pool": "104596412_814862873"
 },
@@ -1611,7 +1611,7 @@
 "model": "Bioderma крем Cicabio Arnica+ для лица 40 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8747,
+"night": 8707,
 "stock": 4,
 "pool": "186622"
 },
