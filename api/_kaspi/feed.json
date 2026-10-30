@@ -12,7 +12,7 @@
 "model": "Bioderma Sensibio DS+ Cream Крем против себорейного дерматита 40 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8451,
+"night": 8491,
 "stock": 4
 },
 {
@@ -182,7 +182,7 @@
 "model": "Bioderma Sebium Hydra для умывания бальзам 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11545,
+"night": 11543,
 "stock": 14
 },
 {
@@ -460,7 +460,7 @@
 "model": "Bioderma крем Cicabio Arnica+ для лица 40 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 7974,
+"night": 8849,
 "stock": 4
 },
 {
@@ -698,7 +698,7 @@
 "model": "Bioderma Atoderm Intensive гель 500 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 10847,
+"night": 11249,
 "stock": 4
 },
 {
@@ -828,7 +828,7 @@
 "model": "Bioderma Hydrabio gel moussant гель 400 мл",
 "brand": "Bioderma",
 "day": 14400,
-"night": 13709,
+"night": 14330,
 "stock": 4
 },
 {
@@ -844,7 +844,7 @@
 "model": "Bioderma Hydrabio H2O мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7491,
+"night": 7489,
 "stock": 4
 },
 {
@@ -1611,7 +1611,7 @@
 "model": "Bioderma крем Cicabio Arnica+ для лица 40 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 7974,
+"night": 8849,
 "stock": 4,
 "pool": "186622"
 },
