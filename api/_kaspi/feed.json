@@ -12,7 +12,7 @@
 "model": "Bioderma Sensibio DS+ Cream Крем против себорейного дерматита 40 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8760,
+"night": 8491,
 "stock": 4
 },
 {
@@ -60,7 +60,7 @@
 "model": "Bioderma Sensibio DS+ Gel Мусс гель 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11827,
+"night": 11826,
 "stock": 4
 },
 {
@@ -122,7 +122,7 @@
 "model": "Bioderma крем Sensibio Defensive для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 8190,
+"night": 8750,
 "stock": 4
 },
 {
@@ -156,7 +156,7 @@
 "model": "Bioderma крем Sebium Mat Control матирующий для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9750,
+"night": 9649,
 "stock": 19
 },
 {
@@ -182,7 +182,7 @@
 "model": "Bioderma Sebium Hydra для умывания бальзам 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11254,
+"night": 11253,
 "stock": 14
 },
 {
@@ -190,7 +190,7 @@
 "model": "Bioderma крем Sensibio AR+ для кожи с покраснениями для лица 40 мл",
 "brand": "bioderma",
 "day": 11400,
-"night": 9939,
+"night": 9930,
 "stock": 29
 },
 {
@@ -283,7 +283,7 @@
 "model": "Bioderma Atoderm Ultra-Gentle гель 1000",
 "brand": "bioderma",
 "day": 18400,
-"night": 17943,
+"night": 18147,
 "stock": 4
 },
 {
@@ -300,7 +300,7 @@
 "model": "Bioderma сыворотка Hydrabio Hyalu+ для лица 30 мл",
 "brand": "bioderma",
 "day": 17900,
-"night": 17850,
+"night": 17078,
 "stock": 4
 },
 {
@@ -419,7 +419,7 @@
 "model": "Bioderma крем Atoderm Intensive для области вокруг глаз 100 мл",
 "brand": "bioderma",
 "day": 12400,
-"night": 12250,
+"night": 12243,
 "stock": 9
 },
 {
@@ -460,7 +460,7 @@
 "model": "Bioderma крем Cicabio Arnica+ для лица 40 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8850,
+"night": 8849,
 "stock": 4
 },
 {
@@ -532,7 +532,7 @@
 "model": "Bioderma Sensibio H2O мицеллярная вода 850 мл",
 "brand": "bioderma",
 "day": 15000,
-"night": 13145,
+"night": 13349,
 "stock": 4
 },
 {
@@ -588,7 +588,7 @@
 "model": "Bioderma Node Fluid шампунь 400 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11850,
+"night": 11849,
 "stock": 1
 },
 {
@@ -844,7 +844,7 @@
 "model": "Bioderma Hydrabio H2O мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7285,
+"night": 7564,
 "stock": 4
 },
 {
@@ -1151,7 +1151,7 @@
 "model": "Bioderma сыворотка-концентрат Pigmentbio для лица 15 мл",
 "brand": "Bioderma",
 "day": 16000,
-"night": 15949,
+"night": 15635,
 "stock": 1,
 "pool": "147495818_15383076"
 },
@@ -1201,7 +1201,7 @@
 "model": "Bioderma Sebium H2O 100 мл мицеллярная вода",
 "brand": "Bioderma",
 "day": 4500,
-"night": 4449,
+"night": 4123,
 "stock": 4
 },
 {
@@ -1217,7 +1217,7 @@
 "model": "Bioderma Sebium H2O для жирной и комбинированной кожи мицеллярная вода 500 мл",
 "brand": "Bioderma",
 "day": 11000,
-"night": 10745,
+"night": 10949,
 "stock": 4
 },
 {
@@ -1225,7 +1225,7 @@
 "model": "Bioderma Sensibio H20 AR мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 8400,
-"night": 7320,
+"night": 7763,
 "stock": 4
 },
 {
@@ -1308,7 +1308,7 @@
 "model": "Bioderma Sensibio H2O Eye мицеллярная вода 125 мл",
 "brand": "Bioderma",
 "day": 8700,
-"night": 8650,
+"night": 8649,
 "stock": 1
 },
 {
@@ -1420,7 +1420,7 @@
 "model": "Bioderma Atoderm крем для лица 200 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8645,
+"night": 8849,
 "stock": 14,
 "pool": "182626"
 },
@@ -1447,7 +1447,7 @@
 "model": "Bioderma эмульсия Sebium Pore Refiner для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9500,
+"night": 9776,
 "stock": 9,
 "pool": "17700013_15383076"
 },
@@ -1611,7 +1611,7 @@
 "model": "Bioderma крем Cicabio Arnica+ для лица 40 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8850,
+"night": 8849,
 "stock": 4,
 "pool": "186622"
 },
@@ -1683,7 +1683,7 @@
 "model": "Bioderma сыворотка Sensibio AR+ BI сыворотка для лица 30 мл",
 "brand": "bioderma",
 "day": 17900,
-"night": 17850,
+"night": 17818,
 "stock": 4,
 "pool": "131512476_861368864"
 },
@@ -1998,7 +1998,7 @@
 "model": "Bioderma Sebium H2O для чувствительной кожи мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7289,
+"night": 7544,
 "stock": 4,
 "pool": "21900307_15383076"
 },
