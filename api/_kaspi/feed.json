@@ -60,7 +60,7 @@
 "model": "Bioderma Sensibio DS+ Gel Мусс гель 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11775,
+"night": 11724,
 "stock": 4
 },
 {
@@ -122,7 +122,7 @@
 "model": "Bioderma крем Sensibio Defensive для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 8687,
+"night": 8636,
 "stock": 4
 },
 {
@@ -156,7 +156,7 @@
 "model": "Bioderma крем Sebium Mat Control матирующий для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9598,
+"night": 9547,
 "stock": 19
 },
 {
@@ -283,7 +283,7 @@
 "model": "Bioderma Atoderm Ultra-Gentle гель 1000",
 "brand": "bioderma",
 "day": 18400,
-"night": 18144,
+"night": 18093,
 "stock": 4
 },
 {
@@ -532,7 +532,7 @@
 "model": "Bioderma Sensibio H2O мицеллярная вода 850 мл",
 "brand": "bioderma",
 "day": 15000,
-"night": 13349,
+"night": 13298,
 "stock": 4
 },
 {
@@ -844,7 +844,7 @@
 "model": "Bioderma Hydrabio H2O мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7476,
+"night": 7425,
 "stock": 4
 },
 {
@@ -852,7 +852,7 @@
 "model": "Bioderma Hydrabio H2O 500 мл мицеллярная вода",
 "brand": "Bioderma",
 "day": 11000,
-"night": 9936,
+"night": 9885,
 "stock": 4
 },
 {
@@ -1193,7 +1193,7 @@
 "model": "Bioderma Sebium Gel Moussant гель 400 мл",
 "brand": "Bioderma",
 "day": 14900,
-"night": 13549,
+"night": 13498,
 "stock": 11
 },
 {
@@ -1234,7 +1234,7 @@
 "model": "Bioderma Sebium H2O для жирной и комбинированной кожи мицеллярная вода 500 мл",
 "brand": "Bioderma",
 "day": 11000,
-"night": 10949,
+"night": 10898,
 "stock": 4
 },
 {
@@ -1317,7 +1317,7 @@
 "model": "Bioderma Sensibio H2O мицеллярная вода 500 мл",
 "brand": "Bioderma",
 "day": 11000,
-"night": 9580,
+"night": 9920,
 "stock": 9
 },
 {
@@ -1349,7 +1349,7 @@
 "model": "Bioderma тоник Sensibio Tonique 250 мл",
 "brand": "Bioderma",
 "day": 8400,
-"night": 7905,
+"night": 7854,
 "stock": 4
 },
 {
@@ -1437,7 +1437,7 @@
 "model": "Bioderma Atoderm крем для лица 200 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8849,
+"night": 8798,
 "stock": 14,
 "pool": "182626"
 },
