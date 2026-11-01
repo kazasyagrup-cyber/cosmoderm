@@ -52,7 +52,7 @@
 "model": "Bioderma лосьон-тоник Sebium Lotion 200 мл",
 "brand": "bioderma",
 "day": 16900,
-"night": 16696,
+"night": 16645,
 "stock": 19
 },
 {
@@ -60,7 +60,7 @@
 "model": "Bioderma Sensibio DS+ Gel Мусс гель 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11673,
+"night": 11622,
 "stock": 4
 },
 {
@@ -106,7 +106,7 @@
 "model": "Bioderma Sebium Actif гель 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 10949,
+"night": 10898,
 "stock": 4
 },
 {
@@ -243,7 +243,7 @@
 "model": "Bioderma крем Sebium Global для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 10798,
+"night": 10747,
 "stock": 9
 },
 {
@@ -460,7 +460,7 @@
 "model": "Bioderma крем Cicabio Arnica+ для лица 40 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8747,
+"night": 8707,
 "stock": 4
 },
 {
@@ -1628,7 +1628,7 @@
 "model": "Bioderma крем Cicabio Arnica+ для лица 40 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8747,
+"night": 8707,
 "stock": 4,
 "pool": "186622"
 },
@@ -2015,7 +2015,7 @@
 "model": "Bioderma Sebium H2O для чувствительной кожи мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7493,
+"night": 7442,
 "stock": 4,
 "pool": "21900307_15383076"
 },
