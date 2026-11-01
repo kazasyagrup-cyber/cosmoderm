@@ -107,7 +107,8 @@ async function wbRecords(sinceMs, token) {
     for (const o of orders) {
       const s = st[o.id] || {};
       if (s.supplierStatus === 'cancel' || /^(canceled|declined)/i.test(s.wbStatus || '')) continue;
-      const sku = (o.skus || [])[0];
+      // 01.11: kartta birden çok barkod olabilir (WB 20… + EAN) → haritada tanınanı seç; yoksa ilki
+      const sku = (o.skus || []).find((k) => IDX.wb[k] || SETIDX.wb[k]) || (o.skus || [])[0];
       if (sku) recs.push({ ts: Date.parse(o.createdAt) || 0, key: sku, q: 1 });
     }
     return recs;
