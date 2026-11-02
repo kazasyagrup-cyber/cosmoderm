@@ -76,7 +76,7 @@
 "model": "Bioderma крем Atoderm Creme Ultra для лица 200 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 7792,
+"night": 7950,
 "stock": 14
 },
 {
@@ -147,7 +147,7 @@
 "model": "Bioderma крем Sebium сенситив для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 10850,
+"night": 10900,
 "stock": 9,
 "pool": "17600066_15383076"
 },
@@ -1325,7 +1325,7 @@
 "model": "Bioderma Sensibio H2O Eye мицеллярная вода 125 мл",
 "brand": "Bioderma",
 "day": 8700,
-"night": 8649,
+"night": 8650,
 "stock": 1
 },
 {
@@ -1700,7 +1700,7 @@
 "model": "Bioderma сыворотка Sensibio AR+ BI сыворотка для лица 30 мл",
 "brand": "bioderma",
 "day": 17900,
-"night": 17818,
+"night": 17850,
 "stock": 4,
 "pool": "131512476_861368864"
 },
@@ -1772,7 +1772,7 @@
 "model": "Bioderma бальзам Atoderm Levres 15 мл",
 "brand": "Bioderma",
 "day": 6400,
-"night": 6349,
+"night": 6350,
 "stock": 4,
 "pool": "102415463_15383076"
 },
