@@ -2511,6 +2511,22 @@
 "night": 8700,
 "stock": 1,
 "pool": "152687550_15383076"
+},
+{
+"sku": "118002366_15383076",
+"model": "Institut Esthederm OSMO MAXI DEMAQ HYDRA 400ML молочко 400 мл",
+"brand": "Institut Esthederm",
+"day": 21800,
+"night": 21800,
+"stock": 0
+},
+{
+"sku": "117134933_15383076",
+"model": "Institut Esthederm крем EXCELLAGE CREME для лица 50 мл",
+"brand": "Institut Esthederm",
+"day": 32700,
+"night": 32700,
+"stock": 0
 }
 ],
 "night_start_ms": 1791550800000
