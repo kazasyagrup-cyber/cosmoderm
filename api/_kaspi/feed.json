@@ -20,7 +20,7 @@
 "model": "Bioderma ABCDerm гель 1000 мл",
 "brand": "Bioderma",
 "day": 15900,
-"night": 13850,
+"night": 13940,
 "stock": 2
 },
 {
@@ -182,7 +182,7 @@
 "model": "Bioderma Sebium Hydra для умывания бальзам 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 10822,
+"night": 10922,
 "stock": 14
 },
 {
@@ -410,7 +410,7 @@
 "model": "Bioderma крем Atoderm Intensive для области вокруг глаз 100 мл",
 "brand": "bioderma",
 "day": 12400,
-"night": 10800,
+"night": 11438,
 "stock": 9
 },
 {
@@ -499,7 +499,7 @@
 "model": "Bioderma Atoderm масло 1000",
 "brand": "bioderma",
 "day": 20900,
-"night": 18200,
+"night": 19313,
 "stock": 4
 },
 {
@@ -531,7 +531,7 @@
 "model": "Bioderma сыворотка Sensibio AR+ BI для лица 30 мл",
 "brand": "bioderma",
 "day": 17900,
-"night": 15590,
+"night": 17850,
 "stock": 4
 },
 {
@@ -638,7 +638,7 @@
 "model": "Bioderma бальзам Atoderm Restorative 15 мл",
 "brand": "Bioderma",
 "day": 6400,
-"night": 4990,
+"night": 5839,
 "stock": 4
 },
 {
@@ -697,7 +697,7 @@
 "model": "Bioderma Atoderm mains & ongles крем для рук 50 мл",
 "brand": "Bioderma",
 "day": 4400,
-"night": 3840,
+"night": 4026,
 "stock": 4
 },
 {
@@ -713,7 +713,7 @@
 "model": "Bioderma бальзам Atoderm Stick Levres 4 г",
 "brand": "Bioderma",
 "day": 5400,
-"night": 4710,
+"night": 4940,
 "stock": 4
 },
 {
@@ -819,7 +819,7 @@
 "model": "Bioderma Hydrabio gel moussant гель 400 мл",
 "brand": "Bioderma",
 "day": 14400,
-"night": 12540,
+"night": 13291,
 "stock": 4
 },
 {
@@ -1143,7 +1143,7 @@
 "model": "Bioderma ночной крем Pigmentbio для лица 50 мл",
 "brand": "Bioderma",
 "day": 22500,
-"night": 19940,
+"night": 19600,
 "stock": 1
 },
 {
@@ -1159,7 +1159,7 @@
 "model": "Bioderma сыворотка-концентрат Pigmentbio для лица 15 мл",
 "brand": "Bioderma",
 "day": 16000,
-"night": 13940,
+"night": 14774,
 "stock": 1,
 "pool": "147495818_15383076"
 },
@@ -2329,7 +2329,7 @@
 "model": "Bioderma крем-гель ATODERM Intensive Gel-Creme для лица 200 мл",
 "brand": "Bioderma",
 "day": 12800,
-"night": 11150,
+"night": 11809,
 "stock": 0
 },
 {
