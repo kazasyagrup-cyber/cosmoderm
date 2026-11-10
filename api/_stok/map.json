@@ -2942,18 +2942,6 @@
 },
 {
 "platform":"kaspi",
-"key":"169492134_15383076",
-"ad":"Bioderma BIODERMA Sébium Mat Control 30 мл — 1+1 набор по уходу за лицом унисекс",
-"acik":true,
-"bilesen":[
-{
-"ean":"3701129811955",
-"adet":2
-}
-]
-},
-{
-"platform":"kaspi",
 "key":"132802926_15383076",
 "ad":"Bioderma Bioderma Sensibio AR+ крем 40мл + Sensibio AR+мицеллярный гель 250мл набор по уходу за лицом унисекс",
 "acik":true,
@@ -3057,22 +3045,6 @@
 {
 "ean":"3701129812013",
 "adet":2
-}
-]
-},
-{
-"platform":"kaspi",
-"key":"171268502_15383076",
-"ad":"Bioderma Sebium Mat Control + H2O Sebium 250 набор по уходу за лицом унисекс",
-"acik":true,
-"bilesen":[
-{
-"ean":"3701129811955",
-"adet":1
-},
-{
-"ean":"3401572288297",
-"adet":1
 }
 ]
 },
