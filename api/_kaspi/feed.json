@@ -156,7 +156,7 @@
 "model": "Bioderma крем Sebium Mat Control матирующий для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9547,
+"night": 9500,
 "stock": 19
 },
 {
@@ -369,7 +369,7 @@
 "model": "Bioderma крем Photoderm Spot-Age invisible SPF 50+ для лица, для зоны декольте 40 мл",
 "brand": "bioderma",
 "day": 13900,
-"night": 13747,
+"night": 13696,
 "stock": 1,
 "pool": "117992665_780138579"
 },
@@ -451,7 +451,7 @@
 "model": "Bioderma крем Cicabio Arnica+ для лица 40 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8092,
+"night": 8041,
 "stock": 4
 },
 {
@@ -713,7 +713,7 @@
 "model": "Bioderma бальзам Atoderm Stick Levres 4 г",
 "brand": "Bioderma",
 "day": 5400,
-"night": 4889,
+"night": 4710,
 "stock": 4
 },
 {
@@ -1512,7 +1512,7 @@
 "model": "Bioderma Sebium бальзам 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11850,
+"night": 11720,
 "stock": 14,
 "pool": "116776902_969397242"
 },
@@ -1619,7 +1619,7 @@
 "model": "Bioderma крем Cicabio Arnica+ для лица 40 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8092,
+"night": 8041,
 "stock": 4,
 "pool": "186622"
 },
@@ -1772,7 +1772,7 @@
 "model": "Bioderma Atoderm гель 500 мл",
 "brand": "Bioderma",
 "day": 12400,
-"night": 11197,
+"night": 11146,
 "stock": 4,
 "pool": "150575248_15383076"
 },
