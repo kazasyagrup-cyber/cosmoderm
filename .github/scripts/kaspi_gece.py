@@ -17,6 +17,7 @@ Repo PUBLIC: loga fiyat/alış YAZILMAZ, sadece sayılar. feed.json'u yazar; com
 import datetime, hashlib, http.cookiejar, json, math, os, sys, time, urllib.request
 
 MID = '15383076'; EXP = 0.30; MIN_KAR = 0.10; INDIRIM = 50
+RESMI_ID = '30234404'   # 10.11: Bioderma - Institut Esthederm Official (set_resmi ilanları bu satıcının fiyatını takip eder)
 KOM, VERGI = 0.125, 0.03; ESIKLER = (9990, 4990)   # 23.10: teslimat eşiği kuralı (naos-kz-rapor/kaspi_karlilik_esik.py ile aynı varsayım)
 BOT_RAKIP, BOT_FARK = {'30348533'}, 5   # 24.10: DERMA COSMETOLOGY — fiyatımızın 1 ₸ altına inen bot; 1..BOT_FARK ₸ altımızdaysa yok sayılır
 
@@ -70,6 +71,26 @@ for it in items:
     pid = SKU_PID.get(sku, sku.split('_')[0])
     cost = ALIS.get(sku)
     yeni, neden = day, ''
+    if it.get('set_resmi'):   # 10.11 kullanıcı: resmi satıcılı İKİLİ SET ilanları — gündüz = resmi satıcı fiyatı, gece = resmi − 50; resmi fiyat zarar ettirirse SATIŞ DIŞI
+        if pid not in cache:
+            try: cache[pid] = offers(pid)
+            except Exception as e: cache[pid] = None; hata += 1; print('HATA kart', pid, type(e).__name__)
+            time.sleep(0.3)
+        offs = cache[pid]
+        rp = [o['price'] for o in (offs or []) if str(o.get('merchantId')) == RESMI_ID and o.get('price')]
+        if offs is None or not rp or not cost:
+            nedenler['set: resmi yok/okunamadı — dokunulmadı'] = nedenler.get('set: resmi yok/okunamadı — dokunulmadı', 0) + 1
+            continue
+        p = int(round(min(rp)))
+        if net(p, cost) < 0:
+            if not it.get('satis_disi'): degisen += 1
+            it['satis_disi'] = True; nedenler['set: resmi fiyatta ZARAR → satış dışı'] = nedenler.get('set: resmi fiyatta ZARAR → satış dışı', 0) + 1
+            continue
+        g = p - INDIRIM if net(p - INDIRIM, cost) >= 0 else p
+        if it.get('satis_disi') or it['day'] != p or it['night'] != g: degisen += 1
+        it.pop('satis_disi', None); it['day'] = p; it['night'] = g
+        nedenler['set: resmi fiyat / gece −50'] = nedenler.get('set: resmi fiyat / gece −50', 0) + 1
+        continue
     if it.get('sabit_gece'):   # 21.10 kullanıcı: elle sabitlenen gece fiyatı (Node A/G/P gündüz −%10, Atoderm Baume 45 2950) — görev DOKUNMAZ
         nedenler['elle sabit'] = nedenler.get('elle sabit', 0) + 1
         continue
