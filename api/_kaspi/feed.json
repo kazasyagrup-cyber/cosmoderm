@@ -36,7 +36,7 @@
 "model": "Bioderma бальзам Atoderm Intensive для лица и тела 200 мл",
 "brand": "bioderma",
 "day": 15400,
-"night": 14218,
+"night": 13420,
 "stock": 14
 },
 {
@@ -426,7 +426,7 @@
 "model": "Bioderma Atoderm Huile De Douche Масло косметическое для душа 500 ml масло 500 мл",
 "brand": "bioderma",
 "day": 16400,
-"night": 16170,
+"night": 14290,
 "stock": 4,
 "pool": "137699418_893299201"
 },
@@ -499,7 +499,7 @@
 "model": "Bioderma Atoderm масло 1000",
 "brand": "bioderma",
 "day": 20900,
-"night": 19313,
+"night": 18200,
 "stock": 4
 },
 {
@@ -827,7 +827,7 @@
 "model": "Bioderma Hydrabio H2O мицеллярная вода 100 мл",
 "brand": "Bioderma",
 "day": 4500,
-"night": 3939,
+"night": 3920,
 "stock": 4
 },
 {
@@ -843,7 +843,7 @@
 "model": "Bioderma Hydrabio H2O 500 мл мицеллярная вода",
 "brand": "Bioderma",
 "day": 11000,
-"night": 9990,
+"night": 9580,
 "stock": 4
 },
 {
@@ -851,7 +851,7 @@
 "model": "Bioderma тоник Hydrabio Tonique 250 мл",
 "brand": "Bioderma",
 "day": 8400,
-"night": 7721,
+"night": 7320,
 "stock": 4
 },
 {
@@ -1292,7 +1292,7 @@
 "model": "Bioderma Sensibio H2O мицеллярная вода 100 мл",
 "brand": "Bioderma",
 "day": 4500,
-"night": 4119,
+"night": 3920,
 "stock": 4
 },
 {
