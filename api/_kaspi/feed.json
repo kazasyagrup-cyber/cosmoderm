@@ -2527,6 +2527,54 @@
 "day": 32700,
 "night": 32700,
 "stock": 0
+},
+{
+"sku": "116776898_15383076",
+"model": "Bioderma Cicabio Восстанавливающий и успокаивающий крем для тела 40 мл",
+"brand": "Bioderma",
+"day": 8900,
+"night": 8900,
+"stock": 0
+},
+{
+"sku": "17600362_15383076",
+"model": "Bioderma флюид Photoderm Max SPF100 для лица 40 мл",
+"brand": "Bioderma",
+"day": 12900,
+"night": 12900,
+"stock": 0
+},
+{
+"sku": "119283744_15383076",
+"model": "Bioderma флюид PHOTODERM Cолнцезащитный со светлым оттенком light SPF100+ для лица 40 мл",
+"brand": "Bioderma",
+"day": 12900,
+"night": 12900,
+"stock": 0
+},
+{
+"sku": "178158813_15383076",
+"model": "Bioderma флюид Photoderm Ultra Fluid AR+ для зоны декольте, для лица 40 мл",
+"brand": "Bioderma",
+"day": 13900,
+"night": 13900,
+"stock": 0
+},
+{
+"sku": "118001657_15383076",
+"model": "Institut Esthederm сыворотка INT PROPOLIS+ SAL ACID SÉRUM CONC",
+"brand": "Institut Esthederm",
+"day": 23000,
+"night": 23000,
+"stock": 0
+},
+{
+"sku": "181664434_15383076",
+"model": "Institut Esthederm крем NAD+ Cream для лица 50 мл",
+"brand": "Institut Esthederm",
+"day": 25500,
+"night": 25500,
+"stock": 0
 }
 ],
 "night_start_ms": 1791550800000
