@@ -156,7 +156,7 @@
 "model": "Bioderma крем Sebium Mat Control матирующий для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9990,
+"night": 9649,
 "stock": 19
 },
 {
@@ -369,7 +369,7 @@
 "model": "Bioderma крем Photoderm Spot-Age invisible SPF 50+ для лица, для зоны декольте 40 мл",
 "brand": "bioderma",
 "day": 13900,
-"night": 13850,
+"night": 13849,
 "stock": 1,
 "pool": "117992665_780138579"
 },
@@ -426,7 +426,7 @@
 "model": "Bioderma Atoderm Huile De Douche Масло косметическое для душа 500 ml масло 500 мл",
 "brand": "bioderma",
 "day": 16400,
-"night": 15617,
+"night": 16170,
 "stock": 4,
 "pool": "137699418_893299201"
 },
@@ -451,7 +451,7 @@
 "model": "Bioderma крем Cicabio Arnica+ для лица 40 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 7974,
+"night": 8194,
 "stock": 4
 },
 {
@@ -705,7 +705,7 @@
 "model": "Bioderma крем Atoderm Nutritive для лица 40 мл",
 "brand": "Bioderma",
 "day": 6400,
-"night": 5879,
+"night": 5878,
 "stock": 2
 },
 {
@@ -753,7 +753,7 @@
 "model": "Institut Esthederm спрей EAU CELLULAIRE 200 мл",
 "brand": "Institut Esthederm",
 "day": 15990,
-"night": 15990,
+"night": 13384,
 "stock": 4
 },
 {
@@ -827,7 +827,7 @@
 "model": "Bioderma Hydrabio H2O мицеллярная вода 100 мл",
 "brand": "Bioderma",
 "day": 4500,
-"night": 3920,
+"night": 3939,
 "stock": 4
 },
 {
@@ -835,7 +835,7 @@
 "model": "Bioderma Hydrabio H2O мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7115,
+"night": 7268,
 "stock": 4
 },
 {
@@ -843,7 +843,7 @@
 "model": "Bioderma Hydrabio H2O 500 мл мицеллярная вода",
 "brand": "Bioderma",
 "day": 11000,
-"night": 9837,
+"night": 9990,
 "stock": 4
 },
 {
@@ -1292,7 +1292,7 @@
 "model": "Bioderma Sensibio H2O мицеллярная вода 100 мл",
 "brand": "Bioderma",
 "day": 4500,
-"night": 3920,
+"night": 4119,
 "stock": 4
 },
 {
@@ -1530,7 +1530,7 @@
 "model": "Bioderma крем Pigmentbio Daily Care SPF50+ для лица 40 мл",
 "brand": "bioderma",
 "day": 18000,
-"night": 16945,
+"night": 15945,
 "stock": 1,
 "pool": "100309236_391253203"
 },
@@ -1557,7 +1557,7 @@
 "model": "Bioderma крем Sensibio Defensive Rich, активный успокаивающий крем, 40 мл для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 8257,
+"night": 8206,
 "stock": 4,
 "pool": "104596412_814862873"
 },
@@ -1619,7 +1619,7 @@
 "model": "Bioderma крем Cicabio Arnica+ для лица 40 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 7974,
+"night": 8194,
 "stock": 4,
 "pool": "186622"
 },
@@ -1655,7 +1655,7 @@
 "model": "Bioderma Sensibio gel гель-мусс 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11324,
+"night": 9990,
 "stock": 29,
 "pool": "21900355_139862"
 },
@@ -1772,7 +1772,7 @@
 "model": "Bioderma Atoderm гель 500 мл",
 "brand": "Bioderma",
 "day": 12400,
-"night": 11350,
+"night": 11299,
 "stock": 4,
 "pool": "150575248_15383076"
 },
@@ -1799,7 +1799,7 @@
 "model": "Bioderma Atoderm, Main & Ongles, ультрапитательный крем, 50 мл крем для рук 50 г",
 "brand": "Bioderma",
 "day": 4400,
-"night": 4158,
+"night": 4400,
 "stock": 4,
 "pool": "17600922_15383076"
 },
@@ -2311,7 +2311,7 @@
 "model": "Bioderma крем Atoderm Intensive Baume для лица 500 мл",
 "brand": "Bioderma",
 "day": 21900,
-"night": 21650,
+"night": 21279,
 "stock": 0,
 "pool": "169415444_15383076"
 },
