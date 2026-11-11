@@ -2890,6 +2890,14 @@
 "night": 16158,
 "stock": 0,
 "set_resmi": true
+},
+{
+"sku": "3461020017831",
+"model": "Institut Esthederm Intensive NAD+ сыворотка для лица 30 мл",
+"brand": "institutesthederm",
+"day": 17500,
+"night": 17500,
+"stock": 0
 }
 ],
 "night_start_ms": 1791550800000
