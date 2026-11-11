@@ -60,7 +60,7 @@
 "model": "Bioderma Sensibio DS+ Gel Мусс гель 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11571,
+"night": 11520,
 "stock": 4
 },
 {
@@ -300,7 +300,7 @@
 "model": "Bioderma сыворотка Hydrabio Hyalu+ для лица 30 мл",
 "brand": "bioderma",
 "day": 17900,
-"night": 16194,
+"night": 16143,
 "stock": 4
 },
 {
@@ -369,7 +369,7 @@
 "model": "Bioderma крем Photoderm Spot-Age invisible SPF 50+ для лица, для зоны декольте 40 мл",
 "brand": "bioderma",
 "day": 13900,
-"night": 13594,
+"night": 13571,
 "stock": 1,
 "pool": "117992665_780138579"
 },
@@ -451,7 +451,7 @@
 "model": "Bioderma крем Cicabio Arnica+ для лица 40 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8594,
+"night": 8543,
 "stock": 4
 },
 {
@@ -579,7 +579,7 @@
 "model": "Bioderma Node Fluid шампунь 400 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11594,
+"night": 11543,
 "stock": 1
 },
 {
@@ -1012,7 +1012,7 @@
 "model": "Bioderma Node K кератолитический при псориазе шампунь 150 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 9930,
+"night": 9939,
 "stock": 2
 },
 {
@@ -1619,7 +1619,7 @@
 "model": "Bioderma крем Cicabio Arnica+ для лица 40 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8594,
+"night": 8543,
 "stock": 4,
 "pool": "186622"
 },
@@ -1763,7 +1763,7 @@
 "model": "Bioderma бальзам Atoderm Levres 15 мл",
 "brand": "Bioderma",
 "day": 6400,
-"night": 6145,
+"night": 6094,
 "stock": 4,
 "pool": "102415463_15383076"
 },
@@ -1772,7 +1772,7 @@
 "model": "Bioderma Atoderm гель 500 мл",
 "brand": "Bioderma",
 "day": 12400,
-"night": 11094,
+"night": 11043,
 "stock": 4,
 "pool": "150575248_15383076"
 },
