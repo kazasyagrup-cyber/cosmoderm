@@ -147,7 +147,7 @@
 "model": "Bioderma крем Sebium сенситив для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 10850,
+"night": 10900,
 "stock": 9,
 "pool": "17600066_15383076"
 },
@@ -283,7 +283,7 @@
 "model": "Bioderma Atoderm Ultra-Gentle гель 1000",
 "brand": "bioderma",
 "day": 18400,
-"night": 18096,
+"night": 18045,
 "stock": 4
 },
 {
@@ -835,7 +835,7 @@
 "model": "Bioderma Hydrabio H2O мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7353,
+"night": 7302,
 "stock": 4
 },
 {
@@ -1012,7 +1012,7 @@
 "model": "Bioderma Node K кератолитический при псориазе шампунь 150 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 9939,
+"night": 9930,
 "stock": 2
 },
 {
@@ -1428,7 +1428,7 @@
 "model": "Bioderma Atoderm крем для лица 200 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8798,
+"night": 8747,
 "stock": 14,
 "pool": "182626"
 },
@@ -1781,7 +1781,7 @@
 "model": "Bioderma Atoderm интенсивный гель 500 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 11205,
+"night": 11400,
 "stock": 4,
 "pool": "17600911_15383076"
 },
