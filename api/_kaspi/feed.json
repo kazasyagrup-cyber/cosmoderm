@@ -283,7 +283,7 @@
 "model": "Bioderma Atoderm Ultra-Gentle гель 1000",
 "brand": "bioderma",
 "day": 18400,
-"night": 17994,
+"night": 17943,
 "stock": 4
 },
 {
@@ -835,7 +835,7 @@
 "model": "Bioderma Hydrabio H2O мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7251,
+"night": 7200,
 "stock": 4
 },
 {
@@ -1012,7 +1012,7 @@
 "model": "Bioderma Node K кератолитический при псориазе шампунь 150 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 9939,
+"night": 9930,
 "stock": 2
 },
 {
@@ -1428,7 +1428,7 @@
 "model": "Bioderma Atoderm крем для лица 200 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8696,
+"night": 8645,
 "stock": 14,
 "pool": "182626"
 },
