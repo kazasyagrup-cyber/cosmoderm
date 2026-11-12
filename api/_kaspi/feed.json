@@ -139,7 +139,7 @@
 "model": "Bioderma крем Sebium Sensitive для чувствительной жирной кожи для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9500,
+"night": 9990,
 "stock": 9
 },
 {
@@ -190,7 +190,7 @@
 "model": "Bioderma крем Sensibio AR+ для кожи с покраснениями для лица 40 мл",
 "brand": "bioderma",
 "day": 11400,
-"night": 9930,
+"night": 11250,
 "stock": 29
 },
 {
@@ -811,7 +811,7 @@
 "model": "Bioderma крем Hydrabio Riche для лица 40 мл",
 "brand": "Bioderma",
 "day": 15400,
-"night": 15324,
+"night": 15323,
 "stock": 4
 },
 {
@@ -819,7 +819,7 @@
 "model": "Bioderma Hydrabio gel moussant гель 400 мл",
 "brand": "Bioderma",
 "day": 14400,
-"night": 14328,
+"night": 14326,
 "stock": 4
 },
 {
@@ -1012,7 +1012,7 @@
 "model": "Bioderma Node K кератолитический при псориазе шампунь 150 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 9940,
+"night": 9930,
 "stock": 2
 },
 {
