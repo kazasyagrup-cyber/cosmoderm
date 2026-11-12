@@ -130,7 +130,7 @@
 "model": "Bioderma крем Sensibio Defensive, активный успокаивающий крем, без запаха, 40 мл для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 9400,
+"night": 9350,
 "stock": 4,
 "pool": "104103847_576733923"
 },
@@ -571,7 +571,7 @@
 "model": "Bioderma Atoderm intensive foaming gel гель 1000",
 "brand": "bioderma",
 "day": 17400,
-"night": 16716,
+"night": 17349,
 "stock": 4
 },
 {
@@ -811,7 +811,7 @@
 "model": "Bioderma крем Hydrabio Riche для лица 40 мл",
 "brand": "Bioderma",
 "day": 15400,
-"night": 15326,
+"night": 15325,
 "stock": 4
 },
 {
@@ -819,7 +819,7 @@
 "model": "Bioderma Hydrabio gel moussant гель 400 мл",
 "brand": "Bioderma",
 "day": 14400,
-"night": 14330,
+"night": 14328,
 "stock": 4
 },
 {
@@ -827,7 +827,7 @@
 "model": "Bioderma Hydrabio H2O мицеллярная вода 100 мл",
 "brand": "Bioderma",
 "day": 4500,
-"night": 3920,
+"night": 3939,
 "stock": 4
 },
 {
@@ -835,7 +835,7 @@
 "model": "Bioderma Hydrabio H2O мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7572,
+"night": 7570,
 "stock": 4
 },
 {
@@ -1012,7 +1012,7 @@
 "model": "Bioderma Node K кератолитический при псориазе шампунь 150 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 9940,
+"night": 9930,
 "stock": 2
 },
 {
@@ -2625,8 +2625,8 @@
 "sku": "117633403_15383076",
 "model": "Bioderma Atoderm Масло для душа 1л + Бальзам 200мл для сухой атопичной кожей набор для тела унисекс",
 "brand": "Bioderma",
-"day": 36300,
-"night": 36300,
+"day": 31300,
+"night": 31300,
 "stock": 0,
 "set_resmi": true
 },
