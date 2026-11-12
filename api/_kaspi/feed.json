@@ -571,7 +571,7 @@
 "model": "Bioderma Atoderm intensive foaming gel гель 1000",
 "brand": "bioderma",
 "day": 17400,
-"night": 16716,
+"night": 16883,
 "stock": 4
 },
 {
@@ -835,7 +835,7 @@
 "model": "Bioderma Hydrabio H2O мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7570,
+"night": 7568,
 "stock": 4
 },
 {
@@ -1012,7 +1012,7 @@
 "model": "Bioderma Node K кератолитический при псориазе шампунь 150 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 9930,
+"night": 9940,
 "stock": 2
 },
 {
@@ -1348,7 +1348,7 @@
 "model": "Bioderma крем Sensibio Forte против покраснения для лица 40 мл",
 "brand": "Bioderma",
 "day": 8900,
-"night": 8440,
+"night": 7799,
 "stock": 4
 },
 {
@@ -1557,7 +1557,7 @@
 "model": "Bioderma крем Sensibio Defensive Rich, активный успокаивающий крем, 40 мл для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 8206,
+"night": 8470,
 "stock": 4,
 "pool": "104596412_814862873"
 },
@@ -2412,7 +2412,7 @@
 "model": "Institut Esthederm сыворотка Intensive Pro Collagen Serum для лица 30 мл",
 "brand": "Institut Esthederm",
 "day": 20737,
-"night": 18665,
+"night": 19650,
 "stock": 0,
 "pool": "117138798_15383076"
 },
