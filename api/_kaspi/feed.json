@@ -122,7 +122,7 @@
 "model": "Bioderma крем Sensibio Defensive для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 9244,
+"night": 9242,
 "stock": 4
 },
 {
@@ -182,7 +182,7 @@
 "model": "Bioderma Sebium Hydra для умывания бальзам 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11834,
+"night": 11830,
 "stock": 14
 },
 {
@@ -819,7 +819,7 @@
 "model": "Bioderma Hydrabio gel moussant гель 400 мл",
 "brand": "Bioderma",
 "day": 14400,
-"night": 14326,
+"night": 14324,
 "stock": 4
 },
 {
@@ -1012,7 +1012,7 @@
 "model": "Bioderma Node K кератолитический при псориазе шампунь 150 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 9940,
+"night": 9930,
 "stock": 2
 },
 {
@@ -1691,7 +1691,7 @@
 "model": "Bioderma сыворотка Sensibio AR+ BI сыворотка для лица 30 мл",
 "brand": "bioderma",
 "day": 17900,
-"night": 17850,
+"night": 15590,
 "stock": 4,
 "pool": "131512476_861368864"
 },
@@ -2006,7 +2006,7 @@
 "model": "Bioderma Sebium H2O для чувствительной кожи мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7249,
+"night": 7442,
 "stock": 4,
 "pool": "21900307_15383076"
 },
@@ -2388,7 +2388,7 @@
 "model": "Bioderma Sensibio AR+ Мицеллярный гель мицеллярный гель для снятия макияжа 250 мл",
 "brand": "Bioderma",
 "day": 10400,
-"night": 9940,
+"night": 9060,
 "stock": 0
 },
 {
@@ -2634,8 +2634,8 @@
 "sku": "132802926_15383076",
 "model": "Bioderma Bioderma Sensibio AR+ крем 40мл + Sensibio AR+мицеллярный гель 250мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 23865,
-"night": 23865,
+"day": 15900,
+"night": 15900,
 "stock": 0,
 "set_resmi": true
 },
@@ -2871,7 +2871,8 @@
 "day": 23217,
 "night": 23217,
 "stock": 0,
-"set_resmi": true
+"set_resmi": true,
+"satis_disi": true
 },
 {
 "sku": "171186480_15383076",
