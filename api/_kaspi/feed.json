@@ -147,7 +147,7 @@
 "model": "Bioderma крем Sebium сенситив для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 10900,
+"night": 10850,
 "stock": 9,
 "pool": "17600066_15383076"
 },
@@ -369,7 +369,7 @@
 "model": "Bioderma крем Photoderm Spot-Age invisible SPF 50+ для лица, для зоны декольте 40 мл",
 "brand": "bioderma",
 "day": 13900,
-"night": 13850,
+"night": 13520,
 "stock": 1,
 "pool": "117992665_780138579"
 },
@@ -811,7 +811,7 @@
 "model": "Bioderma крем Hydrabio Riche для лица 40 мл",
 "brand": "Bioderma",
 "day": 15400,
-"night": 15010,
+"night": 15328,
 "stock": 4
 },
 {
@@ -1012,7 +1012,7 @@
 "model": "Bioderma Node K кератолитический при псориазе шампунь 150 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 9930,
+"night": 9939,
 "stock": 2
 },
 {
@@ -1233,7 +1233,7 @@
 "model": "Bioderma Sensibio H20 AR мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 8400,
-"night": 7320,
+"night": 7763,
 "stock": 4
 },
 {
@@ -1970,7 +1970,7 @@
 "model": "Bioderma крем Pigmentbio ночной крем для лица 50 мл",
 "brand": "Bioderma",
 "day": 22500,
-"night": 20949,
+"night": 22500,
 "stock": 1,
 "pool": "100309098_15383076"
 },
