@@ -182,7 +182,7 @@
 "model": "Bioderma Sebium Hydra для умывания бальзам 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11735,
+"night": 11733,
 "stock": 14
 },
 {
@@ -198,7 +198,7 @@
 "model": "Bioderma крем Sensibio AR Anti-Redness Care для лица 40 мл",
 "brand": "bioderma",
 "day": 11400,
-"night": 11350,
+"night": 11300,
 "stock": 29,
 "pool": "131462171_342517855"
 },
@@ -207,7 +207,7 @@
 "model": "Bioderma крем SENSIBIO AR Увлажняющий крем от покраснений для чувствительной кожи с куперозом и розацеей, 40 мл для лица 40 мл",
 "brand": "bioderma",
 "day": 11400,
-"night": 11350,
+"night": 11300,
 "stock": 29,
 "pool": "131462171_342517855"
 },
@@ -216,7 +216,7 @@
 "model": "Bioderma крем Sensibio AR крем против покраснений для лица 40 мл",
 "brand": "bioderma",
 "day": 11400,
-"night": 11350,
+"night": 11300,
 "stock": 29,
 "pool": "131462171_342517855"
 },
@@ -234,7 +234,7 @@
 "model": "Bioderma крем Крем для чувствительной кожи с куперозами для лица 40 мл",
 "brand": "bioderma",
 "day": 11400,
-"night": 11350,
+"night": 11300,
 "stock": 29,
 "pool": "131462171_342517855"
 },
@@ -713,7 +713,7 @@
 "model": "Bioderma бальзам Atoderm Stick Levres 4 г",
 "brand": "Bioderma",
 "day": 5400,
-"night": 4889,
+"night": 4990,
 "stock": 4
 },
 {
@@ -1012,7 +1012,7 @@
 "model": "Bioderma Node K кератолитический при псориазе шампунь 150 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 9930,
+"night": 9939,
 "stock": 2
 },
 {
