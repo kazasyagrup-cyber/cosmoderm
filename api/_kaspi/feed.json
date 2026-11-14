@@ -2923,6 +2923,30 @@
 "day": 15900,
 "night": 15900,
 "stock": 0
+},
+{
+"sku": "3701129801383",
+"model": "Bioderma Atoderm Intensive Baume бальзам 400 мл",
+"brand": "Bioderma",
+"day": 19900,
+"night": 19900,
+"stock": 0
+},
+{
+"sku": "3701129804414",
+"model": "Bioderma Photoderm M SPF 50+ светлый оттенок 40 мл",
+"brand": "Bioderma",
+"day": 10900,
+"night": 10900,
+"stock": 0
+},
+{
+"sku": "3401353791220",
+"model": "Bioderma Sebium Gel Moussant гель-мусс 100 мл",
+"brand": "Bioderma",
+"day": 5900,
+"night": 5900,
+"stock": 0
 }
 ],
 "night_start_ms": 1791550800000
