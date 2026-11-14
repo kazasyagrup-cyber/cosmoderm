@@ -2899,6 +2899,30 @@
 "day": 17500,
 "night": 17500,
 "stock": 0
+},
+{
+"sku": "182709746_15383076",
+"model": "Bioderma Sebium Gommant скраб 75 мл",
+"brand": "Bioderma",
+"day": 8400,
+"night": 8400,
+"stock": 0
+},
+{
+"sku": "147824749_15383076",
+"model": "Bioderma Photoderm XDEFENSE Ultra-Fluid SPF 50+ светлый тон 40 мл",
+"brand": "Bioderma",
+"day": 12500,
+"night": 12500,
+"stock": 0
+},
+{
+"sku": "119820396_15383076",
+"model": "Bioderma Photoderm Lait Ultra SPF50+ молочко 100 мл",
+"brand": "Bioderma",
+"day": 15900,
+"night": 15900,
+"stock": 0
 }
 ],
 "night_start_ms": 1791550800000
