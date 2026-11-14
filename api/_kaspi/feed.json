@@ -2947,6 +2947,14 @@
 "day": 5900,
 "night": 5900,
 "stock": 0
+},
+{
+"sku": "172944878_15383076",
+"model": "Bioderma Photoderm Pediatrics Lait SPF50+ молочко 200 мл",
+"brand": "Bioderma",
+"day": 22000,
+"night": 22000,
+"stock": 0
 }
 ],
 "night_start_ms": 1791550800000
