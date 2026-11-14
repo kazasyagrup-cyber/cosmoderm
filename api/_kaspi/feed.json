@@ -60,7 +60,7 @@
 "model": "Bioderma Sensibio DS+ Gel Мусс гель 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11673,
+"night": 11622,
 "stock": 4
 },
 {
@@ -182,7 +182,7 @@
 "model": "Bioderma Sebium Hydra для умывания бальзам 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11677,
+"night": 11626,
 "stock": 14
 },
 {
@@ -267,7 +267,7 @@
 "model": "Bioderma крем Photoderm Max SPF50 для лица 40 мл",
 "brand": "bioderma",
 "day": 12900,
-"night": 12296,
+"night": 12245,
 "stock": 1
 },
 {
@@ -451,7 +451,7 @@
 "model": "Bioderma крем Cicabio Arnica+ для лица 40 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8696,
+"night": 8645,
 "stock": 4
 },
 {
@@ -579,7 +579,7 @@
 "model": "Bioderma Node Fluid шампунь 400 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11696,
+"night": 11645,
 "stock": 1
 },
 {
@@ -705,7 +705,7 @@
 "model": "Bioderma крем Atoderm Nutritive для лица 40 мл",
 "brand": "Bioderma",
 "day": 6400,
-"night": 5875,
+"night": 5824,
 "stock": 2
 },
 {
@@ -811,7 +811,7 @@
 "model": "Bioderma крем Hydrabio Riche для лица 40 мл",
 "brand": "Bioderma",
 "day": 15400,
-"night": 15163,
+"night": 15112,
 "stock": 4
 },
 {
@@ -1012,7 +1012,7 @@
 "model": "Bioderma Node K кератолитический при псориазе шампунь 150 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 9939,
+"night": 9930,
 "stock": 2
 },
 {
@@ -1176,7 +1176,7 @@
 "model": "Bioderma Sebium Kerato+Body спрей для тела 150 мл",
 "brand": "Bioderma",
 "day": 18600,
-"night": 17456,
+"night": 17405,
 "stock": 4
 },
 {
@@ -1316,7 +1316,7 @@
 "model": "Bioderma Sensibio H2O Eye мицеллярная вода 125 мл",
 "brand": "Bioderma",
 "day": 8700,
-"night": 8496,
+"night": 8445,
 "stock": 1
 },
 {
@@ -1619,7 +1619,7 @@
 "model": "Bioderma крем Cicabio Arnica+ для лица 40 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8696,
+"night": 8645,
 "stock": 4,
 "pool": "186622"
 },
@@ -1763,7 +1763,7 @@
 "model": "Bioderma бальзам Atoderm Levres 15 мл",
 "brand": "Bioderma",
 "day": 6400,
-"night": 6196,
+"night": 6145,
 "stock": 4,
 "pool": "102415463_15383076"
 },
@@ -1772,7 +1772,7 @@
 "model": "Bioderma Atoderm гель 500 мл",
 "brand": "Bioderma",
 "day": 12400,
-"night": 11196,
+"night": 11145,
 "stock": 4,
 "pool": "150575248_15383076"
 },
@@ -2337,7 +2337,7 @@
 "model": "Bioderma бальзам Atoderm PP для лица 200 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 11196,
+"night": 11145,
 "stock": 0
 },
 {
