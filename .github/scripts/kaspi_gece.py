@@ -37,7 +37,16 @@ if len(ALIS) < 50:
 
 UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36', 'Accept-Language': 'ru-RU,ru;q=0.9'}
 OP = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
-OP.open(urllib.request.Request('https://kaspi.kz/shop/', headers=UA), timeout=30).read()   # çerez al: yoksa Kaspi isBrandOfficialPartner alanını GÖNDERMİYOR
+# çerez al: yoksa Kaspi isBrandOfficialPartner alanını GÖNDERMİYOR.
+# 15.11: Kaspi bu ilk istekte ara sıra 429/503 veriyor (08–15.11 arası ~150 çalışmada 5 kez) → iş 10 sn'de düşüp o saatin fiyatı yazılmıyordu.
+# Geçici hata → 10/20/40/60 sn bekleyip toplam 5 deneme; hepsi başarısızsa eskisi gibi hata verir.
+for _d, _bekle in enumerate((10, 20, 40, 60, None)):
+    try:
+        OP.open(urllib.request.Request('https://kaspi.kz/shop/', headers=UA), timeout=30).read(); break
+    except Exception as _e:
+        if _bekle is None: raise
+        print(f'çerez isteği hata ({getattr(_e, "code", type(_e).__name__)}), {_bekle} sn sonra tekrar ({_d + 1}/5)', flush=True)
+        time.sleep(_bekle)
 
 def offers(pid):
     out = []
