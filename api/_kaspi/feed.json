@@ -139,7 +139,7 @@
 "model": "Bioderma крем Sebium Sensitive для чувствительной жирной кожи для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 10750,
+"night": 9974,
 "stock": 9
 },
 {
@@ -251,7 +251,7 @@
 "model": "Bioderma крем Pigmentbio Daily Care SPF50 для лица 40 мл",
 "brand": "bioderma",
 "day": 18000,
-"night": 15680,
+"night": 17474,
 "stock": 1
 },
 {
@@ -410,7 +410,7 @@
 "model": "Bioderma крем Atoderm Intensive для области вокруг глаз 100 мл",
 "brand": "bioderma",
 "day": 12400,
-"night": 12017,
+"night": 12243,
 "stock": 9
 },
 {
@@ -613,7 +613,7 @@
 "model": "Bioderma крем-гель Sebium Kerato для лица 30 мл",
 "brand": "bioderma",
 "day": 13900,
-"night": 13199,
+"night": 13850,
 "stock": 9
 },
 {
@@ -811,7 +811,7 @@
 "model": "Bioderma крем Hydrabio Riche для лица 40 мл",
 "brand": "Bioderma",
 "day": 15400,
-"night": 15319,
+"night": 15318,
 "stock": 4
 },
 {
@@ -819,7 +819,7 @@
 "model": "Bioderma Hydrabio gel moussant гель 400 мл",
 "brand": "Bioderma",
 "day": 14400,
-"night": 14328,
+"night": 14322,
 "stock": 4
 },
 {
@@ -1348,7 +1348,7 @@
 "model": "Bioderma крем Sensibio Forte против покраснения для лица 40 мл",
 "brand": "Bioderma",
 "day": 8900,
-"night": 7942,
+"night": 8380,
 "stock": 4
 },
 {
@@ -1530,7 +1530,7 @@
 "model": "Bioderma крем Pigmentbio Daily Care SPF50+ для лица 40 мл",
 "brand": "bioderma",
 "day": 18000,
-"night": 15945,
+"night": 18000,
 "stock": 1,
 "pool": "100309236_391253203"
 },
@@ -2311,7 +2311,7 @@
 "model": "Bioderma крем Atoderm Intensive Baume для лица 500 мл",
 "brand": "Bioderma",
 "day": 21900,
-"night": 21649,
+"night": 21648,
 "stock": 0,
 "pool": "169415444_15383076"
 },
