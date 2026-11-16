@@ -20,7 +20,7 @@
 "model": "Bioderma ABCDerm гель 1000 мл",
 "brand": "Bioderma",
 "day": 15900,
-"night": 15209,
+"night": 15750,
 "stock": 2
 },
 {
@@ -426,7 +426,7 @@
 "model": "Bioderma Atoderm Huile De Douche Масло косметическое для душа 500 ml масло 500 мл",
 "brand": "bioderma",
 "day": 16400,
-"night": 16170,
+"night": 16180,
 "stock": 4,
 "pool": "137699418_893299201"
 },
@@ -451,7 +451,7 @@
 "model": "Bioderma крем Cicabio Arnica+ для лица 40 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8849,
+"night": 8850,
 "stock": 4
 },
 {
@@ -811,7 +811,7 @@
 "model": "Bioderma крем Hydrabio Riche для лица 40 мл",
 "brand": "Bioderma",
 "day": 15400,
-"night": 15324,
+"night": 15322,
 "stock": 4
 },
 {
@@ -819,7 +819,7 @@
 "model": "Bioderma Hydrabio gel moussant гель 400 мл",
 "brand": "Bioderma",
 "day": 14400,
-"night": 14328,
+"night": 14326,
 "stock": 4
 },
 {
@@ -1619,7 +1619,7 @@
 "model": "Bioderma крем Cicabio Arnica+ для лица 40 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8849,
+"night": 8850,
 "stock": 4,
 "pool": "186622"
 },
@@ -2311,7 +2311,7 @@
 "model": "Bioderma крем Atoderm Intensive Baume для лица 500 мл",
 "brand": "Bioderma",
 "day": 21900,
-"night": 20905,
+"night": 21649,
 "stock": 0,
 "pool": "169415444_15383076"
 },
