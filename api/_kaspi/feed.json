@@ -523,7 +523,7 @@
 "model": "Bioderma Sensibio H2O мицеллярная вода 850 мл",
 "brand": "bioderma",
 "day": 15000,
-"night": 14676,
+"night": 14786,
 "stock": 4
 },
 {
@@ -579,7 +579,7 @@
 "model": "Bioderma Node Fluid шампунь 400 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11849,
+"night": 11850,
 "stock": 1
 },
 {
@@ -811,7 +811,7 @@
 "model": "Bioderma крем Hydrabio Riche для лица 40 мл",
 "brand": "Bioderma",
 "day": 15400,
-"night": 15316,
+"night": 15315,
 "stock": 4
 },
 {
@@ -819,7 +819,7 @@
 "model": "Bioderma Hydrabio gel moussant гель 400 мл",
 "brand": "Bioderma",
 "day": 14400,
-"night": 14322,
+"night": 14320,
 "stock": 4
 },
 {
@@ -1292,7 +1292,7 @@
 "model": "Bioderma Sensibio H2O мицеллярная вода 100 мл",
 "brand": "Bioderma",
 "day": 4500,
-"night": 4299,
+"night": 4320,
 "stock": 4
 },
 {
@@ -1340,7 +1340,7 @@
 "model": "Bioderma тоник Sensibio Tonique 250 мл",
 "brand": "Bioderma",
 "day": 8400,
-"night": 8128,
+"night": 8349,
 "stock": 4
 },
 {
@@ -1763,7 +1763,7 @@
 "model": "Bioderma бальзам Atoderm Levres 15 мл",
 "brand": "Bioderma",
 "day": 6400,
-"night": 6349,
+"night": 6350,
 "stock": 4,
 "pool": "102415463_15383076"
 },
