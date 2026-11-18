@@ -114,7 +114,7 @@
 "model": "Bioderma Node DS+ для лечения шампунь 125 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8850,
+"night": 8799,
 "stock": 29
 },
 {
@@ -139,7 +139,7 @@
 "model": "Bioderma крем Sebium Sensitive для чувствительной жирной кожи для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9990,
+"night": 10725,
 "stock": 9
 },
 {
@@ -243,7 +243,7 @@
 "model": "Bioderma крем Sebium Global для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9990,
+"night": 10850,
 "stock": 9
 },
 {
@@ -267,7 +267,7 @@
 "model": "Bioderma крем Photoderm Max SPF50 для лица 40 мл",
 "brand": "bioderma",
 "day": 12900,
-"night": 12000,
+"night": 12331,
 "stock": 1
 },
 {
@@ -410,7 +410,7 @@
 "model": "Bioderma крем Atoderm Intensive для области вокруг глаз 100 мл",
 "brand": "bioderma",
 "day": 12400,
-"night": 12243,
+"night": 12250,
 "stock": 9
 },
 {
@@ -689,7 +689,7 @@
 "model": "Bioderma Atoderm Intensive гель 500 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 11250,
+"night": 10891,
 "stock": 4
 },
 {
@@ -811,7 +811,7 @@
 "model": "Bioderma крем Hydrabio Riche для лица 40 мл",
 "brand": "Bioderma",
 "day": 15400,
-"night": 15125,
+"night": 15074,
 "stock": 4
 },
 {
@@ -1159,7 +1159,7 @@
 "model": "Bioderma сыворотка-концентрат Pigmentbio для лица 15 мл",
 "brand": "Bioderma",
 "day": 16000,
-"night": 15793,
+"night": 15950,
 "stock": 1,
 "pool": "147495818_15383076"
 },
@@ -1316,7 +1316,7 @@
 "model": "Bioderma Sensibio H2O Eye мицеллярная вода 125 мл",
 "brand": "Bioderma",
 "day": 8700,
-"night": 8445,
+"night": 8650,
 "stock": 1
 },
 {
@@ -1348,7 +1348,7 @@
 "model": "Bioderma крем Sensibio Forte против покраснения для лица 40 мл",
 "brand": "Bioderma",
 "day": 8900,
-"night": 8645,
+"night": 7799,
 "stock": 4
 },
 {
@@ -1557,7 +1557,7 @@
 "model": "Bioderma крем Sensibio Defensive Rich, активный успокаивающий крем, 40 мл для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 8839,
+"night": 9350,
 "stock": 4,
 "pool": "104596412_814862873"
 },
@@ -1610,7 +1610,7 @@
 "model": "Bioderma крем-гель Hydrabio, гель-крем, 40 мл для лица 40 мл",
 "brand": "bioderma",
 "day": 14800,
-"night": 13950,
+"night": 13900,
 "stock": 18,
 "pool": "17600052_15383076"
 },
@@ -2337,7 +2337,7 @@
 "model": "Bioderma бальзам Atoderm PP для лица 200 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 11145,
+"night": 11350,
 "stock": 0
 },
 {
