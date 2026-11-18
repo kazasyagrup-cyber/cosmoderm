@@ -243,7 +243,7 @@
 "model": "Bioderma крем Sebium Global для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9940,
+"night": 9990,
 "stock": 9
 },
 {
@@ -267,7 +267,7 @@
 "model": "Bioderma крем Photoderm Max SPF50 для лица 40 мл",
 "brand": "bioderma",
 "day": 12900,
-"night": 12051,
+"night": 12000,
 "stock": 1
 },
 {
@@ -283,7 +283,7 @@
 "model": "Bioderma Atoderm Ultra-Gentle гель 1000",
 "brand": "bioderma",
 "day": 18400,
-"night": 18096,
+"night": 18045,
 "stock": 4
 },
 {
@@ -343,7 +343,7 @@
 "model": "Bioderma крем PHOTODERM Spot Age для лица 40 мл",
 "brand": "bioderma",
 "day": 13900,
-"night": 13798,
+"night": 13747,
 "stock": 1
 },
 {
@@ -705,7 +705,7 @@
 "model": "Bioderma крем Atoderm Nutritive для лица 40 мл",
 "brand": "Bioderma",
 "day": 6400,
-"night": 6196,
+"night": 6179,
 "stock": 2
 },
 {
@@ -811,7 +811,7 @@
 "model": "Bioderma крем Hydrabio Riche для лица 40 мл",
 "brand": "Bioderma",
 "day": 15400,
-"night": 15176,
+"night": 15125,
 "stock": 4
 },
 {
@@ -1316,7 +1316,7 @@
 "model": "Bioderma Sensibio H2O Eye мицеллярная вода 125 мл",
 "brand": "Bioderma",
 "day": 8700,
-"night": 8496,
+"night": 8445,
 "stock": 1
 },
 {
@@ -1575,7 +1575,7 @@
 "model": "Bioderma Atoderm Creme Ultra Nourishing для лица и тела 500 мл",
 "brand": "bioderma",
 "day": 12900,
-"night": 12205,
+"night": 12155,
 "stock": 11
 },
 {
@@ -2337,7 +2337,7 @@
 "model": "Bioderma бальзам Atoderm PP для лица 200 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 11196,
+"night": 11145,
 "stock": 0
 },
 {
