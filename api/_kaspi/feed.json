@@ -2945,7 +2945,8 @@
 "model": "Bioderma Sebium Gel Moussant гель-мусс 100 мл",
 "brand": "Bioderma",
 "day": 5900,
-"night": 5900,
+"night": 4990,
+"sabit_gece": true,
 "stock": 0
 },
 {
