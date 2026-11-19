@@ -907,7 +907,7 @@
 "model": "Institut Esthederm крем Intensive Pro-Collagen+ для лица 50 мл",
 "brand": "Institut Esthederm",
 "day": 26906,
-"night": 25000,
+"night": 26891,
 "stock": 1
 },
 {
@@ -2589,28 +2589,26 @@
 "sku": "117616689_15383076",
 "model": "Bioderma ABCDerm Гель 1л + Atoderm Крем Ультра 200мл набор уходовой косметики для детей",
 "brand": "Bioderma",
-"day": 20475,
-"night": 20475,
+"day": 19379,
+"night": 19379,
 "stock": 0,
-"set_resmi": true,
-"satis_disi": true
+"set_resmi": true
 },
 {
 "sku": "123242508_15383076",
 "model": "Bioderma Atoderm Creme Ultra крем 200мл + Гель для душа 200мл набор для тела унисекс",
 "brand": "Bioderma",
-"day": 13702,
-"night": 13702,
+"day": 12960,
+"night": 12960,
 "stock": 0,
-"set_resmi": true,
-"satis_disi": true
+"set_resmi": true
 },
 {
 "sku": "140215400_15383076",
 "model": "Bioderma Atoderm Mains & Ongles 50 мл + Photoderm Gel-Crème Après-Soleil 200 мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 9599,
-"night": 9599,
+"day": 12500,
+"night": 12500,
 "stock": 0,
 "set_resmi": true
 },
@@ -2879,11 +2877,10 @@
 "sku": "171186474_15383076",
 "model": "Bioderma Набор для реактивной чувствительной кожи AR-BI Serum 30 мл + SENSIBIO H2O 250 мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 23217,
-"night": 23217,
+"day": 17890,
+"night": 17890,
 "stock": 0,
-"set_resmi": true,
-"satis_disi": true
+"set_resmi": true
 },
 {
 "sku": "171186480_15383076",
