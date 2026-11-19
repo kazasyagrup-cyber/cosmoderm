@@ -139,7 +139,7 @@
 "model": "Bioderma крем Sebium Sensitive для чувствительной жирной кожи для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 10725,
+"night": 9500,
 "stock": 9
 },
 {
@@ -275,7 +275,7 @@
 "model": "Bioderma крем Sensibio Defensive Rich для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 9343,
+"night": 8190,
 "stock": 4
 },
 {
@@ -343,7 +343,7 @@
 "model": "Bioderma крем PHOTODERM Spot Age для лица 40 мл",
 "brand": "bioderma",
 "day": 13900,
-"night": 13594,
+"night": 13849,
 "stock": 1
 },
 {
@@ -351,7 +351,7 @@
 "model": "Bioderma крем Photoderm Spot-Age SPF50 для лица 40 мл",
 "brand": "bioderma",
 "day": 13900,
-"night": 13750,
+"night": 13850,
 "stock": 1,
 "pool": "117992665_780138579"
 },
@@ -426,7 +426,7 @@
 "model": "Bioderma Atoderm Huile De Douche Масло косметическое для душа 500 ml масло 500 мл",
 "brand": "bioderma",
 "day": 16400,
-"night": 16180,
+"night": 14290,
 "stock": 4,
 "pool": "137699418_893299201"
 },
@@ -571,7 +571,7 @@
 "model": "Bioderma Atoderm intensive foaming gel гель 1000",
 "brand": "bioderma",
 "day": 17400,
-"night": 16716,
+"night": 15314,
 "stock": 4
 },
 {
@@ -705,7 +705,7 @@
 "model": "Bioderma крем Atoderm Nutritive для лица 40 мл",
 "brand": "Bioderma",
 "day": 6400,
-"night": 6349,
+"night": 6348,
 "stock": 2
 },
 {
@@ -713,7 +713,7 @@
 "model": "Bioderma бальзам Atoderm Stick Levres 4 г",
 "brand": "Bioderma",
 "day": 5400,
-"night": 4838,
+"night": 4850,
 "stock": 4
 },
 {
@@ -1292,7 +1292,7 @@
 "model": "Bioderma Sensibio H2O мицеллярная вода 100 мл",
 "brand": "Bioderma",
 "day": 4500,
-"night": 4342,
+"night": 3920,
 "stock": 4
 },
 {
@@ -1308,7 +1308,7 @@
 "model": "Bioderma Sensibio H2O мицеллярная вода 500 мл",
 "brand": "Bioderma",
 "day": 11000,
-"night": 9920,
+"night": 9580,
 "stock": 9
 },
 {
@@ -1340,7 +1340,7 @@
 "model": "Bioderma тоник Sensibio Tonique 250 мл",
 "brand": "Bioderma",
 "day": 8400,
-"night": 8350,
+"night": 7320,
 "stock": 4
 },
 {
@@ -1348,7 +1348,7 @@
 "model": "Bioderma крем Sensibio Forte против покраснения для лица 40 мл",
 "brand": "Bioderma",
 "day": 8900,
-"night": 8645,
+"night": 7799,
 "stock": 4
 },
 {
@@ -1428,7 +1428,7 @@
 "model": "Bioderma Atoderm крем для лица 200 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8645,
+"night": 8849,
 "stock": 14,
 "pool": "182626"
 },
