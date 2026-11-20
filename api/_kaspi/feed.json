@@ -1077,7 +1077,7 @@
 "model": "Bioderma крем PHOTODERM Creme light для лица 40 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 9990,
+"night": 9930,
 "stock": 1
 },
 {
@@ -1772,7 +1772,7 @@
 "model": "Bioderma Atoderm гель 500 мл",
 "brand": "Bioderma",
 "day": 12400,
-"night": 9869,
+"night": 9410,
 "stock": 4,
 "pool": "150575248_15383076"
 },
@@ -2580,8 +2580,8 @@
 "sku": "117633414_15383076",
 "model": "Atoderm Crème ultra 500 + Atoderm gel douche 100",
 "brand": "Bioderma",
-"day": 14239,
-"night": 14239,
+"day": 16232,
+"night": 16232,
 "stock": 0,
 "set_resmi": true
 },
@@ -2607,8 +2607,8 @@
 "sku": "140215400_15383076",
 "model": "Bioderma Atoderm Mains & Ongles 50 мл + Photoderm Gel-Crème Après-Soleil 200 мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 12500,
-"night": 12500,
+"day": 14249,
+"night": 14249,
 "stock": 0,
 "set_resmi": true
 },
@@ -2616,8 +2616,8 @@
 "sku": "132685992_15383076",
 "model": "Bioderma Atoderm gel douche 100мл + Sensibio H2Oм 250мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 10639,
-"night": 10639,
+"day": 12128,
+"night": 12128,
 "stock": 0,
 "set_resmi": true
 },
@@ -2625,8 +2625,8 @@
 "sku": "117633403_15383076",
 "model": "Bioderma Atoderm Масло для душа 1л + Бальзам 200мл для сухой атопичной кожей набор для тела унисекс",
 "brand": "Bioderma",
-"day": 25039,
-"night": 25039,
+"day": 28544,
+"night": 28544,
 "stock": 0,
 "set_resmi": true
 },
@@ -2634,8 +2634,8 @@
 "sku": "132802926_15383076",
 "model": "Bioderma Bioderma Sensibio AR+ крем 40мл + Sensibio AR+мицеллярный гель 250мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 15900,
-"night": 15900,
+"day": 18126,
+"night": 18126,
 "stock": 0,
 "set_resmi": true
 },
@@ -2643,8 +2643,8 @@
 "sku": "117617722_15383076",
 "model": "Bioderma Hydrabio Крем 50мл + Мицеллярка 100мл набор по уходу за лицом для женщин",
 "brand": "Bioderma",
-"day": 15977,
-"night": 15977,
+"day": 18213,
+"night": 18213,
 "stock": 0,
 "set_resmi": true
 },
@@ -2652,8 +2652,8 @@
 "sku": "132750680_15383076",
 "model": "Bioderma Pigmentbio H2O 250мл + Sensibio H2O 250мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 15315,
-"night": 15315,
+"day": 17459,
+"night": 17459,
 "stock": 0,
 "set_resmi": true
 },
@@ -2661,8 +2661,8 @@
 "sku": "117633502_15383076",
 "model": "Bioderma Pigmentbio Мицеллярка 250мл +Крем с SPF50+40мл набор по уходу за лицом для женщин",
 "brand": "Bioderma",
-"day": 24694,
-"night": 24694,
+"day": 28151,
+"night": 28151,
 "stock": 0,
 "set_resmi": true
 },
@@ -2670,11 +2670,10 @@
 "sku": "182713602_15383076",
 "model": "Bioderma SENSIBIO Мицелярная вода 250 мл + SENSIBIO EYE набор по уходу за лицом для женщин",
 "brand": "Bioderma",
-"day": 12835,
-"night": 12835,
+"day": 12320,
+"night": 12320,
 "stock": 0,
-"set_resmi": true,
-"satis_disi": true
+"set_resmi": true
 },
 {
 "sku": "171186457_15383076",
@@ -2690,8 +2689,8 @@
 "sku": "129592741_15383076",
 "model": "Bioderma Sebium H2O мицеллярная вода 2 шт по 500 мл",
 "brand": "Bioderma",
-"day": 17119,
-"night": 17119,
+"day": 19515,
+"night": 19515,
 "stock": 0,
 "set_resmi": true
 },
@@ -2699,11 +2698,10 @@
 "sku": "117619467_15383076",
 "model": "Bioderma Sebium Mat Control 30мл + Мицеллярка 100мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 12841,
-"night": 12841,
+"day": 12990,
+"night": 12990,
 "stock": 0,
-"set_resmi": true,
-"satis_disi": true
+"set_resmi": true
 },
 {
 "sku": "132686845_15383076",
@@ -2719,8 +2717,8 @@
 "sku": "123237128_15383076",
 "model": "Bioderma Sebium Sensitive крем 30мл + H2O мицеллярная вода 250мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 16590,
-"night": 16590,
+"day": 18912,
+"night": 18912,
 "stock": 0,
 "set_resmi": true
 },
@@ -2728,8 +2726,8 @@
 "sku": "123237109_15383076",
 "model": "Bioderma Sebium Serum сыворотка 30мл + H2O мицеллярная вода 250мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 22038,
-"night": 22038,
+"day": 25123,
+"night": 25123,
 "stock": 0,
 "set_resmi": true
 },
@@ -2737,8 +2735,8 @@
 "sku": "117633482_15383076",
 "model": "Bioderma Sebium Гель Актив для умывания 200мл + Керато 30мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 21167,
-"night": 21167,
+"day": 24130,
+"night": 24130,
 "stock": 0,
 "set_resmi": true
 },
@@ -2756,8 +2754,8 @@
 "sku": "132805485_15383076",
 "model": "Bioderma Sensibio AR+ BI serum 30 мл + Sensibio AR+ крем 40мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 23719,
-"night": 23719,
+"day": 27039,
+"night": 27039,
 "stock": 0,
 "set_resmi": true
 },
@@ -2765,8 +2763,8 @@
 "sku": "123236177_15383076",
 "model": "Bioderma Sensibio Defensive Rich крем 40мл + H2O мицеллярная вода 250мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 14567,
-"night": 14567,
+"day": 16606,
+"night": 16606,
 "stock": 0,
 "set_resmi": true
 },
@@ -2774,8 +2772,8 @@
 "sku": "123233876_15383076",
 "model": "Bioderma Sensibio Defensive Serum сыворотка 30мл + Gel Moussant гель 200мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 25006,
-"night": 25006,
+"day": 28506,
+"night": 28506,
 "stock": 0,
 "set_resmi": true
 },
@@ -2783,8 +2781,8 @@
 "sku": "123237062_15383076",
 "model": "Bioderma Sensibio Difensive Rich крем 40мл + Gel Moussant гель 200мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 18157,
-"night": 18157,
+"day": 20698,
+"night": 20698,
 "stock": 0,
 "set_resmi": true
 },
@@ -2792,8 +2790,8 @@
 "sku": "123233823_15383076",
 "model": "Bioderma Sensibio Forte крем 40мл + Gel Moussant гель для умывания 200мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 18001,
-"night": 18001,
+"day": 20521,
+"night": 20521,
 "stock": 0,
 "set_resmi": true
 },
@@ -2801,8 +2799,8 @@
 "sku": "123232632_15383076",
 "model": "Bioderma Sensibio Gel Moussant гель 200мл + H2O мицеллярная вода 250мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 18385,
-"night": 18385,
+"day": 20958,
+"night": 20958,
 "stock": 0,
 "set_resmi": true
 },
@@ -2810,8 +2808,8 @@
 "sku": "132746959_15383076",
 "model": "Bioderma Sensibio gel 500мл + Sensibio Eye+ гель для контура глаз 15мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 20014,
-"night": 20014,
+"day": 22815,
+"night": 22815,
 "stock": 0,
 "set_resmi": true
 },
@@ -2819,8 +2817,8 @@
 "sku": "132688604_15383076",
 "model": "Bioderma Sensibio tonique + Sensibio Eye+ гель для контура глаз набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 13363,
-"night": 13363,
+"day": 15233,
+"night": 15233,
 "stock": 0,
 "set_resmi": true
 },
@@ -2838,18 +2836,17 @@
 "sku": "171186493_15383076",
 "model": "Bioderma Набор SEBIUM Kerato+ Гель-крем от акне и высыпаний 30 мл + H2O Мицеллярная вода для жирной и проблемной кожи 250 мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 18029,
-"night": 18029,
+"day": 16441,
+"night": 16441,
 "stock": 0,
-"set_resmi": true,
-"satis_disi": true
+"set_resmi": true
 },
 {
 "sku": "171186503_15383076",
 "model": "Bioderma Набор SEBIUM Kerato+Body Спрей для тела от акне 150 мл + H2O Мицеллярная вода для жирной и проблемной кожи 250 мл набор для тела унисекс",
 "brand": "Bioderma",
-"day": 19298,
-"night": 19298,
+"day": 21999,
+"night": 21999,
 "stock": 0,
 "set_resmi": true
 },
@@ -2857,28 +2854,26 @@
 "sku": "171186487_15383076",
 "model": "Bioderma Набор SEBIUM Lotion Лосьон-тоник для лица 200 мл + Pore Refiner крем корректирующий поры 30 мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 21919,
-"night": 21919,
+"day": 19988,
+"night": 19988,
 "stock": 0,
-"set_resmi": true,
-"satis_disi": true
+"set_resmi": true
 },
 {
 "sku": "182711629_15383076",
 "model": "Bioderma Набор Выгодный уход ATODERM BAUME LEVRES T15ML + ATODERM STICK 4GR набор для тела для женщин",
 "brand": "Bioderma",
-"day": 8746,
-"night": 8746,
+"day": 8394,
+"night": 8394,
 "stock": 0,
-"set_resmi": true,
-"satis_disi": true
+"set_resmi": true
 },
 {
 "sku": "171186474_15383076",
 "model": "Bioderma Набор для реактивной чувствительной кожи AR-BI Serum 30 мл + SENSIBIO H2O 250 мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 17890,
-"night": 17890,
+"day": 20394,
+"night": 20394,
 "stock": 0,
 "set_resmi": true
 },
@@ -2886,8 +2881,8 @@
 "sku": "171186480_15383076",
 "model": "Bioderma Ночной набор для зрелой кожи Pigmentbio Night Renewer 50 мл + Foaming Cream 200 мл набор по уходу за лицом унисекс",
 "brand": "Bioderma",
-"day": 25928,
-"night": 25928,
+"day": 29557,
+"night": 29557,
 "stock": 0,
 "set_resmi": true
 },
