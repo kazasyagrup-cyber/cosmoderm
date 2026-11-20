@@ -291,7 +291,7 @@
 "model": "Bioderma Atoderm Gel Moussant гель 1000 мл",
 "brand": "bioderma",
 "day": 18400,
-"night": 18247,
+"night": 16030,
 "stock": 4,
 "pool": "105802986_709319647"
 },
@@ -369,7 +369,7 @@
 "model": "Bioderma крем Photoderm Spot-Age invisible SPF 50+ для лица, для зоны декольте 40 мл",
 "brand": "bioderma",
 "day": 13900,
-"night": 13520,
+"night": 12110,
 "stock": 1,
 "pool": "117992665_780138579"
 },
@@ -638,7 +638,7 @@
 "model": "Bioderma бальзам Atoderm Restorative 15 мл",
 "brand": "Bioderma",
 "day": 6400,
-"night": 5839,
+"night": 4990,
 "stock": 4
 },
 {
@@ -689,7 +689,7 @@
 "model": "Bioderma Atoderm Intensive гель 500 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 11250,
+"night": 9930,
 "stock": 4
 },
 {
@@ -794,7 +794,7 @@
 "model": "Bioderma крем Hydrabio Legere 72h увлажняющий крем (лёгкий) 40 мл для лица, для зоны декольте 40 мл",
 "brand": "Bioderma",
 "day": 15400,
-"night": 15350,
+"night": 13420,
 "stock": 4
 },
 {
@@ -1446,7 +1446,7 @@
 "model": "Bioderma крем-сыворотка Sebium Pore Refiner для лица 30 мл",
 "brand": "bioderma",
 "day": 10900,
-"night": 9948,
+"night": 9500,
 "stock": 9,
 "pool": "17700013_15383076"
 },
@@ -1557,7 +1557,7 @@
 "model": "Bioderma крем Sensibio Defensive Rich, активный успокаивающий крем, 40 мл для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 8941,
+"night": 8890,
 "stock": 4,
 "pool": "104596412_814862873"
 },
@@ -1862,7 +1862,7 @@
 "model": "Bioderma Cicabio Mains, восстанавливающий барьерный бальзам, 50 мл бальзам для рук 50 г",
 "brand": "Bioderma",
 "day": 8200,
-"night": 8150,
+"night": 7140,
 "stock": 4,
 "pool": "163393083_15383076"
 },
@@ -2069,7 +2069,7 @@
 "model": "Bioderma Sensibio H2O Micellar Water Makeup Remover мицеллярная вода 250 мл",
 "brand": "Bioderma",
 "day": 7900,
-"night": 7050,
+"night": 6880,
 "stock": 9,
 "pool": "21900326_15383076"
 },
@@ -2258,7 +2258,7 @@
 "model": "Bioderma Sensibio H2O eye мицелярная вода 125 мл",
 "brand": "Bioderma",
 "day": 8700,
-"night": 8650,
+"night": 7580,
 "stock": 1,
 "pool": "116776903_15383076"
 },
@@ -2294,7 +2294,7 @@
 "model": "Bioderma лосьон Sebium Lotion Rebalancing Water 200 мл",
 "brand": "bioderma",
 "day": 16900,
-"night": 15940,
+"night": 14720,
 "stock": 19,
 "pool": "17700783_659590"
 },
