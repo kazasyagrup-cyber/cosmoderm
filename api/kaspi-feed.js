@@ -85,7 +85,8 @@ module.exports = async (req, res) => {
   if (String((req.query && req.query.key) || '').trim() !== key.trim()) { res.statusCode = 404; res.end('Not found'); return; }
 
   const hour = (new Date().getUTCHours() + feed.tz_offset) % 24;
-  const night = Date.now() >= (feed.night_start_ms || 0) && (hour >= feed.night_from || hour < feed.night_to);  // night_start_ms öncesi hep gündüz fiyatı
+  const gunduzGece = !!feed.gece_tum_gun_bit && Date.now() < Date.parse(feed.gece_tum_gun_bit);   // 20.11 kullanıcı: Kasım indirimi — bu tarihe kadar GÜNDÜZ DE gece fiyatı; tarihte kendiliğinden normale döner
+  const night = gunduzGece || Date.now() >= (feed.night_start_ms || 0) && (hour >= feed.night_from || hour < feed.night_to);  // night_start_ms öncesi hep gündüz fiyatı
 
   let sold = {}, snap = null;
   if (process.env.KASPI_TOKEN) {
