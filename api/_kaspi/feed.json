@@ -182,7 +182,7 @@
 "model": "Bioderma Sebium Hydra для умывания бальзам 200 мл",
 "brand": "bioderma",
 "day": 11900,
-"night": 11550,
+"night": 9990,
 "stock": 14
 },
 {
@@ -595,7 +595,7 @@
 "model": "Bioderma гель Sensibio Eye для области вокруг глаз 15 мл",
 "brand": "bioderma",
 "day": 8400,
-"night": 8350,
+"night": 7320,
 "stock": 4,
 "pool": "132481168_343538194"
 },
@@ -654,7 +654,7 @@
 "model": "Bioderma Atoderm Gel Douche гель 500 мл",
 "brand": "Bioderma",
 "day": 12400,
-"night": 12299,
+"night": 9870,
 "stock": 4
 },
 {
@@ -689,7 +689,7 @@
 "model": "Bioderma Atoderm Intensive гель 500 мл",
 "brand": "Bioderma",
 "day": 11400,
-"night": 9930,
+"night": 11016,
 "stock": 4
 },
 {
@@ -1428,7 +1428,7 @@
 "model": "Bioderma Atoderm крем для лица 200 мл",
 "brand": "bioderma",
 "day": 8900,
-"night": 8849,
+"night": 7750,
 "stock": 14,
 "pool": "182626"
 },
@@ -1566,7 +1566,7 @@
 "model": "Bioderma Sensibio Riche Насыщенный успокаивающий крем для сухой и чувствительной кожи 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 9310,
+"night": 8190,
 "stock": 4,
 "pool": "104596412_814862873"
 },
@@ -1700,7 +1700,7 @@
 "model": "Bioderma Atoderm гель 1000 мл",
 "brand": "bioderma",
 "day": 17400,
-"night": 15409,
+"night": 15160,
 "stock": 4,
 "pool": "100319370_378955055"
 },
