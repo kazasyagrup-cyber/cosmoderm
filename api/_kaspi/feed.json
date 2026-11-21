@@ -2455,8 +2455,9 @@
 "brand": "Bioderma",
 "day": 7900,
 "night": 7900,
-"stock": 4,
-"pool": "21900307_15383076"
+"stock": 0,
+"not": "21.11 kullanıcı: bu kart HEDİYELİ set gösteriyor, bizde hediye yok → ilandan çıkıldı (stok 0, havuzdan ayrıldı)",
+"satis_disi": true
 },
 {
 "sku": "143144514_15383076",
