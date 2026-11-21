@@ -2,7 +2,7 @@
 """19.10.2026 — Kaspi GECE FİYATI günlük yenileme, BULUT sürümü (GitHub Actions `kaspi-gece`, her gün 17:00 Almatı).
 Yerel naos-kz-rapor/kaspi_gece_guncelle.py ile AYNI kural (kullanıcı 12.10):
   gece fiyatı = o kartın EN UCUZ RESMİ satıcısının (isBrandOfficialPartner, biz hariç) 50 ₸ ALTI
-  - en az %10 net kâr tabanı (taban = alış/0,6, 10'a yukarı yuvarlı); rakip tabanın altındaysa taban
+  - en az %10 net kâr tabanı (21.11: ölçülen maliyet — komisyon %12,2 + vergi %3 + teslimat kademesi + paket 200 + iade 5; eskiden alış/0,6); rakip tabanın altındaysa taban
   - asla gündüz fiyatından yüksek olmaz; resmi rakip yoksa / zaten en ucuzsak gece = gündüz
   - gündüz fiyatı (day) DEĞİŞMEZ
   - feed.json'da "sabit_gece": true olan ilanın gece fiyatına dokunulmaz (21.10)
@@ -18,7 +18,8 @@ import datetime, hashlib, http.cookiejar, json, math, os, sys, time, urllib.requ
 
 MID = '15383076'; EXP = 0.30; MIN_KAR = 0.10; INDIRIM = 50
 RESMI_ID = '30234404'   # 10.11: Bioderma - Institut Esthederm Official (set_resmi ilanları bu satıcının fiyatını takip eder)
-KOM, VERGI = 0.125, 0.03; ESIKLER = (9990, 4990)   # 23.10: teslimat eşiği kuralı (naos-kz-rapor/kaspi_karlilik_esik.py ile aynı varsayım)
+KOM, VERGI = 0.122, 0.03; ESIKLER = (9990, 4990)   # 23.10: teslimat eşiği kuralı · 21.11 A2: KOM banka ekstresinden ÖLÇÜLDÜ (обработка данных %11,2 + процессинг %0,94)
+PAKET, IADE = 200, 5   # 21.11 A2 (kullanıcı «direk uygula»): paketleme 200 ₸/adet + iade maliyeti 5 ₸/satış (iade %0,4, ölçülen) — naos-kz-rapor/maliyet_ortak.py ile aynı
 BOT_RAKIP, BOT_FARK = {'30348533'}, 5   # 24.10: DERMA COSMETOLOGY — fiyatımızın 1 ₸ altına inen bot; 1..BOT_FARK ₸ altımızdaysa yok sayılır
 
 # 25.10 kullanıcı: DERMA COSMETOLOGY ile ortak kartlarda gece indirimi YOK (gece = gündüz = indirimsiz fiyat; rakip −50 ve teslimat eşiği uygulanmaz).
@@ -27,7 +28,13 @@ _DO = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'd
 DERMA_ORTAK = set(_DO['kartlar']) if datetime.datetime.now(datetime.timezone.utc) < datetime.datetime.fromisoformat(_DO['bit']) else set()
 
 def teslimat(p): return 173 if p < 3000 else 231 if p < 5000 else 927 if p < 10000 else 1507
-def net(p, c): return p * (1 - KOM - VERGI) - teslimat(p) - c
+def net(p, c): return p * (1 - KOM - VERGI) - teslimat(p) - PAKET - IADE - c
+def kar_tabani(c):   # 21.11 A2: net kâr ≥ %10 olan en düşük fiyat (teslimat kademesi fiyata bağlı → kademe kademe); eski: alış/0,6 (%30 ölçümsüz gider)
+    pay = 1 - KOM - VERGI - MIN_KAR
+    for lo, hi in ((0, 3000), (3000, 5000), (5000, 10000), (10000, 10 ** 9)):
+        p = (c + teslimat(lo) + PAKET + IADE) / pay
+        if p < hi: return math.ceil(max(p, lo) / 10) * 10
+    return math.ceil(p / 10) * 10
 KURU = '--kuru' in sys.argv
 FEED = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'api', '_kaspi', 'feed.json')
 
@@ -127,7 +134,7 @@ for it in items:
                 yeni, neden = day, 'resmi rakip yok'
             else:
                 best = min(resmi); hedef = round(best - INDIRIM)
-                taban = math.ceil(cost / (1 - EXP - MIN_KAR) / 10) * 10
+                taban = kar_tabani(cost)
                 if hedef >= day: yeni, neden = day, 'zaten en ucuz resmi'
                 elif hedef >= taban: yeni, neden = hedef, 'resmi rakip − 50'
                 elif taban < day: yeni, neden = taban, '%10 kâr tabanı'
