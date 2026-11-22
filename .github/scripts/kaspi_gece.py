@@ -47,12 +47,20 @@ OP = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiej
 # çerez al: yoksa Kaspi isBrandOfficialPartner alanını GÖNDERMİYOR.
 # 15.11: Kaspi bu ilk istekte ara sıra 429/503 veriyor (08–15.11 arası ~150 çalışmada 5 kez) → iş 10 sn'de düşüp o saatin fiyatı yazılmıyordu.
 # Geçici hata → 10/20/40/60 sn bekleyip toplam 5 deneme; hepsi başarısızsa eskisi gibi hata verir.
-for _d, _bekle in enumerate((10, 20, 40, 60, None)):
+# 22.11 (kullanıcı «ok»): 15–22.11 arası 38 çalışmada 9 kez 5 denemenin HEPSİ 429 (yalnız kaspi.kz/shop/ isteği) → kaynak döndürülür:
+# /shop/ ve feed'deki ürün sayfaları (/shop/p/-<pid>/ aynı çerezleri verir — 22.11 yerelde ölçüldü), bekleme 15/30/45/60/75/90 sn (~5 dk).
+_FEED0 = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'api', '_kaspi', 'feed.json'), encoding='utf-8'))
+_PIDS = [i['sku'].split('_')[0] for i in _FEED0['items'] if i['sku'].split('_')[0].isdigit()][:6]
+_KAYNAK = ['https://kaspi.kz/shop/'] + [f'https://kaspi.kz/shop/p/-{p}/' for p in _PIDS]
+for _d, _bekle in enumerate((15, 30, 45, 60, 75, 90, None)):
+    _url = _KAYNAK[_d % len(_KAYNAK)]
     try:
-        OP.open(urllib.request.Request('https://kaspi.kz/shop/', headers=UA), timeout=30).read(); break
+        OP.open(urllib.request.Request(_url, headers=UA), timeout=30).read()
+        if _d: print(f'çerez alındı ({_d + 1}. deneme, kaynak {"ana sayfa" if _d % len(_KAYNAK) == 0 else "ürün sayfası"})', flush=True)
+        break
     except Exception as _e:
         if _bekle is None: raise
-        print(f'çerez isteği hata ({getattr(_e, "code", type(_e).__name__)}), {_bekle} sn sonra tekrar ({_d + 1}/5)', flush=True)
+        print(f'çerez isteği hata ({getattr(_e, "code", type(_e).__name__)}), {_bekle} sn sonra başka kaynakla tekrar ({_d + 1}/7)', flush=True)
         time.sleep(_bekle)
 
 def offers(pid):
@@ -110,6 +118,23 @@ for it in items:
     if it.get('sabit_gece'):   # 21.10 kullanıcı: elle sabitlenen gece fiyatı (Node A/G/P gündüz −%10, Atoderm Baume 45 2950) — görev DOKUNMAZ
         nedenler['elle sabit'] = nedenler.get('elle sabit', 0) + 1
         continue
+    if 'esthederm' in it.get('brand', '').lower() and pid.isdigit() and cost:
+        # 22.11 kullanıcı: «Esthederm'de Kaspi'de BEEV ile aynı fiyatta olalım; bizim indirim onunkinden fazla olmasın» (BEEV ay sonuna kadar
+        # indirimde; 01–02.12 dönüş fiyatına bakılıp strateji yeniden kararlaştırılacak). gündüz = gece = BEEV (RESMI_ID) canlı fiyatı;
+        # −50 ve teslimat eşiği YOK; BEEV %10 kâr tabanının altındaysa taban. BEEV yok/okunamadı → aşağıdaki eski kural.
+        if pid not in cache:
+            try: cache[pid] = offers(pid)
+            except Exception as e: cache[pid] = None; hata += 1; print('HATA kart', pid, type(e).__name__)
+            time.sleep(0.3)
+        bp = [o['price'] for o in (cache[pid] or []) if str(o.get('merchantId')) == RESMI_ID and o.get('price')]
+        if bp:
+            b, tb = int(round(min(bp))), kar_tabani(cost)
+            p = b if b >= tb else min(tb, it['day'])   # BEEV taban altındaysa: taban, ama mevcut gündüzün ÜSTÜNE çıkmaz
+            if it['day'] != p or it['night'] != p: degisen += 1
+            it['day'] = p; it['night'] = p
+            k = 'Esthederm: BEEV fiyatı' if p == b else 'Esthederm: BEEV taban altı → taban/gündüz'
+            nedenler[k] = nedenler.get(k, 0) + 1
+            continue
     if pid in DERMA_ORTAK:
         if day != old: degisen += 1
         nedenler['DERMA ortak: indirimsiz'] = nedenler.get('DERMA ortak: indirimsiz', 0) + 1
