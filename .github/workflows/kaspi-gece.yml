@@ -17,9 +17,13 @@ on:
         description: 'Tetikleyen (worker = Cloudflare 17:00)'
         type: string
         default: 'elle'
+      tekrar:
+        description: '23.11: 429 sonrası yeni makinede tekrar (bir kez; tekrar çalışması kendini yeniden başlatmaz)'
+        type: boolean
+        default: false
 permissions:
   contents: write
-  actions: read
+  actions: write   # 23.11: başarısızlıkta kendini yeni runner'da bir kez yeniden başlatır
 concurrency: kaspi-gece
 jobs:
   gece:
@@ -54,3 +58,13 @@ jobs:
             sleep 5
           done
           exit 1
+      - name: Basarisizsa yeni makinede bir kez yeniden baslat (23.11)
+        # 22–23.11: 30 çalışmada 7 hata = kaspi.kz/shop çerez isteği 429 (GitHub runner IP'si); aynı makinede 5 deneme yetmiyor (15.11).
+        # Yeni runner farklı IP ile gelir. Yalnız BİR kez: tekrar çalışması (inputs.tekrar) yeniden başlatmaz. Kuru denemede yapılmaz.
+        if: ${{ failure() && !inputs.tekrar && !inputs.kuru }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sleep 30
+          gh workflow run kaspi-gece.yml -R "${{ github.repository }}" --ref master -f kaynak=tekrar -f tekrar=true
+          echo "yeni makinede tekrar baslatildi"
