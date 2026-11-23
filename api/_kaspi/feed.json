@@ -1557,7 +1557,7 @@
 "model": "Bioderma крем Sensibio Defensive Rich, активный успокаивающий крем, 40 мл для лица 40 мл",
 "brand": "bioderma",
 "day": 9400,
-"night": 9349,
+"night": 9298,
 "stock": 4,
 "pool": "104596412_814862873"
 },
@@ -2730,7 +2730,8 @@
 "day": 25123,
 "night": 25123,
 "stock": 0,
-"set_resmi": true
+"set_resmi": true,
+"satis_disi": true
 },
 {
 "sku": "117633482_15383076",
